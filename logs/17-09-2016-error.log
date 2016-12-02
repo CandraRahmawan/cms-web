@@ -1,0 +1,40 @@
+2016-09-17 04:22:37 Error: [Cake\Core\Exception\MissingPluginException] Plugin TopBiz could not be found.
+Exception Attributes: array (
+  'plugin' => 'TopBiz',
+)
+Request URL: /cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Core\App.php(189): Cake\Core\Plugin::classPath('TopBiz')
+#1 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\View\View.php(1249): Cake\Core\App::path('Template', 'TopBiz')
+#2 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\View\View.php(1067): Cake\View\View->_paths(NULL)
+#3 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName('home')
+#4 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('home', NULL)
+#5 C:\xampp\htdocs\cms\src\Controller\PagesController.php(29): Cake\Controller\Controller->render('home')
+#6 [internal function]: App\Controller\PagesController->display('home')
+#7 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#9 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#10 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 {main}
+
+
+2016-09-17 11:23:56 Error: [Cake\Core\Exception\MissingPluginException] Plugin TopBiz could not be found.
+Exception Attributes: array (
+  'plugin' => 'TopBiz',
+)
+Request URL: /cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Core\App.php(189): Cake\Core\Plugin::classPath('TopBiz')
+#1 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\View\View.php(1249): Cake\Core\App::path('Template', 'TopBiz')
+#2 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\View\View.php(1067): Cake\View\View->_paths(NULL)
+#3 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName('home')
+#4 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('home', NULL)
+#5 C:\xampp\htdocs\cms\src\Controller\PagesController.php(29): Cake\Controller\Controller->render('home')
+#6 [internal function]: App\Controller\PagesController->display('home')
+#7 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#9 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#10 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 {main}
+
+

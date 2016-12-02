@@ -1,0 +1,232 @@
+2016-11-12 11:27:50 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                ORDER BY CASE category.category_id
+                     WHEN ' at line 3
+Request URL: /cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Database\Connection.php(284): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Database\Connection.php(241): Cake\Database\Connection->query('SELECT category...')
+#3 C:\xampp\htdocs\cms\src\Controller\Component\UtilityComponent.php(13): Cake\Database\Connection->execute('SELECT category...')
+#4 C:\xampp\htdocs\cms\src\Controller\AppController.php(105): App\Controller\Component\UtilityComponent->query('SELECT category...')
+#5 C:\xampp\htdocs\cms\src\Controller\AppController.php(60): App\Controller\AppController->__categoryPage(Array)
+#6 C:\xampp\htdocs\cms\src\Controller\AppController.php(43): App\Controller\AppController->__menuHeader()
+#7 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Event\EventManager.php(386): App\Controller\AppController->beforeRender(Object(Cake\Event\Event))
+#8 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Event\EventManager.php(356): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#9 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#10 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Controller\Controller.php(596): Cake\Controller\Controller->dispatchEvent('Controller.befo...')
+#11 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#12 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\HomeController))
+#13 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2016-11-12 12:02:23 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') 
+                ORDER BY CASE category.category_id
+                     WHEN ' at line 3
+Request URL: /cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Database\Connection.php(284): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Database\Connection.php(241): Cake\Database\Connection->query('SELECT category...')
+#3 C:\xampp\htdocs\cms\src\Controller\Component\UtilityComponent.php(13): Cake\Database\Connection->execute('SELECT category...')
+#4 C:\xampp\htdocs\cms\src\Controller\AppController.php(105): App\Controller\Component\UtilityComponent->query('SELECT category...')
+#5 C:\xampp\htdocs\cms\src\Controller\AppController.php(60): App\Controller\AppController->__categoryPage(Array)
+#6 C:\xampp\htdocs\cms\src\Controller\AppController.php(43): App\Controller\AppController->__menuHeader()
+#7 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Event\EventManager.php(386): App\Controller\AppController->beforeRender(Object(Cake\Event\Event))
+#8 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Event\EventManager.php(356): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#9 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#10 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Controller\Controller.php(596): Cake\Controller\Controller->dispatchEvent('Controller.befo...')
+#11 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#12 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\HomeController))
+#13 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2016-11-12 12:05:41 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ',,) 
+                ORDER BY CASE category.category_id
+                     WHE' at line 3
+Request URL: /cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Database\Connection.php(284): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Database\Connection.php(241): Cake\Database\Connection->query('SELECT category...')
+#3 C:\xampp\htdocs\cms\src\Controller\Component\UtilityComponent.php(13): Cake\Database\Connection->execute('SELECT category...')
+#4 C:\xampp\htdocs\cms\src\Controller\AppController.php(105): App\Controller\Component\UtilityComponent->query('SELECT category...')
+#5 C:\xampp\htdocs\cms\src\Controller\AppController.php(60): App\Controller\AppController->__categoryPage(Array)
+#6 C:\xampp\htdocs\cms\src\Controller\AppController.php(43): App\Controller\AppController->__menuHeader()
+#7 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Event\EventManager.php(386): App\Controller\AppController->beforeRender(Object(Cake\Event\Event))
+#8 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Event\EventManager.php(356): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#9 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#10 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Controller\Controller.php(596): Cake\Controller\Controller->dispatchEvent('Controller.befo...')
+#11 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#12 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\HomeController))
+#13 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2016-11-12 12:06:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Top_biz could not be found.
+Exception Attributes: array (
+  'class' => 'Top_biz',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/top_biz/fonts/fontawesome-webfont.woff2?v=4.3.0
+Referer URL: http://localhost/cms/top_biz/css/font-awesome.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-11-12 12:06:05 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/folio1.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-11-12 12:06:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/folio2.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-11-12 12:06:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/folio5.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-11-12 12:06:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/folio7.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-11-12 12:06:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/folio6.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-11-12 12:06:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/folio3.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-11-12 12:06:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/folio4.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-11-12 12:06:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/folio8.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-11-12 12:06:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/folio9.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-11-12 12:06:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-11-12 12:07:44 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Top_biz could not be found.
+Exception Attributes: array (
+  'class' => 'Top_biz',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/top_biz/css/bootstrap.css.map
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+

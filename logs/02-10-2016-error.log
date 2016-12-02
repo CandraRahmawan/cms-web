@@ -1,0 +1,291 @@
+2016-10-02 22:18:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/folio4.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-02 22:18:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/folio3.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-02 22:18:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/folio2.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-02 22:18:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/folio1.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-02 22:18:56 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Top_biz could not be found.
+Exception Attributes: array (
+  'class' => 'Top_biz',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/top_biz/fonts/fontawesome-webfont.woff2?v=4.3.0
+Referer URL: http://localhost/cms/top_biz/css/font-awesome.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-02 22:18:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/folio5.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-02 22:18:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/folio6.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-02 22:18:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/folio7.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-02 22:18:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/folio8.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-02 22:18:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/blog1.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-02 22:18:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/folio9.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-02 22:18:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/blog2.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-02 22:18:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/home1/blog3.jpg
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-02 22:18:58 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Images could not be found.
+Exception Attributes: array (
+  'class' => 'Images',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /cms/images/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-10-02 22:31:39 Error: Fatal Error (1): Call to a member function toArray() on array in [C:\xampp\htdocs\cms\src\Controller\PagesController.php, line 86]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-10-02 22:31:39 Error: [Cake\Error\FatalErrorException] Call to a member function toArray() on array
+Request URL: /cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 86)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-10-02 22:33:32 Warning: Warning (2): vsprintf(): Too few arguments in [C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Utility\Hash.php, line 543]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+vsprintf - [internal], line ??
+Cake\Utility\Hash::format() - CORE\src\Utility\Hash.php, line 543
+Cake\Utility\Hash::combine() - CORE\src\Utility\Hash.php, line 453
+App\Controller\PagesController::__section() - APP/Controller\PagesController.php, line 86
+App\Controller\PagesController::index() - APP/Controller\PagesController.php, line 12
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-10-02 22:33:32 Warning: Warning (2): vsprintf() [<a href='http://php.net/function.vsprintf'>function.vsprintf</a>]: Too few arguments in [C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Utility\Hash.php, line 543]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+vsprintf - [internal], line ??
+Cake\Utility\Hash::format() - CORE\src\Utility\Hash.php, line 543
+Cake\Utility\Hash::combine() - CORE\src\Utility\Hash.php, line 453
+App\Controller\PagesController::__section() - APP/Controller\PagesController.php, line 86
+App\Controller\PagesController::index() - APP/Controller\PagesController.php, line 12
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-10-02 22:36:46 Warning: Warning (2): vsprintf(): Too few arguments in [C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Utility\Hash.php, line 543]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+vsprintf - [internal], line ??
+Cake\Utility\Hash::format() - CORE\src\Utility\Hash.php, line 543
+Cake\Utility\Hash::combine() - CORE\src\Utility\Hash.php, line 453
+App\Controller\PagesController::__section() - APP/Controller\PagesController.php, line 86
+App\Controller\PagesController::index() - APP/Controller\PagesController.php, line 12
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-10-02 22:36:46 Warning: Warning (2): vsprintf() [<a href='http://php.net/function.vsprintf'>function.vsprintf</a>]: Too few arguments in [C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Utility\Hash.php, line 543]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+vsprintf - [internal], line ??
+Cake\Utility\Hash::format() - CORE\src\Utility\Hash.php, line 543
+Cake\Utility\Hash::combine() - CORE\src\Utility\Hash.php, line 453
+App\Controller\PagesController::__section() - APP/Controller\PagesController.php, line 86
+App\Controller\PagesController::index() - APP/Controller\PagesController.php, line 12
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-10-02 22:47:39 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key`` FROM content Content INNER JOIN themes_setting t ON t.value_1 = content.ca' at line 1
+Request URL: /cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#4 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#5 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#6 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(288): Cake\ORM\Query->all()
+#7 C:\xampp\htdocs\cms\src\Controller\PagesController.php(97): Cake\ORM\Query->toArray()
+#8 C:\xampp\htdocs\cms\src\Controller\PagesController.php(12): App\Controller\PagesController->__section()
+#9 [internal function]: App\Controller\PagesController->index()
+#10 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#12 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#13 C:\xampp\htdocs\cms\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+

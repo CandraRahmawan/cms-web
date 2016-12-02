@@ -1,0 +1,113 @@
+2016-09-25 10:37:59 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 16384 bytes) in [C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\View\View.php, line 990]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-09-25 10:38:00 Error: [Cake\Error\FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 16384 bytes)
+Request URL: /cms/
+Referer URL: http://localhost/cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Allowed memory ...', 'C:\\xampp\\htdocs...', 990)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-09-25 19:47:06 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 16384 bytes) in [C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\View\View.php, line 990]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-09-25 19:47:07 Error: [Cake\Error\FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 16384 bytes)
+Request URL: /cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Allowed memory ...', 'C:\\xampp\\htdocs...', 990)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-09-25 19:47:16 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 16384 bytes) in [C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\View\View.php, line 990]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-09-25 19:47:16 Error: [Cake\Error\FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 16384 bytes)
+Request URL: /cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Allowed memory ...', 'C:\\xampp\\htdocs...', 990)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-09-25 19:47:51 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 16384 bytes) in [C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\View\View.php, line 990]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-09-25 19:47:51 Error: [Cake\Error\FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 16384 bytes)
+Request URL: /cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Allowed memory ...', 'C:\\xampp\\htdocs...', 990)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-09-25 19:49:51 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 16384 bytes) in [C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\View\View.php, line 990]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-09-25 19:49:51 Error: [Cake\Error\FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 16384 bytes)
+Request URL: /cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Allowed memory ...', 'C:\\xampp\\htdocs...', 990)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-09-25 19:51:23 Error: Fatal Error (1): Allowed memory size of 268435456 bytes exhausted (tried to allocate 16384 bytes) in [C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\View\View.php, line 990]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-09-25 19:51:23 Error: [Cake\Error\FatalErrorException] Allowed memory size of 268435456 bytes exhausted (tried to allocate 16384 bytes)
+Request URL: /cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Allowed memory ...', 'C:\\xampp\\htdocs...', 990)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-09-25 19:52:07 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\xampp\htdocs\cms\plugins\TopBiz\src\Template\Element\footer.ctp, line 16]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-09-25 19:52:07 Error: [Cake\Error\FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /cms/
+Stack Trace:
+#0 C:\xampp\htdocs\cms\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 16)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

@@ -1,0 +1,256 @@
+2016-11-12 11:27:48 Notice: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\cms\src\Controller\AppController.php, line 94]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\AppController::__categoryPage() - APP/Controller\AppController.php, line 94
+App\Controller\AppController::__menuHeader() - APP/Controller\AppController.php, line 60
+App\Controller\AppController::beforeRender() - APP/Controller\AppController.php, line 43
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 596
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-11-12 11:27:48 Notice: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\cms\src\Controller\AppController.php, line 96]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\AppController::__categoryPage() - APP/Controller\AppController.php, line 96
+App\Controller\AppController::__menuHeader() - APP/Controller\AppController.php, line 60
+App\Controller\AppController::beforeRender() - APP/Controller\AppController.php, line 43
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 596
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-11-12 11:27:48 Notice: Notice (8): Undefined offset: 1 in [C:\xampp\htdocs\cms\src\Controller\AppController.php, line 94]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\AppController::__categoryPage() - APP/Controller\AppController.php, line 94
+App\Controller\AppController::__menuHeader() - APP/Controller\AppController.php, line 60
+App\Controller\AppController::beforeRender() - APP/Controller\AppController.php, line 43
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 596
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-11-12 11:27:48 Notice: Notice (8): Undefined offset: 1 in [C:\xampp\htdocs\cms\src\Controller\AppController.php, line 96]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\AppController::__categoryPage() - APP/Controller\AppController.php, line 96
+App\Controller\AppController::__menuHeader() - APP/Controller\AppController.php, line 60
+App\Controller\AppController::beforeRender() - APP/Controller\AppController.php, line 43
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 596
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-11-12 12:02:23 Notice: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\cms\src\Controller\AppController.php, line 94]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\AppController::__categoryPage() - APP/Controller\AppController.php, line 94
+App\Controller\AppController::__menuHeader() - APP/Controller\AppController.php, line 60
+App\Controller\AppController::beforeRender() - APP/Controller\AppController.php, line 43
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 596
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-11-12 12:02:23 Notice: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\cms\src\Controller\AppController.php, line 96]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\AppController::__categoryPage() - APP/Controller\AppController.php, line 96
+App\Controller\AppController::__menuHeader() - APP/Controller\AppController.php, line 60
+App\Controller\AppController::beforeRender() - APP/Controller\AppController.php, line 43
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 596
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-11-12 12:02:23 Notice: Notice (8): Undefined offset: 1 in [C:\xampp\htdocs\cms\src\Controller\AppController.php, line 94]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\AppController::__categoryPage() - APP/Controller\AppController.php, line 94
+App\Controller\AppController::__menuHeader() - APP/Controller\AppController.php, line 60
+App\Controller\AppController::beforeRender() - APP/Controller\AppController.php, line 43
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 596
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-11-12 12:02:23 Notice: Notice (8): Undefined offset: 1 in [C:\xampp\htdocs\cms\src\Controller\AppController.php, line 96]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\AppController::__categoryPage() - APP/Controller\AppController.php, line 96
+App\Controller\AppController::__menuHeader() - APP/Controller\AppController.php, line 60
+App\Controller\AppController::beforeRender() - APP/Controller\AppController.php, line 43
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 596
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-11-12 12:05:41 Notice: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\cms\src\Controller\AppController.php, line 94]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\AppController::__categoryPage() - APP/Controller\AppController.php, line 94
+App\Controller\AppController::__menuHeader() - APP/Controller\AppController.php, line 60
+App\Controller\AppController::beforeRender() - APP/Controller\AppController.php, line 43
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 596
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-11-12 12:05:41 Notice: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\cms\src\Controller\AppController.php, line 96]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\AppController::__categoryPage() - APP/Controller\AppController.php, line 96
+App\Controller\AppController::__menuHeader() - APP/Controller\AppController.php, line 60
+App\Controller\AppController::beforeRender() - APP/Controller\AppController.php, line 43
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 596
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-11-12 12:05:41 Notice: Notice (8): Undefined offset: 1 in [C:\xampp\htdocs\cms\src\Controller\AppController.php, line 94]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\AppController::__categoryPage() - APP/Controller\AppController.php, line 94
+App\Controller\AppController::__menuHeader() - APP/Controller\AppController.php, line 60
+App\Controller\AppController::beforeRender() - APP/Controller\AppController.php, line 43
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 596
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-11-12 12:05:41 Notice: Notice (8): Undefined offset: 1 in [C:\xampp\htdocs\cms\src\Controller\AppController.php, line 96]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\AppController::__categoryPage() - APP/Controller\AppController.php, line 96
+App\Controller\AppController::__menuHeader() - APP/Controller\AppController.php, line 60
+App\Controller\AppController::beforeRender() - APP/Controller\AppController.php, line 43
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 596
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-11-12 12:05:41 Notice: Notice (8): Undefined offset: 2 in [C:\xampp\htdocs\cms\src\Controller\AppController.php, line 94]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\AppController::__categoryPage() - APP/Controller\AppController.php, line 94
+App\Controller\AppController::__menuHeader() - APP/Controller\AppController.php, line 60
+App\Controller\AppController::beforeRender() - APP/Controller\AppController.php, line 43
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 596
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-11-12 12:05:41 Notice: Notice (8): Undefined offset: 2 in [C:\xampp\htdocs\cms\src\Controller\AppController.php, line 96]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\AppController::__categoryPage() - APP/Controller\AppController.php, line 96
+App\Controller\AppController::__menuHeader() - APP/Controller\AppController.php, line 60
+App\Controller\AppController::beforeRender() - APP/Controller\AppController.php, line 43
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 596
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-11-12 12:05:41 Notice: Notice (8): Undefined offset: 3 in [C:\xampp\htdocs\cms\src\Controller\AppController.php, line 94]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\AppController::__categoryPage() - APP/Controller\AppController.php, line 94
+App\Controller\AppController::__menuHeader() - APP/Controller\AppController.php, line 60
+App\Controller\AppController::beforeRender() - APP/Controller\AppController.php, line 43
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 596
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-11-12 12:05:41 Notice: Notice (8): Undefined offset: 3 in [C:\xampp\htdocs\cms\src\Controller\AppController.php, line 96]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\AppController::__categoryPage() - APP/Controller\AppController.php, line 96
+App\Controller\AppController::__menuHeader() - APP/Controller\AppController.php, line 60
+App\Controller\AppController::beforeRender() - APP/Controller\AppController.php, line 43
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 596
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
