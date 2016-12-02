@@ -1,2 +1,5 @@
 /sql query/
 /vendor/
+/logs/
+/test/
+/tmp/
