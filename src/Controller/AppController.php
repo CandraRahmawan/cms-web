@@ -40,27 +40,28 @@ class AppController extends Controller {
                 ->where(['is_active' => 'Y', '`key`' => 'base_url', 'id_theme' => $this->id_themes])
                 ->first();
         $this->set('base_url', $base_url['value_1']);
-        $menu_header = $this->__menuHeader();
+        //$menu_header = $this->__menuHeader();
         $social_media = $this->__socialMedia();
+        $title_meta = $this->_titleMeta();
         $footer = $this->__footer();
-        $this->set(compact('menu_header', 'social_media', 'footer'));
+        $this->set(compact('menu_header', 'social_media', 'footer', 'title_meta'));
     }
 
-    private function __menuHeader() {
-        $query = $this->Menu->find();
-        $query->select(['menu.value']);
-        $query->join([
-            'table' => 'themes_setting',
-            'alias' => 't',
-            'type' => 'INNER',
-            'conditions' => 't.value_1 = menu.menu_id']);
-        $query->where(['t.is_active' => 'Y', 't.id_theme' => $this->id_themes, 't.`key`' => 'menu_header', 'menu.is_active' => 'Y']);
-        $value_menu = $query->first()['menu']['value'];
-        $value_menu = unserialize($value_menu);
-        $result = $this->__categoryPage($value_menu);
-
-        return $result;
-    }
+//    private function __menuHeader() {
+//        $query = $this->Menu->find();
+//        $query->select(['menu.value']);
+//        $query->join([
+//            'table' => 'themes_setting',
+//            'alias' => 't',
+//            'type' => 'INNER',
+//            'conditions' => 't.value_1 = menu.menu_id']);
+//        $query->where(['t.is_active' => 'Y', 't.id_theme' => $this->id_themes, 't.`key`' => 'menu_header', 'menu.is_active' => 'Y']);
+//        $value_menu = $query->first()['menu']['value'];
+//        $value_menu = unserialize($value_menu);
+//        $result = $this->__categoryPage($value_menu);
+//
+//        return $result;
+//    }
 
     private function __socialMedia() {
         $option['select'] = ['key', 'field_name', 'group', 'value_1'];
@@ -103,6 +104,27 @@ class AppController extends Controller {
                     ' . $caseOrder . '
                 END';
         $result = $this->Utility->query($sql);
+
+        return $result;
+    }
+
+    private function _titleMeta() {
+        $result = [
+            'title_web' => 'Website',
+            'title_logo' => 'Website',
+            'description_meta' => ''
+        ];
+        $query = $this->ThemesSetting->find()
+                ->where([
+                    'id_theme' => $this->id_themes,
+                    '`key` IN ("title_web", "description_meta", "title_logo")',
+                    'is_active' => 'Y'
+                ])
+                ->toArray();
+
+        foreach ($query as $item) {
+            $result[$item['key']] = $item['value_1'];
+        }
 
         return $result;
     }

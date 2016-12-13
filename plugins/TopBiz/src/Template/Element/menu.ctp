@@ -1,9 +1,8 @@
 <header class="headerArea">
     <div class="logo pull-left">
         <div class="logoImg">
-            <a href="index.html"><?php echo $this->Html->image('/TopBiz/images/logo.png'); ?></a>
         </div>
-        <h2><a href="index.html">top<span>biz</span></a></h2>
+        <h2><a href="/"><?= $title_meta['title_logo']; ?></a></h2>
     </div>
     <nav class="mainMenu pull-left">
         <div class="menuButton hidden-lg hidden-md">
@@ -13,11 +12,10 @@
         </div>
         <ul>                                                                                 
             <li><a href="/">Home</a></li>
-            <?php
-            foreach ($menu_header as $menu) {
-                echo '<li><a href="' . $this->Url->build('/pages/' . $menu['category_id'], true) . '">' . $menu['name'] . '</a></li>';
-            }
-            ?>
+            <li><a href="/">Profile</a></li>
+            <li><a href="/">Layanan Kami</a></li>
+            <li><a href="/">Klien Kami</a></li> 
+            <li><a href="/">Hubungi Kami</a></li> 
         </ul>
     </nav>
     <div class="topSocial pull-right">

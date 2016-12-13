@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TopBiz - Responsive Corporate HTML5 Template</title>
+        <title><?= $title_meta['title_web']; ?></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="<?= $title_meta['description_meta']; ?>">
         <?php
         echo $this->Html->css([
             'TopBiz.bootstrap',

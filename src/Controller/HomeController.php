@@ -17,19 +17,23 @@ class HomeController extends AppController {
         $option['where'] = ['id_theme' => $this->id_themes, 'is_active' => 'Y', '`group`' => 'section'];
         $result = $this->Utility->finds($option);
 
-        $query = $this->Content->find('all');
-        $query->select(['t.key', 'content.content_id', 'content.description', 'content.status']);
-        $query->join([
+        $query = $this->Content->find('all')
+                ->select(['t.key', 'c.content_id', 'c.description', 'c.status'])
+                ->from('content c')
+                ->join([
             'table' => 'themes_setting',
             'alias' => 't',
             'type' => 'INNER',
-            'conditions' => 't.value_1 = content.category_id']);
+            'conditions' => 't.value_1 = c.category_id']);
         for ($i = 0; $i < count($result); $i++) {
             $query->orWhere(['category_id' => $result[$i]['value_1']]);
         }
-        $result = $query->toArray();
+        $query->where(['t.is_active' => 'Y', 'c.status' => 'Y']);
+        $query->where(['t.group' => 'section']);
 
-        return $result;
+        $result_content = $query->toArray();
+
+        return $result_content;
     }
 
     private function __topSlider() {
@@ -38,19 +42,22 @@ class HomeController extends AppController {
         $option['where'] = ['id_theme' => $this->id_themes, 'is_active' => 'Y', '`key`' => 'top_slider'];
         $result = $this->Utility->finds($option);
 
-        $query = $this->Gallery->find('all');
-        $query->select(['t.key', 'gallery.title', 'gallery.description', 'gallery.link', 'gallery.path', 'gallery.is_active', 'gallery.category_id']);
-        $query->join([
+        $query = $this->Gallery->find('all')
+                ->select(['t.key', 'g.title', 'g.description', 'g.link', 'g.path', 'g.is_active', 'g.category_id'])
+                ->from('gallery g')
+                ->join([
             'table' => 'themes_setting',
             'alias' => 't',
             'type' => 'INNER',
-            'conditions' => 't.value_1 = gallery.category_id']);
+            'conditions' => 't.value_1 = g.category_id']);
         for ($i = 0; $i < count($result); $i++) {
             $query->orWhere(['category_id' => $result[$i]['value_1']]);
         }
-        $result = $query->toArray();
+        $query->where(['t.is_active' => 'Y', 'g.is_active' => 'Y']);
+        $query->where(['t.key' => 'top_slider']);
+        $result_content = $query->toArray();
 
-        return $result;
+        return $result_content;
     }
 
 }
