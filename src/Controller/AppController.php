@@ -10,6 +10,7 @@ class AppController extends Controller {
 
     public $id_themes;
     public $params;
+    public $pass;
 
     public function initialize() {
         parent::initialize();
@@ -21,6 +22,7 @@ class AppController extends Controller {
         $this->loadModel('Gallery');
         $this->loadComponent('Utility');
         $this->params = $this->request->params;
+        $this->pass = $this->request->pass;
     }
 
     public function beforeFilter(Event $event) {
