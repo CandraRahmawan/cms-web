@@ -69,6 +69,7 @@ class AppController extends Controller {
     private function __staticMenu() {
         $query = $this->Content->find();
         $query->select(['cat.name', 'content.link']);
+        $query->from('content content');
         $query->join([
             'table' => 'category',
             'alias' => 'cat',
