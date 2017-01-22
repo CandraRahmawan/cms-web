@@ -43,10 +43,11 @@ class AppController extends Controller {
                 ->first();
         $this->set('base_url', $base_url['value_1']);
         //$menu_header = $this->__menuHeader();
+        $menu_static = $this->__staticMenu();
         $social_media = $this->__socialMedia();
         $title_meta = $this->_titleMeta();
         $footer = $this->__footer();
-        $this->set(compact('menu_header', 'social_media', 'footer', 'title_meta'));
+        $this->set(compact('menu_header', 'social_media', 'footer', 'title_meta', 'menu_static'));
     }
 
 //    private function __menuHeader() {
@@ -64,6 +65,19 @@ class AppController extends Controller {
 //
 //        return $result;
 //    }
+
+    private function __staticMenu() {
+        $query = $this->Content->find();
+        $query->select(['cat.name', 'content.link']);
+        $query->join([
+            'table' => 'category',
+            'alias' => 'cat',
+            'type' => 'INNER',
+            'conditions' => 'cat.category_id = content.category_id']);
+        $query->where(['cat.status' => 'Y', 'content.status' => 'Y', 'cat.type' => 'page']);
+
+        return $query->toArray();
+    }
 
     private function __socialMedia() {
         $option['select'] = ['key', 'field_name', 'group', 'value_1'];

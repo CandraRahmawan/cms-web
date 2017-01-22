@@ -12,10 +12,18 @@
         </div>
         <ul>                                                                                 
             <li><a href="/">Home</a></li>
-            <li><a href="/">Profile</a></li>
-            <li><a href="/">Layanan Kami</a></li>
-            <li><a href="/">Klien Kami</a></li> 
-            <li><a href="/">Hubungi Kami</a></li> 
+            <li><a href="<?= $menu_static[0]['content']['link'] ?>"><?= $menu_static[0]['cat']['name'] ?></a></li>
+            <li class="hasChild">
+                <a href="#">Layanan Kami</a>
+                <ul class="dropMenu">
+                    <li><a href="<?= $menu_static[3]['content']['link'] ?>"><?= $menu_static[3]['cat']['name'] ?></a></li>
+                    <li><a href="<?= $menu_static[4]['content']['link'] ?>"><?= $menu_static[4]['cat']['name'] ?></a></li>
+                    <li><a href="<?= $menu_static[0]['content']['link'] ?>"><?= $menu_static[0]['cat']['name'] ?></a></li>
+                    <li><a href="<?= $menu_static[0]['content']['link'] ?>"><?= $menu_static[0]['cat']['name'] ?></a></li>
+                </ul>
+            </li>
+            <li><a href="<?= $menu_static[0]['content']['link'] ?>"><?= $menu_static[0]['cat']['name'] ?></a></li> 
+            <li><a href="<?= $menu_static[0]['content']['link'] ?>"><?= $menu_static[0]['cat']['name'] ?></a></li> 
         </ul>
     </nav>
     <div class="topSocial pull-right">

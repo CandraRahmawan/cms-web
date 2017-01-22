@@ -29,4 +29,11 @@ class UtilityHelper extends Helper {
         return $base;
     }
 
+    public function getCategoryById($id) {
+        $conn = ConnectionManager::get('default');
+        $cols = $conn->execute("SELECT category_id, name FROM category WHERE status='Y' AND category_id='{$id}'");
+        $results = $cols->fetchAll('assoc');
+        return $results;
+    }
+
 }

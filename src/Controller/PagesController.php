@@ -17,14 +17,20 @@ class PagesController extends AppController {
         $explode = explode('-', $param);
 
         if (is_array($explode)) {
-            $id = $explode[count($explode)-1];
+            $id = $explode[count($explode) - 1];
         } else {
             $this->redirect('/');
         }
 
         $content = $this->Content
                 ->find('all')
-                ->where(['content_id' => $id, 'status' => 'Y'])
+                ->select(['content.description', 'cat.name'])
+                ->join([
+                    'table' => 'category',
+                    'alias' => 'cat',
+                    'type' => 'INNER',
+                    'conditions' => 'cat.category_id = content.category_id'])
+                ->where(['content.content_id' => $id, 'content.status' => 'Y', 'cat.status' => 'Y'])
                 ->toArray();
 
         if (count($content) != 1) {
