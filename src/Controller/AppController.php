@@ -42,42 +42,57 @@ class AppController extends Controller {
                 ->where(['is_active' => 'Y', '`key`' => 'base_url', 'id_theme' => $this->id_themes])
                 ->first();
         $this->set('base_url', $base_url['value_1']);
-        //$menu_header = $this->__menuHeader();
-        $menu_static = $this->__staticMenu();
+        $menu_header = $this->__menuHeader();
         $social_media = $this->__socialMedia();
         $title_meta = $this->_titleMeta();
         $footer = $this->__footer();
         $this->set(compact('menu_header', 'social_media', 'footer', 'title_meta', 'menu_static'));
     }
 
-//    private function __menuHeader() {
-//        $query = $this->Menu->find();
-//        $query->select(['menu.value']);
-//        $query->join([
-//            'table' => 'themes_setting',
-//            'alias' => 't',
-//            'type' => 'INNER',
-//            'conditions' => 't.value_1 = menu.menu_id']);
-//        $query->where(['t.is_active' => 'Y', 't.id_theme' => $this->id_themes, 't.`key`' => 'menu_header', 'menu.is_active' => 'Y']);
-//        $value_menu = $query->first()['menu']['value'];
-//        $value_menu = unserialize($value_menu);
-//        $result = $this->__categoryPage($value_menu);
-//
-//        return $result;
-//    }
-
-    private function __staticMenu() {
-        $query = $this->Content->find();
-        $query->select(['cat.name', 'content.link']);
-        $query->from('content content');
+    private function __menuHeader() {
+        /* SELECT 
+          c.name,
+          c.category_id,
+          md.parent_id,
+          md.menu_detil_id
+          FROM themes_setting ts
+          RIGHT JOIN menu m ON m.menu_id=ts.value_1 AND ts.`key`="menu_header"
+          INNER JOIN menu_detail md ON m.menu_id=md.menu_id
+          INNER JOIN category c ON c.category_id=md.category_id
+          LEFT JOIN content ct ON c.category_id=ct.category_id
+          WHERE (ts.is_active="Y" AND ts.is_theme=1 AND c.`type`="Page" AND md.ended_date > NOW() AND m.is_active="Y"
+          AND c.`status`="Y" AND md.`status`="Y" AND ct.`status`="Y")
+          ORDER BY md.order_id ASC */
+        $query = $this->Themes->find();
+        $query->select(['c.name', 'c.category_id', 'md.parent_id', 'md.menu_detil_id', 'ct.link', 'md.drop_down']);
+        $query->from('themes_setting ts');
+        $query->join([
+            'table' => 'menu',
+            'alias' => 'm',
+            'type' => 'RIGHT',
+            'conditions' => 'm.menu_id=ts.value_1 AND ts.`key`="menu_header"']);
+        $query->join([
+            'table' => 'menu_detail',
+            'alias' => 'md',
+            'type' => 'INNER',
+            'conditions' => 'm.menu_id=md.menu_id']);
         $query->join([
             'table' => 'category',
-            'alias' => 'cat',
+            'alias' => 'c',
             'type' => 'INNER',
-            'conditions' => 'cat.category_id = content.category_id']);
-        $query->where(['cat.status' => 'Y', 'content.status' => 'Y', 'cat.type' => 'page']);
+            'conditions' => 'c.category_id=md.category_id']);
+        $query->join([
+            'table' => 'content',
+            'alias' => 'ct',
+            'type' => 'LEFT',
+            'conditions' => 'c.category_id=ct.category_id']);
+        $query->where(['ts.is_active' => 'Y', 'ts.id_theme' => $this->id_themes, 'c.`type`' => 'Page', 'md.ended_date > NOW()',
+            'm.is_active' => 'Y', 'c.`status`' => 'Y', 'md.`status`' => 'Y', 'ct.`status`' => 'Y']);
+        $query->order(['md.order_id' => 'ASC']);
+        $result = $query->all();
 
-        return $query->toArray();
+        //debug($result);die;
+        return $result;
     }
 
     private function __socialMedia() {

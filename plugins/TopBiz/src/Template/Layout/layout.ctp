@@ -20,7 +20,7 @@
         ]);
         $this->fetch('css');
         ?>
-        <link rel="icon"  type="image/png" href="images/favicon.png">
+        <link rel="icon"  type="image/png" href="/favicon.ico">
         <!--[if lt IE 9]>
         <?php
         echo $this->Html->script('TopBiz.html5shiv');

@@ -12,18 +12,21 @@
         </div>
         <ul>                                                                                 
             <li><a href="/">Home</a></li>
-            <li><a href="<?= $menu_static[0]['content']['link'] ?>"><?= $menu_static[0]['cat']['name'] ?></a></li>
-            <li class="hasChild">
-                <a href="#">Layanan Kami</a>
-                <ul class="dropMenu">
-                    <li><a href="<?= $menu_static[3]['content']['link'] ?>"><?= $menu_static[3]['cat']['name'] ?></a></li>
-                    <li><a href="<?= $menu_static[4]['content']['link'] ?>"><?= $menu_static[4]['cat']['name'] ?></a></li>
-                    <li><a href="<?= $menu_static[0]['content']['link'] ?>"><?= $menu_static[0]['cat']['name'] ?></a></li>
-                    <li><a href="<?= $menu_static[0]['content']['link'] ?>"><?= $menu_static[0]['cat']['name'] ?></a></li>
-                </ul>
-            </li>
-            <li><a href="<?= $menu_static[0]['content']['link'] ?>"><?= $menu_static[0]['cat']['name'] ?></a></li> 
-            <li><a href="<?= $menu_static[0]['content']['link'] ?>"><?= $menu_static[0]['cat']['name'] ?></a></li> 
+
+            <?php
+            foreach ($menu_header as $item):
+                if ($item['md']['drop_down'] == 0 && $item['md']['parent_id'] == 0) {
+                    echo '<li><a href="' . $item["ct"]["link"] . '">' . $item['c']['name'] . '</a></li>';
+                } else if ($item['md']['drop_down'] != 0) {
+                    echo '<li class="hasChild">';
+                    echo '<a href="#">' . $item['c']['name'] . '</a>';
+                    echo '<ul class="dropMenu">';
+                    $this->Utility->categoryMenu($item['md']['menu_detil_id']);
+                    echo '</ul>';
+                    echo '</li>';
+                }
+            endforeach;
+            ?>
         </ul>
     </nav>
     <div class="topSocial pull-right">

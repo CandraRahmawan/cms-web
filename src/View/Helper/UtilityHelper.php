@@ -36,4 +36,18 @@ class UtilityHelper extends Helper {
         return $results;
     }
 
+    public function categoryMenu($params) {
+        $conn = ConnectionManager::get('default');
+        $cols = $conn->execute("SELECT
+                c.category_id, c.name, ct.link 
+                FROM category c 
+                INNER JOIN content ct ON ct.category_id=c.category_id 
+                INNER JOIN menu_detail md ON ct.category_id=md.category_id
+                WHERE md.parent_id='2'");
+        $results = $cols->fetchAll('assoc');
+        foreach ($results as $menu) {
+            echo '<li><a href="' . $menu["link"] . '">' . $menu['name'] . '</a></li>';
+        }
+    }
+
 }

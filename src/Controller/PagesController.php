@@ -24,19 +24,19 @@ class PagesController extends AppController {
 
         $content = $this->Content
                 ->find('all')
-                ->select(['content.description', 'cat.name'])
+                ->select(['Content.description', 'cat.name'])
                 ->join([
                     'table' => 'category',
                     'alias' => 'cat',
                     'type' => 'INNER',
-                    'conditions' => 'cat.category_id = content.category_id'])
-                ->where(['content.content_id' => $id, 'content.status' => 'Y', 'cat.status' => 'Y'])
+                    'conditions' => 'cat.category_id = Content.category_id'])
+                ->where(['Content.content_id' => $id, 'Content.status' => 'Y', 'cat.status' => 'Y'])
                 ->toArray();
 
         if (count($content) != 1) {
             $this->redirect('/');
         }
-
+        
         $this->set(compact('content'));
     }
 

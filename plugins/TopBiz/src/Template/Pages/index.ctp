@@ -11,7 +11,7 @@
                         <h2 class="wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms"><a href="#"><a><?= $content[0]['cat']['name']; ?></a></h2>
                         <hr>
                         <div class="blogPostContent wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
-                            <?= $content[0]['content']['description']; ?>
+                            <?= $content[0]['description']; ?>
                         </div>
                     </div>
                 </div>
