@@ -177,8 +177,7 @@ Request::addDetector('tablet', function ($request) {
  * Plugin::load('Migrations'); //Loads a single plugin named Migrations
  *
  */
-Plugin::load('Migrations');
-Plugin::load('TopBiz', ['autoload' => true]);
+Plugin::loadAll();
 
 // Only try to load DebugKit in development mode
 // Debug Kit should not be installed on a production system

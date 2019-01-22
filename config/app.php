@@ -215,7 +215,7 @@ return [
             //'port' => 'non_standard_port_number',
             'username' => 'root',
             'password' => '',
-            'database' => 'klikkita_cms',
+            'database' => 'cms',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'flags' => [],
