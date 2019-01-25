@@ -2,29 +2,11 @@
 $html = $this->Html;
 ?>
 <div class="content-wrapper">
-    <div class="carousel-image-wrapper">
-        <div id="image-carousel" class="uk-visible-toggle uk-light" tabindex="-1"
-             uk-slideshow="autoplay: true;max-height: 400;min-height: 400;">
-            <ul class="uk-slideshow-items">
-                <li>
-                    <img data-src="http://dottoroac.co.id/wp-content/uploads/2017/03/slide-service-ac.jpg" uk-cover
-                         uk-img="target: !ul > :last-child, !* +*">
-                </li>
-                <li>
-                    <img data-src="https://acsofts.com/wp-content/uploads/2018/08/service-AC-sidoarjo-2-1024x576.jpg"
-                         uk-cover uk-img="target: !* -*, !* +*">
-                </li>
-            </ul>
-            <a class="uk-position-center-left uk-hidden-hover arrow-img-carousel" href="#" uk-slidenav-previous
-               uk-slideshow-item="previous"></a>
-            <a class="uk-position-center-right uk-hidden-hover arrow-img-carousel" href="#" uk-slidenav-next
-               uk-slideshow-item="next"></a>
-        </div>
-    </div>
+    <?= $this->Element('image_carousel'); ?>
     <div class="uk-background-muted line-top">
         <div class="homepage-content-wrapper">
             <?= $this->Html->tag('h2', 'Selamat datang di website Maju Teknik', ['class' => 'uk-text-center']); ?>
-            <hr class="uk-divider-icon">
+            <hr class="desktop uk-divider-icon">
             <?= $this->Html->tag('p', 'Maju Teknik adalah sebuah perusahaan jasa service dan perbaikan AC, telah berpengalaman menangani berbagai layanan service AC mulai dari pengadaan, pemasangan, dan tentunya berbagai layanan perbaikan dan perawatan rutin yang dibutuhkan AC Anda.'); ?>
             <p>Didukung oleh tim teknisi handal, ramah dan terpercaya di seluruh wilayah Jakarta dan sekitarnya, kami berpengalaman memberikan berbagai pelayanan service AC mulai dari perumahan, apartment, sampai perkantoran, pabrik dan industri.</p>
             <p>Selain itu juga bisa melakukan service dan perbaikan Kulkas, Mesin Cuci dan Alat Elektronik lainnya.</p>

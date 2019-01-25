@@ -1,0 +1,245 @@
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)  {
+    header .tablet {
+        display: block;
+    }
+
+    header .desktop {
+        display: none;
+    }
+
+    hr.desktop {
+        display: none;
+    }
+
+    #image-carousel-tablet {
+        display: block;
+    }
+
+    #image-carousel-desktop {
+        display: none;
+    }
+
+    .ellipsis {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        text-align: left;
+    }
+
+
+    /* header */
+    header {
+        background-color: #0652DD;
+        border-bottom: 2px solid #dfe4ea;
+        padding: 15px 15px 5px 15px;
+        letter-spacing: 0.5px;
+        min-height: 50px;
+    }
+
+    .header-content {
+        max-width: 1000px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo-wrapper {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .logo-wrapper > img {
+        height: 40px;
+        margin-right: 15px;
+        border-radius: 100%;
+        border: 1px solid #fff;
+    }
+
+    .logo-wrapper > h4 {
+        margin-bottom: 0;
+        margin-top: 0;
+        line-height: 1.9;
+    }
+
+    .contact-menu span.uk-icon {
+       margin-right: 10px;
+    }
+
+    a.uk-navbar-toggle {
+        min-height: auto;
+        color: #fff;
+    }
+
+    nav.uk-margin {
+        margin-bottom: 10px;
+    }
+
+
+    /* body */
+    .carousel-image-wrapper a.left {
+        position: absolute;
+        margin: 0 15px;
+        top: 134px;
+        left: 0;
+    }
+
+    .carousel-image-wrapper a.right {
+        position: absolute;
+        margin: 0 15px;
+        top: 134px;
+        right: 0;
+    }
+
+    .homepage-content-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px 40px;
+    }
+
+    .line-divider {
+        display: flex;
+    }
+
+    .line-divider .blue-divider {
+        margin-bottom: 30px;
+        border-top: 1px solid #1e87f0;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .homepage-content-wrapper > .switcher-area > .uk-subnav {
+        justify-content: center;
+    }
+
+    .related-blog-wrapper h4 {
+        height: 85px;
+        margin-bottom: 10px;
+    }
+
+    .card-wrapper > .uk-card {
+        border: 1px solid #c0392b;
+        padding: 20px;
+    }
+
+    .card-wrapper span {
+        text-align: center;
+        width: 100%;
+    }
+
+    .card-wrapper h4 {
+        margin-top: 0;
+    }
+
+    .service-wrapper-left {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+
+    .service-wrapper-right {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 0;
+        flex-direction: row-reverse;
+        color: #fff;
+    }
+
+    .service-wrapper-right h3 {
+        color: #fff;
+    }
+
+    .service-wrapper-left > .service-content {
+        margin-right: 30px;
+    }
+
+    .service-wrapper-right > .service-content {
+        margin-left: 30px;
+    }
+
+    .service-content .uk-divider-small::after {
+        border-top: 1px solid #1e87f0;
+    }
+
+    .service-image > img {
+        height: 300px;
+        max-width: none;
+        width: 400px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+        border: 1px solid #fff;
+        object-fit: cover;
+    }
+
+    /* footer */
+    footer {
+        border-top: 1px solid #dfe4ea;
+        width: 100%;
+        background-color: #34495e;
+    }
+
+    footer a {
+        color: #dcdde1;
+    }
+
+
+    footer a:hover {
+        text-decoration: none;
+        color: #00a8ff;
+    }
+
+    footer > .footer-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+        max-width: 1000px;
+        margin: 0 auto;
+        color: #fff;
+    }
+
+    .footer-content ul {
+        list-style: none;
+        margin-bottom: 0;
+    }
+
+    .footer-content h4 {
+        color: #fff;
+    }
+
+    .footer-logo {
+        width: 200px;
+        text-align: center;
+    }
+
+    .footer-logo > h4 {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        height: 70px;
+        border: 1px solid #fff;
+    }
+
+    .footer-address {
+        max-width: 200px;
+    }
+
+    .footer-blog {
+        max-width: 200px;
+    }
+
+    footer > .copyright {
+        background-color: #2c3e50;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+
+    footer .desktop {
+        display: none;
+    }
+}
