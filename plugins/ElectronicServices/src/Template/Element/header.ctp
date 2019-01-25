@@ -28,16 +28,19 @@ $html = $this->Html;
                     <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
                 </a>
             </div>
-        </nav>
-        <div id="offcanvas-slide" uk-offcanvas>
-            <div class="uk-offcanvas-bar">
+            <div class="uk-navbar-right">
                 <div class="logo-wrapper">
                     <?php
                     echo $html->image('/images/logo.jpeg');
                     echo $html->tag('h4', 'Maju Teknik');
                     ?>
                 </div>
+            </div>
+        </nav>
+        <div id="offcanvas-slide" uk-offcanvas>
+            <div class="uk-offcanvas-bar">
                 <ul class="uk-nav uk-nav-default">
+                    <li class="uk-nav-header">Menu</li>
                     <li class="uk-nav-divider"></li>
                     <li class="uk-active"><a href="#">Beranda</a></li>
                     <li><a href="">Produk</a></li>

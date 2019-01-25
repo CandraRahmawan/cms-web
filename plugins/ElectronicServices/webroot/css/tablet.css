@@ -46,7 +46,7 @@
 
     .logo-wrapper {
         display: flex;
-        margin-bottom: 10px;
+        width: 170px;
     }
 
     .logo-wrapper > img {
@@ -60,6 +60,7 @@
         margin-bottom: 0;
         margin-top: 0;
         line-height: 1.9;
+        color: #fff;
     }
 
     .contact-menu span.uk-icon {
