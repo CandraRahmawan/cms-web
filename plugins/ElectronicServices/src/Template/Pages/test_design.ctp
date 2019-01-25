@@ -1,6 +1,6 @@
 <div class="content-wrapper">
     <div class="uk-background-muted">
-        <div class="service-wrapper-left">
+        <div class="service-wrapper left">
             <div class="service-content">
                 <h3>Service Cuci AC</h3>
                 <hr class="uk-divider-small">
@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="uk-background-secondary">
-        <div class="service-wrapper-right">
+        <div class="service-wrapper right">
             <div class="service-content">
                 <h3>Tambah Freon</h3>
                 <hr class="uk-divider-small">
@@ -30,7 +30,7 @@
         </div>
     </div>
     <div class="uk-background-muted">
-        <div class="service-wrapper-left">
+        <div class="service-wrapper left">
             <div class="service-content">
                 <h3>Isi Freon</h3>
                 <hr class="uk-divider-small">
@@ -44,7 +44,7 @@
         </div>
     </div>
     <div class="uk-background-secondary">
-        <div class="service-wrapper-right">
+        <div class="service-wrapper right">
             <div class="service-content">
                 <h3>Pemasangan AC</h3>
                 <hr class="uk-divider-small">
@@ -57,7 +57,7 @@
         </div>
     </div>
     <div class="uk-background-muted">
-        <div class="service-wrapper-left">
+        <div class="service-wrapper left">
             <div class="service-content">
                 <h3>Pengecekan AC</h3>
                 <hr class="uk-divider-small">

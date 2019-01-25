@@ -53,3 +53,20 @@ p {
     color: #fff;
     opacity: 0.6;
 }
+
+.service-wrapper.right {
+    flex-direction: row-reverse;
+    color: #fff;
+}
+
+.service-wrapper.right h3 {
+    color: #fff;
+}
+
+.service-wrapper.left > .service-content {
+    margin-right: 30px;
+}
+
+.service-wrapper.right > .service-content {
+    margin-left: 30px;
+}

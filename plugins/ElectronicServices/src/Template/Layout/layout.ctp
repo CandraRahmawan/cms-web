@@ -26,7 +26,7 @@ echo $html->docType();
 <?php
 echo $html->script('https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js');
 echo $html->script('https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit-icons.min.js');
-echo $html->script('app');
+echo $html->script('app.js?' . time() . '', ['plugin' => false]);
 ?>
 </body>
 </html>
