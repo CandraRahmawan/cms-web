@@ -9,8 +9,9 @@ echo $html->docType();
     echo $html->meta('viewport', 'width=device-width, initial-scale=1.0');
     echo $html->css('https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css');
     echo $html->css('/ElectronicServices/css/styles.css?' . time() . '', ['plugin' => false]);
-    echo $html->css('/ElectronicServices/css/desktop.css?' . time() . '', ['plugin' => false]);
+    echo $html->css('/ElectronicServices/css/mobile.css?' . time() . '', ['plugin' => false]);
     echo $html->css('/ElectronicServices/css/tablet.css?' . time() . '', ['plugin' => false]);
+    echo $html->css('/ElectronicServices/css/desktop.css?' . time() . '', ['plugin' => false]);
     //echo $html->css('styles');
     ?>
 </head>

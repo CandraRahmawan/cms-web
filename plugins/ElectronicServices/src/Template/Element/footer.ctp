@@ -3,7 +3,7 @@ $html = $this->Html;
 ?>
 <footer>
     <div class="footer-content">
-        <div class="desktop footer-logo">
+        <div class="footer-logo">
             <?php
             echo $html->image('/images/logo.jpeg', ['class' => 'uk-border-circle']);
             echo $html->tag('h4', 'Maju Teknik');

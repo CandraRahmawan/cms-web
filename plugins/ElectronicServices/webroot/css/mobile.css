@@ -1,4 +1,4 @@
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 320px) {
     header .tablet {
         display: block;
     }
@@ -8,15 +8,15 @@
     }
 
     hr.desktop {
-        display: none !important;
-    }
-
-    #image-carousel-mobile {
         display: none;
     }
 
-    #image-carousel-tablet {
+    #image-carousel-mobile {
         display: block;
+    }
+
+    #image-carousel-tablet {
+        display: none;
     }
 
     #image-carousel-desktop {
@@ -24,11 +24,16 @@
     }
 
     table.desktop {
-        display: table;
+        display: none;
     }
 
     table.mobile {
-        display: none;
+        display: table;
+    }
+
+    table.mobile tbody {
+        display: inline-grid;
+        width: 100%;
     }
 
     .ellipsis {
@@ -40,6 +45,9 @@
         text-align: left;
     }
 
+    .scroll-top {
+        display: none !important;
+    }
 
     /* header */
     header {
@@ -58,12 +66,11 @@
 
     .logo-wrapper {
         display: flex;
-        width: 150px;
-        align-items: center;
+        width: 140px;
     }
 
     .logo-wrapper > img {
-        height: 40px;
+        height: 30px;
         margin-right: 15px;
         border-radius: 100%;
         border: 1px solid #fff;
@@ -74,6 +81,7 @@
         margin-top: 0;
         line-height: 1.9;
         color: #fff;
+        font-size: 1rem;
     }
 
     .contact-menu span.uk-icon {
@@ -89,26 +97,25 @@
         margin-bottom: 10px;
     }
 
-
     /* body */
     .carousel-image-wrapper a.left {
         position: absolute;
         margin: 0 15px;
-        top: 134px;
+        top: 124px;
         left: 0;
     }
 
     .carousel-image-wrapper a.right {
         position: absolute;
         margin: 0 15px;
-        top: 134px;
+        top: 124px;
         right: 0;
     }
 
     .homepage-content-wrapper {
         max-width: 1000px;
         margin: 0 auto;
-        padding: 20px 40px !important;
+        padding: 20px;
     }
 
     .card-wrapper h4 {
@@ -120,22 +127,22 @@
         justify-content: space-between;
         max-width: 1000px;
         margin: 0 auto;
-        padding: 20px 40px;
+        padding: 20px;
         align-items: center;
-        flex-direction: inherit;
+        flex-direction: column;
     }
 
     .service-wrapper.right {
-        flex-direction: row-reverse;
+        flex-direction: column;
         color: #fff;
     }
 
     .service-wrapper.left > .service-content {
-        margin-right: 20px;
+        margin-right: 0;
     }
 
     .service-wrapper.right > .service-content {
-        margin-left: 20px;
+        margin-left: 0;
     }
 
     .service-content .uk-divider-small::after {
@@ -151,30 +158,37 @@
         object-fit: cover;
     }
 
-    .related-blog-wrapper h4 {
-        height: 85px;
-    }
-
     /* footer */
     footer > .footer-content {
         display: flex;
         justify-content: space-between;
-        padding: 20px 40px !important;
+        padding: 20px;
         max-width: 1000px;
         margin: 0 auto;
         color: #fff;
-        flex-direction: inherit;
+        flex-direction: column;
+    }
+
+    .footer-content h4 {
+        margin-bottom: 5px;
+    }
+
+    .footer-address {
+        padding-bottom: 30px;
+    }
+
+    .footer-contact {
+        padding-bottom: 30px;
     }
 
     .footer-logo {
         display: none;
     }
+}
 
-    .footer-address {
-        max-width: 200px;
-    }
-
-    .footer-blog {
-        max-width: 200px;
+@media only screen and (min-device-width: 321px) and (max-device-width: 767px) {
+    table.mobile tbody {
+        display: table;
+        width: 100%;
     }
 }
