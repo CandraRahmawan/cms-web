@@ -5,14 +5,18 @@ namespace App\Controller;
 use Cake\Controller\Controller;
 use Cake\Event\Event;
 use Cake\Utility\Hash;
+use Cake\Utility\Text;
+use Cake\Collection\Collection;
 
-class AppController extends Controller {
+class AppController extends Controller
+{
 
     public $id_themes;
     public $params;
     public $pass;
 
-    public function initialize() {
+    public function initialize()
+    {
         parent::initialize();
         $this->loadModel('ThemesSetting');
         $this->loadModel('Themes');
@@ -25,31 +29,38 @@ class AppController extends Controller {
         $this->pass = $this->request->pass;
     }
 
-    public function beforeFilter(Event $event) {
+    public function beforeFilter(Event $event)
+    {
         parent::beforeFilter($event);
         $themes = $this->Themes->find()
-                ->select(['id_theme', 'name'])
-                ->where(['active' => 'Y'])
-                ->first();
+            ->select(['id_theme', 'name'])
+            ->where(['active' => 'Y'])
+            ->first();
         $this->id_themes = $themes['id_theme'];
         $this->viewBuilder()->theme($themes['name']);
     }
 
-    public function beforeRender(Event $event) {
+    public function beforeRender(Event $event)
+    {
         parent::beforeRender($event);
         $base_url = $this->ThemesSetting->find()
-                ->select(['value_1'])
-                ->where(['is_active' => 'Y', '`key`' => 'base_url', 'id_theme' => $this->id_themes])
-                ->first();
+            ->select(['value_1'])
+            ->where(['is_active' => 'Y', '`key`' => 'base_url', 'id_theme' => $this->id_themes])
+            ->first();
         $this->set('base_url', $base_url['value_1']);
+        $company = $this->__getContent('company');
         $menu_header = $this->__menuHeader();
-        $social_media = $this->__socialMedia();
+        $social_media = $this->__getContent('social_media');
         $title_meta = $this->_titleMeta();
-        $footer = $this->__footer();
-        $this->set(compact('menu_header', 'social_media', 'footer', 'title_meta', 'menu_static'));
+        $footer = $this->__getContent('footer');
+        $contact = $this->__getContent('contact');
+        $random_blog_post = $this->__randomBlogPost();
+        $random_related_blog_post = $this->__randomRelatedBlogPost();
+        $this->set(compact('menu_header', 'social_media', 'footer', 'title_meta', 'menu_static', 'company', 'contact', 'random_blog_post', 'random_related_blog_post'));
     }
 
-    private function __menuHeader() {
+    private function __menuHeader()
+    {
         /* SELECT 
           c.name,
           c.category_id,
@@ -95,26 +106,19 @@ class AppController extends Controller {
         return $result;
     }
 
-    private function __socialMedia() {
+    private function __getContent($group)
+    {
         $option['select'] = ['key', 'field_name', 'group', 'value_1'];
         $option['table'] = 'themes_setting';
-        $option['where'] = ['id_theme' => $this->id_themes, 'is_active' => 'Y', '`group`' => 'social_media'];
-        $result = $this->Utility->finds($option);
-
-        return $result;
-    }
-
-    private function __footer() {
-        $option['select'] = ['key', 'field_name', 'group', 'value_1'];
-        $option['table'] = 'themes_setting';
-        $option['where'] = ['id_theme' => $this->id_themes, 'is_active' => 'Y', '`group`' => 'footer'];
+        $option['where'] = ['id_theme' => $this->id_themes, 'is_active' => 'Y', '`group`' => $group];
         $result = $this->Utility->finds($option);
         $result = Hash::combine($result, '{n}.key', '{n}.value_1');
 
         return $result;
     }
 
-    private function __categoryPage($params) {
+    private function __categoryPage($params)
+    {
         $caseOrder = '';
         $id_category = '';
         for ($i = 0; $i < count($params['id']); $i++) {
@@ -140,25 +144,81 @@ class AppController extends Controller {
         return $result;
     }
 
-    private function _titleMeta() {
+    private function _titleMeta()
+    {
         $result = [
             'title_web' => 'Website',
             'title_logo' => 'Website',
             'description_meta' => ''
         ];
         $query = $this->ThemesSetting->find()
-                ->where([
-                    'id_theme' => $this->id_themes,
-                    '`key` IN ("title_web", "description_meta", "title_logo")',
-                    'is_active' => 'Y'
-                ])
-                ->toArray();
+            ->where([
+                'id_theme' => $this->id_themes,
+                '`key` IN ("title_web", "description_meta", "title_logo")',
+                'is_active' => 'Y'
+            ])
+            ->toArray();
 
         foreach ($query as $item) {
             $result[$item['key']] = $item['value_1'];
         }
 
         return $result;
+    }
+
+    private function __randomBlogPost($limit = 5)
+    {
+        return $content = $this->Content
+            ->find('all')
+            ->select(['Content.title', 'Content.content_id'])
+            ->join([
+                'table' => 'category',
+                'alias' => 'cat',
+                'type' => 'INNER',
+                'conditions' => 'cat.category_id = Content.category_id'])
+            ->where([
+                'Content.status' => 'Y',
+                'cat.status' => 'Y',
+                'cat.type' => 'Content'
+            ])
+            ->order('RAND()')
+            ->limit($limit)
+            ->toArray();
+    }
+
+    private function __randomRelatedBlogPost($limit = 3)
+    {
+        if (isset($this->request->pass[0])) {
+            $pass_url = Text::tokenize($this->request->pass[0], '-');
+            $collection = new Collection($pass_url);
+            $content_id = $collection->last();
+
+            $get_category = $this->Content
+                ->find()
+                ->select('Content.category_id')
+                ->where(['Content.content_id' => $content_id])
+                ->toArray();
+            $category_id = Hash::extract($get_category, "{n}.category_id")[0];
+
+            return $content = $this->Content
+                ->find('all')
+                ->select(['Content.title', 'Content.content_id', 'Content.description'])
+                ->join([
+                    'table' => 'category',
+                    'alias' => 'cat',
+                    'type' => 'INNER',
+                    'conditions' => 'cat.category_id = Content.category_id'])
+                ->where([
+                    'Content.status' => 'Y',
+                    'cat.status' => 'Y',
+                    'cat.type' => 'Content',
+                    'cat.category_id' => $category_id,
+                    'Content.content_id != ' => $content_id
+                ])
+                ->order('RAND()')
+                ->limit($limit)
+                ->toArray();
+        }
     }
 
 }

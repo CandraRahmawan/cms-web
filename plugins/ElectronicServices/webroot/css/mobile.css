@@ -88,6 +88,10 @@
         margin-right: 10px;
     }
 
+    li.contact-menu > a {
+        display: flex;
+    }
+
     a.uk-navbar-toggle {
         min-height: auto;
         color: #fff;
@@ -95,6 +99,10 @@
 
     nav.uk-margin {
         margin-bottom: 10px;
+    }
+
+    .uk-navbar-toggle:hover {
+        color: #fff;
     }
 
     /* body */
@@ -156,6 +164,19 @@
         box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
         border: 1px solid #fff;
         object-fit: cover;
+    }
+
+    .related-blog-wrapper span {
+        height: 75px;
+        margin-bottom: 30px;
+    }
+
+    .related-blog-wrapper a {
+        width: 100%;
+    }
+
+    .uk-background-muted {
+        display: block;
     }
 
     /* footer */

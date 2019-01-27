@@ -1,30 +1,16 @@
 <?php
-echo $this->Html->tag('h2', 'Artikel Terkait');
-echo $this->Html->tag('hr', '', ['class' => 'uk-divider-small']);
-?>
-<div class="uk-child-width-1-3@s" uk-grid>
-    <div class="related-blog-wrapper">
-        <div class="uk-dark uk-background-muted uk-padding">
-            <h4 class="ellipsis">Service AC di Jakarta Utara, Petamburan - Maju Teknik</h4>
-            <p class="ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua.</p>
-            <button class="uk-button uk-button-primary">Selengkapnya...</button>
-        </div>
-    </div>
-    <div class="related-blog-wrapper">
-        <div class="uk-dark uk-background-muted uk-padding">
-            <h4 class="ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h4>
-            <p class="ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua.</p>
-            <button class="uk-button uk-button-primary">Selengkapnya...</button>
-        </div>
-    </div>
-    <div class="related-blog-wrapper">
-        <div class="uk-dark uk-background-muted uk-padding">
-            <h4 class="ellipsis">Dark</h4>
-            <p class="ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua.</p>
-            <button class="uk-button uk-button-primary">Selengkapnya...</button>
-        </div>
-    </div>
-</div>
+if (sizeof($random_related_blog_post) > 0) {
+    echo $this->Html->tag('h2', 'Artikel Terkait');
+    echo $this->Html->tag('hr', '', ['class' => 'uk-divider-small']);
+    echo '<div class="uk-child-width-1-3@s" uk-grid>';
+    foreach ($random_related_blog_post as $item) {
+        echo '<div class="related-blog-wrapper">';
+        echo '<div class="uk-dark uk-background-muted uk-padding">';
+        echo $this->Html->tag('h4', $item['title'], ['class' => 'ellipsis']);
+        echo $this->Html->tag('span', $item['description'], ['class' => 'ellipsis']);
+        echo $this->Html->tag('a', 'Selengkapnya...', ['href' => $this->Utility->buildBlogUrl($item['title'], $item['content_id']), 'class' => 'uk-button uk-button-primary']);
+        echo '</div>';
+        echo '</div>';
+    }
+    echo '</div>';
+}

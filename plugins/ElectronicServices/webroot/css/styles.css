@@ -3,6 +3,10 @@ body {
     flex-direction: column;
 }
 
+body.uk-offcanvas-container {
+    overflow-x: unset;
+}
+
 p {
     text-align: justify;
 }
@@ -48,6 +52,12 @@ p {
     border-top: 1px solid #1e87f0;
     width: 100%;
     margin-top: 0;
+}
+
+.ellipsis-one-line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* body */

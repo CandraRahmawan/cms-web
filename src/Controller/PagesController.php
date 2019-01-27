@@ -27,12 +27,29 @@ class PagesController extends AppController
 
         $content = $this->Content
             ->find('all')
-            ->select(['Content.description', 'cat.name', 'Content.title', 'cat.type'])
-            ->join([
-                'table' => 'category',
-                'alias' => 'cat',
-                'type' => 'INNER',
-                'conditions' => 'cat.category_id = Content.category_id'])
+            ->select([
+                'cat.name',
+                'Content.description',
+                'Content.title',
+                'Content.create_date',
+                'cat.type',
+                'u.first_name',
+                'u.last_name'
+            ])
+            ->join(
+                [
+                    'cat' => [
+                        'table' => 'category',
+                        'type' => 'INNER',
+                        'conditions' => 'cat.category_id = Content.category_id'
+                    ],
+                    'u' => [
+                        'table' => 'users',
+                        'type' => 'INNER',
+                        'conditions' => 'u.user_id = Content.user_id'
+                    ]
+
+                ])
             ->where([
                 'Content.content_id' => $id,
                 'Content.status' => 'Y',
