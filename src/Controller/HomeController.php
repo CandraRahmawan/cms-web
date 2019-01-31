@@ -39,7 +39,7 @@ class HomeController extends AppController {
     private function __topSlider() {
         $option['select'] = ['value_1'];
         $option['table'] = 'themes_setting';
-        $option['where'] = ['id_theme' => $this->id_themes, 'is_active' => 'Y', '`key`' => 'top_slider'];
+        $option['where'] = ['id_theme' => $this->id_themes, 'is_active' => 'Y', '`key`' => 'top_image_carousel'];
         $result = $this->Utility->finds($option);
 
         $query = $this->Gallery->find('all')
@@ -54,7 +54,7 @@ class HomeController extends AppController {
             $query->orWhere(['category_id' => $result[$i]['value_1']]);
         }
         $query->where(['t.is_active' => 'Y', 'g.is_active' => 'Y']);
-        $query->where(['t.key' => 'top_slider']);
+        $query->where(['t.key' => 'top_image_carousel']);
         $result_content = $query->toArray();
 
         return $result_content;

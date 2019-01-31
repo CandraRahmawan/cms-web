@@ -27,6 +27,7 @@ class AppController extends Controller
         $this->loadComponent('Utility');
         $this->params = $this->request->params;
         $this->pass = $this->request->pass;
+        $this->loadComponent('Paginator');
     }
 
     public function beforeFilter(Event $event)

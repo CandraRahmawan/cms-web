@@ -2,16 +2,10 @@
 $html = $this->Html;
 ?>
 <div class="content-wrapper">
-    <?= $this->Element('image_carousel'); ?>
-    <div class="uk-background-muted line-top">
-        <div class="homepage-content-wrapper">
-            <?= $this->Html->tag('h2', 'Selamat datang di website Maju Teknik', ['class' => 'uk-text-center']); ?>
-            <hr class="desktop uk-divider-icon">
-            <?= $this->Html->tag('p', 'Maju Teknik adalah sebuah perusahaan jasa service dan perbaikan AC, telah berpengalaman menangani berbagai layanan service AC mulai dari pengadaan, pemasangan, dan tentunya berbagai layanan perbaikan dan perawatan rutin yang dibutuhkan AC Anda.'); ?>
-            <p>Didukung oleh tim teknisi handal, ramah dan terpercaya di seluruh wilayah Jakarta dan sekitarnya, kami berpengalaman memberikan berbagai pelayanan service AC mulai dari perumahan, apartment, sampai perkantoran, pabrik dan industri.</p>
-            <p>Selain itu juga bisa melakukan service dan perbaikan Kulkas, Mesin Cuci dan Alat Elektronik lainnya.</p>
-        </div>
-    </div>
+    <?php
+    echo $this->Element('image_carousel');
+    echo $this->Html->tag('div', $this->Element('section_1'), ['class' => 'uk-background-muted line-top']);
+    ?>
     <div class="homepage-content-wrapper">
         <?= $this->Html->tag('h2', 'Kelebihan Service AC di Maju Teknik'); ?>
         <div class="line-divider">

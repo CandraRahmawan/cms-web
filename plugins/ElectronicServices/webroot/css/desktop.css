@@ -209,8 +209,34 @@
         margin-bottom: 30px;
     }
 
+    .related-blog-wrapper .uk-background-muted {
+        min-height: 270px;
+    }
+
+    .related-blog-wrapper a {
+        margin-top: 30px;
+    }
+
     .uk-background-muted {
         display: block;
+    }
+
+    .article-content-wrapper {
+        display: flex;
+        flex-direction: unset;
+        margin-bottom: 30px;
+    }
+
+    .article-content-wrapper p {
+        margin-bottom: 0;
+    }
+
+    .article-content-wrapper img {
+        margin-right: 20px;
+        object-fit: cover;
+        width: 200px;
+        height: 100px;
+        margin-bottom: 0;
     }
 
     /* footer */

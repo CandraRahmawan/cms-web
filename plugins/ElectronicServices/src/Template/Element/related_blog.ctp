@@ -7,7 +7,7 @@ if (sizeof($random_related_blog_post) > 0) {
         echo '<div class="related-blog-wrapper">';
         echo '<div class="uk-dark uk-background-muted uk-padding">';
         echo $this->Html->tag('h4', $item['title'], ['class' => 'ellipsis']);
-        echo $this->Html->tag('span', $item['description'], ['class' => 'ellipsis']);
+        echo $this->Html->tag('span', $this->Text->truncate($item['description'], 200, ['ellipsis' => '...', 'exact' => false]));
         echo $this->Html->tag('a', 'Selengkapnya...', ['href' => $this->Utility->buildBlogUrl($item['title'], $item['content_id']), 'class' => 'uk-button uk-button-primary']);
         echo '</div>';
         echo '</div>';
