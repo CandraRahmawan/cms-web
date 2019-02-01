@@ -76,7 +76,7 @@ class AppController extends Controller
           AND c.`status`="Y" AND md.`status`="Y" AND ct.`status`="Y")
           ORDER BY md.order_id ASC */
         $query = $this->Themes->find();
-        $query->select(['c.name', 'c.category_id', 'md.parent_id', 'md.menu_detil_id', 'ct.link', 'md.drop_down']);
+        $query->select(['c.name', 'c.category_id', 'md.parent_id', 'md.menu_detil_id', 'ct.link', 'md.drop_down', 'md.custom_link']);
         $query->from('themes_setting ts');
         $query->join([
             'table' => 'menu',
@@ -98,7 +98,7 @@ class AppController extends Controller
             'alias' => 'ct',
             'type' => 'LEFT',
             'conditions' => 'c.category_id=ct.category_id']);
-        $query->where(['ts.is_active' => 'Y', 'ts.id_theme' => $this->id_themes, 'c.`type`' => 'Page', 'md.ended_date > NOW()',
+        $query->where(['ts.is_active' => 'Y', 'ts.id_theme' => $this->id_themes, 'c.`type`' => 'Page',
             'm.is_active' => 'Y', 'c.`status`' => 'Y', 'md.`status`' => 'Y', 'ct.`status`' => 'Y']);
         $query->order(['md.order_id' => 'ASC']);
         $result = $query->all();

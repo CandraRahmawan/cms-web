@@ -12,7 +12,7 @@
             if ($item['picture'] != '') {
                 echo $this->Html->image($img_path . $item['picture']);
             }
-            echo '<span>' . $this->Text->truncate($item['description'], 500, ['ellipsis' => '...', 'exact' => false]) . '</span>';
+            echo '<span>' . $this->Text->truncate($item['description'], 250, ['ellipsis' => '...', 'exact' => false, 'html' => true]) . '</span>';
             echo '</div>';
             echo '<div class="uk-grid-small uk-child-width-auto" uk-grid><div>';
             echo $this->Html->tag('a', 'Selengkapnya...', ['href' => $this->Utility->buildBlogUrl($item['title'], $item['content_id']), 'class' => 'uk-button uk-button-primary']);
