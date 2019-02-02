@@ -197,6 +197,10 @@
         margin-bottom: 20px;
     }
 
+    .uk-article-title {
+        font-size: 1.7rem;
+    }
+
     /* footer */
     footer > .footer-content {
         display: flex;
