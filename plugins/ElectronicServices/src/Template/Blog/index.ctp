@@ -2,7 +2,7 @@
     <div class="homepage-content-wrapper">
         <?php
         foreach ($blog as $item) {
-            $img_path = $this->Utility->basePathImgArticle($base_url, $item['category_id']);
+            $img_path = $this->Utility->basePathImgArticle($path_url_admin, $item['category_id']);
             echo '<article class="uk-article">';
             echo $this->Html->tag('h1', $this->Html->tag('a', $item['title'], ['class' => 'uk-link-reset', 'href' => $this->Url->build($item['link'], true)]), ['class' => 'uk-article-title']);
             echo $this->Html->tag('p',
