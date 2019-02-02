@@ -59,7 +59,7 @@ class AppController extends Controller
     {
         $result = [];
         $menu = $this->Themes->find();
-        $menu->select(['md.parent_id', 'md.menu_detil_id', 'md.drop_down', 'md.custom_link', 'md.name', 'md.content_id']);
+        $menu->select(['md.parent_id', 'md.menu_detail_id', 'md.drop_down', 'md.custom_link', 'md.name', 'md.content_id']);
         $menu->from('themes_setting ts');
         $menu->join([
             'table' => 'menu',

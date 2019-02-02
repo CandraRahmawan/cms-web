@@ -21,7 +21,7 @@
                     echo '<li class="hasChild">';
                     echo '<a href="#">' . $item['c']['name'] . '</a>';
                     echo '<ul class="dropMenu">';
-                    $this->Utility->categoryMenu($item['md']['menu_detil_id']);
+                    $this->Utility->categoryMenu($item['md']['menu_detail_id']);
                     echo '</ul>';
                     echo '</li>';
                 }
