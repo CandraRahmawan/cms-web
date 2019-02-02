@@ -56,48 +56,55 @@ class AppController extends Controller
 
     private function __menuHeader()
     {
-        /* SELECT 
-          c.name,
-          c.category_id,
-          md.parent_id,
-          md.menu_detil_id
-          FROM themes_setting ts
-          RIGHT JOIN menu m ON m.menu_id=ts.value_1 AND ts.`key`="menu_header"
-          INNER JOIN menu_detail md ON m.menu_id=md.menu_id
-          INNER JOIN category c ON c.category_id=md.category_id
-          LEFT JOIN content ct ON c.category_id=ct.category_id
-          WHERE (ts.is_active="Y" AND ts.is_theme=1 AND c.`type`="Page" AND md.ended_date > NOW() AND m.is_active="Y"
-          AND c.`status`="Y" AND md.`status`="Y" AND ct.`status`="Y")
-          ORDER BY md.order_id ASC */
-        $query = $this->Themes->find();
-        $query->select(['c.name', 'c.category_id', 'md.parent_id', 'md.menu_detil_id', 'ct.link', 'md.drop_down', 'md.custom_link']);
-        $query->from('themes_setting ts');
-        $query->join([
+        $result = [];
+        $menu = $this->Themes->find();
+        $menu->select(['md.parent_id', 'md.menu_detil_id', 'md.drop_down', 'md.custom_link', 'md.name', 'md.category_id']);
+        $menu->from('themes_setting ts');
+        $menu->join([
             'table' => 'menu',
             'alias' => 'm',
             'type' => 'RIGHT',
             'conditions' => 'm.menu_id=ts.value_1 AND ts.`key`="menu_header"']);
-        $query->join([
+        $menu->join([
             'table' => 'menu_detail',
             'alias' => 'md',
             'type' => 'INNER',
             'conditions' => 'm.menu_id=md.menu_id']);
-        $query->join([
-            'table' => 'category',
-            'alias' => 'c',
-            'type' => 'INNER',
-            'conditions' => 'c.category_id=md.category_id']);
-        $query->join([
-            'table' => 'content',
-            'alias' => 'ct',
-            'type' => 'LEFT',
-            'conditions' => 'c.category_id=ct.category_id']);
-        $query->where(['ts.is_active' => 'Y', 'ts.id_theme' => $this->id_themes, 'c.`type`' => 'Page',
-            'm.is_active' => 'Y', 'c.`status`' => 'Y', 'md.`status`' => 'Y', 'ct.`status`' => 'Y']);
-        $query->order(['md.order_id' => 'ASC']);
-        $result = $query->all();
+        $menu->where(['ts.is_active' => 'Y', 'ts.id_theme' => $this->id_themes,
+            'm.is_active' => 'Y', 'md.`status`' => 'Y']);
+        $menu->order(['md.order_id' => 'ASC']);
+        $menu_result = $menu->toList();
 
-        //debug($result);die;
+        if (sizeof($menu_result) > 0) {
+            $category = Hash::extract($menu_result, '{n}.md.category_id');
+
+            $content = $this->Content->find();
+            $content->select(['c.link', 'c.category_id']);
+            $content->from('content c');
+            $content->join([
+                'table' => 'category',
+                'alias' => 'ct',
+                'type' => 'INNER',
+                'conditions' => 'ct.category_id=c.category_id'
+            ]);
+            $content->where(['ct.status' => 'Y', 'c.status' => 'Y', 'c.category_id IN' => $category]);
+            $content_result = $content->toList();
+
+            $menu_result = Hash::extract($menu_result, '{n}.md');
+            $content_result = Hash::extract($content_result, '{n}.c');
+            foreach ($menu_result as $key => $item) {
+                $result[$key]['name'] = $item['name'];
+                if ($item['category_id'] == '0') {
+                    $result[$key]['link'] = $item['custom_link'];
+                } else {
+                    foreach ($content_result as $content) {
+                        if ($content['category_id'] == $item['category_id']) {
+                            $result[$key]['link'] = $content['link'];
+                        }
+                    }
+                }
+            }
+        }
         return $result;
     }
 
