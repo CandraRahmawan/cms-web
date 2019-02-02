@@ -59,7 +59,7 @@ class AppController extends Controller
     {
         $result = [];
         $menu = $this->Themes->find();
-        $menu->select(['md.parent_id', 'md.menu_detil_id', 'md.drop_down', 'md.custom_link', 'md.name', 'md.category_id']);
+        $menu->select(['md.parent_id', 'md.menu_detil_id', 'md.drop_down', 'md.custom_link', 'md.name', 'md.content_id']);
         $menu->from('themes_setting ts');
         $menu->join([
             'table' => 'menu',
@@ -77,10 +77,10 @@ class AppController extends Controller
         $menu_result = $menu->toList();
 
         if (sizeof($menu_result) > 0) {
-            $category = Hash::extract($menu_result, '{n}.md.category_id');
+            $content_id = Hash::extract($menu_result, '{n}.md.content_id');
 
             $content = $this->Content->find();
-            $content->select(['c.link', 'c.category_id']);
+            $content->select(['c.link', 'c.content_id']);
             $content->from('content c');
             $content->join([
                 'table' => 'category',
@@ -88,7 +88,7 @@ class AppController extends Controller
                 'type' => 'INNER',
                 'conditions' => 'ct.category_id=c.category_id'
             ]);
-            $content->where(['ct.status' => 'Y', 'c.status' => 'Y', 'c.category_id IN' => $category]);
+            $content->where(['ct.status' => 'Y', 'c.status' => 'Y', 'c.content_id IN' => $content_id]);
             $content_result = $content->toList();
 
             $menu_result = Hash::extract($menu_result, '{n}.md');
@@ -96,11 +96,11 @@ class AppController extends Controller
             foreach ($menu_result as $key => $item) {
                 $result[$key]['name'] = $item['name'];
                 $link = '';
-                if ($item['category_id'] == '0') {
+                if ($item['content_id'] == '0') {
                     $link = $item['custom_link'];
                 } else {
                     foreach ($content_result as $content) {
-                        if ($content['category_id'] == $item['category_id']) {
+                        if ($content['content_id'] == $item['content_id']) {
                             $link = $content['link'];
                         }
                     }
@@ -123,33 +123,6 @@ class AppController extends Controller
         $option['where'] = ['id_theme' => $this->id_themes, 'is_active' => 'Y'];
         $result = $this->Utility->finds($option);
         $result = Hash::combine($result, '{n}.key', '{n}.value_1');
-        return $result;
-    }
-
-    private function __categoryPage($params)
-    {
-        $caseOrder = '';
-        $id_category = '';
-        for ($i = 0; $i < count($params['id']); $i++) {
-
-            if ($i == 0)
-                $comma = '';
-            else
-                $comma = ',';
-
-            $caseOrder .= ' WHEN ' . $params['id'][$i] . ' THEN ' . $i;
-
-            $id_category .= $comma . $params['id'][$i];
-        }
-
-        $sql = 'SELECT category.category_id, category.name, description 
-                FROM category 
-                WHERE category.status="Y" AND category_id IN(' . $id_category . ') 
-                ORDER BY CASE category.category_id
-                    ' . $caseOrder . '
-                END';
-        $result = $this->Utility->query($sql);
-
         return $result;
     }
 
