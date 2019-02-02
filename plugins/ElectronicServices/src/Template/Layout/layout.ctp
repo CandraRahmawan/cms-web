@@ -1,18 +1,23 @@
 <?php
-$html = $this->Html;
-echo $html->docType();
+echo $this->Html->docType();
 ?>
 <html>
 <head>
     <?php
-    echo $html->charset();
-    echo $html->meta('viewport', 'width=device-width, initial-scale=1.0');
-    echo $html->css('https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css');
-    echo $html->css('/ElectronicServices/css/styles.css?' . time() . '', ['plugin' => false]);
-    echo $html->css('/ElectronicServices/css/mobile.css?' . time() . '', ['plugin' => false]);
-    echo $html->css('/ElectronicServices/css/tablet.css?' . time() . '', ['plugin' => false]);
-    echo $html->css('/ElectronicServices/css/desktop.css?' . time() . '', ['plugin' => false]);
-    //echo $html->css('styles');
+    echo $this->Html->charset();
+    echo $this->Html->meta('viewport', 'width=device-width, initial-scale=1.0');
+    echo $this->Html->tag('title', '');
+    echo $this->Html->meta('description', '');
+    echo $this->Html->meta(['rel' => 'canonical', 'href' => $this->Utility->buildFullUrl($this->Url->Build())]);
+    echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css');
+    if ($this->Utility->isDevelopment()) {
+        echo $this->Html->css('/ElectronicServices/css/styles-dev.css?' . time() . '', ['plugin' => false]);
+        echo $this->Html->css('/ElectronicServices/css/mobile.css?' . time() . '', ['plugin' => false]);
+        echo $this->Html->css('/ElectronicServices/css/tablet.css?' . time() . '', ['plugin' => false]);
+        echo $this->Html->css('/ElectronicServices/css/desktop.css?' . time() . '', ['plugin' => false]);
+    } else {
+        echo $this->Html->css('styles');
+    }
     ?>
 </head>
 <body onload="scrollFunction()">
@@ -21,13 +26,17 @@ echo $html->docType();
     echo $this->Element('header');
     echo $this->fetch('content');
     echo $this->Element('footer');
-    echo $html->tag('div', '<a href="#" uk-totop uk-scroll></a>', ['class' => 'scroll-top uk-border-circle', 'id' => 'scroll-top'])
+    echo $this->Html->tag('div', '<a href="#" uk-totop uk-scroll></a>', ['class' => 'scroll-top uk-border-circle', 'id' => 'scroll-top'])
     ?>
 </div>
 <?php
-echo $html->script('https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js');
-echo $html->script('https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit-icons.min.js');
-echo $html->script('app.js?' . time() . '', ['plugin' => false]);
+echo $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js');
+echo $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit-icons.min.js');
+if ($this->Utility->isDevelopment()) {
+    echo $this->Html->script('app.js?' . time() . '', ['plugin' => false]);
+} else {
+    echo $this->Html->script('app.js');
+}
 ?>
 </body>
 </html>

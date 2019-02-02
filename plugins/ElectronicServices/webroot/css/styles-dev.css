@@ -151,7 +151,3 @@ footer > .copyright {
     padding: 10px;
     text-align: center;
 }
-
-@import "mobile.css";
-@import "tablet.css";
-@import "desktop.css";

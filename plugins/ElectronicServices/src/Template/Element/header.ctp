@@ -3,7 +3,7 @@
         <div class="logo-wrapper">
             <?php
             echo $this->Html->image('/images/logo.jpeg');
-            echo $this->Html->tag('h4', $company['company_title']);
+            echo $this->Html->tag('h4', $settings['company_title']);
             ?>
         </div>
         <div class="top-menu-wrapper">
@@ -16,13 +16,13 @@
                 echo $this->Html->tag('li', $this->Html->tag('a', 'Artikel', ['href' => $this->Url->build('/artikel', true)]), ['class' => '']);
                 ?>
                 <li class="contact-menu">
-                    <a href="https://api.whatsapp.com/send?phone=<?= $contact['contact_whatsapp']; ?>" target="_blank">
+                    <a href="https://api.whatsapp.com/send?phone=<?= $settings['contact_whatsapp']; ?>" target="_blank">
                         <span uk-icon="icon: whatsapp"></span>
                         Whatsapp
                     </a>
                 </li>
                 <li class="contact-menu">
-                    <a href="mailto:<?= $contact['contact_email']; ?>">
+                    <a href="mailto:<?= $settings['contact_email']; ?>">
                         <span uk-icon="icon: mail"></span>
                         Email
                     </a>

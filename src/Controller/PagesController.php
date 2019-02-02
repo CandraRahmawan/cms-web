@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use Cake\Utility\Hash;
+use Cake\Utility\Text;
+use Cake\Collection\Collection;
 
 class PagesController extends AppController
 {
@@ -11,6 +13,8 @@ class PagesController extends AppController
     {
         parent::beforeRender($event);
         $this->viewBuilder()->layout('layout');
+        $random_related_blog_post = $this->__randomRelatedBlogPost();
+        $this->set(compact('random_related_blog_post'));
     }
 
     public function index()
@@ -68,6 +72,41 @@ class PagesController extends AppController
     public function testDesign()
     {
         $this->set(compact('content'));
+    }
+
+    private function __randomRelatedBlogPost($limit = 3)
+    {
+        if (isset($this->request->pass[0])) {
+            $pass_url = Text::tokenize($this->request->pass[0], '-');
+            $collection = new Collection($pass_url);
+            $content_id = $collection->last();
+
+            $get_category = $this->Content
+                ->find()
+                ->select('Content.category_id')
+                ->where(['Content.content_id' => $content_id])
+                ->toArray();
+            $category_id = Hash::extract($get_category, "{n}.category_id")[0];
+
+            return $content = $this->Content
+                ->find('all')
+                ->select(['Content.title', 'Content.content_id', 'Content.description'])
+                ->join([
+                    'table' => 'category',
+                    'alias' => 'cat',
+                    'type' => 'INNER',
+                    'conditions' => 'cat.category_id = Content.category_id'])
+                ->where([
+                    'Content.status' => 'Y',
+                    'cat.status' => 'Y',
+                    'cat.type' => 'Content',
+                    'cat.category_id' => $category_id,
+                    'Content.content_id != ' => $content_id
+                ])
+                ->order('RAND()')
+                ->limit($limit)
+                ->toArray();
+        }
     }
 
 }
