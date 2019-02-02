@@ -90,7 +90,7 @@ class PagesController extends AppController
 
             return $content = $this->Content
                 ->find('all')
-                ->select(['Content.title', 'Content.content_id', 'Content.description'])
+                ->select(['Content.title', 'Content.content_id', 'Content.description', 'Content.link'])
                 ->join([
                     'table' => 'category',
                     'alias' => 'cat',

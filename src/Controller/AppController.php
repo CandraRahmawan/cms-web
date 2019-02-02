@@ -152,7 +152,7 @@ class AppController extends Controller
     {
         return $content = $this->Content
             ->find('all')
-            ->select(['Content.title', 'Content.content_id'])
+            ->select(['Content.title', 'Content.content_id', 'Content.link'])
             ->join([
                 'table' => 'category',
                 'alias' => 'cat',

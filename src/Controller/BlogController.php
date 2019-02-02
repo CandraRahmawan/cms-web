@@ -28,6 +28,7 @@ class BlogController extends AppController
                 'Content.create_date',
                 'Content.category_id',
                 'Content.picture',
+                'Content.link',
                 'u.first_name',
                 'u.last_name',
             ])
