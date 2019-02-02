@@ -5,6 +5,7 @@ namespace App\Controller;
 use Cake\Controller\Controller;
 use Cake\Event\Event;
 use Cake\Utility\Hash;
+use Cake\Utility\Inflector;
 
 class AppController extends Controller
 {
@@ -94,15 +95,22 @@ class AppController extends Controller
             $content_result = Hash::extract($content_result, '{n}.c');
             foreach ($menu_result as $key => $item) {
                 $result[$key]['name'] = $item['name'];
+                $link = '';
                 if ($item['category_id'] == '0') {
-                    $result[$key]['link'] = $item['custom_link'];
+                    $link = $item['custom_link'];
                 } else {
                     foreach ($content_result as $content) {
                         if ($content['category_id'] == $item['category_id']) {
-                            $result[$key]['link'] = $content['link'];
+                            $link = $content['link'];
                         }
                     }
                 }
+                $result[$key]['link'] = $link;
+                $result[$key]['active'] = '';
+                if (Inflector::slug($link, '-') == $this->request->url) {
+                    $result[$key]['active'] = 'active';
+                }
+
             }
         }
         return $result;
