@@ -93,14 +93,14 @@
     .carousel-image-wrapper a.left {
         position: absolute;
         margin: 0 15px;
-        top: 134px;
+        top: 200px;
         left: 0;
     }
 
     .carousel-image-wrapper a.right {
         position: absolute;
         margin: 0 15px;
-        top: 134px;
+        top: 200px;
         right: 0;
     }
 

@@ -11,6 +11,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/*', ['controller' => 'Pages', 'action' => 'index']);
     $routes->connect('/artikel/*', ['controller' => 'Blog', 'action' => 'index']);
     $routes->connect('/test-design', ['controller' => 'Pages', 'action' => 'testDesign']);
+    $routes->connect('/robots.txt', ['controller' => 'Common', 'action' => 'robots']);
     $routes->fallbacks('DashedRoute');
 });
 

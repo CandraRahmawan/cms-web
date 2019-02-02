@@ -43,15 +43,15 @@ class AppController extends Controller
     public function beforeRender(Event $event)
     {
         parent::beforeRender($event);
-        $base_url = $this->ThemesSetting->find()
+        $path_url_admin = $this->ThemesSetting->find()
             ->select(['value_1'])
-            ->where(['is_active' => 'Y', '`key`' => 'base_url', 'id_theme' => $this->id_themes])
+            ->where(['is_active' => 'Y', '`key`' => 'path_url_admin', 'id_theme' => $this->id_themes])
             ->first();
-        $this->set('base_url', $base_url['value_1']);
         $settings = $this->__getThemesSetting();
         $menu_header = $this->__menuHeader();
         $title_meta = $this->_titleMeta();
         $random_blog_post = $this->__randomBlogPost();
+        $this->set('path_url_admin', $path_url_admin['value_1']);
         $this->set(compact('menu_header', 'settings', 'title_meta', 'menu_static', 'random_blog_post'));
     }
 

@@ -11,10 +11,9 @@ class UtilityHelper extends Helper
         return date('d M Y', strtotime($dateTime));
     }
 
-    public function basePathImgSliderBanner($base_url, $category_id)
+    public function basePathImgSliderBanner($url, $category_id)
     {
-        $base = $base_url . 'img/Gallery/SliderBanner/' . $category_id . '/';
-        return $base;
+        return $this->buildFullUrl($url . '/img/Gallery/SliderBanner/' . $category_id . '/');
     }
 
     public function basePathImgArticle($base_url, $category_id)
