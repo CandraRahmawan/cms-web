@@ -6,15 +6,15 @@ echo $this->Html->docType();
     <?php
     echo $this->Html->charset();
     echo $this->Html->meta('viewport', 'width=device-width, initial-scale=1.0');
-    echo $this->Html->tag('title', '');
-    echo $this->Html->meta('description', '');
+    echo $this->Html->tag('title', $seo['meta_title']);
+    echo $this->Html->meta('description', $seo['meta_description']);
     echo $this->Html->meta(['rel' => 'canonical', 'href' => $this->Utility->buildFullUrl($this->Url->Build())]);
     echo $this->Html->meta(['property' => 'og:type', 'content' => 'website']);
-    echo $this->Html->meta(['property' => 'og:title', 'content' => '']);
-    echo $this->Html->meta(['property' => 'og:description', 'content' => '']);
+    echo $this->Html->meta(['property' => 'og:title', 'content' => $seo['meta_title']]);
+    echo $this->Html->meta(['property' => 'og:description', 'content' => $seo['meta_description']]);
     echo $this->Html->meta(['property' => 'og:url', 'content' => $this->Utility->buildFullUrl($this->Url->Build())]);
     echo $this->Html->meta(['property' => 'og:site_name', 'content' => $settings['company_title']]);
-    echo $this->Html->meta(['property' => 'og:image', 'content' => '']);
+    //echo $this->Html->meta(['property' => 'og:image', 'content' => '']);
     echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css');
     if ($this->Utility->isDevelopment()) {
         echo $this->Html->css('/ElectronicServices/css/styles-dev.css?' . time() . '', ['plugin' => false]);

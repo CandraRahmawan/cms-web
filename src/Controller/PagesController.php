@@ -52,7 +52,6 @@ class PagesController extends AppController
                         'type' => 'INNER',
                         'conditions' => 'u.user_id = Content.user_id'
                     ]
-
                 ])
             ->where([
                 'Content.content_id' => $id,

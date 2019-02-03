@@ -23,6 +23,8 @@ class AppController extends Controller
         $this->loadModel('Category');
         $this->loadModel('Content');
         $this->loadModel('Gallery');
+        $this->loadModel('MenuDetail');
+        $this->loadModel('Seo');
         $this->loadComponent('Utility');
         $this->params = $this->request->params;
         $this->pass = $this->request->pass;
@@ -49,10 +51,10 @@ class AppController extends Controller
             ->first();
         $settings = $this->__getThemesSetting();
         $menu_header = $this->__menuHeader();
-        $title_meta = $this->_titleMeta();
         $random_blog_post = $this->__randomBlogPost();
+        $seo = $this->__getSeoInfo();
         $this->set('path_url_admin', $path_url_admin['value_1']);
-        $this->set(compact('menu_header', 'settings', 'title_meta', 'menu_static', 'random_blog_post'));
+        $this->set(compact('menu_header', 'settings', 'menu_static', 'random_blog_post', 'seo'));
     }
 
     private function __menuHeader()
@@ -126,28 +128,6 @@ class AppController extends Controller
         return $result;
     }
 
-    private function _titleMeta()
-    {
-        $result = [
-            'title_web' => 'Website',
-            'title_logo' => 'Website',
-            'description_meta' => ''
-        ];
-        $query = $this->ThemesSetting->find()
-            ->where([
-                'id_theme' => $this->id_themes,
-                '`key` IN ("title_web", "description_meta", "title_logo")',
-                'is_active' => 'Y'
-            ])
-            ->toArray();
-
-        foreach ($query as $item) {
-            $result[$item['key']] = $item['value_1'];
-        }
-
-        return $result;
-    }
-
     private function __randomBlogPost($limit = 5)
     {
         return $content = $this->Content
@@ -167,5 +147,29 @@ class AppController extends Controller
             ->limit($limit)
             ->toArray();
     }
+
+    private function __getSeoInfo()
+    {
+        $url = '/' . $this->request->url;
+
+        $seo = $this->Content->find()
+            ->select('seo_id')
+            ->where(['link' => $url])
+            ->toArray();
+
+        if (sizeof($seo) <= 0) {
+            $seo = $this->MenuDetail->find()
+                ->select('seo_id')
+                ->where(['custom_link' => $url])
+                ->toArray();
+        }
+
+        if (sizeof($seo) > 0) {
+            $seo = $this->Seo->get($seo[0]['seo_id']);
+        }
+
+        return $seo;
+    }
+
 
 }

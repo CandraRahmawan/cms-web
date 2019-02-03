@@ -60,4 +60,8 @@ class HomeController extends AppController {
         return $result_content;
     }
 
+    private function __getSeoInfo() {
+
+    }
+
 }
