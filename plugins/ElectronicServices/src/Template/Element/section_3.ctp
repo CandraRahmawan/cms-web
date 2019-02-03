@@ -12,7 +12,7 @@
                     dilakukan agar AC Anda bebas debu. Debu yang menumpuk akan mengakibatkan berkurangnya
                     kesejukan AC, juga mengotori udara di ruangan. Pastikan Anda melakukan service cuci AC
                     setiap 3-4 bulan sekali.</p>
-                <a href="<?= $this->Url->build('/service-4'); ?>" class="uk-button uk-button-default white">Selengkapnya...</a>
+                <a href="<?= $this->Url->build('/service-kami'); ?>" class="uk-button uk-button-default white">Selengkapnya...</a>
             </div>
         </div>
         <div>
@@ -21,7 +21,7 @@
                 <p class="ellipsis white">Freon adalah salah satu komponen terpenting dalam AC. Salah satu tanda
                     bahwa freon harus ditambahkan adalah ketika AC Anda tidak lagi terasa dingin. Lakukan
                     penambahan freon setidaknya setahun sekali.</p>
-                <a href="<?= $this->Url->build('/service-4'); ?>" class="uk-button uk-button-default white">Selengkapnya...</a>
+                <a href="<?= $this->Url->build('/service-kami'); ?>" class="uk-button uk-button-default white">Selengkapnya...</a>
             </div>
         </div>
         <div>
@@ -31,7 +31,7 @@
                     besar
                     kemungkinan telah terjadi kebocoran di AC Anda. Maka, yang Anda perlukan bukan hanya
                     menambah kadar freon, tetapi mengisi ulang freon di AC Anda.</p>
-                <a href="<?= $this->Url->build('/service-4'); ?>" class="uk-button uk-button-default white">Selengkapnya...</a>
+                <a href="<?= $this->Url->build('/service-kami'); ?>" class="uk-button uk-button-default white">Selengkapnya...</a>
             </div>
         </div>
         <div>
@@ -49,7 +49,7 @@
                     berfungsi dengan
                     seharusnya dan apakah kadar suhu di ruangan ketika AC dinyalakan sesuai dengan
                     seharusnya.</p>
-                <a href="<?= $this->Url->build('/service-4'); ?>" class="uk-button uk-button-default white">Selengkapnya...</a>
+                <a href="<?= $this->Url->build('/service-kami'); ?>" class="uk-button uk-button-default white">Selengkapnya...</a>
             </div>
         </div>
     </div>
