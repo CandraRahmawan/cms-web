@@ -10,7 +10,7 @@
             <ul>
                 <?php
                 foreach ($menu_header as $item) {
-                    echo $this->Html->tag('li', $this->Html->tag('a', $item['name'], ['href' => $this->Url->build($item['link'], true)]), ['class' => $item['active']]);
+                    echo $this->Html->tag('li', $this->Html->tag('a', $item['name'], ['href' => $this->Utility->buildUrl($item['link'])]), ['class' => $item['active']]);
                 }
                 ?>
                 <li class="contact-menu">
@@ -51,7 +51,7 @@
                     <li class="uk-nav-divider"></li>
                     <?php
                     foreach ($menu_header as $item) {
-                        echo $this->Html->tag('li', $this->Html->tag('a', $item['name'], ['href' => $this->Url->build($item['link'], true)]), ['class' => 'uk-' . $item['active']]);
+                        echo $this->Html->tag('li', $this->Html->tag('a', $item['name'], ['href' => $this->Utility->buildUrl($item['link'])]), ['class' => 'uk-' . $item['active']]);
                     }
                     ?>
                     <li class="uk-nav-divider"></li>

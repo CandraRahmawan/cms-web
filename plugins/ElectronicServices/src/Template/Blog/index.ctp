@@ -4,7 +4,7 @@
         foreach ($blog as $item) {
             $img_path = $this->Utility->basePathImgArticle($path_url_admin, $item['category_id']);
             echo '<article class="uk-article">';
-            echo $this->Html->tag('h1', $this->Html->tag('a', $item['title'], ['class' => 'uk-link-reset', 'href' => $this->Url->build($item['link'], true)]), ['class' => 'uk-article-title']);
+            echo $this->Html->tag('h1', $this->Html->tag('a', $item['title'], ['class' => 'uk-link-reset', 'href' => $this->Utility->buildUrl($item['link'])]), ['class' => 'uk-article-title']);
             echo $this->Html->tag('p',
                 'Ditulis oleh <b>' . $item['u']['first_name'] . ' ' . $item['u']['last_name'] . '</b> ' .
                 $this->Utility->formatDate($item['create_date']) . '', ['class' => 'uk-article-meta']);
@@ -15,7 +15,7 @@
             echo '<span>' . $this->Text->truncate($item['description'], 250, ['ellipsis' => '...', 'exact' => false, 'html' => true]) . '</span>';
             echo '</div>';
             echo '<div class="uk-grid-small uk-child-width-auto" uk-grid><div>';
-            echo $this->Html->tag('a', 'Selengkapnya...', ['href' => $this->Url->Build($item['link'], true), 'class' => 'uk-button uk-button-primary']);
+            echo $this->Html->tag('a', 'Selengkapnya...', ['href' => $this->Utility->buildUrl($item['link']), 'class' => 'uk-button uk-button-primary']);
             echo '</div></div>';
             echo '</article>';
             echo '<hr>';

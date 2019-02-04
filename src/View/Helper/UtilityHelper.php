@@ -3,6 +3,7 @@
 namespace App\View\Helper;
 
 use Cake\View\Helper;
+use Cake\View\Helper\UrlHelper;
 
 class UtilityHelper extends Helper
 {
@@ -33,5 +34,14 @@ class UtilityHelper extends Helper
     public function isDevelopment()
     {
         return $this->request->env('HTTP_HOST') === 'localhost';
+    }
+
+    public function buildUrl($url)
+    {
+        if ($this->isDevelopment()) {
+            return UrlHelper::build($url, true);
+        }
+        $fullUrl = UrlHelper::build($url, true);
+        return str_replace($this->request->base, "", $fullUrl);
     }
 }

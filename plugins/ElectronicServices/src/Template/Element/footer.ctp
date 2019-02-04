@@ -25,7 +25,7 @@
             echo '<div class="footer-blog">';
             echo $this->Html->tag('h4', 'Artikel Lainnya');
             foreach ($random_blog_post as $item) {
-                echo $this->Html->tag('div', $this->Html->tag('a', $item['title'], ['href' => $this->Url->Build($item['link'], true)]), ['class' => 'ellipsis-one-line']);
+                echo $this->Html->tag('div', $this->Html->tag('a', $item['title'], ['href' => $this->Utility->buildUrl($item['link'])]), ['class' => 'ellipsis-one-line']);
             }
             echo '</div>';
         }
