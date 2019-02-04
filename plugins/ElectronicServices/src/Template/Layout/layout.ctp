@@ -14,6 +14,7 @@ echo $this->Html->docType();
     echo $this->Html->meta(['property' => 'og:description', 'content' => $seo['meta_description']]);
     echo $this->Html->meta(['property' => 'og:url', 'content' => $this->Utility->buildFullUrl($this->Url->Build())]);
     echo $this->Html->meta(['property' => 'og:site_name', 'content' => $settings['company_title']]);
+    echo '<meta name="google-site-verification" content="Kc4ZjRsxpVhsEscBm1x8RoCwM50FuG9c68hb6okuAQc" />';
     //echo $this->Html->meta(['property' => 'og:image', 'content' => '']);
     echo $this->Element('favicon');
     echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css');

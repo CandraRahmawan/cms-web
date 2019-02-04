@@ -11,7 +11,7 @@
                     Anda melakukan service cuci AC setiap 3-4 bulan sekali.</p>
             </div>
             <div class="service-image">
-                <img src="https://anugrahjayatechnic.com/wp-content/uploads/2018/10/WhatsApp-Image-2018-10-02-at-12.55.39.jpeg"/>
+<!--                <img src="https://anugrahjayatechnic.com/wp-content/uploads/2018/10/WhatsApp-Image-2018-10-02-at-12.55.39.jpeg"/>-->
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@
                     sekali.</p>
             </div>
             <div class="service-image">
-                <img src="https://anugrahjayatechnic.com/wp-content/uploads/2018/07/Pengisian-Preon-.jpeg"/>
+<!--                <img src="https://anugrahjayatechnic.com/wp-content/uploads/2018/07/Pengisian-Preon-.jpeg"/>-->
             </div>
         </div>
     </div>
@@ -39,7 +39,7 @@
                     ulang freon di AC Anda.</p>
             </div>
             <div class="service-image">
-                <img src="https://anugrahjayatechnic.com/wp-content/uploads/2018/08/Service-4.jpg"/>
+<!--                <img src="https://anugrahjayatechnic.com/wp-content/uploads/2018/08/Service-4.jpg"/>-->
             </div>
         </div>
     </div>
@@ -52,7 +52,7 @@
                     menjaga AC tetap awet.</p>
             </div>
             <div class="service-image">
-                <img src="https://anugrahjayatechnic.com/wp-content/uploads/2018/07/Pengecekan-Rutin-1-.jpg"/>
+<!--                <img src="https://anugrahjayatechnic.com/wp-content/uploads/2018/07/Pengecekan-Rutin-1-.jpg"/>-->
             </div>
         </div>
     </div>
@@ -65,7 +65,7 @@
                     dan apakah kadar suhu di ruangan ketika AC dinyalakan sesuai dengan seharusnya.</p>
             </div>
             <div class="service-image">
-                <img src="https://anugrahjayatechnic.com/wp-content/uploads/2018/08/Pengecekan-Rutin-5-.jpg"/>
+<!--                <img src="https://anugrahjayatechnic.com/wp-content/uploads/2018/08/Pengecekan-Rutin-5-.jpg"/>-->
             </div>
         </div>
     </div>
