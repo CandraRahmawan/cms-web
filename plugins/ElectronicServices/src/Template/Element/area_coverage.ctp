@@ -40,7 +40,6 @@
                     </tr>
                     <tr>
                         <td>Pejagalan</td>
-                        <td>Penjaringan</td>
                         <td>Pluit</td>
                         <td>Tanjung Priok</td>
                         <td>Sunter</td>
@@ -213,7 +212,7 @@
                         <td>Dukuh</td>
                         <td>Belakambang</td>
                         <td>Batu Ampar</td>
-                        <td>Makasar</td>
+                        <td>Kampung Makasar</td>
                         <td>Cipinang Melayu</td>
                         <td>Kebon Pala</td>
                         <td>Pinang Ranti</td>
