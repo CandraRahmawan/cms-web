@@ -150,14 +150,22 @@ class AppController extends Controller
 
     private function __getSeoInfo()
     {
-        $url = '/' . $this->request->url;
+        $id = 0;
+        if (sizeof($this->pass) > 0) {
+            $param = $this->pass[0];
+            $explode = explode('-', $param);
+            if (is_array($explode)) {
+                $id = $explode[count($explode) - 1];
+            }
+        }
 
         $seo = $this->Content->find()
             ->select('seo_id')
-            ->where(['link' => $url])
+            ->where(['content_id' => $id])
             ->toArray();
 
         if (sizeof($seo) <= 0) {
+            $url = '/' . $this->request->url;
             $seo = $this->MenuDetail->find()
                 ->select('seo_id')
                 ->where(['custom_link' => $url])
