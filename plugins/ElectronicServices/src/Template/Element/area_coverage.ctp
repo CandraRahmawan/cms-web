@@ -95,7 +95,7 @@
                         <td>Cempaka Putih</td>
                         <td>Rawa Sari</td>
                         <td>Cideng</td>
-                        <td>Jahar Baru</td>
+                        <td>Johar Baru</td>
                         <td>Galur</td>
                         <td>Tanah Tinggi</td>
                         <td>Kemayoran</td>
@@ -133,7 +133,7 @@
                         <td>Cideng</td>
                     </tr>
                     <tr>
-                        <td>Jahar Baru</td>
+                        <td>Johar Baru</td>
                         <td>Galur</td>
                         <td>Tanah Tinggi</td>
                     </tr>
@@ -178,7 +178,7 @@
                         <td>Penggilingan</td>
                         <td>Pulo Gadung</td>
                         <td>Cipinang</td>
-                        <td>Kayu Putuh</td>
+                        <td>Kayu Putih</td>
                         <td>Pisangan</td>
                     </tr>
                     <tr>
@@ -210,7 +210,7 @@
                     </tr>
                     <tr>
                         <td>Dukuh</td>
-                        <td>Belakambang</td>
+                        <td>Balekambang</td>
                         <td>Batu Ampar</td>
                         <td>Kampung Makasar</td>
                         <td>Cipinang Melayu</td>
@@ -251,7 +251,7 @@
                     <tr>
                         <td>Pulo Gadung</td>
                         <td>Cipinang</td>
-                        <td>Kayu Putuh</td>
+                        <td>Kayu Putih</td>
                     </tr>
                     <tr>
                         <td>Pisangan</td>
@@ -291,7 +291,7 @@
                     <tr>
                         <td>Cawang</td>
                         <td>Dukuh</td>
-                        <td>Belakambang</td>
+                        <td>Balekambang</td>
                     </tr>
                     <tr>
                         <td>Batu Ampar</td>
