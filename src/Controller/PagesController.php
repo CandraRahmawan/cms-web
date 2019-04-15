@@ -68,9 +68,30 @@ class PagesController extends AppController
         $this->set(compact('content'));
     }
 
-    public function testDesign()
+    public function servicePage()
     {
-        $this->set(compact('content'));
+        $this->loadModel('Plugins');
+        $service = $this->Plugins
+            ->find('all')
+            ->select([
+                'detail.value_1',
+                'detail.value_2',
+                'detail.value_3'
+            ])
+            ->from('plugins plugin')
+            ->join([
+                'detail' => [
+                    'table' => 'plugins_detail',
+                    'type' => 'INNER',
+                    'conditions' => 'plugin.plugin_id = detail.plugin_id',
+                ]
+            ])
+            ->where([
+                'plugin.is_active' => 'Y',
+                'plugin.key' => 'service_page'
+            ])
+            ->toArray();
+        $this->set(compact('service'));
     }
 
     private function __randomRelatedBlogPost($limit = 3)
