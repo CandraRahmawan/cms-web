@@ -13,6 +13,7 @@ class AppController extends Controller
     public $id_themes;
     public $params;
     public $pass;
+    public $baseUrl;
 
     public function initialize()
     {
@@ -28,6 +29,7 @@ class AppController extends Controller
         $this->loadComponent('Utility');
         $this->params = $this->request->params;
         $this->pass = $this->request->pass;
+        $this->baseUrl = $this->buildBaseUrl();
         $this->loadComponent('Paginator');
     }
 
@@ -179,5 +181,18 @@ class AppController extends Controller
         return $seo;
     }
 
+    private function buildBaseUrl()
+    {
+        $http = 'https://';
+        if ($this->isDevelopment()) {
+            $http = '//';
+        }
+        return $http . $this->request->env('HTTP_HOST');
+    }
+
+    private function isDevelopment()
+    {
+        return $this->request->env('HTTP_HOST') === 'localhost';
+    }
 
 }
