@@ -44,7 +44,7 @@ $html = $this->Html;
         </div>
     </div>
     <div class="uk-background-muted">
-        <?= $this->Element('section_3'); ?>
+        <?= $this->Element('plugin_service_page'); ?>
     </div>
     <div>
         <?= $this->Element('area_coverage'); ?>
