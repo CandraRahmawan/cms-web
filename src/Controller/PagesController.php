@@ -71,6 +71,10 @@ class PagesController extends AppController
     public function servicePage()
     {
         $this->loadModel('Plugins');
+        $service_page = $this->ThemesSetting->find()
+            ->select(['value_1'])
+            ->where(['is_active' => 'Y', '`key`' => 'service_page', 'id_theme' => $this->id_themes])
+            ->first();
         $service = $this->Plugins
             ->find('all')
             ->select([
@@ -88,7 +92,7 @@ class PagesController extends AppController
             ])
             ->where([
                 'plugin.is_active' => 'Y',
-                'plugin.key' => 'service_page'
+                'plugin.plugin_id' => $service_page['value_1']
             ])
             ->toArray();
         $this->set(compact('service'));
