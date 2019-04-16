@@ -36,6 +36,7 @@ class PagesController extends AppController
                 'Content.description',
                 'Content.title',
                 'Content.create_date',
+                'Content.link',
                 'cat.type',
                 'u.first_name',
                 'u.last_name'
@@ -61,7 +62,7 @@ class PagesController extends AppController
             ])
             ->toArray();
 
-        if (count($content) != 1) {
+        if (count($content) != 1 || $content[0]['link'] != '/' . $param) {
             $this->redirect('/');
         }
 
