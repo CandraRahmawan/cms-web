@@ -1,6 +1,6 @@
 <div class="homepage-content-wrapper">
     <?php
-    echo $this->Html->tag('h2', 'Selamat datang di website Maju Teknik', ['class' => 'uk-text-center']);
+    echo $this->Html->tag('h1', 'Selamat datang di website Maju Teknik', ['class' => 'uk-text-center']);
     echo '<hr class="desktop uk-divider-icon">';
     if (!empty($section)) {
         foreach ($section as $sec) {

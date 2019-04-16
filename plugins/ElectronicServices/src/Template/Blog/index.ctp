@@ -4,7 +4,7 @@
         foreach ($blog as $item) {
             $img_path = $this->Utility->basePathImgArticle($path_url_admin, $item['category_id']);
             echo '<article class="uk-article">';
-            echo $this->Html->tag('h1', $this->Html->tag('a', $item['title'], ['class' => 'uk-link-reset', 'href' => $this->Utility->buildUrl($item['link'])]), ['class' => 'uk-article-title']);
+            echo $this->Html->tag('h2', $this->Html->tag('a', $item['title'], ['class' => 'uk-link-reset', 'href' => $this->Utility->buildUrl($item['link'])]), ['class' => 'uk-article-title']);
             echo $this->Html->tag('p',
                 'Ditulis oleh <b>' . $item['u']['first_name'] . ' ' . $item['u']['last_name'] . '</b>, ' .
                 $this->Utility->formatDate($item['create_date']) . '', ['class' => 'uk-article-meta']);
