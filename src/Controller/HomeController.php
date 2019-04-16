@@ -9,9 +9,10 @@ class HomeController extends AppController
     {
         $section = $this->__section();
         $top_slider = $this->__topSlider();
-        $plugin_service_page = $this->__pluginServicePage();
+        $plugin_service_page = $this->__plugin('service_page');
+        $plugin_area_coverage = $this->__plugin('area_coverage');
         $this->viewBuilder()->layout('layout');
-        $this->set(compact('top_slider', 'section', 'plugin_service_page'));
+        $this->set(compact('top_slider', 'section', 'plugin_service_page', 'plugin_area_coverage'));
     }
 
     private function __section()
@@ -65,14 +66,14 @@ class HomeController extends AppController
         return $result_content;
     }
 
-    private function __pluginServicePage()
+    private function __plugin($key)
     {
         $this->loadModel('Plugins');
-        $service_page = $this->ThemesSetting->find()
+        $themesKey = $this->ThemesSetting->find()
             ->select(['value_1'])
-            ->where(['is_active' => 'Y', '`key`' => 'service_page', 'id_theme' => $this->id_themes])
+            ->where(['is_active' => 'Y', '`key`' => $key, 'id_theme' => $this->id_themes])
             ->first();
-        $service = $this->Plugins
+        $plugin = $this->Plugins
             ->find('all')
             ->select([
                 'detail.value_1',
@@ -89,10 +90,10 @@ class HomeController extends AppController
             ])
             ->where([
                 'plugin.is_active' => 'Y',
-                'plugin.plugin_id' => $service_page['value_1']
+                'plugin.plugin_id' => $themesKey['value_1']
             ])
             ->toArray();
-        return $service;
-    }
 
+        return $plugin;
+    }
 }

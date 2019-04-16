@@ -47,6 +47,6 @@ $html = $this->Html;
         <?= $this->Element('plugin_service_page'); ?>
     </div>
     <div>
-        <?= $this->Element('area_coverage'); ?>
+        <?= $this->Element('plugin_area_coverage'); ?>
     </div>
 </div>
