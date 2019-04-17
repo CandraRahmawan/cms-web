@@ -63,8 +63,7 @@ class PagesController extends AppController
                 'OR' => [['cat.type' => 'Content'], ['cat.type' => 'Page']]
             ])
             ->toArray();
-
-        if (count($content) != 1 || $content[0]['link'] != '/' . $param) {
+        if (count($content) != 1 || preg_replace('[/]', '', $content[0]['link']) != $param) {
             $this->redirect('/');
         }
 

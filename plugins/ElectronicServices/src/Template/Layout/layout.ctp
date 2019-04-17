@@ -1,5 +1,10 @@
 <?php
 echo $this->Html->docType();
+if (!empty($content[0]['picture'])) {
+    $og_image = $this->Utility->basePathImgArticle($path_url_admin, $content[0]['cat']['category_id']) . $content[0]['picture'];
+} else {
+    $og_image = $settings['image_logo'];
+}
 ?>
 <html>
 <head>
@@ -15,7 +20,7 @@ echo $this->Html->docType();
     echo $this->Html->meta(['property' => 'og:url', 'content' => $this->Utility->buildFullUrl($this->request->here)]);
     echo $this->Html->meta(['property' => 'og:site_name', 'content' => $settings['company_title']]);
     echo $this->Html->meta(['name' => 'google-site-verification', 'content' => 'Kc4ZjRsxpVhsEscBm1x8RoCwM50FuG9c68hb6okuAQc']);
-    //echo $this->Html->meta(['property' => 'og:image', 'content' => '']);
+    echo $this->Html->meta(['property' => 'og:image', 'content' => $og_image]);
     echo $this->Element('favicon');
     echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css');
     if ($this->Utility->isDevelopment()) {
