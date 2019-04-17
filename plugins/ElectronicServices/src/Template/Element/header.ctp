@@ -2,7 +2,7 @@
     <div class="header-content desktop">
         <div class="logo-wrapper">
             <?php
-            echo $this->Html->image('/images/logo.jpeg');
+            echo $this->Html->image($settings['image_logo']);
             echo $this->Html->tag('h4', $settings['company_title']);
             ?>
         </div>
@@ -38,7 +38,7 @@
             <div class="uk-navbar-right">
                 <div class="logo-wrapper">
                     <?php
-                    echo $this->Html->image('/images/logo.jpeg');
+                    echo $this->Html->image($settings['image_logo']);
                     echo $this->Html->tag('h4', $settings['company_title']);
                     ?>
                 </div>

@@ -2,7 +2,7 @@
     <div class="footer-content">
         <div class="footer-logo">
             <?php
-            echo $this->Html->image('/images/logo.jpeg', ['class' => 'uk-border-circle']);
+            echo $this->Html->image($settings['image_logo'], ['class' => 'uk-border-circle']);
             echo $this->Html->tag('h4', $settings['company_title']);
             ?>
         </div>
