@@ -22,8 +22,10 @@
                 echo $this->Utility->formatDate($content['create_date']);
                 echo '.</p >';
             }
+            $img_path = $this->Utility->basePathImgArticle($path_url_admin, $content['cat']['category_id']);
             ?>
             <hr>
+            <div><?php if ($content['picture']) echo $this->Html->image($img_path . $content['picture']); ?></div>
             <p><?= $content['description']; ?></p>
         </article>
         <?= $this->Element('related_blog'); ?>

@@ -37,7 +37,9 @@ class PagesController extends AppController
                 'Content.title',
                 'Content.create_date',
                 'Content.link',
+                'Content.picture',
                 'cat.type',
+                'cat.category_id',
                 'u.first_name',
                 'u.last_name'
             ])
