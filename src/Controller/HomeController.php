@@ -11,8 +11,9 @@ class HomeController extends AppController
         $top_slider = $this->__topSlider();
         $plugin_service_page = $this->__plugin('service_page');
         $plugin_area_coverage = $this->__plugin('area_coverage');
+        $plugin_why_choose_us = $this->__plugin('why_choose_us');
         $this->viewBuilder()->layout('layout');
-        $this->set(compact('top_slider', 'section', 'plugin_service_page', 'plugin_area_coverage'));
+        $this->set(compact('top_slider', 'section', 'plugin_service_page', 'plugin_area_coverage', 'plugin_why_choose_us'));
     }
 
     private function __section()
