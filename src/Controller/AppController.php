@@ -111,7 +111,7 @@ class AppController extends Controller
                 }
                 $result[$key]['link'] = $link;
                 $result[$key]['active'] = '';
-                if (Inflector::slug($link, '-') == $this->request->url) {
+                if (Inflector::slug($link, '-') == preg_replace('[/]', '', $this->request->url)) {
                     $result[$key]['active'] = 'active';
                 }
 
