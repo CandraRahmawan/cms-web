@@ -24,35 +24,35 @@ class SeoController extends AppController
         $articles = $this->content
             ->find('all')
             ->select([
-                'Content.title',
-                'Content.content_id',
-                'Content.description',
-                'Content.create_date',
-                'Content.update_date',
-                'Content.category_id',
-                'Content.picture',
-                'Content.link'
+                'content.title',
+                'content.content_id',
+                'content.description',
+                'content.create_date',
+                'content.update_date',
+                'content.category_id',
+                'content.picture',
+                'content.link'
             ])
             ->join([
                 'cat' => [
                     'table' => 'category',
                     'type' => 'INNER',
-                    'conditions' => 'cat.category_id = Content.category_id'
+                    'conditions' => 'cat.category_id = content.category_id'
                 ]
             ])
             ->where([
-                'Content.status' => 'Y',
+                'content.status' => 'Y',
                 'cat.status' => 'Y',
                 'cat.type' => 'Content'
             ])
             ->toArray();
+			
         $xmlArray = [];
         foreach ($articles as $key => $item) {
-            $content = $item['Content'];
-            $xmlArray['urlset']['url'][$key]['loc'] = $this->baseUrl . $content['link'];
+            $xmlArray['urlset']['url'][$key]['loc'] = $this->baseUrl . $item['link'];
             $xmlArray['urlset']['url'][$key]['changefreq'] = 'monthly';
             $xmlArray['urlset']['url'][$key]['priority'] = '0.5';
-            $xmlArray['urlset']['url'][$key]['lastmod'] = empty($content['update_date']) ? $content['create_date'] : $content['update_date'];
+            $xmlArray['urlset']['url'][$key]['lastmod'] = empty($item['update_date']) ? $item['create_date'] : $item['update_date'];
         }
         $xmlObject = Xml::fromArray($xmlArray);
         $xmlString = $xmlObject->asXML();
@@ -66,38 +66,37 @@ class SeoController extends AppController
     {
         $this->viewBuilder()->layout(false);
         $this->render(false);
-        $articles = $this->content
+        $page = $this->content
             ->find('all')
             ->select([
-                'Content.title',
-                'Content.content_id',
-                'Content.description',
-                'Content.create_date',
-                'Content.update_date',
-                'Content.category_id',
-                'Content.picture',
-                'Content.link'
+                'content.title',
+                'content.content_id',
+                'content.description',
+                'content.create_date',
+                'content.update_date',
+                'content.category_id',
+                'content.picture',
+                'content.link'
             ])
             ->join([
                 'cat' => [
                     'table' => 'category',
                     'type' => 'INNER',
-                    'conditions' => 'cat.category_id = Content.category_id'
+                    'conditions' => 'cat.category_id = content.category_id'
                 ]
             ])
             ->where([
-                'Content.status' => 'Y',
+                'content.status' => 'Y',
                 'cat.status' => 'Y',
                 'cat.type' => 'Page'
             ])
             ->toArray();
         $xmlArray = [];
-        foreach ($articles as $key => $item) {
-            $content = $item['Content'];
-            $xmlArray['urlset']['url'][$key]['loc'] = $this->baseUrl . $content['link'];
+        foreach ($page as $key => $item) {
+            $xmlArray['urlset']['url'][$key]['loc'] = $this->baseUrl . $item['link'];
             $xmlArray['urlset']['url'][$key]['changefreq'] = 'monthly';
             $xmlArray['urlset']['url'][$key]['priority'] = '0.5';
-            $xmlArray['urlset']['url'][$key]['lastmod'] = empty($content['update_date']) ? $content['create_date'] : $content['update_date'];
+            $xmlArray['urlset']['url'][$key]['lastmod'] = empty($item['update_date']) ? $item['create_date'] : $item['update_date'];
         }
         $xmlObject = Xml::fromArray($xmlArray);
         $xmlString = $xmlObject->asXML();

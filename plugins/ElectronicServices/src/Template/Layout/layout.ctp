@@ -5,18 +5,20 @@ if (!empty($content[0]['picture'])) {
 } else {
     $og_image = $settings['image_logo'];
 }
+$title = !empty($seo['meta_title']) ? $seo['meta_title'] : '';
+$description = !empty($seo['meta_description']) ? $seo['meta_description'] : '';
 ?>
 <html>
 <head>
     <?php
     echo $this->Html->charset();
     echo $this->Html->meta('viewport', 'width=device-width, initial-scale=1.0');
-    echo $this->Html->tag('title', $seo['meta_title']);
-    echo $this->Html->meta('description', $seo['meta_description']);
+    echo $this->Html->tag('title', $title);
+    echo $this->Html->meta('description', $description);
     echo $this->Html->meta(['rel' => 'canonical', 'link' => $this->Utility->buildFullUrl($this->request->here)]);
     echo $this->Html->meta(['property' => 'og:type', 'content' => 'website']);
-    echo $this->Html->meta(['property' => 'og:title', 'content' => $seo['meta_title']]);
-    echo $this->Html->meta(['property' => 'og:description', 'content' => $seo['meta_description']]);
+    echo $this->Html->meta(['property' => 'og:title', 'content' => $title]);
+    echo $this->Html->meta(['property' => 'og:description', 'content' => $description]);
     echo $this->Html->meta(['property' => 'og:url', 'content' => $this->Utility->buildFullUrl($this->request->here)]);
     echo $this->Html->meta(['property' => 'og:site_name', 'content' => $settings['company_title']]);
     echo $this->Html->meta(['name' => 'google-site-verification', 'content' => 'Kc4ZjRsxpVhsEscBm1x8RoCwM50FuG9c68hb6okuAQc']);

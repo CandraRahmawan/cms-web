@@ -24,11 +24,14 @@ class UtilityHelper extends Helper
 
     public function buildFullUrl($url)
     {
+        $queryBuilder = sizeof($this->request->query) > 0 ? '?' . http_build_query($this->request->query) : '';
         $http = 'https://';
         if ($this->isDevelopment()) {
             $http = '//';
+        } else {
+            $url = str_replace($this->request->base, "", $url);
         }
-        return $http . $this->request->env('HTTP_HOST') . $url;
+        return $http . $this->request->env('HTTP_HOST') . $url . $queryBuilder;
     }
 
     public function isDevelopment()
