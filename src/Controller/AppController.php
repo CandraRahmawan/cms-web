@@ -56,7 +56,7 @@ class AppController extends Controller
         $random_blog_post = $this->__randomBlogPost();
         $seo = $this->__getSeoInfo();
         $this->set('path_url_admin', $path_url_admin['value_1']);
-        $this->set(compact('menu_header', 'settings', 'menu_static', 'random_blog_post', 'seo'));
+        $this->set(compact('menu_header', 'settings', 'random_blog_post', 'seo'));
     }
 
     private function __menuHeader()
