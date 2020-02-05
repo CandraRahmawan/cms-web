@@ -9,12 +9,12 @@
 - SQLite 3
 
 ##Should be todo before running apps :
-- Rename .htaccess.default into .htaccess
+- Copy files .htaccess.default into .htaccess
 
 ###Depedencies :
 - admin-cms https://bitbucket.org/candra_rahmawan/cms-admin/src/master/ (database in here)
 
 ###Configuration :
-- rename .env.default file into .env and adjust your configuration
+- copy files .env.default into .env and adjust your configuration
 
 
