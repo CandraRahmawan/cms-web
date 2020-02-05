@@ -8,6 +8,9 @@
 - MariaDB >= 5.5
 - SQLite 3
 
+##Should be todo before running apps :
+- Rename .htaccess.default into .htaccess
+
 ###Depedencies :
 - admin-cms https://bitbucket.org/candra_rahmawan/cms-admin/src/master/ (database in here)
 
