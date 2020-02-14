@@ -1,13 +1,19 @@
 ##Front End CMS Website Version 1.1.0
 > contains a web theme plugin, build use CakePHP Version 3.8.9
 
-####Requirement :
+####Core Requirement :
 - PHP >= 5.6
 - MySQL >= 5.5.3
 - MariaDB >= 5.5
 - SQLite 3
 
-####Should be todo before running apps :
+####Development Requirement :
+- NodeJS
+
+####Development :
+- File Watcher scss/sass to css `npm run sass:watch`
+
+####Before run application :
 - Copy files .htaccess.default into .htaccess
 
 ####Depedencies :

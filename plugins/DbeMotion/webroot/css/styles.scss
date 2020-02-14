@@ -1,0 +1,47 @@
+@import "font.css";
+
+.top-image {
+  img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
+.home-section-1 {
+  height: 100vh;
+  display: flex;
+  padding-left: 10%;
+  padding-right: 2%;
+  justify-content: space-between;
+  .section-1-left {
+    margin-top: 80px;
+    width: 45%;
+    h1 {
+      margin-bottom: 70px;
+      font-weight: bold;
+    }
+    span {
+      margin-top: 70px;
+      font-size: 20px;
+    }
+  }
+  .section-1-right {
+    margin-top: 50px;
+    width: 50%;
+    img {
+      height: 700px;
+    }
+  }
+}
+
+.home-section-2 {
+  img {
+    height: 470px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.home-section-3 {
+}

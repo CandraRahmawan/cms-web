@@ -10,7 +10,8 @@
   "autoload": {
     "psr-4": {
       "App\\": "src",
-      "ElectronicServices\\": "plugins/ElectronicServices/src"
+      "ElectronicServices\\": "plugins/ElectronicServices/src",
+      "DbeMotion\\": "plugins/DbeMotion/src"
     }
   }
 }

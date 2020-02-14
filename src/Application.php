@@ -35,6 +35,7 @@ class Application extends BaseApplication
     public function bootstrap()
     {
         $this->addPlugin('ElectronicServices');
+        $this->addPlugin('DbeMotion');
 
         // Call parent to load bootstrap from files.
         parent::bootstrap();

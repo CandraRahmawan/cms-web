@@ -3,4 +3,5 @@
 /nbproject/
 /.idea
 /config/.env
+/node_modules
 .htaccess

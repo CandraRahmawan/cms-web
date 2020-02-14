@@ -1,0 +1,17 @@
+{
+  "name": "cms-web",
+  "version": "1.0.0",
+  "description": "> contains a web theme plugin, build use CakePHP Version 3.8.9",
+  "scripts": {
+    "sass:watch": "node-sass -w plugins/DbeMotion/webroot/css/styles.scss plugins/DbeMotion/webroot/css/styles.min.css --output-style compressed",
+    "sass:minify": "node-sass plugins/DbeMotion/webroot/css/styles.scss plugins/DbeMotion/webroot/css/styles.min.css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://candra_rahmawan@bitbucket.org/candra_rahmawan/cms-web.git"
+  },
+  "author": "Candra Rahmawan",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

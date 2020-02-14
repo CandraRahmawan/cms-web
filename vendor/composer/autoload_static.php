@@ -78,6 +78,7 @@ class ComposerStaticInitfcd4131b5b150623ae7bfc1b93c0bf2d
             'DeepCopy\\' => 9,
             'DebugKit\\Test\\Fixture\\' => 22,
             'DebugKit\\' => 9,
+            'DbeMotion\\' => 10,
         ),
         'C' => 
         array (
@@ -199,6 +200,10 @@ class ComposerStaticInitfcd4131b5b150623ae7bfc1b93c0bf2d
         'DebugKit\\' => 
         array (
             0 => __DIR__ . '/..' . '/cakephp/debug_kit/src',
+        ),
+        'DbeMotion\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/plugins/DbeMotion/src',
         ),
         'Composer\\XdebugHandler\\' => 
         array (
