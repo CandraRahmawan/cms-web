@@ -11,7 +11,9 @@
 - NodeJS
 
 ####Development :
-- File Watcher scss/sass to css `npm run sass:watch`
+- Install node module run `npm install`
+- File Watcher scss/sass to css run `npm run sass:watch` (adjust input and output file on packages.json)
+- Bundle css minify run `npm run sass:minify` (adjust input and output file on packages.json)
 
 ####Before run application :
 - Copy files .htaccess.default into .htaccess

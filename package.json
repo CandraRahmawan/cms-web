@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "> contains a web theme plugin, build use CakePHP Version 3.8.9",
   "scripts": {
-    "sass:watch": "node-sass -w plugins/DbeMotion/webroot/css/styles.scss plugins/DbeMotion/webroot/css/styles.min.css --output-style compressed",
+    "sass:watch": "node-sass -w plugins/DbeMotion/webroot/css/styles.scss plugins/DbeMotion/webroot/css/styles.css",
     "sass:minify": "node-sass plugins/DbeMotion/webroot/css/styles.scss plugins/DbeMotion/webroot/css/styles.min.css --output-style compressed"
   },
   "repository": {

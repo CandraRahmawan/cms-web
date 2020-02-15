@@ -1,5 +1,5 @@
 <div class="home-section-1">
-    <div class="section-1-left">
+    <div class="section-part-left">
         <h1>
             We Put That Value To All Our
             Product Starting From
@@ -17,7 +17,7 @@
             service to our costumer
         </span>
     </div>
-    <div class="section-1-right">
+    <div class="section-part-right">
         <?= $this->Html->image('/images/img_section_1.png') ?>
     </div>
 </div>
