@@ -49,7 +49,8 @@ h1 {
       line-height: 34px; }
   .home-section-1 .section-part-right img {
     width: 520px;
-    height: 100%; }
+    height: 100%;
+    object-fit: contain; }
 
 .home-section-2 {
   position: relative; }
@@ -78,7 +79,8 @@ h1 {
   margin: 100px auto 0 auto; }
   .home-section-3 .section-part-left img {
     height: 100%;
-    width: 750px; }
+    width: 750px;
+    object-fit: contain; }
   .home-section-3 .section-part-right {
     width: 480px;
     margin-top: 30px; }

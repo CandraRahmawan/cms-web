@@ -73,6 +73,7 @@ h1 {
     img {
       width: 520px;
       height: 100%;
+      object-fit: contain;
     }
   }
 }
@@ -114,6 +115,7 @@ h1 {
     img {
       height: 100%;
       width: 750px;
+      object-fit: contain;
     }
   }
 
