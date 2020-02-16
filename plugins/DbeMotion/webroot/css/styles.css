@@ -1,9 +1,10 @@
 @import url(font.css);
 .top-image {
-  position: relative; }
+  position: relative;
+  height: 100vh; }
   .top-image img {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover; }
   .top-image .text-image-centre {
     color: #fff;
@@ -40,7 +41,7 @@
       margin-top: 70px;
       font-size: 26px; }
   .home-section-1 .section-part-right img {
-    height: 910px; }
+    height: 100%; }
 
 .home-section-2 {
   position: relative; }
@@ -67,7 +68,7 @@
   display: flex;
   margin: 100px auto 0 auto; }
   .home-section-3 .section-part-left img {
-    height: 890px; }
+    height: 100%; }
   .home-section-3 .section-part-right {
     width: 560px;
     margin-top: 30px; }

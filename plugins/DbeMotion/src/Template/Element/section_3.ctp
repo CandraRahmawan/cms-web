@@ -1,4 +1,4 @@
-<div class="home-section-3">
+<section class="home-section-3">
     <div class="section-part-left">
         <?= $this->Html->image('/images/img_section_3.png'); ?>
     </div>
@@ -13,4 +13,4 @@ the supply chain so you can get them at lowest price possible
             Quality Control process
         </div>
     </div>
-</div>
+</section>

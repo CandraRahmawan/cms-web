@@ -1,4 +1,4 @@
-<div class="top-image">
+<section class="top-image">
    <?= $this->Html->image('/images/top_image_home.jpg'); ?>
     <div class="text-image-centre">
         <span>
@@ -8,4 +8,4 @@
             SERIOUSLY GOOD VALUE
         </div>
     </div>
-</div>
+</section>

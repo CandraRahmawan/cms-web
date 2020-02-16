@@ -1,4 +1,4 @@
-<div class="home-section-4">
+<section class="home-section-4">
     <div class="title-section">
         <h1>Advantages of DBE Acoustic</h1>
     </div>
@@ -28,4 +28,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>

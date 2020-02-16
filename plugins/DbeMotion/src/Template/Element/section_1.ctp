@@ -1,4 +1,4 @@
-<div class="home-section-1">
+<section class="home-section-1">
     <div class="section-part-left">
         <h1>
             We Put That Value To All Our
@@ -20,4 +20,4 @@
     <div class="section-part-right">
         <?= $this->Html->image('/images/img_section_1.png') ?>
     </div>
-</div>
+</section>
