@@ -28,8 +28,7 @@ $description = !empty($seo['meta_description']) ? $seo['meta_description'] : '';
     if ($this->Utility->isDevelopment()) {
         echo $this->Html->css('/DbeMotion/css/styles.css?' . time() . '', ['plugin' => false]);
     } else {
-        //echo $this->Html->css('styles.min');
-        echo $this->Html->css('/DbeMotion/css/styles.css?' . time() . '', ['plugin' => false]);
+        echo $this->Html->css('styles.min');
     }
     ?>
 </head>

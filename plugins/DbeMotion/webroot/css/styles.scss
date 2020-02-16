@@ -4,6 +4,10 @@ $fitWidth: 1200px;
 $whiteColor: #fff;
 $blackColor: #000;
 
+h1 {
+  font-family: 'Manrope VF', Manrope, sans-serif;
+}
+
 .top-image {
   position: relative;
   height: 100vh;
@@ -25,44 +29,49 @@ $blackColor: #000;
     text-align: center;
 
     span {
-      font-size: 30px;
+      font-size: 20px;
     }
 
     .box-text {
       color: $whiteColor;
-      font-size: 24px;
-      border: 1px solid $whiteColor;
-      width: 350px;
-      margin: 60px auto 0 auto;
-      padding: 20px;
+      font-size: 20px;
+      border: 1px solid #fff;
+      width: 320px;
+      margin: 80px auto 0 auto;
+      padding: 14px;
     }
   }
 }
 
 .home-section-1 {
   height: calc(100vh - 90px);
-  display: flex;
   width: $fitWidth;
   margin: 90px auto 0 auto;
-  justify-content: space-between;
+  display: flex;
+  justify-content: center;
 
   .section-part-left {
-    width: 520px;
+    width: 560px;
 
     h1 {
       margin-bottom: 70px;
       font-weight: bold;
-      font-size: 46px;
+      font-size: 36px;
+      letter-spacing: 2px;
+      color: $blackColor;
+      line-height: 52px;
     }
 
     span {
       margin-top: 70px;
-      font-size: 26px;
+      font-size: 22px;
+      line-height: 34px;
     }
   }
 
   .section-part-right {
     img {
+      width: 520px;
       height: 100%;
     }
   }
@@ -72,22 +81,22 @@ $blackColor: #000;
   position: relative;
 
   img {
-    height: 540px;
+    height: 435px;
     width: 100%;
     object-fit: cover;
   }
 
   div {
-    width: $fitWidth;
+    width: 1040px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
     h1 {
-      font-size: 118px;
-      line-height: 118px;
-      font-weight: 500;
+      font-size: 98px;
+      line-height: 104px;
+      font-weight: bold;
       color: #F563A1;
       width: 600px;
       margin-bottom: 0;
@@ -98,29 +107,32 @@ $blackColor: #000;
 .home-section-3 {
   height: calc(100vh - 100px);
   display: flex;
+  justify-content: center;
   margin: 100px auto 0 auto;
 
   .section-part-left {
     img {
       height: 100%;
+      width: 750px;
     }
   }
 
   .section-part-right {
-    width: 560px;
+    width: 480px;
     margin-top: 30px;
 
     h1 {
       color: #6DAFDF;
       font-weight: bold;
       margin-bottom: 80px;
-      font-size: 78px;
+      font-size: 52px;
     }
 
     span {
       margin-top: 30px;
-      font-size: 30px;
+      font-size: 22px;
       color: $blackColor;
+      line-height: 42px;
     }
   }
 
@@ -128,9 +140,9 @@ $blackColor: #000;
     margin-top: 80px;
     border: 2px solid $blackColor;
     padding: 10px;
-    width: 380px;
+    width: 320px;
     text-align: center;
-    font-size: 30px;
+    font-size: 24px;
     color: $blackColor;
   }
 }
@@ -141,12 +153,12 @@ $blackColor: #000;
   padding-top: 100px;
 
   .title-section {
-    width: $fitWidth;
+    width: 940px;
     margin: 0 auto;
 
     h1 {
-      font-size: 42px;
-      font-weight: 500;
+      font-size: 30px;
+      font-weight: bold;
     }
   }
 
@@ -154,21 +166,33 @@ $blackColor: #000;
     margin: 40px auto 0 auto;
     width: $fitWidth;
     display: flex;
-    justify-content: space-between;
-    font-size: 32px;
+    justify-content: space-evenly;
+    font-size: 22px;
+
+    div {
+      margin-bottom: 80px;
+    }
+
+    span {
+      align-self: center;
+    }
+
+    .section-icon {
+      display: flex;
+    }
+
+    img {
+      margin-right: 70px;
+      width: 98px;
+      height: 96px;
+    }
 
     .section-part-left {
-      width: 450px;
-      div {
-        margin-bottom: 80px;
-      }
+      width: 360px;
     }
 
     .section-part-right {
       width: 450px;
-      div {
-        margin-bottom: 80px;
-      }
     }
   }
 }
