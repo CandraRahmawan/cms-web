@@ -41,10 +41,8 @@ header {
     }
   }
 
-  &.page {
-    .burger-menu {
-      color: $blackColor;
-    }
+  .burger-menu {
+    color: $blackColor;
   }
 
   &.homepage {
@@ -246,10 +244,12 @@ header {
 }
 
 .product-category-wrapper {
-  width: 980px;
-  margin: 200px auto 0 auto;
+  width: 940px;
+  margin: 160px auto 0 auto;
+
   .content-wrapper {
     margin-bottom: 120px;
+
     h1 {
       text-align: right;
       border-bottom: 2px solid $blackColor;
@@ -258,16 +258,52 @@ header {
       padding-bottom: 14px;
       margin-bottom: 40px;
     }
+
     .bg-image {
       border-radius: 15px;
       height: 300px;
       width: 100%;
       display: inline-block;
+
       img {
         height: 300px;
         width: 620px;
         object-fit: cover;
       }
+    }
+  }
+}
+
+.scroll-text-absolute {
+  position: absolute;
+  color: $whiteColor;
+  bottom: -55px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+
+  hr {
+    height: 80px;
+    border-width: 1.2px;
+  }
+
+  .text-rotate {
+    transform-origin: 0 0;
+    transform: rotate(270deg);
+    margin-left: 22px;
+    margin-top: 80px;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+
+  &.page {
+    color: $blackColor;
+    bottom: -5px;
+    hr {
+      border-color: $blackColor;
     }
   }
 }

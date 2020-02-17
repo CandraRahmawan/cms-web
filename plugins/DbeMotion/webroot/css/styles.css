@@ -26,7 +26,7 @@ header {
   z-index: 1; }
   header .logo img {
     height: 26px; }
-  header.page .burger-menu {
+  header .burger-menu {
     color: #000; }
   header.homepage .burger-menu {
     color: #fff; }
@@ -164,8 +164,8 @@ header {
       width: 403px; }
 
 .product-category-wrapper {
-  width: 980px;
-  margin: 200px auto 0 auto; }
+  width: 940px;
+  margin: 160px auto 0 auto; }
   .product-category-wrapper .content-wrapper {
     margin-bottom: 120px; }
     .product-category-wrapper .content-wrapper h1 {
@@ -184,6 +184,32 @@ header {
         height: 300px;
         width: 620px;
         object-fit: cover; }
+
+.scroll-text-absolute {
+  position: absolute;
+  color: #fff;
+  bottom: -55px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end; }
+  .scroll-text-absolute hr {
+    height: 80px;
+    border-width: 1.2px; }
+  .scroll-text-absolute .text-rotate {
+    transform-origin: 0 0;
+    transform: rotate(270deg);
+    margin-left: 22px;
+    margin-top: 80px;
+    letter-spacing: 1px;
+    font-weight: 500; }
+  .scroll-text-absolute.page {
+    color: #000;
+    bottom: -5px; }
+    .scroll-text-absolute.page hr {
+      border-color: #000; }
 
 footer .left-footer {
   width: 1200px;

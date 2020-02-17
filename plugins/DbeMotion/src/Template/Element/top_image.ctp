@@ -8,4 +8,5 @@
             SERIOUSLY GOOD VALUE
         </div>
     </div>
+    <?= $this->Element('scroll_text_absolute'); ?>
 </section>
