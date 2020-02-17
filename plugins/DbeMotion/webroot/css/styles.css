@@ -26,9 +26,9 @@ header {
   z-index: 1; }
   header .logo img {
     height: 26px; }
-  header .burger-menu {
+  header.page .burger-menu {
     color: #000; }
-  header .homepage .burger-menu {
+  header.homepage .burger-menu {
     color: #fff; }
 
 .top-image {
