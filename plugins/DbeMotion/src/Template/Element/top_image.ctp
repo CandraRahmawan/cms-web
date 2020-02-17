@@ -1,5 +1,5 @@
 <section class="top-image">
-   <?= $this->Html->image('/images/top_image_home.jpg'); ?>
+    <?= $this->Html->image('/images/top_image_home.jpg', ['class' => 'hero-image']); ?>
     <div class="text-image-centre">
         <span>
             We love music.. Who doesn’t love music.

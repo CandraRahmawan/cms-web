@@ -135,4 +135,33 @@ class PagesController extends AppController
         }
     }
 
+    public function productCategory() {
+        $this->loadModel('Plugins');
+        $service_page = $this->ThemesSetting->find()
+            ->select(['value_1'])
+            ->where(['is_active' => 'Y', '`key`' => 'product_category_page', 'id_theme' => $this->id_themes])
+            ->first();
+        $service = $this->Plugins
+            ->find('all')
+            ->select([
+                'detail.value_1',
+                'detail.value_2',
+                'detail.value_3'
+            ])
+            ->from('plugins plugin')
+            ->join([
+                'detail' => [
+                    'table' => 'plugins_detail',
+                    'type' => 'INNER',
+                    'conditions' => 'plugin.plugin_id = detail.plugin_id',
+                ]
+            ])
+            ->where([
+                'plugin.is_active' => 'Y',
+                'plugin.plugin_id' => $service_page['value_1']
+            ])
+            ->toArray();
+        $this->set(compact('service'));
+    }
+
 }

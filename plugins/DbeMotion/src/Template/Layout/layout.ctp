@@ -35,7 +35,7 @@ $description = !empty($seo['meta_description']) ? $seo['meta_description'] : '';
 <body>
 <div class="container">
     <?php
-    echo $this->Element('top_image');
+    echo $this->Element('header');
     echo $this->fetch('content');
     echo $this->Element('footer');
     ?>
