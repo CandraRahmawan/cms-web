@@ -1,4 +1,55 @@
 @import url(font.css);
+body.uk-offcanvas-container {
+  position: fixed; }
+
+.uk-offcanvas-bar {
+  position: fixed;
+  width: 100%;
+  background-color: #EEEFF4; }
+  .uk-offcanvas-bar .list-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    margin: 140px auto 0 auto; }
+    .uk-offcanvas-bar .list-menu .social-list {
+      align-self: flex-end;
+      margin-right: -70px;
+      margin-bottom: 24px; }
+    .uk-offcanvas-bar .list-menu .social-title {
+      font-weight: bold;
+      color: #000;
+      letter-spacing: normal; }
+    .uk-offcanvas-bar .list-menu .social-link {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #000;
+      letter-spacing: 1px;
+      font-weight: normal; }
+    .uk-offcanvas-bar .list-menu li {
+      font-size: 34px;
+      font-weight: bold;
+      letter-spacing: 3px; }
+      .uk-offcanvas-bar .list-menu li a {
+        color: #000; }
+        .uk-offcanvas-bar .list-menu li a:visited {
+          color: #000; }
+        .uk-offcanvas-bar .list-menu li a:hover {
+          color: grey; }
+
+.menu-fullbar-header {
+  display: flex;
+  justify-content: space-between;
+  width: 1080px;
+  margin: 30px auto 0 auto; }
+  .menu-fullbar-header a {
+    color: #000; }
+    .menu-fullbar-header a:visited {
+      color: #000; }
+    .menu-fullbar-header a:hover {
+      color: grey; }
+  .menu-fullbar-header img {
+    height: 22px; }
+
 h1 {
   font-family: 'Manrope VF', Manrope, sans-serif; }
 
@@ -26,9 +77,9 @@ header {
   z-index: 1; }
   header .logo img {
     height: 26px; }
-  header .burger-menu {
+  header .burger-menu a {
     color: #000; }
-  header.homepage .burger-menu {
+  header.homepage .burger-menu a {
     color: #fff; }
 
 .top-image {

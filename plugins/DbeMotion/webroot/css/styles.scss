@@ -1,8 +1,89 @@
 @import "font.css";
 
-$fitWidth: 1200px;
+$maxFitWidth: 1200px;
+$midFitWidth: 1080px;
 $whiteColor: #fff;
 $blackColor: #000;
+
+body {
+  &.uk-offcanvas-container {
+    position: fixed;
+  }
+}
+
+.uk-offcanvas-bar {
+  position: fixed;
+  width: 100%;
+  background-color: #EEEFF4;
+
+  .list-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    margin: 140px auto 0 auto;
+
+    .social-list {
+      align-self: flex-end;
+      margin-right: -70px;
+      margin-bottom: 24px;
+    }
+
+    .social-title {
+      font-weight: bold;
+      color: $blackColor;
+      letter-spacing: normal;
+    }
+
+    .social-link {
+      margin-top: 30px;
+      font-size: 14px;
+      color: $blackColor;
+      letter-spacing: 1px;
+      font-weight: normal;
+    }
+
+    li {
+      font-size: 34px;
+      font-weight: bold;
+      letter-spacing: 3px;
+
+      a {
+        &:visited {
+          color: $blackColor;
+        }
+
+        &:hover {
+          color: grey;
+        }
+
+        color: $blackColor;
+      }
+    }
+  }
+}
+
+.menu-fullbar-header {
+  display: flex;
+  justify-content: space-between;
+  width: $midFitWidth;
+  margin: 30px auto 0 auto;
+
+  a {
+    &:visited {
+      color: $blackColor;
+    }
+
+    &:hover {
+      color: grey;
+    }
+
+    color: $blackColor;
+  }
+
+  img {
+    height: 22px;
+  }
+}
 
 h1 {
   font-family: 'Manrope VF', Manrope, sans-serif;
@@ -31,7 +112,7 @@ header {
   top: 70px;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1080px;
+  width: $midFitWidth;
   margin: 0 auto;
   z-index: 1;
 
@@ -42,12 +123,16 @@ header {
   }
 
   .burger-menu {
-    color: $blackColor;
+    a {
+      color: $blackColor;
+    }
   }
 
   &.homepage {
     .burger-menu {
-      color: $whiteColor;
+      a {
+        color: $whiteColor;
+      }
     }
   }
 }
@@ -89,7 +174,7 @@ header {
 
 .home-section-1 {
   height: calc(100vh - 90px);
-  width: $fitWidth;
+  width: $maxFitWidth;
   margin: 90px auto 0 auto;
   display: flex;
   justify-content: center;
@@ -210,7 +295,7 @@ header {
 
   .column-content {
     margin: 40px auto 0 auto;
-    width: $fitWidth;
+    width: $maxFitWidth;
     display: flex;
     justify-content: space-evenly;
     font-size: 22px;
@@ -302,6 +387,7 @@ header {
   &.page {
     color: $blackColor;
     bottom: -5px;
+
     hr {
       border-color: $blackColor;
     }
@@ -310,7 +396,7 @@ header {
 
 footer {
   .left-footer {
-    width: $fitWidth;
+    width: $maxFitWidth;
     margin: 150px auto 0 auto;
     border-top: 1px solid;
 
@@ -326,7 +412,7 @@ footer {
     padding: 14px 0;
 
     div {
-      width: $fitWidth;
+      width: $maxFitWidth;
       margin: 0 auto;
       text-align: right;
       font-size: 14px;
