@@ -135,13 +135,10 @@ class PagesController extends AppController
         }
     }
 
-    public function productCategory() {
+    public function pluginContent($plugin_key)
+    {
         $this->loadModel('Plugins');
-        $service_page = $this->ThemesSetting->find()
-            ->select(['value_1'])
-            ->where(['is_active' => 'Y', '`key`' => 'product_category_page', 'id_theme' => $this->id_themes])
-            ->first();
-        $service = $this->Plugins
+        $content = $this->Plugins
             ->find('all')
             ->select([
                 'detail.value_1',
@@ -157,11 +154,11 @@ class PagesController extends AppController
                 ]
             ])
             ->where([
+                'plugin.id_theme' => $this->id_themes,
                 'plugin.is_active' => 'Y',
-                'plugin.plugin_id' => $service_page['value_1']
+                'plugin.key' => $plugin_key
             ])
             ->toArray();
-        $this->set(compact('service'));
+        $this->set(compact($content));
     }
-
 }

@@ -236,6 +236,21 @@ header {
         width: 620px;
         object-fit: cover; }
 
+.where-to-buy-wrapper {
+  height: calc(100vh - 180px);
+  width: 1080px;
+  margin: 180px auto 0 auto; }
+  .where-to-buy-wrapper h1 {
+    font-weight: bold;
+    margin-bottom: 120px;
+    letter-spacing: 1px;
+    font-size: 72px; }
+  .where-to-buy-wrapper .image-ecommerce {
+    display: flex;
+    justify-content: space-evenly; }
+    .where-to-buy-wrapper .image-ecommerce img {
+      height: 120px; }
+
 .scroll-text-absolute {
   position: absolute;
   color: #fff;
