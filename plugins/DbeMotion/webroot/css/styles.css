@@ -7,24 +7,21 @@ body.uk-offcanvas-container {
   width: 100%;
   background-color: #EEEFF4; }
   .uk-offcanvas-bar .list-menu {
-    display: flex;
-    justify-content: space-between;
     width: 900px;
     margin: 140px auto 0 auto; }
     .uk-offcanvas-bar .list-menu .social-list {
-      align-self: flex-end;
-      margin-right: -70px;
-      margin-bottom: 24px; }
+      display: flex;
+      border-top: 1px solid #000;
+      margin-top: 50px;
+      justify-content: flex-end; }
     .uk-offcanvas-bar .list-menu .social-title {
-      font-weight: bold;
+      margin: 18px 42px 0 0;
       color: #000;
       letter-spacing: normal; }
     .uk-offcanvas-bar .list-menu .social-link {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #000;
-      letter-spacing: 1px;
-      font-weight: normal; }
+      margin: 0 12px; }
+      .uk-offcanvas-bar .list-menu .social-link img {
+        height: 18px; }
     .uk-offcanvas-bar .list-menu li {
       font-size: 34px;
       font-weight: bold;

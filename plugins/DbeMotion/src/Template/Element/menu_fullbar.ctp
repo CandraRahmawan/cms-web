@@ -17,18 +17,20 @@
                 ?>
             </ul>
             <ul class="uk-nav uk-nav-default social-list">
-                <div class="social-title">Follow dbE Acoustics</div>
+                <div class="social-title">
+                    Follow dbE Acoustics
+                </div>
                 <li class="social-link">
-                    Facebook
+                    <?= $this->Html->image('/images/fb_logo.png'); ?>
                 </li>
                 <li class="social-link">
-                    Instagram
+                    <?= $this->Html->image('/images/ig_logo.png'); ?>
                 </li>
                 <li class="social-link">
-                    Tokopedia
+                    <?= $this->Html->image('/images/shopee_logo.png'); ?>
                 </li>
                 <li class="social-link">
-                    Shopee
+                    <?= $this->Html->image('/images/tokped_logo.png'); ?>
                 </li>
             </ul>
         </div>

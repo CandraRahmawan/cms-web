@@ -17,29 +17,27 @@ body {
   background-color: #EEEFF4;
 
   .list-menu {
-    display: flex;
-    justify-content: space-between;
     width: 900px;
     margin: 140px auto 0 auto;
 
     .social-list {
-      align-self: flex-end;
-      margin-right: -70px;
-      margin-bottom: 24px;
+      display: flex;
+      border-top: 1px solid $blackColor;
+      margin-top: 50px;
+      justify-content: flex-end;
     }
 
     .social-title {
-      font-weight: bold;
+      margin: 18px 42px 0 0;
       color: $blackColor;
       letter-spacing: normal;
     }
 
     .social-link {
-      margin-top: 30px;
-      font-size: 14px;
-      color: $blackColor;
-      letter-spacing: 1px;
-      font-weight: normal;
+      margin: 0 12px;
+      img {
+        height: 18px;
+      }
     }
 
     li {
