@@ -15,16 +15,40 @@
                 Follow dbE Acoustics
             </div>
             <li class="social-contact">
-                <?= $this->Html->image('/images/fb_logo.png'); ?>
-                <?= $this->Html->image('/images/ig_logo.png'); ?>
-                <?= $this->Html->image('/images/shopee_logo.png'); ?>
-                <?= $this->Html->image('/images/tokped_logo.png'); ?>
+                <?= $this->Html->link(
+                    $this->Html->image('/images/fb_logo.png'),
+                    '/',
+                    ['escape' => false, 'target' => '_blank']
+                );
+                ?>
+                <?= $this->Html->link(
+                    $this->Html->image('/images/ig_logo.png'),
+                    'https://www.instagram.com/dbe.id/',
+                    ['escape' => false, 'target' => '_blank']
+                );
+                ?>
+                <?= $this->Html->link(
+                    $this->Html->image('/images/shopee_logo.png'),
+                    'https://shopee.co.id/dbeofficial',
+                    ['escape' => false, 'target' => '_blank']
+                );
+                ?>
+                <?= $this->Html->link(
+                    $this->Html->image('/images/tokped_logo.png'),
+                    'https://www.tokopedia.com/dbeofficial',
+                    ['escape' => false, 'target' => '_blank']
+                );
+                ?>
             </li>
             <li class="social-contact">
                 +62 22 423 4642
             </li>
             <li class="social-contact">
-                info@dbeacoustics.com
+                <?= $this->Html->link(
+                    'info@dbeacoustics.com',
+                    'mailto: info@dbeacoustics.com'
+                );
+                ?>
             </li>
         </div>
     </div>

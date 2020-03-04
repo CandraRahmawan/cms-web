@@ -22,6 +22,8 @@ body.uk-offcanvas-container {
       margin: 0 12px; }
       .uk-offcanvas-bar .list-menu .social-link img {
         height: 18px; }
+      .uk-offcanvas-bar .list-menu .social-link a {
+        padding: 0; }
     .uk-offcanvas-bar .list-menu a {
       color: #000; }
       .uk-offcanvas-bar .list-menu a:hover {
@@ -275,7 +277,7 @@ header {
     position: relative;
     overflow: hidden;
     height: 981px;
-    margin-top: -2px; }
+    margin-top: -1px; }
     .our-story-wrapper .middle-content .text {
       font-size: 30px;
       font-weight: bold;
@@ -384,8 +386,13 @@ footer .right-footer {
   letter-spacing: 1px;
   text-align: right; }
   footer .right-footer img {
-    height: 20px;
-    margin-left: 22px; }
+    height: 20px; }
+  footer .right-footer a {
+    margin-left: 22px;
+    color: #666; }
+    footer .right-footer a:hover {
+      color: grey;
+      text-decoration: none; }
   footer .right-footer img:first-child {
     margin-left: 0; }
 
