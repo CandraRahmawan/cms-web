@@ -1,9 +1,11 @@
 <div id="menu-show" uk-offcanvas>
     <div class="uk-offcanvas-bar">
         <div class="menu-fullbar-header">
-            <div>
-                <?= $this->Html->image('/images/logo.png'); ?>
-            </div>
+            <?= $this->Html->link(
+                $this->Html->image('/images/logo.png'),
+                '/',
+                ['escape' => false]
+            ); ?>
             <div>
                 <a href="#menu-show" uk-toggle><span uk-icon="icon: close; ratio: 2"></span></a>
             </div>

@@ -1,7 +1,11 @@
 <footer>
     <div class="wrapper-section">
         <div class="left-footer">
-            <?= $this->Html->image('/images/logo.png') ?>
+            <?= $this->Html->link(
+                $this->Html->image('/images/logo.png'),
+                '/',
+                ['escape' => false]
+            ); ?>
             <ul class="uk-nav">
                 <?php
                 foreach ($menu_header as $item) {

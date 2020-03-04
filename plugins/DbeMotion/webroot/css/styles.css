@@ -234,7 +234,6 @@ header {
         object-fit: cover; }
 
 .where-to-buy-wrapper {
-  height: calc(100vh - 180px);
   width: 1080px;
   margin: 180px auto 0 auto; }
   .where-to-buy-wrapper h1 {
@@ -242,11 +241,42 @@ header {
     margin-bottom: 120px;
     letter-spacing: 1px;
     font-size: 72px; }
+  .where-to-buy-wrapper h2 {
+    text-align: right;
+    font-weight: bold; }
   .where-to-buy-wrapper .image-ecommerce {
     display: flex;
-    justify-content: space-evenly; }
+    align-items: center;
+    flex-direction: column; }
     .where-to-buy-wrapper .image-ecommerce img {
-      height: 120px; }
+      height: 128px;
+      width: 442px;
+      margin-bottom: 48px; }
+  .where-to-buy-wrapper .provider-store {
+    border-top: 2px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .where-to-buy-wrapper .provider-store .store-list-wrapper {
+      margin-top: 70px; }
+      .where-to-buy-wrapper .provider-store .store-list-wrapper h3 {
+        border-bottom: 2px solid #000;
+        font-weight: bold;
+        padding-bottom: 16px;
+        margin-bottom: 32px;
+        width: 150px;
+        text-transform: uppercase; }
+      .where-to-buy-wrapper .provider-store .store-list-wrapper .store-list {
+        width: 310px;
+        margin-bottom: 42px; }
+        .where-to-buy-wrapper .provider-store .store-list-wrapper .store-list span {
+          display: block; }
+        .where-to-buy-wrapper .provider-store .store-list-wrapper .store-list h5 {
+          font-weight: bold;
+          margin-bottom: 10px;
+          text-transform: uppercase; }
+  .where-to-buy-wrapper .scroll-text-absolute {
+    bottom: 286px !important; }
 
 .our-story-wrapper {
   margin: 180px auto 0 auto;
@@ -351,59 +381,56 @@ header {
     .scroll-text-absolute.page hr {
       border-color: #000; }
 
-footer .wrapper-section {
-  display: flex;
-  justify-content: space-between;
-  width: 1200px;
-  margin: 130px auto 0 auto;
-  border-top: 1px solid; }
-
-footer ul {
-  padding-left: 0; }
-
-footer li {
-  list-style: none;
-  margin: 22px 0; }
-
-footer .left-footer {
-  letter-spacing: 2px;
-  margin-top: 80px; }
-  footer .left-footer a {
-    font-size: 18px;
-    font-weight: bold;
-    color: #000; }
-    footer .left-footer a:hover {
-      color: grey;
-      text-decoration: none; }
-  footer .left-footer img {
-    height: 28px;
-    margin-bottom: 40px; }
-
-footer .right-footer {
-  align-self: flex-end;
-  margin-top: 80px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-align: right; }
-  footer .right-footer img {
-    height: 20px; }
-  footer .right-footer a {
-    margin-left: 22px;
-    color: #666; }
-    footer .right-footer a:hover {
-      color: grey;
-      text-decoration: none; }
-  footer .right-footer img:first-child {
-    margin-left: 0; }
-
-footer .bottom-footer {
-  background-color: #ADAAAA;
-  color: #fff;
-  padding: 14px 0;
-  margin-top: 42px; }
-  footer .bottom-footer div {
+footer {
+  border-top: 1px solid;
+  margin-top: 120px; }
+  footer .wrapper-section {
+    display: flex;
+    justify-content: space-between;
     width: 1200px;
-    margin: 0 auto;
-    text-align: right;
-    font-size: 14px;
-    letter-spacing: 1px; }
+    margin: 0 auto; }
+  footer ul {
+    padding-left: 0; }
+  footer li {
+    list-style: none;
+    margin: 22px 0; }
+  footer .left-footer {
+    letter-spacing: 2px;
+    margin-top: 40px; }
+    footer .left-footer a {
+      font-size: 18px;
+      font-weight: bold;
+      color: #000; }
+      footer .left-footer a:hover {
+        color: grey;
+        text-decoration: none; }
+    footer .left-footer img {
+      height: 28px;
+      margin-bottom: 40px; }
+  footer .right-footer {
+    align-self: flex-end;
+    margin-top: 80px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: right; }
+    footer .right-footer img {
+      height: 20px; }
+    footer .right-footer a {
+      margin-left: 22px;
+      color: #666; }
+      footer .right-footer a:hover {
+        color: grey;
+        text-decoration: none; }
+    footer .right-footer img:first-child {
+      margin-left: 0; }
+  footer .bottom-footer {
+    background-color: #ADAAAA;
+    color: #fff;
+    padding: 14px 0;
+    margin-top: 42px; }
+    footer .bottom-footer div {
+      width: 1200px;
+      margin: 0 auto;
+      text-align: right;
+      font-size: 14px;
+      letter-spacing: 1px; }
