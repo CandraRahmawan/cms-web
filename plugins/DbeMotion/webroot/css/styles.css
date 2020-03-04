@@ -238,10 +238,11 @@ header {
   margin: 180px auto 0 auto; }
   .where-to-buy-wrapper h1 {
     font-weight: bold;
-    margin-bottom: 120px;
+    margin-bottom: 92px;
     letter-spacing: 1px;
     font-size: 72px; }
   .where-to-buy-wrapper h2 {
+    margin-top: 0;
     text-align: right;
     font-weight: bold; }
   .where-to-buy-wrapper .image-ecommerce {
