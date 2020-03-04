@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="list-menu">
-            <ul class="uk-nav uk-nav-default">
+            <ul class="uk-nav">
                 <?php
                 foreach ($menu_header as $item) {
                     echo $this->Html->tag('li', $this->Html->tag('a', $item['name'], ['href' => $this->Utility->buildUrl($item['link'])]), ['class' => 'uk-' . $item['active']]);

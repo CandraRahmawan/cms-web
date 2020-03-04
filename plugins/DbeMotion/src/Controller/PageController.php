@@ -16,4 +16,9 @@ class PageController extends PagesController
     {
         $this->pluginContent('where_to_buy_page');
     }
+
+    public function ourStory()
+    {
+        $this->pluginContent('our_story_page');
+    }
 }

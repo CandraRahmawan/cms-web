@@ -2,7 +2,7 @@
     <div class="wrapper-section">
         <div class="left-footer">
             <?= $this->Html->image('/images/logo.png') ?>
-            <ul>
+            <ul class="uk-nav">
                 <?php
                 foreach ($menu_header as $item) {
                     echo $this->Html->tag('li', $this->Html->tag('a', $item['name'], ['href' => $this->Utility->buildUrl($item['link'])]), ['class' => 'uk-' . $item['active']]);
