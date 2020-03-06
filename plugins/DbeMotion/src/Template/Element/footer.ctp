@@ -21,7 +21,7 @@
             <li class="social-contact">
                 <?= $this->Html->link(
                     $this->Html->image('/images/fb_logo.png'),
-                    '/',
+                    'https://www.facebook.com/DbE-Indonesia-111625933761626/',
                     ['escape' => false, 'target' => '_blank']
                 );
                 ?>
@@ -45,12 +45,12 @@
                 ?>
             </li>
             <li class="social-contact">
-                +62 22 423 4642
+                <?= $this->Html->link('+62 22 423 4642', 'tel: +62 22 423 4642'); ?>
             </li>
             <li class="social-contact">
                 <?= $this->Html->link(
-                    'info@dbeacoustics.com',
-                    'mailto: info@dbeacoustics.com'
+                    'info@dbe-id.com',
+                    'mailto: info@dbe-id.com'
                 );
                 ?>
             </li>

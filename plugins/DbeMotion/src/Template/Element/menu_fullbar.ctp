@@ -25,7 +25,7 @@
                 <li class="social-link">
                     <?= $this->Html->link(
                         $this->Html->image('/images/fb_logo.png'),
-                        '/',
+                        'https://www.facebook.com/DbE-Indonesia-111625933761626/',
                         ['escape' => false, 'target' => '_blank']
                     );
                     ?>
