@@ -163,7 +163,7 @@ header {
     .box-text {
       color: $whiteColor;
       font-size: 20px;
-      border: 1px solid #fff;
+      border: 1px solid $whiteColor;
       width: 320px;
       margin: 80px auto 0 auto;
       padding: 14px;
@@ -388,7 +388,7 @@ header {
   }
 
   .provider-store {
-    border-top: 2px solid #000;
+    border-top: 2px solid $blackColor;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -397,7 +397,7 @@ header {
       margin-top: 70px;
 
       h3 {
-        border-bottom: 2px solid #000;
+        border-bottom: 2px solid $blackColor;
         font-weight: bold;
         padding-bottom: 16px;
         margin-bottom: 32px;
@@ -534,6 +534,70 @@ header {
     bottom: 286px !important;
   }
 
+}
+
+.warranty-information-wrapper {
+  margin: 180px auto 0 auto;
+  height: calc(100vh - 180px);
+  width: $midFitWidth;
+  color: $blackColor;
+
+  .title-wrapper {
+    h1 {
+      font-weight: bold;
+      font-size: 68px;
+    }
+
+    width: 495px;
+  }
+
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .left-content {
+    width: 495px;
+    hr {
+      border-width: 1.2px;
+      border-color: $blackColor;
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: 32px;
+      margin-top: 0;
+    }
+  }
+
+  .right-content {
+    align-self: flex-end;
+    width: 385px;
+
+    .top-text {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 38px;
+    }
+
+    h3 {
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .store-list {
+      margin-bottom: 32px;
+    }
+  }
+
+  .scroll-text-absolute {
+    bottom: 286px !important;
+  }
 }
 
 .scroll-text-absolute {

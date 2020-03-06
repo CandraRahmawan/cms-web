@@ -356,6 +356,46 @@ header {
   .our-story-wrapper .scroll-text-absolute {
     bottom: 286px !important; }
 
+.warranty-information-wrapper {
+  margin: 180px auto 0 auto;
+  height: calc(100vh - 180px);
+  width: 1080px;
+  color: #000; }
+  .warranty-information-wrapper .title-wrapper {
+    width: 495px; }
+    .warranty-information-wrapper .title-wrapper h1 {
+      font-weight: bold;
+      font-size: 68px; }
+  .warranty-information-wrapper .content-wrapper {
+    display: flex;
+    justify-content: space-between; }
+  .warranty-information-wrapper .left-content {
+    width: 495px; }
+    .warranty-information-wrapper .left-content hr {
+      border-width: 1.2px;
+      border-color: #000; }
+    .warranty-information-wrapper .left-content h3 {
+      font-weight: bold;
+      font-size: 32px;
+      margin-top: 0; }
+  .warranty-information-wrapper .right-content {
+    align-self: flex-end;
+    width: 385px; }
+    .warranty-information-wrapper .right-content .top-text {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 38px; }
+    .warranty-information-wrapper .right-content h3 {
+      font-weight: bold;
+      margin-bottom: 0; }
+    .warranty-information-wrapper .right-content p {
+      margin: 0;
+      font-size: 22px; }
+    .warranty-information-wrapper .right-content .store-list {
+      margin-bottom: 32px; }
+  .warranty-information-wrapper .scroll-text-absolute {
+    bottom: 286px !important; }
+
 .scroll-text-absolute {
   position: absolute;
   color: #fff;
