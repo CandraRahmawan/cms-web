@@ -628,9 +628,13 @@ header {
   }
 }
 
-.image-wrapper {
+.not-found-page-image-wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+.not-found-btn-home {
+  text-align: center;
 }
 
 .scroll-text-absolute {

@@ -417,9 +417,12 @@ header {
     font-size: 34px;
     margin-bottom: 0; }
 
-.image-wrapper {
+.not-found-page-image-wrapper {
   display: flex;
   justify-content: space-between; }
+
+.not-found-btn-home {
+  text-align: center; }
 
 .scroll-text-absolute {
   position: absolute;

@@ -25,9 +25,16 @@
         </div>
     </div>
 </div>
-<div class="image-wrapper">
+<div class="not-found-page-image-wrapper">
     <?= $this->Html->image('/images/404/left-img.png'); ?>
     <?= $this->Html->image('/images/404/right-img.png'); ?>
+</div>
+<div class="not-found-btn-home">
+    <?= $this->Html->link(
+        $this->Html->image('/images/404/btn-home.png'),
+        '/',
+        ['escape' => false]
+    ); ?>
 </div>
 <?php
 echo $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js');
