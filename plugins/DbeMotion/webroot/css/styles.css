@@ -2,6 +2,10 @@
 body.uk-offcanvas-container {
   position: fixed; }
 
+body.not-found-page {
+  background-image: linear-gradient(to bottom, #8AD8D2, #fff);
+  height: 100vh; }
+
 .uk-offcanvas-bar {
   position: fixed;
   width: 100%;
@@ -395,6 +399,27 @@ header {
       margin-bottom: 32px; }
   .warranty-information-wrapper .scroll-text-absolute {
     bottom: 286px !important; }
+
+.not-found-wrapper {
+  padding-top: 100px;
+  margin: 0 auto;
+  width: 1080px;
+  text-align: center;
+  color: #fff; }
+  .not-found-wrapper h1 {
+    font-size: 124px;
+    font-weight: bold;
+    opacity: 0.7;
+    color: #fff;
+    margin-top: 0; }
+  .not-found-wrapper p {
+    font-weight: bold;
+    font-size: 34px;
+    margin-bottom: 0; }
+
+.image-wrapper {
+  display: flex;
+  justify-content: space-between; }
 
 .scroll-text-absolute {
   position: absolute;

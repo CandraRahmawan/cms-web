@@ -9,10 +9,13 @@ use Cake\Collection\Collection;
 class PagesController extends AppController
 {
 
+    private $is_404_page = false;
+
     public function beforeRender(\Cake\Event\Event $event)
     {
         parent::beforeRender($event);
-        $this->viewBuilder()->layout('layout');
+        $layout = $this->is_404_page ? 'default' : 'layout';
+        $this->viewBuilder()->layout($layout);
         $random_related_blog_post = $this->__randomRelatedBlogPost();
         $this->set(compact('random_related_blog_post'));
     }
@@ -21,6 +24,7 @@ class PagesController extends AppController
     {
         $param = $this->pass[0];
         $id = 0;
+        $content = [];
         $explode = explode('-', $param);
 
         if (is_array($explode)) {
@@ -29,42 +33,46 @@ class PagesController extends AppController
             $this->redirect('/');
         }
 
-        $content = $this->Content
-            ->find('all')
-            ->select([
-                'cat.name',
-                'Content.description',
-                'Content.title',
-                'Content.create_date',
-                'Content.link',
-                'Content.picture',
-                'cat.type',
-                'cat.category_id',
-                'u.first_name',
-                'u.last_name'
-            ])
-            ->join(
-                [
-                    'cat' => [
-                        'table' => 'category',
-                        'type' => 'INNER',
-                        'conditions' => 'cat.category_id = Content.category_id'
-                    ],
-                    'u' => [
-                        'table' => 'users',
-                        'type' => 'INNER',
-                        'conditions' => 'u.user_id = Content.user_id'
-                    ]
+        if (is_int($id)) {
+            $content = $this->Content
+                ->find('all')
+                ->select([
+                    'cat.name',
+                    'Content.description',
+                    'Content.title',
+                    'Content.create_date',
+                    'Content.link',
+                    'Content.picture',
+                    'cat.type',
+                    'cat.category_id',
+                    'u.first_name',
+                    'u.last_name'
                 ])
-            ->where([
-                'Content.content_id' => $id,
-                'Content.status' => 'Y',
-                'cat.status' => 'Y',
-                'OR' => [['cat.type' => 'Content'], ['cat.type' => 'Page']]
-            ])
-            ->toArray();
+                ->join(
+                    [
+                        'cat' => [
+                            'table' => 'category',
+                            'type' => 'INNER',
+                            'conditions' => 'cat.category_id = Content.category_id'
+                        ],
+                        'u' => [
+                            'table' => 'users',
+                            'type' => 'INNER',
+                            'conditions' => 'u.user_id = Content.user_id'
+                        ]
+                    ])
+                ->where([
+                    'Content.content_id' => $id,
+                    'Content.status' => 'Y',
+                    'cat.status' => 'Y',
+                    'OR' => [['cat.type' => 'Content'], ['cat.type' => 'Page']]
+                ])
+                ->toArray();
+        }
+
         if (count($content) != 1 || preg_replace('[/]', '', $content[0]['link']) != $param) {
-            $this->redirect('/');
+            $this->is_404_page = true;
+            $this->render('/Page/404_page');
         }
 
         $this->set(compact('content'));
@@ -102,7 +110,7 @@ class PagesController extends AppController
 
     private function __randomRelatedBlogPost($limit = 3)
     {
-        if (isset($this->request->pass[0])) {
+        if (isset($this->request->pass[0]) && is_int($this->request->pass[0])) {
             $pass_url = Text::tokenize($this->request->pass[0], '-');
             $collection = new Collection($pass_url);
             $content_id = $collection->last();

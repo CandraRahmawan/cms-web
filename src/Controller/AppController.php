@@ -153,29 +153,32 @@ class AppController extends Controller
     private function __getSeoInfo()
     {
         $id = 0;
-        if (sizeof($this->pass) > 0) {
-            $param = $this->pass[0];
-            $explode = explode('-', $param);
-            if (is_array($explode)) {
-                $id = $explode[count($explode) - 1];
+        $seo = '';
+        if (is_int($this->pass)) {
+            if (sizeof($this->pass) > 0) {
+                $param = $this->pass[0];
+                $explode = explode('-', $param);
+                if (is_array($explode)) {
+                    $id = $explode[count($explode) - 1];
+                }
             }
-        }
 
-        $seo = $this->Content->find()
-            ->select('seo_id')
-            ->where(['content_id' => $id])
-            ->toArray();
-
-        if (sizeof($seo) <= 0) {
-            $url = '/' . $this->request->url;
-            $seo = $this->MenuDetail->find()
+            $seo = $this->Content->find()
                 ->select('seo_id')
-                ->where(['custom_link' => $url])
+                ->where(['content_id' => $id])
                 ->toArray();
-        }
 
-        if (sizeof($seo) > 0) {
-            $seo = $this->Seo->get($seo[0]['seo_id']);
+            if (sizeof($seo) <= 0) {
+                $url = '/' . $this->request->url;
+                $seo = $this->MenuDetail->find()
+                    ->select('seo_id')
+                    ->where(['custom_link' => $url])
+                    ->toArray();
+            }
+
+            if (sizeof($seo) > 0) {
+                $seo = $this->Seo->get($seo[0]['seo_id']);
+            }
         }
 
         return $seo;
