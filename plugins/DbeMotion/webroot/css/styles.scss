@@ -598,6 +598,12 @@ header {
 
     .store-list {
       margin-bottom: 32px;
+      a {
+        color: $blackColor;
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
   }
 

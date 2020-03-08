@@ -19,7 +19,12 @@
             <div class="store-list">
                 <h3>BANDUNG</h3>
                 <p>Bandung Electronic Center 2nd Fl Y05</p>
-                <p>022-4234642</p>
+                <?= $this->Html->link(
+                    '<p>022-4234642</p>',
+                    'tel:022-4234642',
+                    ['escape' => false]
+                );
+                ?>
             </div>
         </div>
     </div>

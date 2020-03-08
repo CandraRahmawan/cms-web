@@ -430,6 +430,10 @@ header {
       font-size: 22px; }
     .warranty-information-wrapper .right-content .store-list {
       margin-bottom: 32px; }
+      .warranty-information-wrapper .right-content .store-list a {
+        color: #000; }
+        .warranty-information-wrapper .right-content .store-list a:hover {
+          text-decoration: none; }
   .warranty-information-wrapper .scroll-text-absolute {
     bottom: 286px !important; }
 
