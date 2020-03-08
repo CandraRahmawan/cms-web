@@ -1,4 +1,37 @@
 @import url(font.css);
+input[type="text"] {
+  background-color: transparent;
+  border-bottom: 1px solid grey;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: 22px; }
+  input[type="text"]:active, input[type="text"]:focus {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid grey; }
+
+.uk-textarea {
+  background-color: transparent;
+  border-bottom: 1px solid grey;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: 22px; }
+  .uk-textarea:active, .uk-textarea:focus {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid grey; }
+
+button {
+  background-color: #000;
+  color: #fff;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 3px;
+  font-size: 22px; }
+  button:hover {
+    cursor: pointer;
+    color: grey; }
+
 body.uk-offcanvas-container {
   position: fixed; }
 
@@ -399,6 +432,80 @@ header {
       margin-bottom: 32px; }
   .warranty-information-wrapper .scroll-text-absolute {
     bottom: 286px !important; }
+
+.contact-page-top {
+  margin: 200px auto 0 auto;
+  height: calc(100vh - 200px);
+  width: 1080px;
+  color: #000;
+  position: relative; }
+  .contact-page-top .title-wrapper {
+    width: 495px; }
+    .contact-page-top .title-wrapper h1 {
+      font-weight: bold;
+      font-size: 68px; }
+  .contact-page-top .content-wrapper {
+    display: flex;
+    justify-content: space-between; }
+  .contact-page-top .left-content {
+    width: 580px; }
+    .contact-page-top .left-content h3 {
+      font-size: 30px;
+      margin-top: 0; }
+  .contact-page-top .right-content {
+    width: 390px;
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+    .contact-page-top .right-content h3 {
+      font-weight: bold;
+      margin-bottom: 0; }
+    .contact-page-top .right-content p {
+      margin: 0;
+      font-size: 22px; }
+    .contact-page-top .right-content .store-list {
+      margin-bottom: 32px; }
+      .contact-page-top .right-content .store-list a {
+        color: #000; }
+        .contact-page-top .right-content .store-list a:hover {
+          text-decoration: none; }
+  .contact-page-top .scroll-text-absolute {
+    bottom: 286px !important; }
+
+.contact-page-bottom {
+  color: #000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  .contact-page-bottom form span {
+    letter-spacing: 2px;
+    font-weight: bold; }
+  .contact-page-bottom button {
+    margin-top: 28px; }
+  .contact-page-bottom h1 {
+    font-weight: bold;
+    font-size: 48px; }
+  .contact-page-bottom .content-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 1080px; }
+    .contact-page-bottom .content-top .left-content {
+      width: 45%; }
+    .contact-page-bottom .content-top .right-content {
+      width: 45%; }
+  .contact-page-bottom .content-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 1080px;
+    margin: 0 auto; }
+    .contact-page-bottom .content-bottom .left-content {
+      font-size: 22px;
+      width: 45%; }
+    .contact-page-bottom .content-bottom .right-content {
+      width: 45%; }
 
 .not-found-wrapper {
   padding-top: 100px;

@@ -26,4 +26,9 @@ class PageController extends PagesController
     {
         $this->pluginContent('warranty_information_page');
     }
+
+    public function contact()
+    {
+        $this->pluginContent('contact_page');
+    }
 }

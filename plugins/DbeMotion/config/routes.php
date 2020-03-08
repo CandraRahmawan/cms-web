@@ -8,4 +8,5 @@ Router::scope('/', ['plugin' => 'DbeMotion'], function (RouteBuilder $routes) {
     $routes->connect('/where-to-buy', ['controller' => 'Page', 'action' => 'whereToBuy']);
     $routes->connect('/our-story', ['controller' => 'Page', 'action' => 'ourStory']);
     $routes->connect('/warranty-information', ['controller' => 'Page', 'action' => 'warrantyInformation']);
+    $routes->connect('/contact', ['controller' => 'Page', 'action' => 'contact']);
 });

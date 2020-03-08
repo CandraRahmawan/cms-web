@@ -1,0 +1,43 @@
+input {
+  &[type="text"] {
+    background-color: transparent;
+    border-bottom: 1px solid grey;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 22px;
+
+    &:active, &:focus {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid grey;
+    }
+  }
+}
+
+.uk-textarea {
+  background-color: transparent;
+  border-bottom: 1px solid grey;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: 22px;
+
+  &:active, &:focus {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid grey;
+  }
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 3px;
+  font-size: 22px;
+
+  &:hover {
+    cursor: pointer;
+    color: grey;
+  }
+}
