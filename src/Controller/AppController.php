@@ -14,6 +14,7 @@ class AppController extends Controller
     public $params;
     public $pass;
     public $baseUrl;
+    public $is_404_page = false;
 
     public function initialize()
     {
@@ -154,7 +155,7 @@ class AppController extends Controller
     {
         $id = 0;
         $seo = '';
-        if (is_int($this->pass)) {
+        if (is_int($this->pass) || !$this->is_404_page) {
             if (sizeof($this->pass) > 0) {
                 $param = $this->pass[0];
                 $explode = explode('-', $param);

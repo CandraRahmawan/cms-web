@@ -9,8 +9,6 @@ use Cake\Collection\Collection;
 class PagesController extends AppController
 {
 
-    private $is_404_page = false;
-
     public function beforeRender(\Cake\Event\Event $event)
     {
         parent::beforeRender($event);
