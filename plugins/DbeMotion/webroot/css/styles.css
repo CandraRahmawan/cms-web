@@ -1,6 +1,7 @@
 @import url(font.css);
 input[type="text"] {
   background-color: transparent;
+  border: none;
   border-bottom: 1px solid grey;
   margin-top: 10px;
   margin-bottom: 40px;
@@ -12,6 +13,7 @@ input[type="text"] {
 
 .uk-textarea {
   background-color: transparent;
+  border: none;
   border-bottom: 1px solid grey;
   margin-top: 10px;
   margin-bottom: 40px;
@@ -31,6 +33,21 @@ button {
   button:hover {
     cursor: pointer;
     color: grey; }
+
+.grey {
+  background-color: #E2E2E2; }
+
+.yellow {
+  background-color: #F7DEA9; }
+
+.blue {
+  background-color: #AED8D5; }
+
+.orange {
+  background-color: #FFCBB1; }
+
+.blue-grey {
+  background-color: #EEEFF4; }
 
 body.uk-offcanvas-container {
   position: fixed; }
@@ -86,18 +103,6 @@ body.not-found-page {
 
 h1 {
   font-family: 'Manrope VF', Manrope, sans-serif; }
-
-.grey {
-  background-color: #E2E2E2; }
-
-.yellow {
-  background-color: #F7DEA9; }
-
-.blue {
-  background-color: #AED8D5; }
-
-.orange {
-  background-color: #FFCBB1; }
 
 header {
   display: flex;
@@ -314,7 +319,7 @@ header {
           margin-bottom: 10px;
           text-transform: uppercase; }
   .where-to-buy-wrapper .scroll-text-absolute {
-    bottom: 286px !important; }
+    bottom: 220px !important; }
 
 .our-story-wrapper {
   margin: 180px auto 0 auto;
@@ -391,7 +396,7 @@ header {
         font-size: 20px;
         line-height: 34px; }
   .our-story-wrapper .scroll-text-absolute {
-    bottom: 286px !important; }
+    bottom: 252px !important; }
 
 .warranty-information-wrapper {
   margin: 180px auto 0 auto;
@@ -435,7 +440,7 @@ header {
         .warranty-information-wrapper .right-content .store-list a:hover {
           text-decoration: none; }
   .warranty-information-wrapper .scroll-text-absolute {
-    bottom: 286px !important; }
+    bottom: 264px !important; }
 
 .contact-page-top {
   margin: 200px auto 0 auto;
@@ -474,7 +479,7 @@ header {
         .contact-page-top .right-content .store-list a:hover {
           text-decoration: none; }
   .contact-page-top .scroll-text-absolute {
-    bottom: 286px !important; }
+    bottom: 248px !important; }
 
 .contact-page-bottom {
   color: #000;
@@ -510,6 +515,83 @@ header {
       width: 45%; }
     .contact-page-bottom .content-bottom .right-content {
       width: 45%; }
+
+.review-wrapper {
+  margin: 260px auto 0 auto; }
+  .review-wrapper h1 {
+    text-align: center;
+    margin: 0 auto;
+    padding: 8px 0;
+    font-size: 62px;
+    font-weight: bold;
+    width: 275px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000; }
+  .review-wrapper .review-list {
+    width: 1080px;
+    margin: 100px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .review-wrapper .review-list .review-content {
+      margin: 60px 0;
+      width: 45%; }
+      .review-wrapper .review-list .review-content h3 {
+        font-weight: 500; }
+      .review-wrapper .review-list .review-content p {
+        line-height: 42px; }
+  .review-wrapper .load-more-wrapper {
+    width: 1080px;
+    display: flex;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 60px auto 120px auto; }
+    .review-wrapper .load-more-wrapper .left-content {
+      width: 55%; }
+  .review-wrapper .youtube-section-wrapper {
+    display: flex;
+    margin: 0 auto;
+    padding: 80px 0;
+    justify-content: center; }
+    .review-wrapper .youtube-section-wrapper .logo-youtube {
+      margin-top: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .review-wrapper .youtube-section-wrapper .logo-youtube div {
+        margin-left: 40px;
+        margin-bottom: -24px;
+        letter-spacing: 1px;
+        color: #000; }
+    .review-wrapper .youtube-section-wrapper iframe {
+      margin: 0 20px; }
+  .review-wrapper .review-form-wrapper {
+    color: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 1080px; }
+    .review-wrapper .review-form-wrapper form span {
+      letter-spacing: 2px;
+      font-weight: bold; }
+    .review-wrapper .review-form-wrapper button {
+      margin-top: 28px; }
+    .review-wrapper .review-form-wrapper h1 {
+      font-weight: bold;
+      font-size: 52px;
+      width: 426px;
+      border: none;
+      text-align: left;
+      margin: 0;
+      letter-spacing: 2px; }
+    .review-wrapper .review-form-wrapper .left-content {
+      width: 45%; }
+    .review-wrapper .review-form-wrapper .right-content {
+      width: 45%; }
+  .review-wrapper .scroll-text-absolute {
+    bottom: 220px !important; }
 
 .not-found-wrapper {
   padding-top: 100px;

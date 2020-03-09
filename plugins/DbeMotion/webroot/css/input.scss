@@ -1,6 +1,7 @@
 input {
   &[type="text"] {
     background-color: transparent;
+    border: none;
     border-bottom: 1px solid grey;
     margin-top: 10px;
     margin-bottom: 40px;
@@ -16,6 +17,7 @@ input {
 
 .uk-textarea {
   background-color: transparent;
+  border: none;
   border-bottom: 1px solid grey;
   margin-top: 10px;
   margin-bottom: 40px;

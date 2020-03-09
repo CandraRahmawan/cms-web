@@ -22,6 +22,11 @@ class PageController extends PagesController
         $this->pluginContent('our_story_page');
     }
 
+    public function review()
+    {
+        $this->pluginContent('review_page');
+    }
+
     public function warrantyInformation()
     {
         $this->pluginContent('warranty_information_page');

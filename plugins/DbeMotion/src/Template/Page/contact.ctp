@@ -35,7 +35,7 @@
         </div>
     </div>
 </div>
-<div class="grey">
+<div class="blue-grey">
     <div class="contact-page-bottom">
         <div class="content-top">
             <div class="left-content">
