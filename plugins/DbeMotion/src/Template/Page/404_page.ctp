@@ -26,8 +26,15 @@
     </div>
 </div>
 <div class="not-found-page-image-wrapper">
-    <?= $this->Html->image('/images/404/left-img.png'); ?>
-    <?= $this->Html->image('/images/404/right-img.png'); ?>
+    <div class="left">
+        <?= $this->Html->image('/images/404/left-img.png'); ?>
+    </div>
+    <div class="middle">
+        <?= $this->Html->image('/images/404/robot.png'); ?>
+    </div>
+    <div class="right">
+        <?= $this->Html->image('/images/404/right-img.png'); ?>
+    </div>
 </div>
 <div class="not-found-btn-home">
     <?= $this->Html->link(
