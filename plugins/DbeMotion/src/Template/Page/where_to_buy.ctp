@@ -106,7 +106,7 @@
                 </div>
                 <div class="store-list">
                     <h5>Star Comp</h5>
-                    <span>Jl. Nusa Indah Candi Gebang, Dero, Depok, Sleman RT05 / RW 12 No. 240,YOGYAKARTA  55283</span>
+                    <span>Jl. Nusa Indah Candi Gebang, Dero, Depok, Sleman RT05 / RW 12 No.240, YOGYAKARTA  55283</span>
                     <span>(0274) 28030309 / 0811-2951-900</span>
                 </div>
             </div>

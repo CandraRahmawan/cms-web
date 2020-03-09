@@ -166,15 +166,17 @@ header {
       margin-top: 70px;
       font-size: 22px;
       line-height: 34px; }
-  .home-section-1 .section-part-right img {
-    width: 520px;
-    height: 100%;
-    object-fit: contain; }
+  .home-section-1 .section-part-right {
+    margin-bottom: 38px; }
+    .home-section-1 .section-part-right img {
+      width: 520px;
+      height: 100%;
+      object-fit: contain; }
 
 .home-section-2 {
   position: relative; }
   .home-section-2 img {
-    height: 435px;
+    height: 522px;
     width: 100%;
     object-fit: cover; }
   .home-section-2 div {
@@ -313,10 +315,11 @@ header {
         width: 310px;
         margin-bottom: 42px; }
         .where-to-buy-wrapper .provider-store .store-list-wrapper .store-list span {
-          display: block; }
+          display: block;
+          margin-bottom: 8px; }
         .where-to-buy-wrapper .provider-store .store-list-wrapper .store-list h5 {
           font-weight: bold;
-          margin-bottom: 10px;
+          margin-bottom: 8px;
           text-transform: uppercase; }
   .where-to-buy-wrapper .scroll-text-absolute {
     bottom: 220px !important; }
