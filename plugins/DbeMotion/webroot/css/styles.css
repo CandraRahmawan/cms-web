@@ -567,7 +567,8 @@ header {
         letter-spacing: 1px;
         color: #000; }
     .review-wrapper .youtube-section-wrapper iframe {
-      margin: 0 20px; }
+      margin: 0 20px;
+      border-radius: 32px; }
   .review-wrapper .review-form-wrapper {
     color: #000;
     height: 100vh;
