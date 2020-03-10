@@ -180,6 +180,28 @@ header {
     }
   }
 
+  .uk-slideshow-items {
+    li {
+      position: relative;
+    }
+    .text-title {
+      position: absolute;
+      top: 50%;
+      left: 15%;
+
+      h1 {
+        font-size: 92px;
+        margin-top: 0;
+      }
+
+      span {
+        margin-left: 6px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+
   .uk-slideshow-nav {
     position: absolute;
     width: 100%;
@@ -190,6 +212,7 @@ header {
       a {
         border: 1px solid $whiteColor;
       }
+
       &.uk-active {
         a {
           background-color: $whiteColor;

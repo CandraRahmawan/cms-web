@@ -11,18 +11,38 @@
                 </div>
             </li>
             <li>
+                <div class="text-title">
+                    <span>High Quality Metal Earphone</span>
+                    <h1>PR100</h1>
+                </div>
                 <?= $this->Html->image('/images/carousel/1.jpg', ['class' => 'hero-image']); ?>
             </li>
             <li>
+                <div class="text-title">
+                    <span>Dual Dynamic Driver Earphone</span>
+                    <h1>PR300</h1>
+                </div>
                 <?= $this->Html->image('/images/carousel/2.jpg', ['class' => 'hero-image']); ?>
             </li>
             <li>
+                <div class="text-title">
+                    <span>7.1 Virtual Surround Gaming Headphone</span>
+                    <h1>GM300</h1>
+                </div>
                 <?= $this->Html->image('/images/carousel/3.jpg', ['class' => 'hero-image']); ?>
             </li>
             <li>
+                <div class="text-title">
+                    <span>Pro Gaming Headphone dengan 3.5mm Jack</span>
+                    <h1>GM250</h1>
+                </div>
                 <?= $this->Html->image('/images/carousel/4.jpg', ['class' => 'hero-image']); ?>
             </li>
             <li>
+                <div class="text-title">
+                    <span>High Definition Wood Earphone</span>
+                    <h1>WS100</h1>
+                </div>
                 <?= $this->Html->image('/images/carousel/5.jpg', ['class' => 'hero-image']); ?>
             </li>
         </ul>

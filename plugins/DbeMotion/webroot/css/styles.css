@@ -146,6 +146,19 @@ header {
       width: 320px;
       margin: 80px auto 0 auto;
       padding: 14px; }
+  .top-image .uk-slideshow-items li {
+    position: relative; }
+  .top-image .uk-slideshow-items .text-title {
+    position: absolute;
+    top: 50%;
+    left: 15%; }
+    .top-image .uk-slideshow-items .text-title h1 {
+      font-size: 92px;
+      margin-top: 0; }
+    .top-image .uk-slideshow-items .text-title span {
+      margin-left: 6px;
+      font-size: 18px;
+      font-weight: bold; }
   .top-image .uk-slideshow-nav {
     position: absolute;
     width: 100%;
