@@ -293,11 +293,19 @@ header {
       border-radius: 15px;
       height: 300px;
       width: 100%;
-      display: inline-block; }
+      display: flex;
+      position: relative; }
       .product-category-wrapper .content-wrapper .bg-image img {
         height: 300px;
         width: 620px;
         object-fit: cover; }
+      .product-category-wrapper .content-wrapper .bg-image a {
+        position: absolute;
+        top: 40%;
+        right: 92px; }
+        .product-category-wrapper .content-wrapper .bg-image a img {
+          height: 54px;
+          width: auto; }
 
 .where-to-buy-wrapper {
   width: 1080px;

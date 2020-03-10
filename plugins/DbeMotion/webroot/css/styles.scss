@@ -184,6 +184,7 @@ header {
     li {
       position: relative;
     }
+
     .text-title {
       position: absolute;
       top: 50%;
@@ -400,12 +401,24 @@ header {
       border-radius: 15px;
       height: 300px;
       width: 100%;
-      display: inline-block;
+      display: flex;
+      position: relative;
 
       img {
         height: 300px;
         width: 620px;
         object-fit: cover;
+      }
+
+      a {
+        position: absolute;
+        top: 40%;
+        right: 92px;
+
+        img {
+          height: 54px;
+          width: auto;
+        }
       }
     }
   }
