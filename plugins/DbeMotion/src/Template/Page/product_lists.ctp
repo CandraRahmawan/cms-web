@@ -35,9 +35,12 @@
     </div>
     <div class="card-list-wrapper">
         <div class="card-list">
-            <div class="product-img">
-                <?= $this->Html->image('/images/card/card_1.jpg'); ?>
-            </div>
+            <?= $this->Html->link(
+                $this->Html->image('/images/card/card_1.jpg'),
+                '/products/' . $this->request->params['category'] . '/123-dbe-pr100',
+                ['escape' => false, 'class' => 'product-img']
+            );
+            ?>
             <div class="detail-info">
                 <h2>dbE PR100</h2>
                 <span class="description">Earphone with Microphone</span>
@@ -45,9 +48,25 @@
             </div>
         </div>
         <div class="card-list">
-            <div class="product-img">
-                <?= $this->Html->image('/images/card/card_1.jpg'); ?>
+            <?= $this->Html->link(
+                $this->Html->image('/images/card/card_2.jpg'),
+                '/products/' . $this->request->params['category'] . '/123-dbe-pr400',
+                ['escape' => false, 'class' => 'product-img']
+            );
+            ?>
+            <div class="detail-info">
+                <h2>dbE PR400</h2>
+                <span class="description">Hifi Triple Driver In Ear Earphone</span>
+                <span class="price">Rp. 450.000</span>
             </div>
+        </div>
+        <div class="card-list">
+            <?= $this->Html->link(
+                $this->Html->image('/images/card/card_1.jpg'),
+                '/products/' . $this->request->params['category'] . '123-dbe-pr100',
+                ['escape' => false, 'class' => 'product-img']
+            );
+            ?>
             <div class="detail-info">
                 <h2>dbE PR100</h2>
                 <span class="description">Earphone with Microphone</span>
@@ -55,9 +74,25 @@
             </div>
         </div>
         <div class="card-list">
-            <div class="product-img">
-                <?= $this->Html->image('/images/card/card_1.jpg'); ?>
+            <?= $this->Html->link(
+                $this->Html->image('/images/card/card_2.jpg'),
+                '/products/' . $this->request->params['category'] . '/123-dbe-pr400',
+                ['escape' => false, 'class' => 'product-img']
+            );
+            ?>
+            <div class="detail-info">
+                <h2>dbE PR400</h2>
+                <span class="description">Hifi Triple Driver In Ear Earphone</span>
+                <span class="price">Rp. 450.000</span>
             </div>
+        </div>
+        <div class="card-list">
+            <?= $this->Html->link(
+                $this->Html->image('/images/card/card_1.jpg'),
+                '/products/' . $this->request->params['category'] . '/123-dbe-pr100',
+                ['escape' => false, 'class' => 'product-img']
+            );
+            ?>
             <div class="detail-info">
                 <h2>dbE PR100</h2>
                 <span class="description">Earphone with Microphone</span>
@@ -65,33 +100,16 @@
             </div>
         </div>
         <div class="card-list">
-            <div class="product-img">
-                <?= $this->Html->image('/images/card/card_1.jpg'); ?>
-            </div>
+            <?= $this->Html->link(
+                $this->Html->image('/images/card/card_2.jpg'),
+                '/products/' . $this->request->params['category'] . '/123-dbe-pr400',
+                ['escape' => false, 'class' => 'product-img']
+            );
+            ?>
             <div class="detail-info">
-                <h2>dbE PR100</h2>
-                <span class="description">Earphone with Microphone</span>
-                <span class="price">Rp. 100.000</span>
-            </div>
-        </div>
-        <div class="card-list">
-            <div class="product-img">
-                <?= $this->Html->image('/images/card/card_1.jpg'); ?>
-            </div>
-            <div class="detail-info">
-                <h2>dbE PR100</h2>
-                <span class="description">Earphone with Microphone</span>
-                <span class="price">Rp. 100.000</span>
-            </div>
-        </div>
-        <div class="card-list">
-            <div class="product-img">
-                <?= $this->Html->image('/images/card/card_1.jpg'); ?>
-            </div>
-            <div class="detail-info">
-                <h2>dbE PR100</h2>
-                <span class="description">Earphone with Microphone</span>
-                <span class="price">Rp. 100.000</span>
+                <h2>dbE PR400</h2>
+                <span class="description">Hifi Triple Driver In Ear Earphone</span>
+                <span class="price">Rp. 450.000</span>
             </div>
         </div>
     </div>

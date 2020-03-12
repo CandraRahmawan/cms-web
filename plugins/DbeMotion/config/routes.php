@@ -7,7 +7,10 @@ Router::scope('/', ['plugin' => 'DbeMotion'], function (RouteBuilder $routes) {
     $routes->connect('/products', ['controller' => 'Page', 'action' => 'productCategory']);
     $routes->connect(
         '/products/:category', ['controller' => 'Page', 'action' => 'productLists']
-    )->setPatterns(['category' => '[a-z]+(?:[a-z\-]+)?$']);
+    )->setPatterns(['category' => '[a-z]+(?:[a-z\-]+)(\/?)$']);
+    $routes->connect(
+        '/products/:category/:detail', ['controller' => 'Page', 'action' => 'productDetail']
+    )->setPatterns(['category' => '[a-z]+(?:[a-z\-]+)', 'detail' => '[0-9]+(?:[a-z0-9\-]+)(\/?)$']);
     $routes->connect('/buy', ['controller' => 'Page', 'action' => 'whereToBuy']);
     $routes->connect('/story', ['controller' => 'Page', 'action' => 'ourStory']);
     $routes->connect('/review', ['controller' => 'Page', 'action' => 'review']);

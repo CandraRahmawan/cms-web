@@ -41,4 +41,9 @@ class PageController extends PagesController
     {
         $this->pluginContent('product_lists');
     }
+
+    public function productDetail()
+    {
+        $this->pluginContent('product_detail');
+    }
 }
