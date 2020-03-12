@@ -63,7 +63,7 @@
         <div class="card-list">
             <?= $this->Html->link(
                 $this->Html->image('/images/card/card_1.jpg'),
-                '/products/' . $this->request->params['category'] . '123-dbe-pr100',
+                '/products/' . $this->request->params['category'] . '/123-dbe-pr100',
                 ['escape' => false, 'class' => 'product-img']
             );
             ?>

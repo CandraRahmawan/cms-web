@@ -55,4 +55,60 @@
             </div>
         </div>
     </div>
+    <div class="section-3">
+        <div class="left-content">
+            <h3>Specification</h3>
+            <table border="0">
+                <tbody>
+                <tr>
+                    <td>Driver Impedance</td>
+                    <td>50 mm Dynamic Driver</td>
+                </tr>
+                <tr>
+                    <td>Impedance</td>
+                    <td>32 ohm +- 5%</td>
+                </tr>
+                <tr>
+                    <td>Frequency Response</td>
+                    <td>20 - 20.000 Hz</td>
+                </tr>
+                <tr>
+                    <td>Sensitivity</td>
+                    <td>118 dB +- 3 dB</td>
+                </tr>
+                <tr>
+                    <td>Cable Length</td>
+                    <td>220 cm</td>
+                </tr>
+                <tr>
+                    <td>Jack Plug</td>
+                    <td>3.5 mm 4 pole connector</td>
+                </tr>
+                <tr>
+                    <td>Mic Impedance</td>
+                    <td>2.2 K Ohm</td>
+                </tr>
+                <tr>
+                    <td>Mic Sensitivity</td>
+                    <td>42 dB +- 3 dB</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="right-content">
+            <div class="top">
+                GM500 also have detachable noise cancelling microphone
+                to make your in game communication better.
+            </div>
+            <div class="bottom">
+                <h2>Features</h2>
+                <div class="text-features">
+                    <span>Plush Earpads</span>
+                    <span>Plush Earpads</span>
+                    <span>Plush Earpads</span>
+                    <span>Plush Earpads</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
