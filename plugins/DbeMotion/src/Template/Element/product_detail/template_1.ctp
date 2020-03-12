@@ -101,12 +101,12 @@
                 to make your in game communication better.
             </div>
             <div class="bottom">
-                <h2>Features</h2>
+                <h4>Features</h4>
                 <div class="text-features">
-                    <span>Plush Earpads</span>
-                    <span>Plush Earpads</span>
-                    <span>Plush Earpads</span>
-                    <span>Plush Earpads</span>
+                    <span style="background-color: #FE0000">Plush Earpads</span>
+                    <span style="background-color: #FE0000">Premium Build Quality</span>
+                    <span style="background-color: #FE0000">Special 50mm Speakers</span>
+                    <span style="background-color: #FE0000">3.5mm 4 Pole Connector</span>
                 </div>
             </div>
         </div>
