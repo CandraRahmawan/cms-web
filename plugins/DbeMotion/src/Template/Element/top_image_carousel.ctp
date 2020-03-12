@@ -1,4 +1,4 @@
-<section class="top-image" uk-slideshow="autoplay:true;autoplay-interval:2000">
+<section class="top-image" uk-slideshow="autoplay:true;autoplay-interval:3000">
     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
         <ul class="uk-slideshow-items">
             <li>
