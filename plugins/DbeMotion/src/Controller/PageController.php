@@ -36,4 +36,9 @@ class PageController extends PagesController
     {
         $this->pluginContent('contact_page');
     }
+
+    public function productLists()
+    {
+        $this->pluginContent('product_lists');
+    }
 }
