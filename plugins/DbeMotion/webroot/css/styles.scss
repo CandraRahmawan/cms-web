@@ -1139,6 +1139,14 @@ header {
           letter-spacing: 2px;
         }
       }
+
+      &.template-3 {
+        color: #4F7673;
+
+        p {
+          width: 500px;
+        }
+      }
     }
   }
 
@@ -1191,27 +1199,94 @@ header {
           letter-spacing: 1px;
           margin-top: 0;
           margin-bottom: 0;
+
+          &.border-bottom {
+            border-bottom: 1.5px solid $blackColor;
+            margin-top: 36px;
+            display: inline-block;
+          }
         }
       }
     }
 
-    .specification {
+    .specification-wrapper {
+      h4 {
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border-bottom: 1.5px solid $blackColor;
+        display: inline-block;
+        padding-bottom: 10px;
+        margin-bottom: 0;
+      }
+
       &.template-2 {
         width: $midFitWidth;
         margin: 60px auto 0 auto;
 
-        h4 {
-          font-size: 14px;
+        p {
+          width: 430px;
+        }
+      }
+
+      &.template-3 {
+        width: $midFitWidth;
+        margin: 50px auto 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        h2 {
           font-weight: bold;
-          letter-spacing: 1px;
-          border-bottom: 1.5px solid #000;
-          display: inline-block;
-          padding-bottom: 12px;
           margin-bottom: 0;
         }
 
+        h4 {
+          letter-spacing: normal;
+          font-weight: 500;
+          border-bottom: 1px solid $blackColor;
+          padding-bottom: 8px;
+        }
+
         p {
-          width: 430px;
+          font-weight: bold;
+          color: $semiBlackColor;
+          line-height: 40px;
+          font-size: 22px;
+          margin-bottom: 32px;
+          margin-top: 8px;
+        }
+
+        .specification-list {
+          width: 45%;
+          margin-top: 60px;
+
+          table {
+            width: 100%;
+            margin-top: 30px;
+            border-collapse: collapse;
+
+            tr {
+              &:first-child {
+                border-top: 1px solid $semiBlackColor;
+              }
+            }
+
+            td {
+              color: $semiBlackColor;
+              border-bottom: 1px solid $semiBlackColor;
+              padding: 12px 0;
+
+              span {
+                margin-left: 52px;
+              }
+
+              &:before {
+                content: "-";
+                margin-left: -6px;
+              }
+            }
+          }
         }
       }
     }
@@ -1223,28 +1298,38 @@ header {
     width: $midFitWidth;
     margin: 80px auto 0 auto;
 
-    .left-content {
-      width: 45%;
+    h4 {
+      padding-bottom: 14px;
+      border-bottom: 1.2px solid grey;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: bold;
+      margin-bottom: 32px;
+    }
 
-      table {
-        width: 450px;
-        border-collapse: collapse;
+    table {
+      width: 450px;
+      border-collapse: collapse;
+      color: $blackColor;
 
-        tr {
-          &:first-child {
-            border-top: 1px solid $semiBlackColor;
-          }
-        }
-
-        td {
-          border-bottom: 1px solid $semiBlackColor;
-          padding: 12px 0;
-
-          &:last-child {
-            text-align: right;
-          }
+      tr {
+        &:first-child {
+          border-top: 1px solid $semiBlackColor;
         }
       }
+
+      td {
+        border-bottom: 1px solid $semiBlackColor;
+        padding: 12px 0;
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+
+    .left-content {
+      width: 45%;
 
       h3 {
         font-size: 18px;
@@ -1273,15 +1358,6 @@ header {
       }
 
       .bottom {
-        h4 {
-          padding-bottom: 14px;
-          border-bottom: 1px solid grey;
-          text-transform: uppercase;
-          letter-spacing: 4px;
-          font-weight: bold;
-          margin-bottom: 32px;
-        }
-
         span {
           display: block;
           color: $whiteColor;
@@ -1290,6 +1366,34 @@ header {
           width: 45%;
           margin-top: 24px;
           font-size: 15px;
+        }
+      }
+    }
+
+    &.template-3 {
+      display: block;
+
+      h4 {
+        display: inline-block;
+        font-size: 14px;
+        text-transform: none;
+        letter-spacing: 1px;
+        padding-bottom: 8px;
+        font-weight: normal;
+        color: $blackColor;
+      }
+
+      table {
+        td {
+          span {
+            margin-left: 52px;
+          }
+
+          &:first-child {
+            &:before {
+              content: "-";
+            }
+          }
         }
       }
     }

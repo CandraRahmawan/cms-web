@@ -39,7 +39,7 @@
                 small eartips, 1 pair of medium eartips and 1 pair of large eartips.
             </h2>
         </div>
-        <div class="specification template-2">
+        <div class="specification-wrapper template-2">
             <h4>Specification</h4>
             <p>
                 3 pair of eartips, 1 pair small, 1 pair medium and 1 pair large

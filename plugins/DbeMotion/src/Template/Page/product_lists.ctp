@@ -62,15 +62,15 @@
         </div>
         <div class="card-list">
             <?= $this->Html->link(
-                $this->Html->image('/images/card/card_1.jpg'),
-                '/products/' . $this->request->params['category'] . '/123-dbe-pr100',
+                $this->Html->image('/images/card/card_4.jpg'),
+                '/products/' . $this->request->params['category'] . '/123-dbe-hardcase',
                 ['escape' => false, 'class' => 'product-img']
             );
             ?>
             <div class="detail-info">
-                <h2>dbE PR100</h2>
-                <span class="description">Earphone with Microphone</span>
-                <span class="price">Rp. 100.000</span>
+                <h2>dbE Hardcase</h2>
+                <span class="description">EVA Hardcase for Earphone / Headphone Protection</span>
+                <span class="price">Rp. 40.000 - 150.000</span>
             </div>
         </div>
         <div class="card-list">
