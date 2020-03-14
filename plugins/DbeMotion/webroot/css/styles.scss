@@ -1009,8 +1009,34 @@ header {
       width: 45%;
       margin-bottom: 40px;
 
-      .product-img {
+      a {
+        position: relative;
+        width: 486px;
+        height: 365px;
+        display: block;
         background-color: $blueGreyColor;
+
+        .arrow {
+          display: none;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+
+        img:not(.arrow) {
+          transition: transform .5s ease;
+        }
+
+        &:hover {
+          img:not(.arrow) {
+            transform: scale(0.7);
+          }
+
+          .arrow {
+            display: block;
+          }
+        }
       }
 
       .detail-info {

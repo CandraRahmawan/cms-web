@@ -692,8 +692,24 @@ header {
     .product-list-wrapper .card-list-wrapper .card-list {
       width: 45%;
       margin-bottom: 40px; }
-      .product-list-wrapper .card-list-wrapper .card-list .product-img {
+      .product-list-wrapper .card-list-wrapper .card-list a {
+        position: relative;
+        width: 486px;
+        height: 365px;
+        display: block;
         background-color: #EEEFF4; }
+        .product-list-wrapper .card-list-wrapper .card-list a .arrow {
+          display: none;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translate(0, -50%); }
+        .product-list-wrapper .card-list-wrapper .card-list a img:not(.arrow) {
+          transition: transform .5s ease; }
+        .product-list-wrapper .card-list-wrapper .card-list a:hover img:not(.arrow) {
+          transform: scale(0.7); }
+        .product-list-wrapper .card-list-wrapper .card-list a:hover .arrow {
+          display: block; }
       .product-list-wrapper .card-list-wrapper .card-list .detail-info {
         margin-top: 20px;
         display: grid; }
