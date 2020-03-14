@@ -734,6 +734,14 @@ header {
       font-weight: 500;
       width: 384px;
       margin-top: 0; }
+    .product-detail-wrapper .top-content .content-info-wrapper.template-2 {
+      top: 50%;
+      bottom: unset; }
+      .product-detail-wrapper .top-content .content-info-wrapper.template-2 h1 {
+        font-size: 82px;
+        width: 150px;
+        font-weight: bold;
+        letter-spacing: 2px; }
   .product-detail-wrapper .section-1 {
     position: relative;
     overflow: hidden; }
@@ -764,6 +772,16 @@ header {
         text-align: right;
         float: right;
         line-height: 58px; }
+      .product-detail-wrapper .section-1 .right-content.template-2 {
+        color: #4F7673;
+        transform: translate(-54%, -50%);
+        font-size: 26px;
+        font-weight: bold; }
+        .product-detail-wrapper .section-1 .right-content.template-2 p {
+          width: 428px;
+          letter-spacing: 2px; }
+  .product-detail-wrapper .section-2.template-2 {
+    padding: 120px 0 80px 0; }
   .product-detail-wrapper .section-2 .content-wrapper {
     width: 1080px;
     margin: 0 auto;
@@ -788,6 +806,29 @@ header {
         font-weight: bold; }
     .product-detail-wrapper .section-2 .content-wrapper .right-content {
       width: 42%; }
+    .product-detail-wrapper .section-2 .content-wrapper.template-2 {
+      display: block;
+      height: auto; }
+      .product-detail-wrapper .section-2 .content-wrapper.template-2 h2 {
+        font-size: 29px;
+        line-height: 58px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-top: 0;
+        margin-bottom: 0; }
+  .product-detail-wrapper .section-2 .specification.template-2 {
+    width: 1080px;
+    margin: 60px auto 0 auto; }
+    .product-detail-wrapper .section-2 .specification.template-2 h4 {
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      border-bottom: 1.5px solid #000;
+      display: inline-block;
+      padding-bottom: 12px;
+      margin-bottom: 0; }
+    .product-detail-wrapper .section-2 .specification.template-2 p {
+      width: 430px; }
   .product-detail-wrapper .section-3 {
     display: flex;
     justify-content: space-between;

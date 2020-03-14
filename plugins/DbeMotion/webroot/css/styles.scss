@@ -1075,6 +1075,18 @@ header {
         width: 384px;
         margin-top: 0;
       }
+
+      &.template-2 {
+        top: 50%;
+        bottom: unset;
+
+        h1 {
+          font-size: 82px;
+          width: 150px;
+          font-weight: bold;
+          letter-spacing: 2px;
+        }
+      }
     }
   }
 
@@ -1115,10 +1127,26 @@ header {
         float: right;
         line-height: 58px;
       }
+
+      &.template-2 {
+        color: #4F7673;
+        transform: translate(-54%, -50%);
+        font-size: 26px;
+        font-weight: bold;
+
+        p {
+          width: 428px;
+          letter-spacing: 2px;
+        }
+      }
     }
   }
 
   .section-2 {
+    &.template-2 {
+      padding: 120px 0 80px 0;
+    }
+
     .content-wrapper {
       width: $midFitWidth;
       margin: 0 auto;
@@ -1150,6 +1178,41 @@ header {
 
       .right-content {
         width: 42%;
+      }
+
+      &.template-2 {
+        display: block;
+        height: auto;
+
+        h2 {
+          font-size: 29px;
+          line-height: 58px;
+          font-weight: bold;
+          letter-spacing: 1px;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .specification {
+      &.template-2 {
+        width: $midFitWidth;
+        margin: 60px auto 0 auto;
+
+        h4 {
+          font-size: 14px;
+          font-weight: bold;
+          letter-spacing: 1px;
+          border-bottom: 1.5px solid #000;
+          display: inline-block;
+          padding-bottom: 12px;
+          margin-bottom: 0;
+        }
+
+        p {
+          width: 430px;
+        }
       }
     }
   }

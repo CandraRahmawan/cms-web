@@ -88,15 +88,15 @@
         </div>
         <div class="card-list">
             <?= $this->Html->link(
-                $this->Html->image('/images/card/card_1.jpg'),
-                '/products/' . $this->request->params['category'] . '/123-dbe-pr100',
+                $this->Html->image('/images/card/card_3.jpg'),
+                '/products/' . $this->request->params['category'] . '/123-dbe-comfit-eartips',
                 ['escape' => false, 'class' => 'product-img']
             );
             ?>
             <div class="detail-info">
-                <h2>dbE PR100</h2>
-                <span class="description">Earphone with Microphone</span>
-                <span class="price">Rp. 100.000</span>
+                <h2>dbE Comfit Eartips</h2>
+                <span class="description">High Quality Silicon Eartips</span>
+                <span class="price">Rp. 35.000</span>
             </div>
         </div>
         <div class="card-list">
