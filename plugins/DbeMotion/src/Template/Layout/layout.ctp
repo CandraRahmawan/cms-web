@@ -43,6 +43,7 @@ $description = !empty($seo['meta_description']) ? $seo['meta_description'] : '';
 </div>
 <script>
     const fullBaseAdminUrl = "<?= $full_base_admin_url; ?>";
+    var captchaTokenResponse = "";
 </script>
 <?php
 echo $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js');
@@ -54,5 +55,12 @@ if ($this->Utility->isDevelopment()) {
     echo $this->Html->script('app.js');
 }
 ?>
+<script>
+    grecaptcha.ready(function () {
+        grecaptcha.execute('<?= $settings['captcha_site_key']; ?>', {action: 'form_submit'}).then(function (token) {
+            captchaTokenResponse = token;
+        });
+    });
+</script>
 </body>
 </html>

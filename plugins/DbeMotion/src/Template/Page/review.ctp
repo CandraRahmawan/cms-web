@@ -1,9 +1,8 @@
 <?php
 echo $this->Html->script([
     '/plugins/jQuery/jquery-2.2.3.min',
-    '/plugins/jquery-validation/dist/jquery.validate.min'], ['block' => 'scriptBottom']);
-
-echo $this->Html->script('https://www.google.com/recaptcha/api.js?render=' . $settings['captcha_site_key'] . '');
+    '/plugins/jquery-validation/dist/jquery.validate.min',
+    'https://www.google.com/recaptcha/api.js?render=' . $settings['captcha_site_key'] . ''], ['block' => 'scriptBottom']);
 ?>
 <div class="review-wrapper">
     <?= $this->Element('scroll_text_absolute'); ?>
@@ -102,28 +101,11 @@ echo $this->Html->script('https://www.google.com/recaptcha/api.js?render=' . $se
                 <label for="comment" class="label">Comment</label>
                 <textarea class="uk-textarea" rows="3" id="comment" name="comment"></textarea>
             </div>
-            <div class="input-group">
-                <input type="text" id="g-recaptcha-response" name="g-recaptcha-response"/>
-            </div>
+            <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response"/>
+            <input type="hidden" id="captcha_secret_key" name="captcha_secret_key"
+                   value="<?= $settings['captcha_secret_key']; ?>"/>
             <button type="submit">Submit</button>
             <?= $this->Form->end(); ?>
         </div>
     </div>
 </div>
-
-<script>
-    grecaptcha.ready(function () {
-        grecaptcha.execute('<?= $settings['captcha_site_key']; ?>', {action: 'action_name'}).then(function (token) {
-            console.log('token', token);
-        });
-    });
-
-    //$.ajax({
-    //    url: 'https://www.google.com/recaptcha/api/siteverify',
-    //    type: 'POST',
-    //    data: {
-    //        secret: '<?//= $settings['captcha_secret_key']; ?>//',
-    //        response: ''
-    //    }
-    //});
-</script>

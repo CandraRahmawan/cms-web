@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    console.log('captchaTokenResponse', captchaTokenResponse);
+    console.log('---', $('#captcha_secret_key').val());
     $("#form_review").validate({
         rules: {
             name: {
@@ -46,24 +48,32 @@ $(document).ready(function () {
         },
         submitHandler: function (form) {
             $.ajax({
-                url: fullBaseAdminUrl + 'comments/api/sendReview',
+                url: 'https://www.google.com/recaptcha/api/siteverify',
                 type: 'POST',
                 data: {
-                    name: form[1].value,
-                    email: form[2].value,
-                    phone_number: form[3].value,
-                    comment: form[4].value
-                },
-                beforeSend: function (xhr) {
-                    $(':button').html('Sending...');
+                    secret: $('#captcha_secret_key').val(),
+                    response: captchaTokenResponse
                 }
-            }).done(function (data) {
-                $(':button').html('Submit');
-                alert(data);
-                //location.reload();
-            }).fail(function (jqXHR) {
-                console.log('error', jqXHR);
             });
+            // $.ajax({
+            //     url: fullBaseAdminUrl + 'comments/api/sendReview',
+            //     type: 'POST',
+            //     data: {
+            //         name: form[1].value,
+            //         email: form[2].value,
+            //         phone_number: form[3].value,
+            //         comment: form[4].value
+            //     },
+            //     beforeSend: function (xhr) {
+            //         $(':button').html('Sending...');
+            //     }
+            // }).done(function (data) {
+            //     $(':button').html('Submit');
+            //     alert(data);
+            //     //location.reload();
+            // }).fail(function (jqXHR) {
+            //     console.log('error', jqXHR);
+            // });
         }
     });
 });
