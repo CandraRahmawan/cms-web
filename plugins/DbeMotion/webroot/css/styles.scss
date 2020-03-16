@@ -1016,12 +1016,15 @@ header {
         display: block;
         background-color: $blueGreyColor;
 
-        .arrow {
-          display: none;
-          position: absolute;
-          right: 0;
-          top: 50%;
-          transform: translate(0, -50%);
+        img {
+          &.arrow {
+            display: none;
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 70px;
+          }
         }
 
         img:not(.arrow) {
@@ -1121,7 +1124,7 @@ header {
     overflow: hidden;
 
     img {
-      height: 510px;
+      height: auto;
       width: 100%;
       object-fit: cover;
     }
@@ -1157,12 +1160,12 @@ header {
       &.template-2 {
         color: #4F7673;
         transform: translate(-54%, -50%);
-        font-size: 26px;
+        font-size: 28px;
         font-weight: bold;
 
         p {
-          width: 428px;
-          letter-spacing: 2px;
+          width: 514px;
+          letter-spacing: 4px;
         }
       }
 
@@ -1170,7 +1173,9 @@ header {
         color: #4F7673;
 
         p {
-          width: 500px;
+          width: 590px;
+          letter-spacing: 3px;
+          font-weight: bold;
         }
       }
     }
