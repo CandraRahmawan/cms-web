@@ -2,6 +2,8 @@
 echo $this->Html->script([
     '/plugins/jQuery/jquery-2.2.3.min',
     '/plugins/jquery-validation/dist/jquery.validate.min'], ['block' => 'scriptBottom']);
+
+echo $this->Html->script('https://www.google.com/recaptcha/api.js?render=' . $settings['captcha_site_key'] . '');
 ?>
 <div class="review-wrapper">
     <?= $this->Element('scroll_text_absolute'); ?>
@@ -105,3 +107,19 @@ echo $this->Html->script([
         </div>
     </div>
 </div>
+
+<script>
+    grecaptcha.ready(function () {
+        grecaptcha.execute('<?= $settings['captcha_site_key']; ?>', {action: 'homepage'}).then(function (token) {
+        });
+    });
+
+    $.ajax({
+        url: 'https://www.google.com/recaptcha/api/siteverify',
+        type: 'POST',
+        data: {
+            secret: '<?= $settings['captcha_secret_key']; ?>',
+            response: ''
+        }
+    });
+</script>

@@ -45,7 +45,6 @@ $(document).ready(function () {
             },
         },
         submitHandler: function (form) {
-            console.log('form', form);
             $.ajax({
                 url: fullBaseAdminUrl + 'comments/api/sendReview',
                 type: 'POST',
