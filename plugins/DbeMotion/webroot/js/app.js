@@ -60,7 +60,7 @@ $(document).ready(function () {
             }).done(function (data) {
                 $(':button').html('Submit');
                 alert(data);
-                location.reload();
+                //location.reload();
             }).fail(function (jqXHR) {
                 console.log('error', jqXHR);
             });
