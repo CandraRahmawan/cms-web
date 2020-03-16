@@ -71,6 +71,7 @@ $(document).ready(function () {
                 location.reload();
             }).fail(function (jqXHR) {
                 $(':button').html('Submit');
+                alert('Error Internal Client');
                 console.log('error : ', jqXHR);
             });
         }
