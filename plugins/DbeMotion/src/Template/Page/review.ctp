@@ -102,6 +102,9 @@ echo $this->Html->script('https://www.google.com/recaptcha/api.js?render=' . $se
                 <label for="comment" class="label">Comment</label>
                 <textarea class="uk-textarea" rows="3" id="comment" name="comment"></textarea>
             </div>
+            <div class="input-group">
+                <div class="g-recaptcha" data-sitekey="<?= $settings['captcha_site_key']; ?>"></div>
+            </div>
             <button type="submit">Submit</button>
             <?= $this->Form->end(); ?>
         </div>
@@ -114,12 +117,12 @@ echo $this->Html->script('https://www.google.com/recaptcha/api.js?render=' . $se
         });
     });
 
-    $.ajax({
-        url: 'https://www.google.com/recaptcha/api/siteverify',
-        type: 'POST',
-        data: {
-            secret: '<?= $settings['captcha_secret_key']; ?>',
-            response: ''
-        }
-    });
+    //$.ajax({
+    //    url: 'https://www.google.com/recaptcha/api/siteverify',
+    //    type: 'POST',
+    //    data: {
+    //        secret: '<?//= $settings['captcha_secret_key']; ?>//',
+    //        response: ''
+    //    }
+    //});
 </script>
