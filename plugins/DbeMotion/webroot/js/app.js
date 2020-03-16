@@ -1,6 +1,11 @@
+grecaptcha.ready(function () {
+    grecaptcha.execute(captchaSiteKey, {action: 'form_submit'}).then(function (token) {
+        $('#g-recaptcha-response').val(token);
+        console.log()
+    });
+});
+
 $(document).ready(function () {
-    console.log('captchaTokenResponse', captchaTokenResponse);
-    console.log('---', $('#captcha_secret_key').val());
     $("#form_review").validate({
         rules: {
             name: {
@@ -48,32 +53,26 @@ $(document).ready(function () {
         },
         submitHandler: function (form) {
             $.ajax({
-                url: 'https://www.google.com/recaptcha/api/siteverify',
+                url: fullBaseAdminUrl + 'api/sendReview',
                 type: 'POST',
                 data: {
-                    secret: $('#captcha_secret_key').val(),
-                    response: captchaTokenResponse
+                    name: form[1].value,
+                    email: form[2].value,
+                    phone_number: form[3].value,
+                    comment: form[4].value,
+                    secret: captchaSecretKey,
+                    response: $("#g-recaptcha-response").val()
+                },
+                beforeSend: function (xhr) {
+                    $(':button').html('Sending...');
                 }
+            }).done(function (data) {
+                alert(data);
+                location.reload();
+            }).fail(function (jqXHR) {
+                $(':button').html('Submit');
+                console.log('error : ', jqXHR);
             });
-            // $.ajax({
-            //     url: fullBaseAdminUrl + 'comments/api/sendReview',
-            //     type: 'POST',
-            //     data: {
-            //         name: form[1].value,
-            //         email: form[2].value,
-            //         phone_number: form[3].value,
-            //         comment: form[4].value
-            //     },
-            //     beforeSend: function (xhr) {
-            //         $(':button').html('Sending...');
-            //     }
-            // }).done(function (data) {
-            //     $(':button').html('Submit');
-            //     alert(data);
-            //     //location.reload();
-            // }).fail(function (jqXHR) {
-            //     console.log('error', jqXHR);
-            // });
         }
     });
 });

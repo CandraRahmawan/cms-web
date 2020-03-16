@@ -102,8 +102,6 @@ echo $this->Html->script([
                 <textarea class="uk-textarea" rows="3" id="comment" name="comment"></textarea>
             </div>
             <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response"/>
-            <input type="hidden" id="captcha_secret_key" name="captcha_secret_key"
-                   value="<?= $settings['captcha_secret_key']; ?>"/>
             <button type="submit">Submit</button>
             <?= $this->Form->end(); ?>
         </div>
