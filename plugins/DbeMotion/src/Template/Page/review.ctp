@@ -103,7 +103,7 @@ echo $this->Html->script('https://www.google.com/recaptcha/api.js?render=' . $se
                 <textarea class="uk-textarea" rows="3" id="comment" name="comment"></textarea>
             </div>
             <div class="input-group">
-                <div class="g-recaptcha" data-sitekey="<?= $settings['captcha_site_key']; ?>"></div>
+                <input type="text" id="g-recaptcha-response" name="g-recaptcha-response"/>
             </div>
             <button type="submit">Submit</button>
             <?= $this->Form->end(); ?>
@@ -113,7 +113,8 @@ echo $this->Html->script('https://www.google.com/recaptcha/api.js?render=' . $se
 
 <script>
     grecaptcha.ready(function () {
-        grecaptcha.execute('<?= $settings['captcha_site_key']; ?>', {action: 'homepage'}).then(function (token) {
+        grecaptcha.execute('<?= $settings['captcha_site_key']; ?>', {action: 'action_name'}).then(function (token) {
+            console.log('token', token);
         });
     });
 
