@@ -527,9 +527,11 @@ header {
   display: flex;
   justify-content: center;
   flex-direction: column; }
-  .contact-page-bottom form span {
+  .contact-page-bottom form label.label {
     letter-spacing: 2px;
     font-weight: bold; }
+  .contact-page-bottom form .input-group {
+    position: relative; }
   .contact-page-bottom button {
     margin-top: 28px; }
   .contact-page-bottom h1 {

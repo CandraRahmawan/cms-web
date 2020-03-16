@@ -746,9 +746,15 @@ header {
   flex-direction: column;
 
   form {
-    span {
-      letter-spacing: 2px;
-      font-weight: bold;
+    label {
+      &.label {
+        letter-spacing: 2px;
+        font-weight: bold;
+      }
+    }
+
+    .input-group {
+      position: relative;
     }
   }
 
