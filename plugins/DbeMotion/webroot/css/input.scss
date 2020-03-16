@@ -43,3 +43,14 @@ button {
     color: grey;
   }
 }
+
+label {
+  &.error {
+    color: red;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-style: italic;
+    font-size: 11px;
+  }
+}

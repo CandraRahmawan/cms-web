@@ -24,6 +24,7 @@ $description = !empty($seo['meta_description']) ? $seo['meta_description'] : '';
     echo $this->Html->meta(['name' => 'google-site-verification', 'content' => 'Kc4ZjRsxpVhsEscBm1x8RoCwM50FuG9c68hb6okuAQc']);
     echo $this->Html->meta(['property' => 'og:image', 'content' => $og_image]);
     echo $this->Element('favicon');
+    echo $this->fetch('css');
     echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css');
     if ($this->Utility->isDevelopment()) {
         echo $this->Html->css('/DbeMotion/css/styles.css?' . time() . '', ['plugin' => false]);
@@ -40,9 +41,13 @@ $description = !empty($seo['meta_description']) ? $seo['meta_description'] : '';
     echo $this->Element('footer');
     ?>
 </div>
+<script>
+    const fullBaseAdminUrl = "<?= $full_base_admin_url; ?>";
+</script>
 <?php
 echo $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js');
 echo $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit-icons.min.js');
+echo $this->fetch('scriptBottom');
 if ($this->Utility->isDevelopment()) {
     echo $this->Html->script('app.js?' . time() . '', ['plugin' => false]);
 } else {

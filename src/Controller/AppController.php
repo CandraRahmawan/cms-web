@@ -6,6 +6,7 @@ use Cake\Controller\Controller;
 use Cake\Event\Event;
 use Cake\Utility\Hash;
 use Cake\Utility\Inflector;
+use Cake\Core\Configure;
 
 class AppController extends Controller
 {
@@ -56,8 +57,9 @@ class AppController extends Controller
         $menu_header = $this->__menuHeader();
         $random_blog_post = $this->__randomBlogPost();
         $seo = $this->__getSeoInfo();
-        $this->set('path_url_admin', $path_url_admin['value_1']);
-        $this->set(compact('menu_header', 'settings', 'random_blog_post', 'seo'));
+        $path_url_admin = $path_url_admin['value_1'];
+        $full_base_admin_url = Configure::read('App.fullBaseAdminUrl');
+        $this->set(compact('menu_header', 'settings', 'random_blog_post', 'seo', 'path_url_admin', 'full_base_admin_url'));
     }
 
     private function __menuHeader()

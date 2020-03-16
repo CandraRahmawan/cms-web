@@ -1,3 +1,8 @@
+<?php
+echo $this->Html->script([
+    '/plugins/jQuery/jquery-2.2.3.min',
+    '/plugins/jquery-validation/dist/jquery.validate.min'], ['block' => 'scriptBottom']);
+?>
 <div class="review-wrapper">
     <?= $this->Element('scroll_text_absolute'); ?>
     <h1>REVIEWS</h1>
@@ -78,27 +83,25 @@
             <h1>Story of Your Best Experience with</h1>
         </div>
         <div class="right-content">
-            <form>
-                <div>
-                    <span>Your Name</span>
-                    <input class="uk-input" type="text">
-                </div>
-                <div>
-                    <span>Email</span>
-                    <input class="uk-input" type="text">
-                </div>
-                <div>
-                    <span>Phone</span>
-                    <input class="uk-input" type="text">
-                </div>
-                <div>
-                    <span>Comment</span>
-                    <textarea class="uk-textarea" rows="3"></textarea>
-                </div>
-                <button>
-                    Submit
-                </button>
-            </form>
+            <?= $this->Form->create(null, ['id' => 'form_review', 'onsubmit' => 'event.preventDefault();']); ?>
+            <div class="input-group">
+                <label for="name" class="label">Your Name</label>
+                <input class="uk-input" type="text" id="name" name="name">
+            </div>
+            <div class="input-group">
+                <label for="email" class="label">Email</label>
+                <input class="uk-input" type="text" id="email" name="email">
+            </div>
+            <div class="input-group">
+                <label for="phone_number" class="label">Phone</label>
+                <input class="uk-input" type="text" id="phone_number" name="phone_number">
+            </div>
+            <div class="input-group">
+                <label for="comment" class="label">Comment</label>
+                <textarea class="uk-textarea" rows="3" id="comment" name="comment"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+            <?= $this->Form->end(); ?>
         </div>
     </div>
 </div>

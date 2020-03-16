@@ -879,9 +879,11 @@ header {
     width: $midFitWidth;
 
     form {
-      span {
-        letter-spacing: 2px;
-        font-weight: bold;
+      label {
+        &.label {
+          letter-spacing: 2px;
+          font-weight: bold;
+        }
       }
     }
 
@@ -905,6 +907,10 @@ header {
 
     .right-content {
       width: 45%;
+
+      .input-group {
+        position: relative;
+      }
     }
 
   }

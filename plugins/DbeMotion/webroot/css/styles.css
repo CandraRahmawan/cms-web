@@ -34,6 +34,14 @@ button {
     cursor: pointer;
     color: grey; }
 
+label.error {
+  color: red;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-style: italic;
+  font-size: 11px; }
+
 .grey {
   background-color: #E2E2E2; }
 
@@ -606,7 +614,7 @@ header {
     align-items: center;
     margin: 0 auto;
     width: 1080px; }
-    .review-wrapper .review-form-wrapper form span {
+    .review-wrapper .review-form-wrapper form label.label {
       letter-spacing: 2px;
       font-weight: bold; }
     .review-wrapper .review-form-wrapper button {
@@ -623,6 +631,8 @@ header {
       width: 45%; }
     .review-wrapper .review-form-wrapper .right-content {
       width: 45%; }
+      .review-wrapper .review-form-wrapper .right-content .input-group {
+        position: relative; }
   .review-wrapper .scroll-text-absolute {
     bottom: 220px !important; }
 

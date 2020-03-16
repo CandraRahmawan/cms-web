@@ -62,6 +62,7 @@ return [
     'webroot' => 'webroot',
     'wwwRoot' => WWW_ROOT,
     //'baseUrl' => env('SCRIPT_NAME'),
+    'fullBaseAdminUrl' => $protocol . $_SERVER["SERVER_NAME"] . env('ADMIN_PATH_URL'),
     'fullBaseUrl' => false,
     'imageBaseUrl' => 'img/',
     'cssBaseUrl' => 'css/',
