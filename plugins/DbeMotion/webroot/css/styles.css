@@ -563,6 +563,55 @@ header {
           text-transform: uppercase; }
   .where-to-buy-wrapper .scroll-text-absolute {
     bottom: 220px !important; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+    .where-to-buy-wrapper {
+      width: 100%; }
+      .where-to-buy-wrapper h1 {
+        font-size: 50px;
+        padding: 0 30px; }
+      .where-to-buy-wrapper h2 {
+        padding: 0 30px;
+        text-align: left; }
+      .where-to-buy-wrapper .image-ecommerce {
+        align-items: flex-end;
+        padding: 0 30px; }
+        .where-to-buy-wrapper .image-ecommerce img {
+          height: 90px;
+          width: 300px; }
+      .where-to-buy-wrapper .provider-store {
+        margin: 0 30px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    .where-to-buy-wrapper {
+      margin: 120px auto 0 auto; }
+      .where-to-buy-wrapper h1 {
+        padding: 0 18px;
+        font-size: 32px; }
+      .where-to-buy-wrapper h2 {
+        padding: 0 18px;
+        font-size: 18px;
+        margin-bottom: 10px; }
+      .where-to-buy-wrapper .image-ecommerce {
+        padding: 0 18px; }
+        .where-to-buy-wrapper .image-ecommerce img {
+          height: 60px;
+          width: 210px; }
+      .where-to-buy-wrapper .provider-store {
+        margin: 0 18px;
+        border-top: 1px solid #191818;
+        padding-top: 70px; }
+        .where-to-buy-wrapper .provider-store .store-list-wrapper {
+          margin-top: 0; }
+          .where-to-buy-wrapper .provider-store .store-list-wrapper h3 {
+            font-size: 18px;
+            border-bottom: 1px solid #191818;
+            padding-bottom: 6px;
+            margin-bottom: 24px; }
+          .where-to-buy-wrapper .provider-store .store-list-wrapper .store-list {
+            margin-bottom: 32px; }
+            .where-to-buy-wrapper .provider-store .store-list-wrapper .store-list h5 {
+              font-size: 14px; }
+            .where-to-buy-wrapper .provider-store .store-list-wrapper .store-list span {
+              font-size: 12px; } }
 
 .our-story-wrapper {
   margin: 180px auto 0 auto;
@@ -1320,11 +1369,13 @@ footer {
       footer .bottom-footer div {
         width: 100%; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
-    footer .left-footer img {
-      height: 18px;
-      margin-bottom: 20px; }
-    footer .left-footer a {
-      font-size: 14px; }
+    footer .left-footer {
+      letter-spacing: 1px; }
+      footer .left-footer img {
+        height: 18px;
+        margin-bottom: 20px; }
+      footer .left-footer a {
+        font-size: 14px; }
     footer .right-footer {
       font-size: 14px; }
       footer .right-footer a {
