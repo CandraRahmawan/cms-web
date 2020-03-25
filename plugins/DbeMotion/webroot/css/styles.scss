@@ -119,10 +119,8 @@ header {
   display: flex;
   justify-content: space-between;
   position: absolute;
-  top: 70px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: $midFitWidth;
+  top: 50px;
+  width: 100%;
   margin: 0 auto;
   z-index: 1;
 
@@ -130,32 +128,19 @@ header {
     img {
       height: 26px;
     }
+    margin-left: 30px;
   }
 
   .burger-menu {
     a {
       color: $blackColor;
     }
-  }
-
-  &.homepage {
-    .burger-menu {
-      a {
-        color: $whiteColor;
-      }
-    }
+    margin-right: 30px;
   }
 }
 
 .top-image {
   position: relative;
-  height: 100vh;
-
-  .hero-image {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-  }
 
   .text-image-centre {
     color: $whiteColor;
@@ -185,16 +170,17 @@ header {
     .text-title {
       position: absolute;
       top: 50%;
-      left: 15%;
+      left: 30px;
+      z-index: 1;
 
       h1 {
-        font-size: 92px;
+        font-size: 140px;
         margin-top: 0;
       }
 
       span {
         margin-left: 6px;
-        font-size: 18px;
+        font-size: 22px;
         font-weight: bold;
       }
     }

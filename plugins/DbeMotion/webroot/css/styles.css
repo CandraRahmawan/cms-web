@@ -116,26 +116,21 @@ header {
   display: flex;
   justify-content: space-between;
   position: absolute;
-  top: 70px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1080px;
+  top: 50px;
+  width: 100%;
   margin: 0 auto;
   z-index: 1; }
-  header .logo img {
-    height: 26px; }
-  header .burger-menu a {
-    color: #191818; }
-  header.homepage .burger-menu a {
-    color: #fff; }
+  header .logo {
+    margin-left: 30px; }
+    header .logo img {
+      height: 26px; }
+  header .burger-menu {
+    margin-right: 30px; }
+    header .burger-menu a {
+      color: #191818; }
 
 .top-image {
-  position: relative;
-  height: 100vh; }
-  .top-image .hero-image {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover; }
+  position: relative; }
   .top-image .text-image-centre {
     color: #fff;
     position: absolute;
@@ -157,13 +152,14 @@ header {
   .top-image .uk-slideshow-items .text-title {
     position: absolute;
     top: 50%;
-    left: 15%; }
+    left: 30px;
+    z-index: 1; }
     .top-image .uk-slideshow-items .text-title h1 {
-      font-size: 92px;
+      font-size: 140px;
       margin-top: 0; }
     .top-image .uk-slideshow-items .text-title span {
       margin-left: 6px;
-      font-size: 18px;
+      font-size: 22px;
       font-weight: bold; }
   .top-image .uk-slideshow-nav {
     position: absolute;
