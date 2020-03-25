@@ -40,10 +40,6 @@ body {
     max-width: $middleWidth;
     margin: 140px auto 0 auto;
 
-    @include tablet-view() {
-      margin: 70px auto 0 auto;
-    }
-
     .social-list {
       display: flex;
       border-top: 1px solid $blackColor;
@@ -57,15 +53,19 @@ body {
       letter-spacing: normal;
     }
 
-    .social-link {
-      margin: 0 12px;
+    .social-link-list {
+      display: flex;
 
-      img {
-        height: 18px;
-      }
+      .social-link {
+        margin: 0 12px;
 
-      a {
-        padding: 0;
+        img {
+          height: 18px;
+        }
+
+        a {
+          padding: 0;
+        }
       }
     }
 
@@ -81,6 +81,38 @@ body {
       font-size: 34px;
       font-weight: bold;
       letter-spacing: 3px;
+    }
+
+
+    @include tablet-view() {
+      margin: 70px auto 0 auto;
+    }
+
+    @include mobile-view() {
+      margin: 40px auto 0 auto;
+      height: calc(100% - 64px);
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      li {
+        font-size: 20px;
+        letter-spacing: normal;
+      }
+
+      .social-list {
+        flex-direction: column;
+        align-items: flex-end;
+        border-top: none;
+        background-color: $whiteColor;
+        margin: 0 -20px -20px -20px;
+        padding: 20px;
+      }
+
+      .social-title {
+        margin: 0 0 6px 0;
+        font-size: 12px;
+      }
     }
   }
 }
@@ -106,6 +138,17 @@ body {
   img {
     height: 22px;
   }
+
+  @include mobile-view() {
+    margin: 0;
+    img {
+      height: 16px;
+    }
+
+    svg {
+      width: 22px;
+    }
+  }
 }
 
 h1, h2, h3, h4 {
@@ -122,11 +165,11 @@ header {
   z-index: 1;
 
   .logo {
+    margin-left: 30px;
+
     img {
       height: 26px;
     }
-
-    margin-left: 30px;
   }
 
   .burger-menu {
@@ -135,6 +178,25 @@ header {
     }
 
     margin-right: 30px;
+  }
+
+  @include mobile-view() {
+    top: 18px;
+    .logo {
+      margin-left: 18px;
+
+      img {
+        height: 16px;
+      }
+    }
+
+    .burger-menu {
+      margin-right: 18px;
+
+      svg {
+        width: 22px;
+      }
+    }
   }
 }
 
@@ -224,11 +286,6 @@ header {
   display: flex;
   justify-content: center;
 
-  @include tablet-view() {
-    margin: auto;
-    padding: 50px 30px;
-  }
-
   .section-part-left {
     width: 566px;
 
@@ -245,8 +302,23 @@ header {
       font-size: 22px;
       line-height: 34px;
     }
+  }
 
-    @include tablet-view() {
+  .section-part-right {
+    margin: 0 0 30px 16px;
+
+    img {
+      width: 480px;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  @include tablet-view() {
+    margin: auto;
+    padding: 50px 30px;
+
+    .section-part-left {
       width: 100%;
 
       h1 {
@@ -259,19 +331,23 @@ header {
         font-size: 16px;
       }
     }
+
+    .section-part-right {
+      display: none;
+    }
   }
 
-  .section-part-right {
-    margin: 0 0 30px 16px;
+  @include mobile-view() {
+    .section-part-left {
+      h1 {
+        font-size: 22px;
+        line-height: 36px;
+      }
 
-    img {
-      width: 480px;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    @include tablet-view() {
-      display: none;
+      span {
+        font-size: 12px;
+        line-height: 30px;
+      }
     }
   }
 }
@@ -283,10 +359,6 @@ header {
     height: 522px;
     width: 100%;
     object-fit: cover;
-
-    @include tablet-view() {
-      height: auto;
-    }
   }
 
   div {
@@ -304,8 +376,13 @@ header {
       width: 600px;
       margin-bottom: 0;
     }
+  }
 
-    @include tablet-view() {
+  @include tablet-view() {
+    img {
+      height: auto;
+    }
+    div {
       max-width: 750px;
       top: 50%;
       left: 30px;
@@ -317,6 +394,20 @@ header {
       }
     }
   }
+
+  @include mobile-view() {
+    div {
+      width: 224px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      h1 {
+        font-size: 32px;
+        line-height: 32px;
+      }
+    }
+  }
 }
 
 .home-section-3 {
@@ -325,24 +416,11 @@ header {
   margin: 100px auto 0 auto;
   max-width: $largeWidth;
 
-  @include tablet-view() {
-    flex-direction: column-reverse;
-    margin: 0 auto;
-    padding: 50px 30px 0 30px;
-  }
-
   .section-part-left {
     img {
       height: 100%;
       width: 750px;
       object-fit: contain;
-    }
-
-    @include tablet-view() {
-      img {
-        height: auto;
-        width: auto;
-      }
     }
   }
 
@@ -363,15 +441,6 @@ header {
       color: $blackColor;
       line-height: 42px;
     }
-
-    @include tablet-view() {
-      margin-top: 0;
-      width: 100%;
-
-      h1 {
-        margin-bottom: 20px;
-      }
-    }
   }
 
   .box-text {
@@ -382,13 +451,55 @@ header {
     text-align: center;
     font-size: 24px;
     color: $blackColor;
+  }
 
-    @include tablet-view() {
+  @include tablet-view() {
+    flex-direction: column-reverse;
+    margin: 0 auto;
+    padding: 50px 30px 0 30px;
+
+    .section-part-left {
+      img {
+        height: auto;
+        width: auto;
+      }
+    }
+
+    .section-part-right {
+      margin-top: 0;
+      width: 100%;
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      span {
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+
+    .box-text {
       margin: 40px 0;
       font-size: 18px;
       width: 220px;
       text-align: left;
       padding: 10px 22px;
+    }
+  }
+
+  @include mobile-view() {
+    padding: 30px 30px 0 30px;
+    .section-part-right {
+      h1 {
+        font-size: 38px;
+      }
+    }
+    .box-text {
+      margin: 20px 0;
+      font-size: 12px;
+      width: 134px;
+      border: 1px solid $blackColor;
     }
   }
 }
@@ -397,10 +508,6 @@ header {
   background-color: #DDE1E2;
   padding-top: 100px;
 
-  @include tablet-view() {
-    padding: 50px 30px;
-  }
-
   .title-section {
     width: 940px;
     margin: 0 auto;
@@ -408,11 +515,6 @@ header {
     h1 {
       font-size: 30px;
       font-weight: bold;
-    }
-
-    @include tablet-view() {
-      width: 100%;
-      text-align: center;
     }
   }
 
@@ -448,8 +550,15 @@ header {
     .section-part-right {
       width: 403px;
     }
+  }
 
-    @include tablet-view() {
+  @include tablet-view() {
+    padding: 50px 30px;
+    .title-section {
+      width: 100%;
+      text-align: center;
+    }
+    .column-content {
       justify-content: normal;
       flex-direction: column;
       width: 100%;
@@ -469,6 +578,23 @@ header {
 
       div {
         margin-bottom: 40px;
+      }
+    }
+  }
+
+  @include mobile-view() {
+    .title-section {
+      h1 {
+        font-size: 22px;
+      }
+    }
+    .column-content {
+      font-size: 14px;
+
+      img {
+        margin-right: 30px;
+        width: 58px;
+        height: 56px;
       }
     }
   }
@@ -1673,22 +1799,6 @@ footer {
     }
   }
 
-  @include tablet-view() {
-    .wrapper-section {
-      justify-content: normal;
-      width: 100%;
-      flex-direction: column;
-    }
-    li {
-      display: flex;
-      justify-content: space-between;
-      margin: 18px 0;
-    }
-    .left-footer {
-      padding: 0 30px;
-    }
-  }
-
   .right-footer {
     align-self: flex-end;
     margin-top: 80px;
@@ -1713,17 +1823,6 @@ footer {
     img:first-child {
       margin-left: 0;
     }
-
-    @include tablet-view() {
-      align-self: flex-start;
-      text-align: left;
-      padding: 0 30px;
-      margin-top: 40px;
-
-      a {
-        margin-left: 0;
-      }
-    }
   }
 
   .bottom-footer {
@@ -1739,11 +1838,56 @@ footer {
       font-size: 14px;
       letter-spacing: 1px;
     }
+  }
 
-    @include tablet-view() {
+  @include tablet-view() {
+    .wrapper-section {
+      justify-content: normal;
+      width: 100%;
+      flex-direction: column;
+    }
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin: 18px 0;
+    }
+    .left-footer {
+      padding: 0 30px;
+    }
+    .right-footer {
+      align-self: flex-start;
+      text-align: left;
+      padding: 0 30px;
+      margin-top: 40px;
+
+      a {
+        margin-left: 0;
+      }
+    }
+    .bottom-footer {
       padding: 14px 30px;
+
       div {
         width: 100%;
+      }
+    }
+  }
+
+  @include mobile-view() {
+    .left-footer {
+      img {
+        height: 18px;
+        margin-bottom: 20px;
+      }
+      a {
+        font-size: 14px;
+      }
+    }
+
+    .right-footer {
+      font-size: 14px;
+      a {
+        margin-right: 28px;
       }
     }
   }
