@@ -85,16 +85,17 @@ echo $this->Html->script([
                 $('.loading').html('Loading data...');
             }
         }).done(function (result) {
-            const totalCount = result.totalCount;
+            const jsonResult = JSON.parse(result);
+            const totalCount = jsonResult.totalCount;
             if (totalCount <= (limit * page)) {
                 $('.load-more-wrapper > .right-content').hide();
             }
 
-            if (result.totalCount <= 0) {
+            if (totalCount <= 0) {
                 $('.review-list').html('<div class="not-found-content">Reviews not found :(</h4>');
             } else {
                 $('.loading').empty();
-                result.data.map(item => {
+                jsonResult.data.map(item => {
                     $('.review-list').append(`<div class="review-content"><h3>${item.name}</h3><p>${item.comment}</p></div>`);
                 });
             }
