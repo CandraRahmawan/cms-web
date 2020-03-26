@@ -828,7 +828,7 @@ header {
 }
 
 .our-story-wrapper {
-  margin: 180px auto 0 auto;
+  margin: 260px auto 0 auto;
   color: $blackColor;
 
   .top-content {
@@ -839,11 +839,13 @@ header {
     h1 {
       margin: 0 auto;
       border-bottom: 2px solid $blackColor;
-      font-size: 60px;
+      border-top: 2px solid #191818;
+      font-size: 62px;
       font-weight: bold;
-      line-height: 110px;
+      line-height: normal;
       color: $blackColor;
       display: inline-block;
+      padding: 8px 0;
     }
 
     h2 {
@@ -934,6 +936,81 @@ header {
     bottom: 252px !important;
   }
 
+  @include tablet-view() {
+    .top-content {
+      width: auto;
+      padding: 0 30px;
+
+      h1 {
+        font-size: 48px;
+      }
+
+      h2 {
+        font-weight: bold;
+        font-size: 32px;
+      }
+
+      .text-content {
+        width: auto;
+      }
+    }
+    .bottom-content {
+      width: auto;
+      padding: 0 30px;
+      margin: 120px auto 0 auto;
+
+      .text-content {
+        align-items: center;
+
+        h2, p {
+          align-self: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include mobile-view() {
+    margin: 120px auto 0 auto;
+    .top-content {
+      padding: 0 18px;
+
+      h1 {
+        font-size: 34px;
+      }
+
+      h2 {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 54px;
+      }
+
+      .text-content {
+        text-align: left;
+      }
+    }
+
+    .middle-content {
+      .text {
+        right: 18px;
+        left: 18px;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      img {
+        object-position: left;
+      }
+    }
+
+    .bottom-content {
+      .text-content {
+        h2 {
+          font-size: 34px;
+        }
+      }
+    }
+  }
 }
 
 .warranty-information-wrapper {

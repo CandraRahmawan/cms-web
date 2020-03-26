@@ -626,7 +626,7 @@ header {
               font-size: 12px; } }
 
 .our-story-wrapper {
-  margin: 180px auto 0 auto;
+  margin: 260px auto 0 auto;
   color: #191818; }
   .our-story-wrapper .top-content {
     width: 1080px;
@@ -635,11 +635,13 @@ header {
     .our-story-wrapper .top-content h1 {
       margin: 0 auto;
       border-bottom: 2px solid #191818;
-      font-size: 60px;
+      border-top: 2px solid #191818;
+      font-size: 62px;
       font-weight: bold;
-      line-height: 110px;
+      line-height: normal;
       color: #191818;
-      display: inline-block; }
+      display: inline-block;
+      padding: 8px 0; }
     .our-story-wrapper .top-content h2 {
       font-size: 46px;
       font-weight: 500;
@@ -701,6 +703,48 @@ header {
         line-height: 34px; }
   .our-story-wrapper .scroll-text-absolute {
     bottom: 252px !important; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+    .our-story-wrapper .top-content {
+      width: auto;
+      padding: 0 30px; }
+      .our-story-wrapper .top-content h1 {
+        font-size: 48px; }
+      .our-story-wrapper .top-content h2 {
+        font-weight: bold;
+        font-size: 32px; }
+      .our-story-wrapper .top-content .text-content {
+        width: auto; }
+    .our-story-wrapper .bottom-content {
+      width: auto;
+      padding: 0 30px;
+      margin: 120px auto 0 auto; }
+      .our-story-wrapper .bottom-content .text-content {
+        align-items: center; }
+        .our-story-wrapper .bottom-content .text-content h2, .our-story-wrapper .bottom-content .text-content p {
+          align-self: auto;
+          width: 100%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    .our-story-wrapper {
+      margin: 120px auto 0 auto; }
+      .our-story-wrapper .top-content {
+        padding: 0 18px; }
+        .our-story-wrapper .top-content h1 {
+          font-size: 34px; }
+        .our-story-wrapper .top-content h2 {
+          font-weight: bold;
+          font-size: 32px;
+          line-height: 54px; }
+        .our-story-wrapper .top-content .text-content {
+          text-align: left; }
+      .our-story-wrapper .middle-content .text {
+        right: 18px;
+        left: 18px;
+        font-size: 16px;
+        text-align: center; }
+      .our-story-wrapper .middle-content img {
+        object-position: left; }
+      .our-story-wrapper .bottom-content .text-content h2 {
+        font-size: 34px; } }
 
 .warranty-information-wrapper {
   margin: 180px auto 0 auto;
