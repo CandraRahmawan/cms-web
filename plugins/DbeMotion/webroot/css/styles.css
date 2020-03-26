@@ -190,7 +190,7 @@ body.not-found-page {
     .menu-fullbar-header a:hover {
       color: grey; }
   .menu-fullbar-header img {
-    height: 32px; }
+    height: 28px; }
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
     .menu-fullbar-header {
       margin: 0; }
@@ -946,15 +946,16 @@ header {
 
 .review-wrapper {
   margin: 260px auto 0 auto; }
-  .review-wrapper h1 {
-    text-align: center;
-    margin: 0 auto;
-    padding: 8px 0;
-    font-size: 62px;
-    font-weight: bold;
-    width: 275px;
-    border-top: 2px solid #191818;
-    border-bottom: 2px solid #191818; }
+  .review-wrapper .title {
+    text-align: center; }
+    .review-wrapper .title h1 {
+      margin: 0 auto;
+      padding: 8px 0;
+      font-size: 62px;
+      font-weight: bold;
+      border-top: 2px solid #191818;
+      border-bottom: 2px solid #191818;
+      display: inline-block; }
   .review-wrapper .review-list {
     width: 1080px;
     margin: 100px auto 0 auto;
@@ -986,6 +987,8 @@ header {
       display: flex;
       justify-content: center;
       align-items: center; }
+      .review-wrapper .youtube-section-wrapper .logo-youtube.show-mobile {
+        display: none; }
       .review-wrapper .youtube-section-wrapper .logo-youtube div {
         margin-left: 40px;
         margin-bottom: -24px;
@@ -1023,6 +1026,65 @@ header {
         position: relative; }
   .review-wrapper .scroll-text-absolute {
     bottom: 220px !important; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+    .review-wrapper .review-list {
+      width: auto;
+      padding: 0 30px; }
+      .review-wrapper .review-list .review-content {
+        margin: 30px 0; }
+    .review-wrapper .load-more-wrapper {
+      width: auto; }
+    .review-wrapper .youtube-section-wrapper {
+      flex-direction: column; }
+      .review-wrapper .youtube-section-wrapper .logo-youtube.show-mobile {
+        display: flex; }
+      .review-wrapper .youtube-section-wrapper .logo-youtube.hide-mobile {
+        display: none; }
+      .review-wrapper .youtube-section-wrapper div {
+        text-align: center; }
+        .review-wrapper .youtube-section-wrapper div:first-child {
+          margin-bottom: 40px; }
+    .review-wrapper .review-form-wrapper {
+      height: auto;
+      flex-direction: column;
+      width: auto;
+      padding: 80px 30px; }
+      .review-wrapper .review-form-wrapper .left-content, .review-wrapper .review-form-wrapper .right-content {
+        width: 100%; }
+        .review-wrapper .review-form-wrapper .left-content form label.label, .review-wrapper .review-form-wrapper .right-content form label.label {
+          font-size: 22px; }
+        .review-wrapper .review-form-wrapper .left-content h1, .review-wrapper .review-form-wrapper .right-content h1 {
+          font-size: 40px;
+          width: 100%;
+          margin-bottom: 60px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    .review-wrapper {
+      margin: 130px auto 0 auto; }
+      .review-wrapper .title h1 {
+        font-size: 38px; }
+      .review-wrapper .review-list {
+        padding: 0 18px;
+        margin: 60px auto 0 auto; }
+        .review-wrapper .review-list .review-content {
+          margin: 20px 0;
+          width: 100%; }
+      .review-wrapper .youtube-section-wrapper {
+        padding: 40px 0; }
+        .review-wrapper .youtube-section-wrapper .logo-youtube.show-mobile {
+          padding: 0 18px; }
+        .review-wrapper .youtube-section-wrapper div iframe {
+          width: 290px;
+          height: 210px; }
+      .review-wrapper .load-more-wrapper {
+        margin: 0 0 40px 0; }
+        .review-wrapper .load-more-wrapper .right-content, .review-wrapper .load-more-wrapper .left-content {
+          width: 100%; }
+      .review-wrapper .review-form-wrapper {
+        padding: 50px 18px; }
+        .review-wrapper .review-form-wrapper .left-content form label.label, .review-wrapper .review-form-wrapper .right-content form label.label {
+          font-size: 20px; }
+        .review-wrapper .review-form-wrapper .left-content h1, .review-wrapper .review-form-wrapper .right-content h1 {
+          font-size: 32px; } }
 
 .product-list-wrapper {
   margin: 0 auto; }

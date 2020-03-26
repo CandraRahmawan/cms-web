@@ -1,12 +1,14 @@
 <?php
 echo $this->Html->script([
-    '/plugins/jQuery/jquery-2.2.3.min',
-    '/plugins/jquery-validation/dist/jquery.validate.min',
-    'https://www.google.com/recaptcha/api.js?render=' . $settings['captcha_site_key'] . ''], ['block' => 'scriptBottom']);
+  '/plugins/jQuery/jquery-2.2.3.min',
+  '/plugins/jquery-validation/dist/jquery.validate.min',
+  'https://www.google.com/recaptcha/api.js?render=' . $settings['captcha_site_key'] . ''], ['block' => 'scriptBottom']);
 ?>
 <div class="review-wrapper">
-    <?= $this->Element('scroll_text_absolute'); ?>
-    <h1>REVIEWS</h1>
+  <?= $this->Element('scroll_text_absolute'); ?>
+    <div class="title">
+        <h1>REVIEWS</h1>
+    </div>
     <div class="review-list">
         <div class="review-content">
             <h3>Edber Ditamayatsa</h3>
@@ -68,8 +70,8 @@ echo $this->Html->script([
             <iframe width="480" height="315"
                     src="https://www.youtube.com/embed/ItrI2aYumU4">
             </iframe>
-            <div class="logo-youtube">
-                <?= $this->Html->image('/images/youtube_logo.png'); ?>
+            <div class="logo-youtube hide-mobile">
+              <?= $this->Html->image('/images/youtube_logo.png'); ?>
                 <div>Review on Youtube Channel</div>
             </div>
         </div>
@@ -78,13 +80,17 @@ echo $this->Html->script([
                     src="https://www.youtube.com/embed/UavrhybmzNQ">
             </iframe>
         </div>
+        <div class="logo-youtube show-mobile">
+          <?= $this->Html->image('/images/youtube_logo.png'); ?>
+            <div>Review on Youtube Channel</div>
+        </div>
     </div>
     <div class="review-form-wrapper">
         <div class="left-content">
             <h1>Story of Your Best Experience with</h1>
         </div>
         <div class="right-content">
-            <?= $this->Form->create(null, ['id' => 'form_review', 'onsubmit' => 'event.preventDefault();']); ?>
+          <?= $this->Form->create(null, ['id' => 'form_review', 'onsubmit' => 'event.preventDefault();']); ?>
             <div class="input-group">
                 <label for="name" class="label">Your Name</label>
                 <input class="uk-input" type="text" id="name" name="name">
@@ -103,7 +109,7 @@ echo $this->Html->script([
             </div>
             <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response"/>
             <button type="submit">Submit</button>
-            <?= $this->Form->end(); ?>
+          <?= $this->Form->end(); ?>
         </div>
     </div>
 </div>
