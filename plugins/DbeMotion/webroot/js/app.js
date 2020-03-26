@@ -1,7 +1,6 @@
 grecaptcha.ready(function () {
     grecaptcha.execute(captchaSiteKey, {action: 'form_submit'}).then(function (token) {
         $('#g-recaptcha-response').val(token);
-        console.log()
     });
 });
 
@@ -148,3 +147,13 @@ $(document).ready(function () {
         }
     });
 });
+
+function callbackValid(id_form) {
+    const isValid = $(`#${id_form}`).valid();
+
+    if (!isValid) {
+        grecaptcha.execute(captchaSiteKey, {action: 'form_submit'}).then(function (token) {
+            $('#g-recaptcha-response').val(token);
+        });
+    }
+}

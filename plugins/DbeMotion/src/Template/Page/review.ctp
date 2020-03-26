@@ -63,7 +63,7 @@ echo $this->Html->script([
                 <textarea class="uk-textarea" rows="3" id="comment" name="comment"></textarea>
             </div>
             <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response"/>
-            <button type="submit">Submit</button>
+            <button type="submit" onclick="callbackValid('form_review')">Submit</button>
           <?= $this->Form->end(); ?>
         </div>
     </div>
