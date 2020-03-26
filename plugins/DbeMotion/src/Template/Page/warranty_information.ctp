@@ -1,5 +1,5 @@
 <div class="warranty-information-wrapper">
-    <?= $this->Element('scroll_text_absolute'); ?>
+  <?= $this->Element('scroll_text_absolute'); ?>
     <div class="title-wrapper">
         <h1>Warranty Information</h1>
     </div>
@@ -19,12 +19,18 @@
             <div class="store-list">
                 <h3>BANDUNG</h3>
                 <p>Bandung Electronic Center 2nd Fl Y05</p>
-                <?= $this->Html->link(
-                    '<p>022-4234642</p>',
-                    'tel:022-4234642',
-                    ['escape' => false]
-                );
-                ?>
+              <?= $this->Html->link(
+                '<p>022-4234642</p>',
+                'tel:022-4234642',
+                ['escape' => false]
+              );
+              ?>
+              <?= $this->Html->link(
+                '<span uk-icon="icon: whatsapp; ratio: 1.2"/>',
+                'https://api.whatsapp.com/send?phone=6281319991783',
+                ['escape' => false, 'target' => '_blank']
+              );
+              ?>
             </div>
         </div>
     </div>

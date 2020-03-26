@@ -1082,7 +1082,97 @@ header {
   }
 
   .scroll-text-absolute {
-    bottom: 264px !important;
+    top: 234px !important;
+  }
+
+  @include tablet-view() {
+    height: auto;
+    width: auto;
+    padding: 0 30px;
+    .content-wrapper {
+      flex-direction: column;
+
+      .left-content {
+        hr {
+          margin-bottom: 80px;
+        }
+      }
+
+      .right-content {
+        align-self: unset;
+        width: 100%;
+
+        .top-text {
+          font-size: 32px;
+          margin-bottom: 80px;
+        }
+
+        .store-list {
+          svg {
+            width: 48px;
+            margin-top: 24px;
+          }
+
+          h3 {
+            font-size: 30px;
+            color: $blackColor;
+          }
+
+          p {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+
+  @include phone-view() {
+    margin: 120px auto 0 auto;
+    padding: 0 18px;
+
+    .title-wrapper {
+      width: 100%;
+      h1 {
+        font-size: 32px;
+      }
+    }
+    .content-wrapper {
+      .left-content {
+        width: 100%;
+        hr {
+          margin-bottom: 40px;
+        }
+        h3 {
+          font-size: 24px;
+          color: $blackColor;
+        }
+      }
+
+      .right-content {
+        align-self: unset;
+        width: 100%;
+
+        .top-text {
+          font-size: 24px;
+          margin-bottom: 60px;
+        }
+
+        .store-list {
+          svg {
+            width: 34px;
+          }
+
+          h3 {
+            font-size: 22px;
+            color: $blackColor;
+          }
+
+          p {
+            font-size: inherit;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1578,6 +1668,7 @@ header {
 
     .youtube-section-wrapper {
       padding: 40px 0;
+
       .logo-youtube {
         &.show-mobile {
           padding: 0 18px;

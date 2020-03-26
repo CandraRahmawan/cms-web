@@ -788,7 +788,58 @@ header {
         .warranty-information-wrapper .right-content .store-list a:hover {
           text-decoration: none; }
   .warranty-information-wrapper .scroll-text-absolute {
-    bottom: 264px !important; }
+    top: 234px !important; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+    .warranty-information-wrapper {
+      height: auto;
+      width: auto;
+      padding: 0 30px; }
+      .warranty-information-wrapper .content-wrapper {
+        flex-direction: column; }
+        .warranty-information-wrapper .content-wrapper .left-content hr {
+          margin-bottom: 80px; }
+        .warranty-information-wrapper .content-wrapper .right-content {
+          align-self: unset;
+          width: 100%; }
+          .warranty-information-wrapper .content-wrapper .right-content .top-text {
+            font-size: 32px;
+            margin-bottom: 80px; }
+          .warranty-information-wrapper .content-wrapper .right-content .store-list svg {
+            width: 48px;
+            margin-top: 24px; }
+          .warranty-information-wrapper .content-wrapper .right-content .store-list h3 {
+            font-size: 30px;
+            color: #191818; }
+          .warranty-information-wrapper .content-wrapper .right-content .store-list p {
+            font-size: 28px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    .warranty-information-wrapper {
+      margin: 120px auto 0 auto;
+      padding: 0 18px; }
+      .warranty-information-wrapper .title-wrapper {
+        width: 100%; }
+        .warranty-information-wrapper .title-wrapper h1 {
+          font-size: 32px; }
+      .warranty-information-wrapper .content-wrapper .left-content {
+        width: 100%; }
+        .warranty-information-wrapper .content-wrapper .left-content hr {
+          margin-bottom: 40px; }
+        .warranty-information-wrapper .content-wrapper .left-content h3 {
+          font-size: 24px;
+          color: #191818; }
+      .warranty-information-wrapper .content-wrapper .right-content {
+        align-self: unset;
+        width: 100%; }
+        .warranty-information-wrapper .content-wrapper .right-content .top-text {
+          font-size: 24px;
+          margin-bottom: 60px; }
+        .warranty-information-wrapper .content-wrapper .right-content .store-list svg {
+          width: 34px; }
+        .warranty-information-wrapper .content-wrapper .right-content .store-list h3 {
+          font-size: 22px;
+          color: #191818; }
+        .warranty-information-wrapper .content-wrapper .right-content .store-list p {
+          font-size: inherit; } }
 
 .contact-page-wrapper .contact-page-top {
   margin: 200px auto 0 auto;
