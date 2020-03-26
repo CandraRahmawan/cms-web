@@ -98,7 +98,7 @@ echo $this->Html->script([
                     $('.review-list').append(`<div class="review-content"><h3>${item.name}</h3><p>${item.comment}</p></div>`);
                 });
             }
-            $('#offset').val(page++);
+            $('#page').val(page++);
         }).fail(function (jqXHR) {
             $('.review-list').html('<div class="not-found-content">Error Load Reviews :(</h4>');
             console.log('error : ', jqXHR);
