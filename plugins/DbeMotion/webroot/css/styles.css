@@ -166,7 +166,7 @@ body.not-found-page {
         justify-content: space-between;
         flex-direction: column; }
         .uk-offcanvas-bar .list-menu li {
-          font-size: 20px;
+          font-size: 24px;
           letter-spacing: normal; }
         .uk-offcanvas-bar .list-menu .social-list {
           flex-direction: column;
@@ -176,8 +176,7 @@ body.not-found-page {
           margin: 0 -20px -20px -20px;
           padding: 20px; }
         .uk-offcanvas-bar .list-menu .social-title {
-          margin: 0 0 6px 0;
-          font-size: 12px; } }
+          margin: 0 0 6px 0; } }
 
 .menu-fullbar-header {
   display: flex;
