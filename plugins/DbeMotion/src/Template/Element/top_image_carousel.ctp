@@ -1,4 +1,4 @@
-<section class="top-image" uk-slideshow="autoplay:true;autoplay-interval:3000">
+<section class="top-image hide-mobile" uk-slideshow="autoplay:true;autoplay-interval:3000">
     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
         <ul class="uk-slideshow-items">
             <li>
@@ -50,4 +50,14 @@
     </div>
     <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
   <?= $this->Element('scroll_text_absolute'); ?>
+</section>
+
+<section class="top-image show-mobile">
+    <img src="<?= $this->Url->assetUrl('/images/carousel/top_image_home.jpg'); ?>"/>
+    <div class="text-image-centre">
+        <span>We love music.. Who doesn’t love music.</span>
+        <div class="box-text">
+            SERIOUSLY GOOD VALUE
+        </div>
+    </div>
 </section>

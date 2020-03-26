@@ -191,7 +191,7 @@ body.not-found-page {
     .menu-fullbar-header a:hover {
       color: grey; }
   .menu-fullbar-header img {
-    height: 22px; }
+    height: 32px; }
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
     .menu-fullbar-header {
       margin: 0; }
@@ -214,7 +214,7 @@ header {
   header .logo {
     margin-left: 30px; }
     header .logo img {
-      height: 26px; }
+      height: 32px; }
   header .burger-menu {
     margin-right: 30px; }
     header .burger-menu a {
@@ -233,6 +233,8 @@ header {
 
 .top-image {
   position: relative; }
+  .top-image.show-mobile {
+    display: none; }
   .top-image .text-image-centre {
     color: #fff;
     position: absolute;
@@ -251,10 +253,6 @@ header {
       width: 320px;
       margin: 80px auto 0 auto;
       padding: 14px; }
-      @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
-        .top-image .text-image-centre .box-text {
-          margin: 40px auto 0 auto;
-          font-size: 16px; } }
   .top-image .uk-slideshow-items .text-title {
     position: absolute;
     top: 50%;
@@ -263,16 +261,10 @@ header {
     .top-image .uk-slideshow-items .text-title h1 {
       font-size: 140px;
       margin-top: 0; }
-      @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
-        .top-image .uk-slideshow-items .text-title h1 {
-          font-size: 74px; } }
     .top-image .uk-slideshow-items .text-title span {
       margin-left: 6px;
       font-size: 22px;
       font-weight: bold; }
-      @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
-        .top-image .uk-slideshow-items .text-title span {
-          font-size: 18px; } }
   .top-image .uk-slideshow-nav {
     position: absolute;
     width: 100%;
@@ -282,6 +274,27 @@ header {
       border: 1px solid #fff; }
     .top-image .uk-slideshow-nav li.uk-active a {
       background-color: #fff; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+    .top-image .text-image-centre .box-text {
+      margin: 40px auto 0 auto;
+      font-size: 16px; }
+    .top-image .uk-slideshow-items .text-title h1 {
+      font-size: 74px; }
+    .top-image .uk-slideshow-items .text-title span {
+      font-size: 18px; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    .top-image.hide-mobile {
+      display: none; }
+    .top-image.show-mobile {
+      display: block; }
+      .top-image.show-mobile img {
+        height: 100vh;
+        object-fit: cover; }
+      .top-image.show-mobile .text-image-centre .box-text {
+        width: 220px;
+        font-size: 12px;
+        padding: 12px;
+        font-weight: 500; } }
 
 .home-section-1 {
   max-width: 1240px;
@@ -1374,9 +1387,5 @@ footer {
       footer .left-footer img {
         height: 18px;
         margin-bottom: 20px; }
-      footer .left-footer a {
-        font-size: 14px; }
-    footer .right-footer {
-      font-size: 14px; }
-      footer .right-footer a {
-        margin-right: 28px; } }
+    footer .right-footer a {
+      margin-right: 28px; } }

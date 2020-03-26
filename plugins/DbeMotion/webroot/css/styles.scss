@@ -136,7 +136,7 @@ body {
   }
 
   img {
-    height: 22px;
+    height: 32px;
   }
 
   @include mobile-view() {
@@ -168,7 +168,7 @@ header {
     margin-left: 30px;
 
     img {
-      height: 26px;
+      height: 32px;
     }
   }
 
@@ -203,6 +203,10 @@ header {
 .top-image {
   position: relative;
 
+  &.show-mobile {
+    display: none;
+  }
+
   .text-image-centre {
     color: $whiteColor;
     position: absolute;
@@ -224,11 +228,6 @@ header {
       width: 320px;
       margin: 80px auto 0 auto;
       padding: 14px;
-
-      @include tablet-view() {
-        margin: 40px auto 0 auto;
-        font-size: 16px;
-      }
     }
   }
 
@@ -242,20 +241,12 @@ header {
       h1 {
         font-size: 140px;
         margin-top: 0;
-
-        @include tablet-view() {
-          font-size: 74px;
-        }
       }
 
       span {
         margin-left: 6px;
         font-size: 22px;
         font-weight: bold;
-
-        @include tablet-view() {
-          font-size: 18px;
-        }
       }
     }
   }
@@ -274,6 +265,51 @@ header {
       &.uk-active {
         a {
           background-color: $whiteColor;
+        }
+      }
+    }
+  }
+
+  @include tablet-view() {
+    .text-image-centre {
+      .box-text {
+        margin: 40px auto 0 auto;
+        font-size: 16px;
+      }
+    }
+
+    .uk-slideshow-items {
+      .text-title {
+        h1 {
+          font-size: 74px;
+        }
+
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  @include mobile-view() {
+    &.hide-mobile {
+      display: none;
+    }
+
+    &.show-mobile {
+      display: block;
+
+      img {
+        height: 100vh;
+        object-fit: cover;
+      }
+
+      .text-image-centre {
+        .box-text {
+          width: 220px;
+          font-size: 12px;
+          padding: 12px;
+          font-weight: 500;
         }
       }
     }
@@ -1959,15 +1995,9 @@ footer {
         height: 18px;
         margin-bottom: 20px;
       }
-
-      a {
-        font-size: 14px;
-      }
     }
 
     .right-footer {
-      font-size: 14px;
-
       a {
         margin-right: 28px;
       }
