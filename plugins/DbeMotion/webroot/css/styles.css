@@ -123,6 +123,13 @@ body.not-found-page {
   background-image: linear-gradient(to bottom, #8AD8D2, #fff);
   height: 100vh; }
 
+body .not-found-content {
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 24px; }
+
 .uk-offcanvas-bar {
   position: fixed;
   width: 100%;
@@ -1049,7 +1056,8 @@ header {
     display: flex;
     font-weight: bold;
     letter-spacing: 1px;
-    margin: 60px auto 120px auto; }
+    margin: 60px auto 120px auto;
+    cursor: pointer; }
     .review-wrapper .load-more-wrapper .left-content {
       width: 55%; }
   .review-wrapper .youtube-section-wrapper {
@@ -1074,11 +1082,10 @@ header {
       border-radius: 32px; }
   .review-wrapper .review-form-wrapper {
     color: #191818;
-    height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
+    margin: 120px auto;
     width: 1080px; }
     .review-wrapper .review-form-wrapper form label.label {
       letter-spacing: 2px;

@@ -9,9 +9,9 @@ class HomeController extends AppController
     {
         $section = $this->__section();
         $top_slider = $this->__topSlider();
-        $plugin_service_page = $this->__plugin('service_page');
-        $plugin_area_coverage = $this->__plugin('area_coverage');
-        $plugin_why_choose_us = $this->__plugin('why_choose_us');
+        $plugin_service_page = $this->plugin('service_page');
+        $plugin_area_coverage = $this->plugin('area_coverage');
+        $plugin_why_choose_us = $this->plugin('why_choose_us');
         $is_homepage = true;
         $this->viewBuilder()->layout('layout');
         $this->set(compact('is_homepage', 'top_slider', 'section', 'plugin_service_page', 'plugin_area_coverage', 'plugin_why_choose_us'));
@@ -66,36 +66,5 @@ class HomeController extends AppController
         $result_content = $query->toArray();
 
         return $result_content;
-    }
-
-    private function __plugin($key)
-    {
-        $this->loadModel('Plugins');
-        $themesKey = $this->ThemesSetting->find()
-            ->select(['value_1'])
-            ->where(['is_active' => 'Y', '`key`' => $key, 'id_theme' => $this->id_themes])
-            ->first();
-        $plugin = $this->Plugins
-            ->find('all')
-            ->select([
-                'detail.value_1',
-                'detail.value_2',
-                'detail.value_3'
-            ])
-            ->from('plugins plugin')
-            ->join([
-                'detail' => [
-                    'table' => 'plugins_detail',
-                    'type' => 'INNER',
-                    'conditions' => 'plugin.plugin_id = detail.plugin_id',
-                ]
-            ])
-            ->where([
-                'plugin.is_active' => 'Y',
-                'plugin.plugin_id' => $themesKey['value_1']
-            ])
-            ->toArray();
-
-        return $plugin;
     }
 }
