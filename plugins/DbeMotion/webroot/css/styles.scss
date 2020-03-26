@@ -167,7 +167,7 @@ header {
     margin-left: 30px;
 
     img {
-      height: 32px;
+      height: 28px;
     }
   }
 
@@ -744,7 +744,7 @@ header {
   }
 
   .scroll-text-absolute {
-    bottom: 220px !important;
+    top: 250px !important;
   }
 
   @include tablet-view() {
@@ -933,7 +933,7 @@ header {
   }
 
   .scroll-text-absolute {
-    bottom: 252px !important;
+    top: 300px !important;
   }
 
   @include tablet-view() {
@@ -1086,129 +1086,285 @@ header {
   }
 }
 
-.contact-page-top {
-  margin: 200px auto 0 auto;
-  height: calc(100vh - 200px);
-  width: $middleWidth;
-  color: $blackColor;
-  position: relative;
+.contact-page-wrapper {
+  .contact-page-top {
+    margin: 200px auto 0 auto;
+    height: calc(100vh - 200px);
+    width: $middleWidth;
+    color: $blackColor;
+    position: relative;
 
-  .title-wrapper {
-    h1 {
-      font-weight: bold;
-      font-size: 62px;
+    .title-wrapper {
+      h1 {
+        font-weight: bold;
+        font-size: 62px;
+      }
+
+      width: 495px;
     }
 
-    width: 495px;
-  }
-
-  .content-wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .left-content {
-    width: 580px;
-
-    h3 {
-      font-size: 30px;
-      margin-top: 0;
-    }
-  }
-
-  .right-content {
-    width: 390px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-
-    h3 {
-      font-weight: bold;
-      margin-bottom: 0;
+    .content-wrapper {
+      display: flex;
+      justify-content: space-between;
     }
 
-    p {
-      margin: 0;
-      font-size: 22px;
+    .left-content {
+      width: 580px;
+
+      h3 {
+        font-size: 30px;
+        margin-top: 0;
+      }
     }
 
-    .store-list {
-      margin-bottom: 32px;
+    .right-content {
+      width: 390px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
 
-      a {
-        color: $blackColor;
+      h3 {
+        font-weight: bold;
+        margin-bottom: 0;
+      }
 
-        &:hover {
-          text-decoration: none;
+      p {
+        margin: 0;
+        font-size: 22px;
+      }
+
+      .store-list {
+        margin-bottom: 32px;
+
+        a {
+          color: $blackColor;
+
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
     }
   }
 
-  .scroll-text-absolute {
-    bottom: 248px !important;
-  }
-}
+  .contact-page-bottom {
+    color: $blackColor;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
-.contact-page-bottom {
-  color: $blackColor;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+    form {
+      label {
+        &.label {
+          letter-spacing: 2px;
+          font-weight: bold;
+        }
+      }
 
-  form {
-    label {
-      &.label {
-        letter-spacing: 2px;
-        font-weight: bold;
+      .input-group {
+        position: relative;
       }
     }
 
-    .input-group {
-      position: relative;
+    button {
+      margin-top: 28px;
+    }
+
+    h1 {
+      font-weight: bold;
+      font-size: 48px;
+    }
+
+    .content-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      width: $middleWidth;
+
+      .left-content, .right-content {
+        width: 45%;
+
+        .show-mobile {
+          display: none;
+        }
+      }
+    }
+
+    .content-bottom {
+      display: flex;
+      justify-content: space-between;
+      width: $middleWidth;
+      margin: 0 auto;
+
+      .left-content {
+        font-size: 22px;
+        width: 45%;
+      }
+
+      .right-content {
+        width: 45%;
+      }
     }
   }
 
-  button {
-    margin-top: 28px;
+  .scroll-text-absolute {
+    bottom: 300px !important;
   }
 
-  h1 {
-    font-weight: bold;
-    font-size: 48px;
+  @include tablet-view() {
+    .contact-page-top {
+      width: auto;
+      padding: 0 30px;
+      height: auto;
+
+      .content-wrapper {
+        flex-direction: column;
+
+        .left-content {
+          width: 100%;
+
+          h3 {
+            line-height: 60px;
+            font-weight: 500;
+          }
+        }
+
+        .right-content {
+          position: unset;
+          width: auto;
+          margin-top: 40px;
+
+          h3 {
+            font-size: 30px;
+          }
+
+          p {
+            font-size: 28px;
+          }
+
+          .store-list {
+            svg {
+              width: 48px;
+              margin-top: 24px;
+            }
+          }
+        }
+      }
+    }
+
+    .contact-page-bottom {
+      height: auto;
+      padding: 90px 30px;
+
+      form {
+        label {
+          &.label {
+            font-size: 26px;
+          }
+        }
+      }
+
+      .content-top {
+        width: auto;
+        flex-direction: column;
+
+        .left-content {
+          .show-mobile {
+            font-size: 30px;
+            display: block;
+          }
+
+          width: 100%;
+          margin-bottom: 80px;
+        }
+
+        .right-content {
+          width: 100%;
+        }
+      }
+
+      .content-bottom {
+        width: auto;
+        flex-direction: column;
+
+        .left-content {
+          display: none;
+        }
+
+        .right-content {
+          width: auto;
+        }
+      }
+    }
   }
 
-  .content-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    width: $middleWidth;
+  @include mobile-view() {
+    .contact-page-top {
+      margin: 140px auto 0 auto;
+      padding: 0 18px;
 
-    .left-content {
-      width: 45%;
+      .title-wrapper {
+        h1 {
+          font-size: 46px;
+        }
+      }
+
+      .content-wrapper {
+        .left-content {
+          width: 100%;
+
+          h3 {
+            line-height: 46px;
+            font-size: 24px;
+            font-weight: 500;
+          }
+        }
+
+        .right-content {
+          h3 {
+            font-size: 20px;
+          }
+
+          p {
+            font-size: inherit;
+          }
+
+          .store-list {
+            svg {
+              width: 34px;
+            }
+          }
+        }
+      }
     }
 
-    .right-content {
-      width: 45%;
-    }
-  }
+    .contact-page-bottom {
+      padding: 50px 18px;
 
-  .content-bottom {
-    display: flex;
-    justify-content: space-between;
-    width: $middleWidth;
-    margin: 0 auto;
+      form {
+        label {
+          &.label {
+            font-size: 22px;
+          }
+        }
+      }
 
-    .left-content {
-      font-size: 22px;
-      width: 45%;
+      .content-top {
+        .left-content {
+          h1 {
+            font-size: 38px;
+          }
 
-    }
+          .show-mobile {
+            font-size: 22px;
+            line-height: 42px;
+          }
 
-    .right-content {
-      width: 45%;
+          margin-bottom: 60px;
+        }
+      }
     }
   }
 }

@@ -213,7 +213,7 @@ header {
   header .logo {
     margin-left: 30px; }
     header .logo img {
-      height: 32px; }
+      height: 28px; }
   header .burger-menu {
     margin-right: 30px; }
     header .burger-menu a {
@@ -574,7 +574,7 @@ header {
           margin-bottom: 8px;
           text-transform: uppercase; }
   .where-to-buy-wrapper .scroll-text-absolute {
-    bottom: 220px !important; }
+    top: 250px !important; }
   @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
     .where-to-buy-wrapper {
       width: 100%; }
@@ -702,7 +702,7 @@ header {
         font-size: 20px;
         line-height: 34px; }
   .our-story-wrapper .scroll-text-absolute {
-    bottom: 252px !important; }
+    top: 300px !important; }
   @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
     .our-story-wrapper .top-content {
       width: auto;
@@ -790,81 +790,159 @@ header {
   .warranty-information-wrapper .scroll-text-absolute {
     bottom: 264px !important; }
 
-.contact-page-top {
+.contact-page-wrapper .contact-page-top {
   margin: 200px auto 0 auto;
   height: calc(100vh - 200px);
   width: 1080px;
   color: #191818;
   position: relative; }
-  .contact-page-top .title-wrapper {
+  .contact-page-wrapper .contact-page-top .title-wrapper {
     width: 495px; }
-    .contact-page-top .title-wrapper h1 {
+    .contact-page-wrapper .contact-page-top .title-wrapper h1 {
       font-weight: bold;
       font-size: 62px; }
-  .contact-page-top .content-wrapper {
+  .contact-page-wrapper .contact-page-top .content-wrapper {
     display: flex;
     justify-content: space-between; }
-  .contact-page-top .left-content {
+  .contact-page-wrapper .contact-page-top .left-content {
     width: 580px; }
-    .contact-page-top .left-content h3 {
+    .contact-page-wrapper .contact-page-top .left-content h3 {
       font-size: 30px;
       margin-top: 0; }
-  .contact-page-top .right-content {
+  .contact-page-wrapper .contact-page-top .right-content {
     width: 390px;
     position: absolute;
     right: 0;
     bottom: 0; }
-    .contact-page-top .right-content h3 {
+    .contact-page-wrapper .contact-page-top .right-content h3 {
       font-weight: bold;
       margin-bottom: 0; }
-    .contact-page-top .right-content p {
+    .contact-page-wrapper .contact-page-top .right-content p {
       margin: 0;
       font-size: 22px; }
-    .contact-page-top .right-content .store-list {
+    .contact-page-wrapper .contact-page-top .right-content .store-list {
       margin-bottom: 32px; }
-      .contact-page-top .right-content .store-list a {
+      .contact-page-wrapper .contact-page-top .right-content .store-list a {
         color: #191818; }
-        .contact-page-top .right-content .store-list a:hover {
+        .contact-page-wrapper .contact-page-top .right-content .store-list a:hover {
           text-decoration: none; }
-  .contact-page-top .scroll-text-absolute {
-    bottom: 248px !important; }
 
-.contact-page-bottom {
+.contact-page-wrapper .contact-page-bottom {
   color: #191818;
   height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column; }
-  .contact-page-bottom form label.label {
+  .contact-page-wrapper .contact-page-bottom form label.label {
     letter-spacing: 2px;
     font-weight: bold; }
-  .contact-page-bottom form .input-group {
+  .contact-page-wrapper .contact-page-bottom form .input-group {
     position: relative; }
-  .contact-page-bottom button {
+  .contact-page-wrapper .contact-page-bottom button {
     margin-top: 28px; }
-  .contact-page-bottom h1 {
+  .contact-page-wrapper .contact-page-bottom h1 {
     font-weight: bold;
     font-size: 48px; }
-  .contact-page-bottom .content-top {
+  .contact-page-wrapper .contact-page-bottom .content-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     width: 1080px; }
-    .contact-page-bottom .content-top .left-content {
+    .contact-page-wrapper .contact-page-bottom .content-top .left-content, .contact-page-wrapper .contact-page-bottom .content-top .right-content {
       width: 45%; }
-    .contact-page-bottom .content-top .right-content {
-      width: 45%; }
-  .contact-page-bottom .content-bottom {
+      .contact-page-wrapper .contact-page-bottom .content-top .left-content .show-mobile, .contact-page-wrapper .contact-page-bottom .content-top .right-content .show-mobile {
+        display: none; }
+  .contact-page-wrapper .contact-page-bottom .content-bottom {
     display: flex;
     justify-content: space-between;
     width: 1080px;
     margin: 0 auto; }
-    .contact-page-bottom .content-bottom .left-content {
+    .contact-page-wrapper .contact-page-bottom .content-bottom .left-content {
       font-size: 22px;
       width: 45%; }
-    .contact-page-bottom .content-bottom .right-content {
+    .contact-page-wrapper .contact-page-bottom .content-bottom .right-content {
       width: 45%; }
+
+.contact-page-wrapper .scroll-text-absolute {
+  bottom: 300px !important; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+  .contact-page-wrapper .contact-page-top {
+    width: auto;
+    padding: 0 30px;
+    height: auto; }
+    .contact-page-wrapper .contact-page-top .content-wrapper {
+      flex-direction: column; }
+      .contact-page-wrapper .contact-page-top .content-wrapper .left-content {
+        width: 100%; }
+        .contact-page-wrapper .contact-page-top .content-wrapper .left-content h3 {
+          line-height: 60px;
+          font-weight: 500; }
+      .contact-page-wrapper .contact-page-top .content-wrapper .right-content {
+        position: unset;
+        width: auto;
+        margin-top: 40px; }
+        .contact-page-wrapper .contact-page-top .content-wrapper .right-content h3 {
+          font-size: 30px; }
+        .contact-page-wrapper .contact-page-top .content-wrapper .right-content p {
+          font-size: 28px; }
+        .contact-page-wrapper .contact-page-top .content-wrapper .right-content .store-list svg {
+          width: 48px;
+          margin-top: 24px; }
+  .contact-page-wrapper .contact-page-bottom {
+    height: auto;
+    padding: 90px 30px; }
+    .contact-page-wrapper .contact-page-bottom form label.label {
+      font-size: 26px; }
+    .contact-page-wrapper .contact-page-bottom .content-top {
+      width: auto;
+      flex-direction: column; }
+      .contact-page-wrapper .contact-page-bottom .content-top .left-content {
+        width: 100%;
+        margin-bottom: 80px; }
+        .contact-page-wrapper .contact-page-bottom .content-top .left-content .show-mobile {
+          font-size: 30px;
+          display: block; }
+      .contact-page-wrapper .contact-page-bottom .content-top .right-content {
+        width: 100%; }
+    .contact-page-wrapper .contact-page-bottom .content-bottom {
+      width: auto;
+      flex-direction: column; }
+      .contact-page-wrapper .contact-page-bottom .content-bottom .left-content {
+        display: none; }
+      .contact-page-wrapper .contact-page-bottom .content-bottom .right-content {
+        width: auto; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .contact-page-wrapper .contact-page-top {
+    margin: 140px auto 0 auto;
+    padding: 0 18px; }
+    .contact-page-wrapper .contact-page-top .title-wrapper h1 {
+      font-size: 46px; }
+    .contact-page-wrapper .contact-page-top .content-wrapper .left-content {
+      width: 100%; }
+      .contact-page-wrapper .contact-page-top .content-wrapper .left-content h3 {
+        line-height: 46px;
+        font-size: 24px;
+        font-weight: 500; }
+    .contact-page-wrapper .contact-page-top .content-wrapper .right-content h3 {
+      font-size: 20px; }
+    .contact-page-wrapper .contact-page-top .content-wrapper .right-content p {
+      font-size: inherit; }
+    .contact-page-wrapper .contact-page-top .content-wrapper .right-content .store-list svg {
+      width: 34px; }
+  .contact-page-wrapper .contact-page-bottom {
+    padding: 50px 18px; }
+    .contact-page-wrapper .contact-page-bottom form label.label {
+      font-size: 22px; }
+    .contact-page-wrapper .contact-page-bottom .content-top .left-content {
+      margin-bottom: 60px; }
+      .contact-page-wrapper .contact-page-bottom .content-top .left-content h1 {
+        font-size: 38px; }
+      .contact-page-wrapper .contact-page-bottom .content-top .left-content .show-mobile {
+        font-size: 22px;
+        line-height: 42px; } }
 
 .review-wrapper {
   margin: 260px auto 0 auto; }
