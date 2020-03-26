@@ -137,8 +137,24 @@
                     <span>0856 4161 1980</span>
                 </div>
             </div>
+            <div class="store-list-wrapper hide-mobile">
+                <h3>Makassar</h3>
+                <div class="store-list">
+                    <h5>IR Computer</h5>
+                    <span>Jl. Maccini Raya Ruko PIM No 3A Makassar, Ruko PIM, Karuwisi, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan 90231</span>
+                    <span>0812 4279 5777</span>
+                </div>
+            </div>
+            <div class="store-list-wrapper hide-mobile">
+                <h3>Malang</h3>
+                <div class="store-list">
+                    <h5>Keewee Shop</h5>
+                    <span>Jl. Simpang Borobudur no.41 E. Malang</span>
+                    <span>62341479655</span>
+                </div>
+            </div>
         </div>
-        <div class="column-4">
+        <div class="column-4 show-mobile">
             <div class="store-list-wrapper">
                 <h3>Makassar</h3>
                 <div class="store-list">

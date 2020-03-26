@@ -734,6 +734,10 @@ header {
   width: $middleWidth;
   margin: 180px auto 0 auto;
 
+  .show-mobile {
+    display: none;
+  }
+
   h1 {
     font-weight: bold;
     margin-bottom: 92px;
@@ -801,6 +805,12 @@ header {
   }
 
   @include tablet-view() {
+    .show-mobile {
+      display: block;
+    }
+    .hide-mobile {
+      display: none;
+    }
     width: 100%;
     h1 {
       font-size: 50px;

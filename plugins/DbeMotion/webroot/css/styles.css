@@ -562,6 +562,8 @@ header {
 .where-to-buy-wrapper {
   width: 1080px;
   margin: 180px auto 0 auto; }
+  .where-to-buy-wrapper .show-mobile {
+    display: none; }
   .where-to-buy-wrapper h1 {
     font-weight: bold;
     margin-bottom: 92px;
@@ -609,6 +611,10 @@ header {
   @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
     .where-to-buy-wrapper {
       width: 100%; }
+      .where-to-buy-wrapper .show-mobile {
+        display: block; }
+      .where-to-buy-wrapper .hide-mobile {
+        display: none; }
       .where-to-buy-wrapper h1 {
         font-size: 50px;
         padding: 0 30px; }
