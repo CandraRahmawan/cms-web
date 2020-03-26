@@ -675,6 +675,46 @@ header {
       }
     }
   }
+
+  @include tablet-view() {
+    width: auto;
+    padding: 0 30px;
+    .content-wrapper {
+      margin-bottom: 80px;
+
+      .bg-image {
+        a {
+          right: 50px;
+        }
+      }
+    }
+  }
+
+  @include phone-view() {
+    padding: 0 18px;
+    .content-wrapper {
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .bg-image {
+        height: 130px;
+
+        img {
+          height: 130px;
+          width: 90%;
+        }
+
+        a {
+          right: 20px;
+          img {
+            height: 32px;
+          }
+        }
+      }
+    }
+  }
 }
 
 .where-to-buy-wrapper {
@@ -1132,6 +1172,7 @@ header {
 
     .title-wrapper {
       width: 100%;
+
       h1 {
         font-size: 32px;
       }
@@ -1139,9 +1180,11 @@ header {
     .content-wrapper {
       .left-content {
         width: 100%;
+
         hr {
           margin-bottom: 40px;
         }
+
         h3 {
           font-size: 24px;
           color: $blackColor;
