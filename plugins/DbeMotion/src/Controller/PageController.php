@@ -20,9 +20,8 @@ class PageController extends PagesController {
   }
   
   public function review() {
-    $content = $this->plugin('review_page');
     $youtube = $this->plugin('youtube_review');
-    $this->set(compact('content', 'youtube'));
+    $this->set(compact('youtube'));
   }
   
   public function warrantyInformation() {
