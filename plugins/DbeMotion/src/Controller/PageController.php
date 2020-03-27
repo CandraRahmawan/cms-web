@@ -33,10 +33,10 @@ class PageController extends PagesController {
   }
   
   public function productLists() {
-    $this->pluginContent('product_lists');
+    $this->plugin('product_lists');
   }
   
   public function productDetail() {
-    $this->pluginContent('product_detail');
+    $this->plugin('product_detail');
   }
 }

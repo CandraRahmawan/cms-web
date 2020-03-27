@@ -10,7 +10,7 @@
     echo '<img data-src="' . $item['detail']['value_3'] . '" uk-img/>';
     echo $this->Html->link(
       $this->Html->image('/images/icon-circle-right.png'),
-      '/products/headphones-earphones-wired',
+      '/products/' . $this->Utility->slugText($item['detail']['value_1']),
       ['escape' => false]
     );
     echo '</div></div>';
