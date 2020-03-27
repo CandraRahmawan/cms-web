@@ -23,22 +23,24 @@ echo $this->Html->script([
     </div>
     <div class="youtube-section-wrapper blue-grey">
       <?php
-      foreach ($youtube as $index => $item) {
-        echo '<div>';
-        echo '<iframe width="480" height="315" src="https://www.youtube.com/embed/' . $item['detail']['value_1'] . '"></iframe>';
-        if ($index == 0) {
-          echo '<div class="logo-youtube hide-mobile">';
-          echo $this->Html->image('/images/youtube_logo.png');
-          echo '<div>Review on Youtube Channel</div>';
+      if (sizeof($youtube) > 0) {
+        foreach ($youtube as $index => $item) {
+          echo '<div>';
+          echo '<iframe width="480" height="315" src="https://www.youtube.com/embed/' . $item['detail']['value_1'] . '"></iframe>';
+          if ($index == 0) {
+            echo '<div class="logo-youtube hide-mobile">';
+            echo $this->Html->image('/images/youtube_logo.png');
+            echo '<div>Review on Youtube Channel</div>';
+            echo '</div>';
+          }
           echo '</div>';
         }
+        echo '<div class="logo-youtube show-mobile">';
+        echo $this->Html->image('/images/youtube_logo.png');
+        echo '<div>Review on Youtube Channel</div>';
         echo '</div>';
       }
       ?>
-        <div class="logo-youtube show-mobile">
-          <?= $this->Html->image('/images/youtube_logo.png'); ?>
-            <div>Review on Youtube Channel</div>
-        </div>
     </div>
     <div class="review-form-wrapper">
         <div class="left-content">
@@ -91,7 +93,7 @@ echo $this->Html->script([
             if (totalCount <= (limit * page)) {
                 $('.load-more-wrapper > .right-content').hide();
             }
-            
+
             if (totalCount <= 0) {
                 $('.review-list').html('<div class="not-found-content">Not Reviews Found</h4>');
             } else {
