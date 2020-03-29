@@ -21,6 +21,17 @@ body {
     font-weight: 500;
     margin: 24px;
   }
+
+  .loading {
+    @include tablet-view() {
+      margin-left: 30px;
+    }
+    @include phone-view() {
+      margin-left: 18px;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+  }
 }
 
 .uk-offcanvas-bar {

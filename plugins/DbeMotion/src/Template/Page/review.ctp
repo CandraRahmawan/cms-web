@@ -85,6 +85,7 @@ echo $this->Html->script([
             type: 'GET',
             beforeSend: function (xhr) {
                 $('.loading').html('Loading data...');
+                $('.load-more-wrapper > .right-content').hide();
             }
         }).done(function (result) {
             $('.loading').empty();
@@ -92,6 +93,8 @@ echo $this->Html->script([
             const totalCount = jsonResult.totalCount;
             if (totalCount <= (limit * page)) {
                 $('.load-more-wrapper > .right-content').hide();
+            } else {
+                $('.load-more-wrapper > .right-content').show();
             }
 
             if (totalCount <= 0) {
