@@ -1,63 +1,42 @@
-<section class="top-image hide-mobile" uk-slideshow="autoplay:true;autoplay-interval:3000">
-    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
-        <ul class="uk-slideshow-items">
-            <li>
-                <img src="<?= $this->Url->assetUrl('/images/carousel/top_image_home.jpg'); ?>"
-                     uk-cover/>
-                <div class="text-image-centre">
-                    <span>We love music.. Who doesn’t love music.</span>
-                    <div class="box-text">
-                        SERIOUSLY GOOD VALUE
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="text-title">
-                    <span>High Quality Metal Earphone</span>
-                    <h1>PR100</h1>
-                </div>
-                <img src="<?= $this->Utility->buildUrl('/dbe_motion/images/carousel/1.jpg'); ?>" uk-cover/>
-            </li>
-            <li>
-                <div class="text-title">
-                    <span>Dual Dynamic Driver Earphone</span>
-                    <h1>PR300</h1>
-                </div>
-                <img src="<?= $this->Utility->buildUrl('/dbe_motion/images/carousel/2.jpg'); ?>" uk-cover/>
-            </li>
-            <li>
-                <div class="text-title">
-                    <span>7.1 Virtual Surround Gaming Headphone</span>
-                    <h1>GM300</h1>
-                </div>
-                <img src="<?= $this->Utility->buildUrl('/dbe_motion/images/carousel/3.jpg'); ?>" uk-cover/>
-            </li>
-            <li>
-                <div class="text-title">
-                    <span>Pro Gaming Headphone dengan 3.5mm Jack</span>
-                    <h1>GM250</h1>
-                </div>
-                <img src="<?= $this->Utility->buildUrl('/dbe_motion/images/carousel/4.jpg'); ?>" uk-cover/>
-            </li>
-            <li>
-                <div class="text-title">
-                    <span>High Definition Wood Earphone</span>
-                    <h1>WS100</h1>
-                </div>
-                <img src="<?= $this->Utility->buildUrl('/dbe_motion/images/carousel/5.jpg'); ?>" uk-cover/>
-            </li>
-        </ul>
-    </div>
-    <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
-  <?= $this->Element('scroll_text_absolute'); ?>
-</section>
-
-<section class="top-image show-mobile">
-    <img src="<?= $this->Url->assetUrl('/images/carousel/top_image_home.jpg'); ?>"/>
-    <div class="text-image-centre">
-        <span>We love music.. Who doesn’t love music.</span>
-        <div class="box-text">
-            SERIOUSLY GOOD VALUE
-        </div>
-    </div>
-</section>
+<?php
+if (!empty($top_slider)) {
+  echo '<section class="top-image hide-mobile" uk-slideshow="autoplay:true;autoplay-interval:3000">';
+  echo '<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">';
+  echo '<ul class="uk-slideshow-items">';
+  foreach ($top_slider as $slider) {
+    if ($slider['t']['key'] == 'featured_top_image_carousel') {
+      echo '<li>';
+      echo '<img data-src="' . $full_base_admin_url . $slider['g']['path'] . '" uk-img uk-cover/>';
+      echo '<div class="text-image-centre">';
+      echo '<span>' . $slider['g']['description'] . '</span>';
+      echo '<div class="box-text">' . $slider['g']['title'] . '</div>';
+      echo '</div>';
+      echo '</li>';
+    } else {
+      echo '<li>';
+      echo '<div class="text-title">';
+      echo '<span>' . $slider['g']['description'] . '</span>';
+      echo '<h1>' . $slider['g']['title'] . '</h1>';
+      echo '</div>';
+      echo '<img data-src="' . $full_base_admin_url . $slider['g']['path'] . '" uk-img uk-cover/>';
+      echo '</li>';
+    }
+  }
+  echo '</ul>';
+  echo '</div>';
+  echo '<ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>';
+  echo $this->Element('scroll_text_absolute');
+  echo '</section>';
+  
+  foreach ($top_slider as $slider) {
+    if ($slider['t']['key'] == 'featured_top_image_carousel') {
+      echo '<section class="top-image show-mobile">';
+      echo '<img data-src="' . $full_base_admin_url . $slider['g']['path'] . '" uk-img/>';
+      echo '<div class="text-image-centre">';
+      echo '<span>' . $slider['g']['description'] . '</span>';
+      echo '<div class="box-text">' . $slider['g']['title'] . '</div>';
+      echo '</div>';
+      echo '</section>';
+    }
+  }
+}

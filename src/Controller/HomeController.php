@@ -47,7 +47,7 @@ class HomeController extends AppController
     {
         $option['select'] = ['value_1'];
         $option['table'] = 'themes_setting';
-        $option['where'] = ['id_theme' => $this->id_themes, 'is_active' => 'Y', '`key`' => 'top_image_carousel'];
+        $option['where'] = ['id_theme' => $this->id_themes, 'is_active' => 'Y', 'category' => 'Slider Banner'];
         $result = $this->Utility->finds($option);
 
         $query = $this->Gallery->find('all')
@@ -62,7 +62,7 @@ class HomeController extends AppController
             $query->orWhere(['category_id' => $result[$i]['value_1']]);
         }
         $query->where(['t.is_active' => 'Y', 'g.is_active' => 'Y']);
-        $query->where(['t.key' => 'top_image_carousel']);
+        $query->where(['t.category' => 'Slider Banner']);
         $result_content = $query->toArray();
 
         return $result_content;
