@@ -31,9 +31,9 @@ class PageController extends PagesController {
   }
   
   public function contact() {
-    $this->plugin('contact_page');
+    $contact = $this->plugin('contact_page');
     $service_centre = $this->plugin('service_centre');
-    $this->set(compact('service_centre'));
+    $this->set(compact('service_centre', 'contact'));
   }
   
   public function productLists() {

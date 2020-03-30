@@ -8,13 +8,11 @@ echo $this->Html->script([
   <?= $this->Element('scroll_text_absolute'); ?>
     <div class="contact-page-top">
         <div class="title-wrapper">
-            <h1>Contact</h1>
+          <?= $this->Html->tag('h1', $contact[0]['detail']['value_1']); ?>
         </div>
         <div class="content-wrapper">
             <div class="left-content">
-                <h3>We guarantee high quality, timely supply of products and are prepared to provide test samples.
-                    Contact
-                    us in the way most convenient to you. We look forward to cooperating with you!</h3>
+              <?= $this->Html->tag('h3', $contact[0]['detail']['value_2']); ?>
             </div>
             <div class="right-content">
               <?php
