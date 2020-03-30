@@ -37,6 +37,7 @@ if ($sizeSection > 0):
               echo '<img data-src="' . $section_4[$i]['value_2'] . '" uk-img/>';
               echo '<span>' . $section_4[$i]['value_1'] . '</span>';
               echo '</div>';
+              $lastArray++;
             }
           }
           echo '</div>';
