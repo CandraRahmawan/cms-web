@@ -1,16 +1,16 @@
 <div class="warranty-information-wrapper">
   <?= $this->Element('scroll_text_absolute'); ?>
     <div class="title-wrapper">
-        <h1>Warranty Information</h1>
+      <?= $this->Html->tag('h1', $warranty[0]['detail']['value_1']); ?>
     </div>
     <div class="content-wrapper">
         <div class="left-content">
             <hr>
-            <h3>All our Products are covered by 1 year warranty.</h3>
+          <?= $this->Html->tag('h3', $warranty[0]['detail']['value_3']); ?>
         </div>
         <div class="right-content">
             <div class="top-text">
-                If you have any problems with dbE products,<br> please contact us at
+              <?= $warranty[0]['detail']['value_2']; ?>
             </div>
           <?php
           foreach ($service_centre as $item) {
