@@ -2,17 +2,14 @@
   <?= $this->Element('scroll_text_absolute'); ?>
     <h1>Where To Buy</h1>
     <div class="image-ecommerce">
-      <?= $this->Html->link(
-        $this->Html->image('/images/tokped_logo_color.png'),
-        'https://www.tokopedia.com/dbeofficial',
-        ['escape' => false, 'target' => '_blank']
-      );
-      ?>
-      <?= $this->Html->link(
-        $this->Html->image('/images/shopee_logo_color.png'),
-        'https://shopee.co.id/dbeofficial',
-        ['escape' => false, 'target' => '_blank']
-      );
+      <?php
+      foreach ($content as $item) {
+        echo $this->Html->link(
+          '<img data-src="' . $item['detail']['value_2'] . '" uk-img/>',
+          $item['detail']['value_1'],
+          ['escape' => false, 'target' => '_blank']
+        );
+      }
       ?>
     </div>
     <h2>

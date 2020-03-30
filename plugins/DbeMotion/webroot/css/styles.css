@@ -620,7 +620,8 @@ header {
           margin-bottom: 8px;
           text-transform: uppercase; }
   .where-to-buy-wrapper .scroll-text-absolute {
-    top: 250px !important; }
+    top: 250px !important;
+    z-index: -1; }
   @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
     .where-to-buy-wrapper {
       width: 100%; }

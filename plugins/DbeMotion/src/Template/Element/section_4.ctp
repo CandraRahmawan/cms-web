@@ -23,7 +23,7 @@ if ($sizeSection > 0):
           foreach ($section_4 as $item) {
             if (ceil($sizeSection / 2) > $lastArray) {
               echo '<div class="section-icon">';
-              echo '<img data-src="' . $item['value_2'] . '" uk-img/>';
+              echo '<img src="' . $item['value_2'] . '" />';
               echo '<span>' . $item['value_1'] . '</span>';
               echo '</div>';
               $lastArray++;
@@ -34,7 +34,7 @@ if ($sizeSection > 0):
           for ($i = 0; $i < $sizeSection; $i++) {
             if ($lastArray == $i) {
               echo '<div class="section-icon">';
-              echo '<img data-src="' . $section_4[$i]['value_2'] . '" uk-img/>';
+              echo '<img src="' . $section_4[$i]['value_2'] . '" />';
               echo '<span>' . $section_4[$i]['value_1'] . '</span>';
               echo '</div>';
               $lastArray++;

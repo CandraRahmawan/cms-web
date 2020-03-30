@@ -13,6 +13,7 @@ class PageController extends PagesController {
   
   public function whereToBuy() {
     $content = $this->plugin('where_to_buy_page');
+    $this->set(compact('content'));
   }
   
   public function ourStory() {
