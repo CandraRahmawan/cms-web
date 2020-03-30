@@ -1,13 +1,13 @@
 <div class="product-detail-wrapper">
-    <?= $this->Element('scroll_text_absolute'); ?>
     <div class="top-content">
-        <?= $this->Html->image('/images/template_1/top_image.jpg'); ?>
+      <?= $this->Element('scroll_text_absolute'); ?>
+        <img data-src="<?= $this->Url->assetUrl('/images/template_1/top_image.jpg') ?>" uk-img/>
         <div class="content-info-wrapper">
-            <?= $this->Html->link(
-                '<span uk-icon="icon: chevron-left; ratio:1.8" />',
-                '/products/' . $this->request->params['category'] . '',
-                ['escape' => false]
-            ); ?>
+          <?= $this->Html->link(
+            '<span uk-icon="icon: chevron-left; ratio:1.8" />',
+            '/products/' . $this->request->params['category'] . '',
+            ['escape' => false, 'class' => 'hide-mobile']
+          ); ?>
             <div class="title-wrapper">
                 <div>
                     <h3>
@@ -18,10 +18,15 @@
                 <h1>GM500</h1>
             </div>
         </div>
+      <?= $this->Html->link(
+        '<span uk-icon="icon: chevron-left; ratio:1.8" />',
+        '/products/' . $this->request->params['category'] . '',
+        ['escape' => false, 'class' => 'show-mobile']
+      ); ?>
     </div>
     <div class="section-1">
-        <?= $this->Html->image('/images/template_1/section_1_img.jpg'); ?>
-        <div class="right-bg-color-skew"></div>
+      <?= $this->Html->image('/images/template_1/section_1_img.jpg'); ?>
+        <div class="right-bg-color-skew hide-mobile"></div>
         <div class="right-content">
             <p>
                 dbE GM500 is a gaming headphone with dual audio input, 3.5mm for smartphone / tablet or USB for PC /
@@ -51,7 +56,7 @@
                 </p>
             </div>
             <div class="right-content">
-                <?= $this->Html->image('/images/template_1/section_2_img.png'); ?>
+              <?= $this->Html->image('/images/template_1/section_2_img.png'); ?>
             </div>
         </div>
     </div>
