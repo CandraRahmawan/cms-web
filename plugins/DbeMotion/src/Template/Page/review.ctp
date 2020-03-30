@@ -10,7 +10,6 @@ echo $this->Html->script([
     </div>
     <div class="review-list">
     </div>
-
     <div class="load-more-wrapper" onclick="getListReviews()">
         <input type="hidden" id="page"/>
         <div class="left-content">

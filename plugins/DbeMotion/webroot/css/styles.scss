@@ -389,6 +389,7 @@ header {
   }
 
   @include phone-view() {
+    padding: 40px 18px;
     .section-part-left {
       h1 {
         font-size: 22px;
@@ -539,7 +540,7 @@ header {
   }
 
   @include phone-view() {
-    padding: 30px 30px 0 30px;
+    padding: 40px 18px 0 18px;
     .section-part-right {
       h1 {
         font-size: 38px;
@@ -633,6 +634,7 @@ header {
   }
 
   @include phone-view() {
+    padding: 40px 18px;
     .title-section {
       h1 {
         font-size: 22px;
@@ -713,10 +715,14 @@ header {
 
   @include phone-view() {
     padding: 0 18px;
+    margin: 120px auto 0 auto;
     .content-wrapper {
+      margin-bottom: 40px;
 
       h1 {
-        font-size: 30px;
+        font-size: 26px;
+        padding-bottom: 8px;
+        margin-bottom: 30px;
       }
 
       .bg-image {
@@ -843,14 +849,21 @@ header {
 
     .provider-store {
       margin: 0 30px;
+
+      .store-list-wrapper {
+        .store-list {
+          width: auto;
+        }
+      }
     }
   }
 
   @include phone-view() {
-    margin: 120px auto 0 auto;
+    margin: 100px auto 0 auto;
     h1 {
       padding: 0 18px;
       font-size: 32px;
+      margin-bottom: 50px;
     }
 
     h2 {
@@ -871,7 +884,7 @@ header {
     .provider-store {
       margin: 0 18px;
       border-top: 1px solid $blackColor;
-      padding-top: 70px;
+      padding-top: 40px;
 
       .store-list-wrapper {
         margin-top: 0;
@@ -1043,7 +1056,7 @@ header {
   }
 
   @include phone-view() {
-    margin: 120px auto 0 auto;
+    margin: 110px auto 0 auto;
     .top-content {
       padding: 0 18px;
 
@@ -1053,8 +1066,8 @@ header {
 
       h2 {
         font-weight: bold;
-        font-size: 32px;
-        line-height: 54px;
+        font-size: 30px;
+        line-height: 50px;
       }
 
       .text-content {
@@ -1076,9 +1089,18 @@ header {
     }
 
     .bottom-content {
+      margin-top: 80px;
+      padding: 0 18px;
+
       .text-content {
+        margin-bottom: 30px;
+
         h2 {
-          font-size: 34px;
+          font-size: 30px;
+        }
+
+        p {
+          font-size: 18px;
         }
       }
     }
@@ -1204,7 +1226,7 @@ header {
   }
 
   @include phone-view() {
-    margin: 120px auto 0 auto;
+    margin: 100px auto 0 auto;
     padding: 0 18px;
 
     .title-wrapper {
@@ -1223,7 +1245,7 @@ header {
         }
 
         h3 {
-          font-size: 24px;
+          font-size: 22px;
           color: $blackColor;
         }
       }
@@ -1233,7 +1255,7 @@ header {
         width: 100%;
 
         .top-text {
-          font-size: 24px;
+          font-size: 22px;
           margin-bottom: 60px;
         }
 
@@ -1393,6 +1415,10 @@ header {
       padding: 0 30px;
       height: auto;
 
+      .title-wrapper {
+        width: 100%;
+      }
+
       .content-wrapper {
         flex-direction: column;
 
@@ -1476,12 +1502,12 @@ header {
 
   @include phone-view() {
     .contact-page-top {
-      margin: 140px auto 0 auto;
+      margin: 100px auto 0 auto;
       padding: 0 18px;
 
       .title-wrapper {
         h1 {
-          font-size: 46px;
+          font-size: 44px;
         }
       }
 
@@ -1490,8 +1516,8 @@ header {
           width: 100%;
 
           h3 {
-            line-height: 46px;
-            font-size: 24px;
+            line-height: 42px;
+            font-size: 19px;
             font-weight: 500;
           }
         }
@@ -1515,12 +1541,12 @@ header {
     }
 
     .contact-page-bottom {
-      padding: 50px 18px;
+      padding: 40px 18px;
 
       form {
         label {
           &.label {
-            font-size: 22px;
+            font-size: 18px;
           }
         }
       }
@@ -1528,12 +1554,12 @@ header {
       .content-top {
         .left-content {
           h1 {
-            font-size: 38px;
+            font-size: 34px;
           }
 
           .show-mobile {
-            font-size: 22px;
-            line-height: 42px;
+            font-size: 19px;
+            line-height: 38px;
           }
 
           margin-bottom: 60px;
@@ -1719,7 +1745,7 @@ header {
         form {
           label {
             &.label {
-              font-size: 22px;
+              font-size: 18px;
             }
           }
         }
@@ -1734,7 +1760,7 @@ header {
   }
 
   @include phone-view() {
-    margin: 130px auto 0 auto;
+    margin: 100px auto 0 auto;
     .title {
       h1 {
         font-size: 38px;
@@ -1747,6 +1773,10 @@ header {
       .review-content {
         margin: 20px 0;
         width: 100%;
+
+        h3 {
+          font-size: 22px;
+        }
       }
     }
 
@@ -1761,7 +1791,7 @@ header {
 
       div {
         iframe {
-          width: 290px;
+          width: 280px;
           height: 210px;
         }
       }
@@ -1774,20 +1804,21 @@ header {
       }
     }
     .review-form-wrapper {
-      padding: 50px 18px;
+      padding: 50px 18px 0 18px;
+      margin-top: 0;
 
       .left-content, .right-content {
 
         form {
           label {
             &.label {
-              font-size: 20px;
+              font-size: 18px;
             }
           }
         }
 
         h1 {
-          font-size: 32px;
+          font-size: 30px;
         }
       }
     }
@@ -2609,10 +2640,10 @@ header {
 
       .content-info-wrapper {
         width: calc(100% - 36px);
-        top: 40%;
+        top: 170px;
 
-        &.template-2 {
-          top: 30%;
+        &.template-2, &.template-3 {
+          top: 170px;
         }
 
         .title-wrapper {
@@ -2632,7 +2663,12 @@ header {
             h1 {
               font-size: 38px;
               width: 100%;
-              text-align: center;
+            }
+          }
+
+          &.template-3 {
+            h1 {
+              width: auto;
             }
           }
         }
@@ -2680,6 +2716,7 @@ header {
 
       .content-wrapper {
         flex-direction: column;
+        padding: 40px 18px;
 
         .left-content, .right-content {
           width: 100%;
@@ -2695,8 +2732,7 @@ header {
         }
 
         &.template-2 {
-          padding: 40px 18px;
-
+          padding: 40px 18px 0 18px;
           h1 {
             font-size: 22px;
             line-height: 36px;
@@ -2744,6 +2780,9 @@ header {
 
             table {
               td {
+                &:before {
+                  margin-left: 0;
+                }
                 span {
                   margin-left: 8px;
                 }
@@ -2754,11 +2793,10 @@ header {
       }
     }
     .section-3 {
+      margin-top: 50px;
       padding: 0 18px;
 
       &.template-3 {
-        margin-top: 50px;
-
         table {
           td {
             &:first-child {
@@ -2959,6 +2997,7 @@ footer {
   }
 
   @include tablet-view() {
+    margin-top: 80px;
     .wrapper-section {
       justify-content: normal;
       width: 100%;
@@ -2992,6 +3031,7 @@ footer {
   }
 
   @include phone-view() {
+    margin-top: 40px;
     .left-footer {
       letter-spacing: 1px;
       padding: 0 18px;

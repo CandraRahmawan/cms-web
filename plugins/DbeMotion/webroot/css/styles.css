@@ -343,11 +343,13 @@ header {
       .home-section-1 .section-part-right {
         display: none; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
-    .home-section-1 .section-part-left h1 {
-      font-size: 22px;
-      line-height: 36px; }
-    .home-section-1 .section-part-left span {
-      line-height: 30px; } }
+    .home-section-1 {
+      padding: 40px 18px; }
+      .home-section-1 .section-part-left h1 {
+        font-size: 22px;
+        line-height: 36px; }
+      .home-section-1 .section-part-left span {
+        line-height: 30px; } }
 
 .home-section-2 {
   position: relative; }
@@ -443,7 +445,7 @@ header {
         padding: 10px 22px; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
     .home-section-3 {
-      padding: 30px 30px 0 30px; }
+      padding: 40px 18px 0 18px; }
       .home-section-3 .section-part-right h1 {
         font-size: 38px; }
       .home-section-3 .box-text {
@@ -499,14 +501,16 @@ header {
         .home-section-4 .column-content div {
           margin-bottom: 40px; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
-    .home-section-4 .title-section h1 {
-      font-size: 22px; }
-    .home-section-4 .column-content {
-      font-size: 14px; }
-      .home-section-4 .column-content img {
-        margin-right: 30px;
-        width: 58px;
-        height: 56px; } }
+    .home-section-4 {
+      padding: 40px 18px; }
+      .home-section-4 .title-section h1 {
+        font-size: 22px; }
+      .home-section-4 .column-content {
+        font-size: 14px; }
+        .home-section-4 .column-content img {
+          margin-right: 30px;
+          width: 58px;
+          height: 56px; } }
 
 .product-category-wrapper {
   width: 940px;
@@ -550,18 +554,23 @@ header {
           right: 50px; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
     .product-category-wrapper {
-      padding: 0 18px; }
-      .product-category-wrapper .content-wrapper h1 {
-        font-size: 30px; }
-      .product-category-wrapper .content-wrapper .bg-image {
-        height: 130px; }
-        .product-category-wrapper .content-wrapper .bg-image img {
-          height: 130px;
-          width: 90%; }
-        .product-category-wrapper .content-wrapper .bg-image a {
-          right: 20px; }
-          .product-category-wrapper .content-wrapper .bg-image a img {
-            height: 32px; } }
+      padding: 0 18px;
+      margin: 120px auto 0 auto; }
+      .product-category-wrapper .content-wrapper {
+        margin-bottom: 40px; }
+        .product-category-wrapper .content-wrapper h1 {
+          font-size: 26px;
+          padding-bottom: 8px;
+          margin-bottom: 30px; }
+        .product-category-wrapper .content-wrapper .bg-image {
+          height: 130px; }
+          .product-category-wrapper .content-wrapper .bg-image img {
+            height: 130px;
+            width: 90%; }
+          .product-category-wrapper .content-wrapper .bg-image a {
+            right: 20px; }
+            .product-category-wrapper .content-wrapper .bg-image a img {
+              height: 32px; } }
 
 .where-to-buy-wrapper {
   width: 1080px;
@@ -632,13 +641,16 @@ header {
           height: 90px;
           width: 300px; }
       .where-to-buy-wrapper .provider-store {
-        margin: 0 30px; } }
+        margin: 0 30px; }
+        .where-to-buy-wrapper .provider-store .store-list-wrapper .store-list {
+          width: auto; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
     .where-to-buy-wrapper {
-      margin: 120px auto 0 auto; }
+      margin: 100px auto 0 auto; }
       .where-to-buy-wrapper h1 {
         padding: 0 18px;
-        font-size: 32px; }
+        font-size: 32px;
+        margin-bottom: 50px; }
       .where-to-buy-wrapper h2 {
         padding: 0 18px;
         font-size: 18px;
@@ -651,7 +663,7 @@ header {
       .where-to-buy-wrapper .provider-store {
         margin: 0 18px;
         border-top: 1px solid #191818;
-        padding-top: 70px; }
+        padding-top: 40px; }
         .where-to-buy-wrapper .provider-store .store-list-wrapper {
           margin-top: 0; }
           .where-to-buy-wrapper .provider-store .store-list-wrapper h3 {
@@ -766,15 +778,15 @@ header {
           width: 100%; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
     .our-story-wrapper {
-      margin: 120px auto 0 auto; }
+      margin: 110px auto 0 auto; }
       .our-story-wrapper .top-content {
         padding: 0 18px; }
         .our-story-wrapper .top-content h1 {
           font-size: 34px; }
         .our-story-wrapper .top-content h2 {
           font-weight: bold;
-          font-size: 32px;
-          line-height: 54px; }
+          font-size: 30px;
+          line-height: 50px; }
         .our-story-wrapper .top-content .text-content {
           text-align: left; }
       .our-story-wrapper .middle-content .text {
@@ -784,8 +796,15 @@ header {
         text-align: center; }
       .our-story-wrapper .middle-content img {
         object-position: left; }
-      .our-story-wrapper .bottom-content .text-content h2 {
-        font-size: 34px; } }
+      .our-story-wrapper .bottom-content {
+        margin-top: 80px;
+        padding: 0 18px; }
+        .our-story-wrapper .bottom-content .text-content {
+          margin-bottom: 30px; }
+          .our-story-wrapper .bottom-content .text-content h2 {
+            font-size: 30px; }
+          .our-story-wrapper .bottom-content .text-content p {
+            font-size: 18px; } }
 
 .warranty-information-wrapper {
   margin: 180px auto 0 auto;
@@ -858,7 +877,7 @@ header {
             font-size: 28px; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
     .warranty-information-wrapper {
-      margin: 120px auto 0 auto;
+      margin: 100px auto 0 auto;
       padding: 0 18px; }
       .warranty-information-wrapper .title-wrapper {
         width: 100%; }
@@ -869,13 +888,13 @@ header {
         .warranty-information-wrapper .content-wrapper .left-content hr {
           margin-bottom: 40px; }
         .warranty-information-wrapper .content-wrapper .left-content h3 {
-          font-size: 24px;
+          font-size: 22px;
           color: #191818; }
       .warranty-information-wrapper .content-wrapper .right-content {
         align-self: unset;
         width: 100%; }
         .warranty-information-wrapper .content-wrapper .right-content .top-text {
-          font-size: 24px;
+          font-size: 22px;
           margin-bottom: 60px; }
         .warranty-information-wrapper .content-wrapper .right-content .store-list svg {
           width: 34px; }
@@ -969,6 +988,8 @@ header {
     width: auto;
     padding: 0 30px;
     height: auto; }
+    .contact-page-wrapper .contact-page-top .title-wrapper {
+      width: 100%; }
     .contact-page-wrapper .contact-page-top .content-wrapper {
       flex-direction: column; }
       .contact-page-wrapper .contact-page-top .content-wrapper .left-content {
@@ -1013,15 +1034,15 @@ header {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
   .contact-page-wrapper .contact-page-top {
-    margin: 140px auto 0 auto;
+    margin: 100px auto 0 auto;
     padding: 0 18px; }
     .contact-page-wrapper .contact-page-top .title-wrapper h1 {
-      font-size: 46px; }
+      font-size: 44px; }
     .contact-page-wrapper .contact-page-top .content-wrapper .left-content {
       width: 100%; }
       .contact-page-wrapper .contact-page-top .content-wrapper .left-content h3 {
-        line-height: 46px;
-        font-size: 24px;
+        line-height: 42px;
+        font-size: 19px;
         font-weight: 500; }
     .contact-page-wrapper .contact-page-top .content-wrapper .right-content h3 {
       font-size: 20px; }
@@ -1030,16 +1051,16 @@ header {
     .contact-page-wrapper .contact-page-top .content-wrapper .right-content .store-list svg {
       width: 34px; }
   .contact-page-wrapper .contact-page-bottom {
-    padding: 50px 18px; }
+    padding: 40px 18px; }
     .contact-page-wrapper .contact-page-bottom form label.label {
-      font-size: 22px; }
+      font-size: 18px; }
     .contact-page-wrapper .contact-page-bottom .content-top .left-content {
       margin-bottom: 60px; }
       .contact-page-wrapper .contact-page-bottom .content-top .left-content h1 {
-        font-size: 38px; }
+        font-size: 34px; }
       .contact-page-wrapper .contact-page-bottom .content-top .left-content .show-mobile {
-        font-size: 22px;
-        line-height: 42px; } }
+        font-size: 19px;
+        line-height: 38px; } }
 
 .review-wrapper {
   margin: 260px auto 0 auto; }
@@ -1149,14 +1170,14 @@ header {
       .review-wrapper .review-form-wrapper .left-content, .review-wrapper .review-form-wrapper .right-content {
         width: 100%; }
         .review-wrapper .review-form-wrapper .left-content form label.label, .review-wrapper .review-form-wrapper .right-content form label.label {
-          font-size: 22px; }
+          font-size: 18px; }
         .review-wrapper .review-form-wrapper .left-content h1, .review-wrapper .review-form-wrapper .right-content h1 {
           font-size: 40px;
           width: 100%;
           margin-bottom: 60px; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
     .review-wrapper {
-      margin: 130px auto 0 auto; }
+      margin: 100px auto 0 auto; }
       .review-wrapper .title h1 {
         font-size: 38px; }
       .review-wrapper .review-list {
@@ -1165,23 +1186,26 @@ header {
         .review-wrapper .review-list .review-content {
           margin: 20px 0;
           width: 100%; }
+          .review-wrapper .review-list .review-content h3 {
+            font-size: 22px; }
       .review-wrapper .youtube-section-wrapper {
         padding: 40px 0; }
         .review-wrapper .youtube-section-wrapper .logo-youtube.show-mobile {
           padding: 0 18px; }
         .review-wrapper .youtube-section-wrapper div iframe {
-          width: 290px;
+          width: 280px;
           height: 210px; }
       .review-wrapper .load-more-wrapper {
         margin: 0 0 40px 0; }
         .review-wrapper .load-more-wrapper .right-content, .review-wrapper .load-more-wrapper .left-content {
           width: 100%; }
       .review-wrapper .review-form-wrapper {
-        padding: 50px 18px; }
+        padding: 50px 18px 0 18px;
+        margin-top: 0; }
         .review-wrapper .review-form-wrapper .left-content form label.label, .review-wrapper .review-form-wrapper .right-content form label.label {
-          font-size: 20px; }
+          font-size: 18px; }
         .review-wrapper .review-form-wrapper .left-content h1, .review-wrapper .review-form-wrapper .right-content h1 {
-          font-size: 32px; } }
+          font-size: 30px; } }
 
 .product-list-wrapper {
   margin: 0 auto; }
@@ -1674,9 +1698,9 @@ header {
       right: 18px; }
     .product-detail-wrapper .top-content .content-info-wrapper {
       width: calc(100% - 36px);
-      top: 40%; }
-      .product-detail-wrapper .top-content .content-info-wrapper.template-2 {
-        top: 30%; }
+      top: 170px; }
+      .product-detail-wrapper .top-content .content-info-wrapper.template-2, .product-detail-wrapper .top-content .content-info-wrapper.template-3 {
+        top: 170px; }
       .product-detail-wrapper .top-content .content-info-wrapper .title-wrapper h1 {
         font-size: 52px;
         width: 300px; }
@@ -1687,8 +1711,9 @@ header {
         margin-bottom: 0; }
       .product-detail-wrapper .top-content .content-info-wrapper .title-wrapper.template-2 h1 {
         font-size: 38px;
-        width: 100%;
-        text-align: center; }
+        width: 100%; }
+      .product-detail-wrapper .top-content .content-info-wrapper .title-wrapper.template-3 h1 {
+        width: auto; }
     .product-detail-wrapper .section-1 {
       overflow: unset; }
       .product-detail-wrapper .section-1 img {
@@ -1714,7 +1739,8 @@ header {
     .product-detail-wrapper .section-2.template-3 {
       padding: 0; }
     .product-detail-wrapper .section-2 .content-wrapper {
-      flex-direction: column; }
+      flex-direction: column;
+      padding: 40px 18px; }
       .product-detail-wrapper .section-2 .content-wrapper .left-content, .product-detail-wrapper .section-2 .content-wrapper .right-content {
         width: 100%;
         margin-right: 0; }
@@ -1723,7 +1749,7 @@ header {
         .product-detail-wrapper .section-2 .content-wrapper .left-content img, .product-detail-wrapper .section-2 .content-wrapper .right-content img {
           margin-top: 40px; }
       .product-detail-wrapper .section-2 .content-wrapper.template-2 {
-        padding: 40px 18px; }
+        padding: 40px 18px 0 18px; }
         .product-detail-wrapper .section-2 .content-wrapper.template-2 h1 {
           font-size: 22px;
           line-height: 36px;
@@ -1750,16 +1776,17 @@ header {
           line-height: 32px; }
         .product-detail-wrapper .section-2 .specification-wrapper.template-3 .specification-list h2 {
           font-size: 24px; }
+        .product-detail-wrapper .section-2 .specification-wrapper.template-3 .specification-list table td:before {
+          margin-left: 0; }
         .product-detail-wrapper .section-2 .specification-wrapper.template-3 .specification-list table td span {
           margin-left: 8px; }
     .product-detail-wrapper .section-3 {
+      margin-top: 50px;
       padding: 0 18px; }
-      .product-detail-wrapper .section-3.template-3 {
-        margin-top: 50px; }
-        .product-detail-wrapper .section-3.template-3 table td:first-child:before {
-          content: ""; }
-        .product-detail-wrapper .section-3.template-3 table td span {
-          margin-left: 0; }
+      .product-detail-wrapper .section-3.template-3 table td:first-child:before {
+        content: ""; }
+      .product-detail-wrapper .section-3.template-3 table td span {
+        margin-left: 0; }
       .product-detail-wrapper .section-3 .right-content .bottom .text-features span {
         width: auto; } }
 
@@ -1881,35 +1908,39 @@ footer {
       font-size: 14px;
       letter-spacing: 1px; }
   @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
-    footer .wrapper-section {
-      justify-content: normal;
-      width: 100%;
-      flex-direction: column; }
-    footer li {
-      display: flex;
-      justify-content: space-between;
-      margin: 18px 0; }
-    footer .left-footer {
-      padding: 0 30px; }
-    footer .right-footer {
-      align-self: flex-start;
-      text-align: left;
-      padding: 0 30px;
-      margin-top: 40px; }
-      footer .right-footer a {
-        margin-left: 0; }
-    footer .bottom-footer {
-      padding: 14px 30px; }
-      footer .bottom-footer div {
-        width: 100%; } }
+    footer {
+      margin-top: 80px; }
+      footer .wrapper-section {
+        justify-content: normal;
+        width: 100%;
+        flex-direction: column; }
+      footer li {
+        display: flex;
+        justify-content: space-between;
+        margin: 18px 0; }
+      footer .left-footer {
+        padding: 0 30px; }
+      footer .right-footer {
+        align-self: flex-start;
+        text-align: left;
+        padding: 0 30px;
+        margin-top: 40px; }
+        footer .right-footer a {
+          margin-left: 0; }
+      footer .bottom-footer {
+        padding: 14px 30px; }
+        footer .bottom-footer div {
+          width: 100%; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
-    footer .left-footer {
-      letter-spacing: 1px;
-      padding: 0 18px; }
-      footer .left-footer img {
-        height: 18px;
-        margin-bottom: 20px; }
-    footer .right-footer {
-      padding: 0 18px; }
-      footer .right-footer a {
-        margin-right: 28px; } }
+    footer {
+      margin-top: 40px; }
+      footer .left-footer {
+        letter-spacing: 1px;
+        padding: 0 18px; }
+        footer .left-footer img {
+          height: 18px;
+          margin-bottom: 20px; }
+      footer .right-footer {
+        padding: 0 18px; }
+        footer .right-footer a {
+          margin-right: 28px; } }
