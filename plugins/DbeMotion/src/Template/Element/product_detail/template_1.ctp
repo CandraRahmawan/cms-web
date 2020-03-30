@@ -19,7 +19,7 @@
             </div>
         </div>
       <?= $this->Html->link(
-        '<span uk-icon="icon: chevron-left; ratio:1.8" />',
+        '<span uk-icon="icon: chevron-left; ratio:1" />',
         '/products/' . $this->request->params['category'] . '',
         ['escape' => false, 'class' => 'show-mobile']
       ); ?>

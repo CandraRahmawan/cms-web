@@ -1,30 +1,35 @@
 <div class="product-detail-wrapper">
-    <?= $this->Element('scroll_text_absolute'); ?>
     <div class="top-content">
-        <?= $this->Html->image('/images/template_3/top_image.jpg'); ?>
-        <div class="content-info-wrapper template-2">
-            <?= $this->Html->link(
-                '<span uk-icon="icon: chevron-left; ratio:1.8" />',
-                '/products/' . $this->request->params['category'] . '',
-                ['escape' => false]
-            ); ?>
-            <div class="title-wrapper template-2">
+      <?= $this->Element('scroll_text_absolute'); ?>
+      <?= $this->Html->image('/images/template_3/top_image.jpg'); ?>
+        <div class="content-info-wrapper template-3">
+          <?= $this->Html->link(
+            '<span uk-icon="icon: chevron-left; ratio:1.8" />',
+            '/products/' . $this->request->params['category'] . '',
+            ['escape' => false, 'class' => 'hide-mobile']
+          ); ?>
+            <div class="title-wrapper template-3">
                 <h1>
                     Dbe Hardcase
                 </h1>
             </div>
         </div>
+      <?= $this->Html->link(
+        '<span uk-icon="icon: chevron-left; ratio:1" />',
+        '/products/' . $this->request->params['category'] . '',
+        ['escape' => false, 'class' => 'show-mobile']
+      ); ?>
     </div>
-    <div class="section-1">
-        <?= $this->Html->image('/images/template_3/section_1_img.jpg'); ?>
+    <div class="section-1 template-3">
+      <?= $this->Html->image('/images/template_3/section_1_img.jpg'); ?>
         <div class="right-content template-3">
             <p>
                 Hardcase is hard case made by EVA
             </p>
         </div>
     </div>
-    <div class="section-2 template-2 blue-grey">
-        <div class="content-wrapper template-2">
+    <div class="section-2 template-3 blue-grey">
+        <div class="content-wrapper template-3">
             <h2>
                 dbE DAP Hardcase is a hard case made by EVA plastic to protect your digital audio player and earphone
                 from damage. Because of its size, you can put 1 DAP and 1-2 earphone / IEM inside.
