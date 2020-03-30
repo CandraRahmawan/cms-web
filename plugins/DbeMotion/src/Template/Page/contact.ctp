@@ -24,20 +24,22 @@ echo $this->Html->script([
                 <div class="store-list">
                     <h3>BANDUNG</h3>
                     <p>Bandung Electronic Center 2nd Fl Y05</p>
-                  <?= $this->Html->link(
-                    '<p>' . $settings['phone_number'] . '</p>',
-                    'tel:' . $settings['phone_number'],
-                    ['escape' => false]
-                  );
+                  <?php
+                  if ($settings['phone_number'] != "") {
+                    echo $this->Html->link(
+                      '<p>' . $settings['phone_number'] . '</p>',
+                      'tel:' . $settings['phone_number'],
+                      ['escape' => false]
+                    );
+                  }
+                  if ($settings['whatsapp_number'] != "") {
+                    echo $this->Html->link(
+                      '<span uk-icon="icon: whatsapp; ratio: 1.2"/>',
+                      'https://api.whatsapp.com/send?phone=' . $settings['whatsapp_number'],
+                      ['escape' => false, 'target' => '_blank']
+                    );
+                  }
                   ?>
-                  
-                  <?= $this->Html->link(
-                    '<span uk-icon="icon: whatsapp; ratio: 1.2"/>',
-                    'https://api.whatsapp.com/send?phone=' . $settings['whatsapp_number'],
-                    ['escape' => false, 'target' => '_blank']
-                  );
-                  ?>
-
                 </div>
             </div>
         </div>

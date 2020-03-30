@@ -23,38 +23,44 @@
                     Follow dbE Acoustics
                 </div>
                 <div class="social-link-list">
-                    <li class="social-link">
-                      <?= $this->Html->link(
-                        $this->Html->image('/images/fb_logo.png'),
-                        $settings['facebook'],
-                        ['escape' => false, 'target' => '_blank']
-                      );
-                      ?>
-                    </li>
-                    <li class="social-link">
-                      <?= $this->Html->link(
-                        $this->Html->image('/images/ig_logo.png'),
-                        $settings['instagram'],
-                        ['escape' => false, 'target' => '_blank']
-                      );
-                      ?>
-                    </li>
-                    <li class="social-link">
-                      <?= $this->Html->link(
-                        $this->Html->image('/images/shopee_logo.png'),
-                        $settings['shopee'],
-                        ['escape' => false, 'target' => '_blank']
-                      );
-                      ?>
-                    </li>
-                    <li class="social-link">
-                      <?= $this->Html->link(
-                        $this->Html->image('/images/tokped_logo.png'),
-                        $settings['tokopedia'],
-                        ['escape' => false, 'target' => '_blank']
-                      );
-                      ?>
-                    </li>
+                  <?php
+                  if ($settings['facebook'] != "") {
+                    echo '<li class="social-link">';
+                    echo $this->Html->link(
+                      $this->Html->image('/images/fb_logo.png'),
+                      $settings['facebook'],
+                      ['escape' => false, 'target' => '_blank']
+                    );
+                    echo '</li>';
+                  }
+                  if ($settings['instagram'] != "") {
+                    echo '<li class="social-link">';
+                    echo $this->Html->link(
+                      $this->Html->image('/images/ig_logo.png'),
+                      $settings['instagram'],
+                      ['escape' => false, 'target' => '_blank']
+                    );
+                    echo '</li>';
+                  }
+                  if ($settings['shopee'] != "") {
+                    echo '<li class="social-link">';
+                    echo $this->Html->link(
+                      $this->Html->image('/images/shopee_logo.png'),
+                      $settings['shopee'],
+                      ['escape' => false, 'target' => '_blank']
+                    );
+                    echo '</li>';
+                  }
+                  if ($settings['tokopedia'] != "") {
+                    echo '<li class="social-link">';
+                    echo $this->Html->link(
+                      $this->Html->image('/images/tokped_logo.png'),
+                      $settings['tokopedia'],
+                      ['escape' => false, 'target' => '_blank']
+                    );
+                    echo '</li>';
+                  }
+                  ?>
                 </div>
             </ul>
         </div>

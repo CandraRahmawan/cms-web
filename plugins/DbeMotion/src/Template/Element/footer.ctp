@@ -19,41 +19,52 @@
                 Follow dbE Acoustics
             </div>
             <li class="social-contact">
-              <?= $this->Html->link(
-                $this->Html->image('/images/fb_logo.png'),
-                $settings['facebook'],
-                ['escape' => false, 'target' => '_blank']
-              );
-              ?>
-              <?= $this->Html->link(
-                $this->Html->image('/images/ig_logo.png'),
-                $settings['instagram'],
-                ['escape' => false, 'target' => '_blank']
-              );
-              ?>
-              <?= $this->Html->link(
-                $this->Html->image('/images/shopee_logo.png'),
-                $settings['shopee'],
-                ['escape' => false, 'target' => '_blank']
-              );
-              ?>
-              <?= $this->Html->link(
-                $this->Html->image('/images/tokped_logo.png'),
-                $settings['tokopedia'],
-                ['escape' => false, 'target' => '_blank']
-              );
-              ?>
-            </li>
-            <li class="social-contact">
-              <?= $this->Html->link($settings['phone_number'], 'tel: ' . $settings['phone_number']); ?>
-            </li>
-            <li class="social-contact">
-              <?= $this->Html->link(
-                $settings['email'],
-                'mailto: ' . $settings['email']
-              );
+              <?php
+              if ($settings['facebook'] != "") {
+                echo $this->Html->link(
+                  $this->Html->image('/images/fb_logo.png'),
+                  $settings['facebook'],
+                  ['escape' => false, 'target' => '_blank']
+                );
+              }
+              if ($settings['instagram'] != "") {
+                echo $this->Html->link(
+                  $this->Html->image('/images/ig_logo.png'),
+                  $settings['instagram'],
+                  ['escape' => false, 'target' => '_blank']
+                );
+              }
+              if ($settings['shopee'] != "") {
+                echo $this->Html->link(
+                  $this->Html->image('/images/shopee_logo.png'),
+                  $settings['shopee'],
+                  ['escape' => false, 'target' => '_blank']
+                );
+              }
+              if ($settings['shopee'] != "") {
+                echo $this->Html->link(
+                  $this->Html->image('/images/tokped_logo.png'),
+                  $settings['tokopedia'],
+                  ['escape' => false, 'target' => '_blank']
+                );
+              }
               ?>
             </li>
+          <?php
+          if ($settings['phone_number'] != "") {
+            echo '<li class="social-contact">';
+            echo $this->Html->link($settings['phone_number'], 'tel: ' . $settings['phone_number']);
+            echo '</li>';
+          }
+          if ($settings['email'] != "") {
+            echo '<li class="social-contact">';
+            echo $this->Html->link(
+              $settings['email'],
+              'mailto: ' . $settings['email']
+            );
+            echo '</li>';
+          }
+          ?>
         </div>
     </div>
     <div class="bottom-footer">
