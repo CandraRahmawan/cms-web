@@ -20,14 +20,14 @@
                 <h3>BANDUNG</h3>
                 <p>Bandung Electronic Center 2nd Fl Y05</p>
               <?= $this->Html->link(
-                '<p>022-4234642</p>',
-                'tel:022-4234642',
+                '<p>' . $settings['phone_number'] . '</p>',
+                'tel:' . $settings['phone_number'],
                 ['escape' => false]
               );
               ?>
               <?= $this->Html->link(
                 '<span uk-icon="icon: whatsapp; ratio: 1.2"/>',
-                'https://api.whatsapp.com/send?phone=6281319991783',
+                'https://api.whatsapp.com/send?phone=' . $settings['whatsapp_number'],
                 ['escape' => false, 'target' => '_blank']
               );
               ?>

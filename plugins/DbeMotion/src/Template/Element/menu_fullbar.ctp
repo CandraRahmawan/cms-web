@@ -26,7 +26,7 @@
                     <li class="social-link">
                       <?= $this->Html->link(
                         $this->Html->image('/images/fb_logo.png'),
-                        'https://www.facebook.com/DbE-Indonesia-111625933761626/',
+                        $settings['facebook'],
                         ['escape' => false, 'target' => '_blank']
                       );
                       ?>
@@ -34,7 +34,7 @@
                     <li class="social-link">
                       <?= $this->Html->link(
                         $this->Html->image('/images/ig_logo.png'),
-                        'https://www.instagram.com/dbe.id/',
+                        $settings['instagram'],
                         ['escape' => false, 'target' => '_blank']
                       );
                       ?>
@@ -42,7 +42,7 @@
                     <li class="social-link">
                       <?= $this->Html->link(
                         $this->Html->image('/images/shopee_logo.png'),
-                        'https://shopee.co.id/dbeofficial',
+                        $settings['shopee'],
                         ['escape' => false, 'target' => '_blank']
                       );
                       ?>
@@ -50,7 +50,7 @@
                     <li class="social-link">
                       <?= $this->Html->link(
                         $this->Html->image('/images/tokped_logo.png'),
-                        'https://www.tokopedia.com/dbeofficial',
+                        $settings['tokopedia'],
                         ['escape' => false, 'target' => '_blank']
                       );
                       ?>

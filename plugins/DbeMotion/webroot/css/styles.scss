@@ -1141,6 +1141,7 @@ header {
 
   .scroll-text-absolute {
     top: 234px !important;
+    z-index: -1;
   }
 
   @include tablet-view() {

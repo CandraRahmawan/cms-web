@@ -823,7 +823,8 @@ header {
         .warranty-information-wrapper .right-content .store-list a:hover {
           text-decoration: none; }
   .warranty-information-wrapper .scroll-text-absolute {
-    top: 234px !important; }
+    top: 234px !important;
+    z-index: -1; }
   @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
     .warranty-information-wrapper {
       height: auto;
