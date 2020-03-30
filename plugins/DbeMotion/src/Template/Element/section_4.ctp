@@ -1,12 +1,16 @@
 <?php
 $key = 'section_4';
-$hasContent = 0;
+$section_4 = [];
 foreach ($plugin as $item) {
   if ($item['plugin']['key'] == $key) {
-    $hasContent++;
+    array_push($section_4, [
+      'value_1' => $item['detail']['value_1'],
+      'value_2' => $item['detail']['value_2']
+    ]);
   }
 }
-if ($hasContent > 0):
+$sizeSection = sizeof($section_4);
+if ($sizeSection > 0):
   ?>
     <section class="home-section-4">
         <div class="title-section">
@@ -14,32 +18,25 @@ if ($hasContent > 0):
         </div>
         <div class="column-content">
           <?php
+          $lastArray = 0;
           echo '<div class="section-part-left">';
-          $halfColumn = 1;
-          $lastArrayHalfColumn = 1;
-          foreach ($plugin as $index => $item) {
-            if ($item['plugin']['key'] == $key) {
-              if ($halfColumn <= ceil($hasContent / 2)) {
-                echo '<div class="section-icon">';
-                echo '<img data-src="' . $item['detail']['value_2'] . '" uk-img/>';
-                echo '<span>' . $item['detail']['value_1'] . '</span>';
-                echo '</div>';
-                $halfColumn++;
-                $lastArrayHalfColumn = $index + 1;
-              }
+          foreach ($section_4 as $item) {
+            if (ceil($sizeSection / 2) > $lastArray) {
+              echo '<div class="section-icon">';
+              echo '<img data-src="' . $item['value_2'] . '" uk-img/>';
+              echo '<span>' . $item['value_1'] . '</span>';
+              echo '</div>';
+              $lastArray++;
             }
           }
           echo '</div>';
           echo '<div class="section-part-right">';
-          for ($i = 0; $i < sizeof($plugin); $i++) {
-            if ($plugin[$i]['plugin']['key'] == $key) {
-              if ($lastArrayHalfColumn == $i) {
-                echo '<div class="section-icon">';
-                echo '<img data-src="' . $plugin[$i]['detail']['value_2'] . '" uk-img/>';
-                echo '<span>' . $plugin[$i]['detail']['value_1'] . '</span>';
-                echo '</div>';
-                $lastArrayHalfColumn++;
-              }
+          for ($i = 0; $i < $sizeSection; $i++) {
+            if ($lastArray == $i) {
+              echo '<div class="section-icon">';
+              echo '<img data-src="' . $section_4[$i]['value_2'] . '" uk-img/>';
+              echo '<span>' . $section_4[$i]['value_1'] . '</span>';
+              echo '</div>';
             }
           }
           echo '</div>';
