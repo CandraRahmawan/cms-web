@@ -17,13 +17,15 @@ echo $this->Html->script([
                     us in the way most convenient to you. We look forward to cooperating with you!</h3>
             </div>
             <div class="right-content">
-                <div class="store-list">
-                    <h3>JAKARTA</h3>
-                    <p>Plaza Semanggi Lantai 2B no. 122</p>
-                </div>
-                <div class="store-list">
-                    <h3>BANDUNG</h3>
-                    <p>Bandung Electronic Center 2nd Fl Y05</p>
+              <?php
+              foreach ($service_centre as $item) {
+                echo '<div class="store-list">';
+                echo '<h3>' . $item['detail']['value_1'] . '</h3>';
+                echo '<p>' . $item['detail']['value_2'] . '</p>';
+                echo '</div>';
+              }
+              ?>
+                <div class="store-list contact">
                   <?php
                   if ($settings['phone_number'] != "") {
                     echo $this->Html->link(

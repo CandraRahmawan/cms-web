@@ -822,6 +822,8 @@ header {
         color: #191818; }
         .warranty-information-wrapper .right-content .store-list a:hover {
           text-decoration: none; }
+      .warranty-information-wrapper .right-content .store-list.contact {
+        margin-top: -32px; }
   .warranty-information-wrapper .scroll-text-absolute {
     top: 234px !important;
     z-index: -1; }
@@ -913,6 +915,8 @@ header {
         color: #191818; }
         .contact-page-wrapper .contact-page-top .right-content .store-list a:hover {
           text-decoration: none; }
+      .contact-page-wrapper .contact-page-top .right-content .store-list.contact {
+        margin-top: -32px; }
 
 .contact-page-wrapper .contact-page-bottom {
   color: #191818;

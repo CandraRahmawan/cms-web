@@ -26,10 +26,14 @@ class PageController extends PagesController {
   
   public function warrantyInformation() {
     $this->plugin('warranty_information_page');
+    $service_centre = $this->plugin('service_centre');
+    $this->set(compact('service_centre'));
   }
   
   public function contact() {
     $this->plugin('contact_page');
+    $service_centre = $this->plugin('service_centre');
+    $this->set(compact('service_centre'));
   }
   
   public function productLists() {
