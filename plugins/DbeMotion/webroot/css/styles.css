@@ -1748,6 +1748,9 @@ header {
           font-weight: 500; }
         .product-detail-wrapper .section-2 .content-wrapper .left-content img, .product-detail-wrapper .section-2 .content-wrapper .right-content img {
           margin-top: 40px; }
+      .product-detail-wrapper .section-2 .content-wrapper .left-content h3 {
+        line-height: 36px;
+        margin-bottom: 36px; }
       .product-detail-wrapper .section-2 .content-wrapper.template-2 {
         padding: 40px 18px 0 18px; }
         .product-detail-wrapper .section-2 .content-wrapper.template-2 h1 {
@@ -1767,7 +1770,7 @@ header {
       padding: 30px 18px; }
     .product-detail-wrapper .section-2 .specification-wrapper.template-3 {
       margin-top: 0;
-      padding-bottom: 0; }
+      padding-bottom: 40px; }
       .product-detail-wrapper .section-2 .specification-wrapper.template-3 .specification-list {
         padding: 0 18px; }
         .product-detail-wrapper .section-2 .specification-wrapper.template-3 .specification-list p {
@@ -1783,10 +1786,12 @@ header {
     .product-detail-wrapper .section-3 {
       margin-top: 50px;
       padding: 0 18px; }
-      .product-detail-wrapper .section-3.template-3 table td:first-child:before {
-        content: ""; }
-      .product-detail-wrapper .section-3.template-3 table td span {
-        margin-left: 0; }
+      .product-detail-wrapper .section-3.template-3 {
+        margin-top: 40px; }
+        .product-detail-wrapper .section-3.template-3 table td:first-child:before {
+          content: ""; }
+        .product-detail-wrapper .section-3.template-3 table td span {
+          margin-left: 0; }
       .product-detail-wrapper .section-3 .right-content .bottom .text-features span {
         width: auto; } }
 

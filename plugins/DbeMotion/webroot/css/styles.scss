@@ -2731,6 +2731,13 @@ header {
           }
         }
 
+        .left-content {
+          h3 {
+            line-height: 36px;
+            margin-bottom: 36px;
+          }
+        }
+
         &.template-2 {
           padding: 40px 18px 0 18px;
           h1 {
@@ -2763,7 +2770,7 @@ header {
 
         &.template-3 {
           margin-top: 0;
-          padding-bottom: 0;
+          padding-bottom: 40px;
 
           .specification-list {
             padding: 0 18px;
@@ -2797,6 +2804,7 @@ header {
       padding: 0 18px;
 
       &.template-3 {
+        margin-top: 40px;
         table {
           td {
             &:first-child {
