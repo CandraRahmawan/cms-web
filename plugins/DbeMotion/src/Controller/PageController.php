@@ -18,6 +18,7 @@ class PageController extends PagesController {
   
   public function ourStory() {
     $content = $this->plugin('our_story_page');
+    $this->set(compact('content'));
   }
   
   public function review() {

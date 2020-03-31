@@ -756,7 +756,8 @@ header {
         font-size: 20px;
         line-height: 34px; }
   .our-story-wrapper .scroll-text-absolute {
-    top: 300px !important; }
+    top: 300px !important;
+    z-index: -1; }
   @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
     .our-story-wrapper .top-content {
       width: auto;
