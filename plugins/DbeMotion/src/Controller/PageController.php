@@ -43,6 +43,23 @@ class PageController extends PagesController {
   }
   
   public function productDetail() {
-    $this->plugin('product_detail');
+    $id = explode("-", $this->request->params['detail']);
+    if (sizeof($id) > 0) {
+      $this->loadModel('Products');
+      $product = $this->Products->find()->join([
+        'category' => [
+          'table' => 'category',
+          'type' => 'INNER',
+          'conditions' => 'products.category_id = category.category_id',
+        ]
+      ])->where(['products.unique_id' => $id[0], 'category.status' => 'Y'])
+        ->first();
+      $this->set(compact('product'));
+      
+      if (empty($product)) {
+        $this->is_404_page = true;
+        $this->render('/Page/404_page');
+      }
+    }
   }
 }
