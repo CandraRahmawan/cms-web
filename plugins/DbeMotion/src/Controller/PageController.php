@@ -69,9 +69,9 @@ class PageController extends PagesController {
         'category' => [
           'table' => 'category',
           'type' => 'INNER',
-          'conditions' => 'products.category_id = category.category_id',
+          'conditions' => 'Products.category_id = category.category_id',
         ]
-      ])->where(['products.unique_id' => $id[0], 'category.status' => 'Y', 'products.status' => 'Y'])
+      ])->where(['Products.unique_id' => $id[0], 'category.status' => 'Y', 'Products.status' => 'Y'])
         ->first();
       $this->set(compact('product'));
       
