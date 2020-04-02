@@ -6,8 +6,8 @@ use Cake\Routing\RouteBuilder;
 Router::scope('/', ['plugin' => 'DbeMotion'], function (RouteBuilder $routes) {
   $routes->connect('/products', ['controller' => 'Page', 'action' => 'productCategory']);
   $routes->connect(
-    '/products/:category', ['controller' => 'Page', 'action' => 'productLists']
-  )->setPatterns(['category' => '[a-z0-9A-Z]+(?:[a-z0-9\-]+)(\/?)$']);
+    '/products/:category', ['controller' => 'Page', 'action' => 'productLists'], ['category' => '[a-z0-9A-Z]+(?:[a-z0-9\-]+)(\/?)$', 'pass' => ['category']]
+  );
   $routes->connect(
     '/products/:category/:detail', ['controller' => 'Page', 'action' => 'productDetail']
   )->setPatterns(['category' => '[a-z0-9A-Z]+(?:[a-z0-9\-]+)', 'detail' => '[a-z0-9A-Z]+(?:[a-z0-9\-]+)(\/?)$']);

@@ -40,83 +40,29 @@
         </div>
     </div>
     <div class="card-list-wrapper">
-        <div class="card-list">
-            <a href="<?= $this->Utility->buildUrl('/products/' . $this->request->params['category'] . '/123-dbe-pr400'); ?>">
-              <?php
-              echo $this->Html->image('/images/card/card_1.jpg');
-              echo $this->Html->image('/images/arrow-srp.png', ['class' => 'arrow']);
-              ?>
-            </a>
-            <div class="detail-info">
-                <h2>dbE PR100</h2>
-                <span class="description">Earphone with Microphone</span>
-                <span class="price">Rp. 100.000</span>
-            </div>
-        </div>
-        <div class="card-list">
-            <a href="<?= $this->Utility->buildUrl('/products/' . $this->request->params['category'] . '/123-dbe-pr400'); ?>">
-              <?php
-              echo $this->Html->image('/images/card/card_2.jpg');
-              echo $this->Html->image('/images/arrow-srp.png', ['class' => 'arrow']);
-              ?>
-            </a>
-            <div class="detail-info">
-                <h2>dbE PR100</h2>
-                <span class="description">Earphone with Microphone</span>
-                <span class="price">Rp. 100.000</span>
-            </div>
-        </div>
-        <div class="card-list">
-            <a href="<?= $this->Utility->buildUrl('/products/' . $this->request->params['category'] . '/123-dbe-hardcase'); ?>">
-              <?php
-              echo $this->Html->image('/images/card/card_4.jpg');
-              echo $this->Html->image('/images/arrow-srp.png', ['class' => 'arrow']);
-              ?>
-            </a>
-            <div class="detail-info">
-                <h2>dbE Hardcase</h2>
-                <span class="description">EVA Hardcase for Earphone / Headphone Protection</span>
-                <span class="price">Rp. 40.000 - 150.000</span>
-            </div>
-        </div>
-        <div class="card-list">
-            <a href="<?= $this->Utility->buildUrl('/products/' . $this->request->params['category'] . '/123-dbe-pr400'); ?>">
-              <?php
-              echo $this->Html->image('/images/card/card_1.jpg');
-              echo $this->Html->image('/images/arrow-srp.png', ['class' => 'arrow']);
-              ?>
-            </a>
-            <div class="detail-info">
-                <h2>dbE PR400</h2>
-                <span class="description">Hifi Triple Driver In Ear Earphone</span>
-                <span class="price">Rp. 450.000</span>
-            </div>
-        </div>
-        <div class="card-list">
-            <a href="<?= $this->Utility->buildUrl('/products/' . $this->request->params['category'] . '/123-dbe-comfit-eartips'); ?>">
-              <?php
-              echo $this->Html->image('/images/card/card_3.jpg');
-              echo $this->Html->image('/images/arrow-srp.png', ['class' => 'arrow']);
-              ?>
-            </a>
-            <div class="detail-info">
-                <h2>dbE Comfit Eartips</h2>
-                <span class="description">High Quality Silicon Eartips</span>
-                <span class="price">Rp. 35.000</span>
-            </div>
-        </div>
-        <div class="card-list">
-            <a href="<?= $this->Utility->buildUrl('/products/' . $this->request->params['category'] . '/123-dbe-pr400'); ?>">
-              <?php
-              echo $this->Html->image('/images/card/card_2.jpg');
-              echo $this->Html->image('/images/arrow-srp.png', ['class' => 'arrow']);
-              ?>
-            </a>
-            <div class="detail-info">
-                <h2>dbE PR400</h2>
-                <span class="description">Hifi Triple Driver In Ear Earphone</span>
-                <span class="price">Rp. 450.000</span>
-            </div>
-        </div>
+      <?php
+      foreach ($product as $item) {
+        echo '<div class="card-list">';
+        echo '<a href="' . $this->Utility->buildUrl('/products/' . $this->request->params['category'] . DS . $this->Utility->slugText($item['unique_id'] . ' ' . $item['name'])) . '">';
+        echo $this->Html->image('/images/card/card_1.jpg');
+        echo $this->Html->image('/images/arrow-srp.png', ['class' => 'arrow']);
+        echo '</a>';
+        echo '<div class="detail-info">';
+        echo $this->Html->tag('h2', $item['name']);
+        echo '<span class="description">' . $item['subtitle'] . '</span>';
+        echo '<span class="price">' . $item['prefix_currency'] . ' ' . $item['price'] . '</span>';
+        echo '</div>';
+        echo '</div>';
+      }
+      echo '<ul class="uk-pagination uk-flex-center" uk-margin>';
+      if ($this->Paginator->numbers()) {
+        echo $this->Paginator->first('<<');
+        echo $this->Paginator->prev('<');
+        echo $this->Paginator->numbers();
+        echo $this->Paginator->next('>');
+        echo $this->Paginator->last('>>');
+      }
+      echo '</ul>';
+      ?>
     </div>
 </div>

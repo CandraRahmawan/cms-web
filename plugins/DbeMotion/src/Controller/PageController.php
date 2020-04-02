@@ -6,6 +6,11 @@ use App\Controller\PagesController;
 
 class PageController extends PagesController {
   
+  public function beforeFilter(\Cake\Event\Event $event) {
+    parent::beforeFilter($event);
+    $this->loadModel('Products');
+  }
+  
   public function productCategory() {
     $content = $this->plugin('product_category_page');
     $this->set(compact('content'));
@@ -39,20 +44,28 @@ class PageController extends PagesController {
   }
   
   public function productLists() {
-    $this->plugin('product_lists');
+    $product = $this->Paginator->paginate($this->Products->find('all')->join([
+      'category' => [
+        'table' => 'category',
+        'type' => 'INNER',
+        'conditions' => 'products.category_id = category.category_id',
+      ]
+    ])
+      ->where(['category.status' => 'Y', 'products.status' => 'Y'])
+      ->order(['products.product_id' => 'DESC']), ['limit' => 6]);
+    $this->set(compact('product'));
   }
   
   public function productDetail() {
     $id = explode("-", $this->request->params['detail']);
     if (sizeof($id) > 0) {
-      $this->loadModel('Products');
       $product = $this->Products->find()->join([
         'category' => [
           'table' => 'category',
           'type' => 'INNER',
           'conditions' => 'products.category_id = category.category_id',
         ]
-      ])->where(['products.unique_id' => $id[0], 'category.status' => 'Y'])
+      ])->where(['products.unique_id' => $id[0], 'category.status' => 'Y', 'products.status' => 'Y'])
         ->first();
       $this->set(compact('product'));
       

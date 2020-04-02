@@ -179,8 +179,8 @@ class AppController extends Controller {
   private function __getSeoInfo() {
     $id = 0;
     $seo = '';
-    if (is_int($this->pass) || !$this->is_404_page) {
-      if (sizeof($this->pass) > 0) {
+    if (!$this->is_404_page) {
+      if (is_int($this->pass) && sizeof($this->pass) > 0) {
         $param = $this->pass[0];
         $explode = explode('-', $param);
         if (is_array($explode)) {

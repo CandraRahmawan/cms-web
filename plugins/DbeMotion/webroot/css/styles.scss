@@ -1972,6 +1972,30 @@ header {
         }
       }
     }
+
+    ul {
+      width: 100%;
+      font-size: 20px;
+
+      li {
+        &.active {
+          a {
+            color: silver;
+            cursor: auto;
+          }
+        }
+
+        &.first, &.prev, &.next, &.last {
+          a {
+            color: #3CDBCF;
+          }
+        }
+
+        a {
+          color: $blackColor;
+        }
+      }
+    }
   }
 
   .scroll-text-absolute {

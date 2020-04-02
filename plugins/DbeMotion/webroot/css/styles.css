@@ -1303,6 +1303,16 @@ header {
         .product-list-wrapper .card-list-wrapper .card-list .detail-info h2 {
           font-weight: 500;
           margin-bottom: 0; }
+    .product-list-wrapper .card-list-wrapper ul {
+      width: 100%;
+      font-size: 20px; }
+      .product-list-wrapper .card-list-wrapper ul li.active a {
+        color: silver;
+        cursor: auto; }
+      .product-list-wrapper .card-list-wrapper ul li.first a, .product-list-wrapper .card-list-wrapper ul li.prev a, .product-list-wrapper .card-list-wrapper ul li.next a, .product-list-wrapper .card-list-wrapper ul li.last a {
+        color: #3CDBCF; }
+      .product-list-wrapper .card-list-wrapper ul li a {
+        color: #191818; }
   .product-list-wrapper .scroll-text-absolute {
     bottom: 20px !important; }
   @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
