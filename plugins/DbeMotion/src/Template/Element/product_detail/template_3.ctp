@@ -9,9 +9,7 @@
             ['escape' => false, 'class' => 'hide-mobile']
           ); ?>
             <div class="title-wrapper template-3">
-                <h1>
-                    Dbe Hardcase
-                </h1>
+              <?= $this->Html->tag('h1', $product['name']) ?>
             </div>
         </div>
       <?= $this->Html->link(
@@ -23,20 +21,12 @@
     <div class="section-1 template-3">
       <?= $this->Html->image('/images/template_3/section_1_img.jpg'); ?>
         <div class="right-content template-3">
-            <p>
-                Hardcase is hard case made by EVA
-            </p>
+          <?= $product['description_1']; ?>
         </div>
     </div>
     <div class="section-2 template-3 blue-grey">
         <div class="content-wrapper template-3">
-            <h2>
-                dbE DAP Hardcase is a hard case made by EVA plastic to protect your digital audio player and earphone
-                from damage. Because of its size, you can put 1 DAP and 1-2 earphone / IEM inside.
-            </h2>
-            <h2 class="border-bottom">
-                Material : High Quality EVA Plastics & Zipper
-            </h2>
+          <?= $product['description_2']; ?>
         </div>
         <div class="specification-wrapper template-3">
             <div class="specification-list">
@@ -101,33 +91,12 @@
             </div>
         </div>
     </div>
-    <div class="section-3 template-3">
-        <h4>
-            Available Size and Type
-        </h4>
-        <table border="0">
-            <tbody>
-            <tr>
-                <td><span>dbE Hardcase S</span></td>
-                <td>Rp. 40.000</td>
-            </tr>
-            <tr>
-                <td><span>dbE Hardcase M</span></td>
-                <td>Rp. 99.000</td>
-            </tr>
-            <tr>
-                <td><span>dbE Hardcase L</span></td>
-                <td>Rp. 150.000</td>
-            </tr>
-            <tr>
-                <td><span>dbE Hardcase DAP</span></td>
-                <td>Rp. 70.000</td>
-            </tr>
-            <tr>
-                <td><span>dbE Earphone Case</span></td>
-                <td>Rp. 30.000</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+  <?php
+  if (!empty($product['additional_info'])) {
+    echo '<div class="section-3 template-3">';
+    echo $this->Html->tag('h4', 'Available Size and Type');
+    echo $product['additional_info'];
+    echo '</div>';
+  }
+  ?>
 </div>

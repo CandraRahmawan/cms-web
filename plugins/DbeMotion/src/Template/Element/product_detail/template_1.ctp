@@ -61,7 +61,7 @@
                   <div class="text-features">
                     <?php
                     foreach (json_decode($product['features']) as $item) {
-                      echo '<span style="background-color: #FE0000">' . $item . '</span>';
+                      echo '<span style="background-color: ' . $product['features_color'] . '">' . $item . '</span>';
                     }
                     ?>
                   </div>

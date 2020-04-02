@@ -2218,7 +2218,7 @@ header {
         color: #4F7673;
 
         p {
-          width: 590px;
+          width: 610px;
           letter-spacing: 3px;
           font-weight: bold;
         }
@@ -2269,6 +2269,17 @@ header {
         height: auto;
         padding: 0;
 
+        span {
+          &.show-mobile {
+            p {
+              font-size: 22px;
+              line-height: 36px;
+              font-weight: bold;
+              color: $blackColor;
+            }
+          }
+        }
+
         h2 {
           font-size: 29px;
           line-height: 58px;
@@ -2276,8 +2287,12 @@ header {
           letter-spacing: 1px;
           margin-top: 0;
           margin-bottom: 0;
+        }
+      }
 
-          &.border-bottom {
+      &.template-3 {
+        h2 {
+          &:last-child {
             border-bottom: 1.5px solid $blackColor;
             margin-top: 36px;
             display: inline-block;
@@ -2479,6 +2494,7 @@ header {
 
   .scroll-text-absolute {
     bottom: 100px !important;
+    z-index: -1;
   }
 
   @include tablet-view() {
@@ -2743,6 +2759,7 @@ header {
 
         &.template-2 {
           padding: 40px 18px 0 18px;
+
           h1 {
             font-size: 22px;
             line-height: 36px;
@@ -2793,6 +2810,7 @@ header {
                 &:before {
                   margin-left: 0;
                 }
+
                 span {
                   margin-left: 8px;
                 }
@@ -2808,6 +2826,7 @@ header {
 
       &.template-3 {
         margin-top: 40px;
+
         table {
           td {
             &:first-child {

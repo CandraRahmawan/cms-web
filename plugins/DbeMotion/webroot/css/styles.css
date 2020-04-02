@@ -1450,7 +1450,7 @@ header {
       .product-detail-wrapper .section-1 .right-content.template-3 {
         color: #4F7673; }
         .product-detail-wrapper .section-1 .right-content.template-3 p {
-          width: 590px;
+          width: 610px;
           letter-spacing: 3px;
           font-weight: bold; }
   .product-detail-wrapper .section-2.template-2, .product-detail-wrapper .section-2.template-3 {
@@ -1483,6 +1483,11 @@ header {
       display: block;
       height: auto;
       padding: 0; }
+      .product-detail-wrapper .section-2 .content-wrapper.template-2 span.show-mobile p, .product-detail-wrapper .section-2 .content-wrapper.template-3 span.show-mobile p {
+        font-size: 22px;
+        line-height: 36px;
+        font-weight: bold;
+        color: #191818; }
       .product-detail-wrapper .section-2 .content-wrapper.template-2 h2, .product-detail-wrapper .section-2 .content-wrapper.template-3 h2 {
         font-size: 29px;
         line-height: 58px;
@@ -1490,10 +1495,10 @@ header {
         letter-spacing: 1px;
         margin-top: 0;
         margin-bottom: 0; }
-        .product-detail-wrapper .section-2 .content-wrapper.template-2 h2.border-bottom, .product-detail-wrapper .section-2 .content-wrapper.template-3 h2.border-bottom {
-          border-bottom: 1.5px solid #191818;
-          margin-top: 36px;
-          display: inline-block; }
+    .product-detail-wrapper .section-2 .content-wrapper.template-3 h2:last-child {
+      border-bottom: 1.5px solid #191818;
+      margin-top: 36px;
+      display: inline-block; }
   .product-detail-wrapper .section-2 .specification-wrapper h4 {
     font-size: 14px;
     font-weight: bold;
@@ -1615,7 +1620,8 @@ header {
       .product-detail-wrapper .section-3.template-3 table td:first-child:before {
         content: "-"; }
   .product-detail-wrapper .scroll-text-absolute {
-    bottom: 100px !important; }
+    bottom: 100px !important;
+    z-index: -1; }
   @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
     .product-detail-wrapper .top-content .content-info-wrapper {
       width: calc(100% - 60px);
