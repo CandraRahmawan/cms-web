@@ -54,11 +54,11 @@ class PageController extends PagesController {
       'category' => [
         'table' => 'category',
         'type' => 'INNER',
-        'conditions' => 'products.category_id = category.category_id',
+        'conditions' => 'Products.category_id = category.category_id',
       ]
     ])
-      ->where(['category.status' => 'Y', 'products.status' => 'Y', 'products.category_id' => $category_id])
-      ->order(['products.product_id' => 'DESC']), ['limit' => 6]);
+      ->where(['category.status' => 'Y', 'Products.status' => 'Y', 'Products.category_id' => $category_id])
+      ->order(['Products.product_id' => 'DESC']), ['limit' => 6]);
     $this->set(compact('product'));
   }
   
