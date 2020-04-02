@@ -44,6 +44,12 @@ class PageController extends PagesController {
   }
   
   public function productLists() {
+    $category_id = 0;
+    $category_url = explode('-', $this->request->category);
+    if (sizeof($category_url) > 0) {
+      $category_id = $category_url[0];
+    }
+    
     $product = $this->Paginator->paginate($this->Products->find('all')->join([
       'category' => [
         'table' => 'category',
@@ -51,7 +57,7 @@ class PageController extends PagesController {
         'conditions' => 'products.category_id = category.category_id',
       ]
     ])
-      ->where(['category.status' => 'Y', 'products.status' => 'Y'])
+      ->where(['category.status' => 'Y', 'products.status' => 'Y', 'products.category_id' => $category_id])
       ->order(['products.product_id' => 'DESC']), ['limit' => 6]);
     $this->set(compact('product'));
   }

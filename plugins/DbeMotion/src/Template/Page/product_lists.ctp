@@ -41,18 +41,22 @@
     </div>
     <div class="card-list-wrapper">
       <?php
-      foreach ($product as $item) {
-        echo '<div class="card-list">';
-        echo '<a href="' . $this->Utility->buildUrl('/products/' . $this->request->params['category'] . DS . $this->Utility->slugText($item['unique_id'] . ' ' . $item['name'])) . '">';
-        echo $this->Html->image('/images/card/card_1.jpg');
-        echo $this->Html->image('/images/arrow-srp.png', ['class' => 'arrow']);
-        echo '</a>';
-        echo '<div class="detail-info">';
-        echo $this->Html->tag('h2', $item['name']);
-        echo '<span class="description">' . $item['subtitle'] . '</span>';
-        echo '<span class="price">' . $item['prefix_currency'] . ' ' . $item['price'] . '</span>';
-        echo '</div>';
-        echo '</div>';
+      if (sizeof($product) > 0) {
+        foreach ($product as $item) {
+          echo '<div class="card-list">';
+          echo '<a href="' . $this->Utility->buildUrl('/products/' . $this->request->params['category'] . DS . $this->Utility->slugText($item['unique_id'] . ' ' . $item['name'])) . '">';
+          echo $this->Html->image('/images/card/card_1.jpg');
+          echo $this->Html->image('/images/arrow-srp.png', ['class' => 'arrow']);
+          echo '</a>';
+          echo '<div class="detail-info">';
+          echo $this->Html->tag('h2', $item['name']);
+          echo '<span class="description">' . $item['subtitle'] . '</span>';
+          echo '<span class="price">' . $item['prefix_currency'] . ' ' . $item['price'] . '</span>';
+          echo '</div>';
+          echo '</div>';
+        }
+      } else {
+          echo $this->Html->tag('span', 'Product not found', ['class' => 'not-found-content']);
       }
       echo '<ul class="uk-pagination uk-flex-center" uk-margin>';
       if ($this->Paginator->numbers()) {
