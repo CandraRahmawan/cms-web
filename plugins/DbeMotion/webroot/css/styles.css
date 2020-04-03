@@ -1215,7 +1215,8 @@ header {
     position: relative; }
     .product-list-wrapper .top-content img {
       width: 100%;
-      object-fit: cover; }
+      object-fit: cover;
+      min-height: 670px; }
     .product-list-wrapper .top-content a {
       position: absolute;
       top: 50%;
@@ -1331,6 +1332,8 @@ header {
   .product-list-wrapper .scroll-text-absolute {
     bottom: 20px !important; }
   @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+    .product-list-wrapper .top-content img {
+      min-height: 365px; }
     .product-list-wrapper .top-content .content-info-wrapper .title-wrapper {
       width: 92%;
       top: 50%;

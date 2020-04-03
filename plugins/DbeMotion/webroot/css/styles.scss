@@ -1836,6 +1836,7 @@ header {
     img {
       width: 100%;
       object-fit: cover;
+      min-height: 670px;
     }
 
     a {
@@ -2031,6 +2032,10 @@ header {
 
   @include tablet-view() {
     .top-content {
+      img {
+        min-height: 365px;
+      }
+
       .content-info-wrapper {
         .title-wrapper {
           width: 92%;
