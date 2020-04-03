@@ -50,7 +50,7 @@ class PageController extends PagesController {
       $category_id = $category_url[0];
     }
     
-    $featured = $this->plugin('featured_product_list');
+    $featured = $this->plugin('featured_category_product');
     
     $product = $this->Paginator->paginate($this->Products->find('all')->contain(['Category'])->join([
       'Category' => [
