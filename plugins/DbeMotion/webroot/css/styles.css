@@ -1267,6 +1267,19 @@ header {
           .product-list-wrapper .top-content .content-info-wrapper .content-color .content-wrapper .right-content span {
             color: #191818;
             font-size: 18px; }
+    .product-list-wrapper .top-content.no-featured {
+      background-color: #EEEFF4;
+      min-height: 450px; }
+      .product-list-wrapper .top-content.no-featured .content-info-wrapper {
+        padding: 120px 0; }
+        .product-list-wrapper .top-content.no-featured .content-info-wrapper .title-wrapper {
+          margin: 0 auto;
+          position: unset;
+          top: 0;
+          transform: unset;
+          left: 0; }
+          .product-list-wrapper .top-content.no-featured .content-info-wrapper .title-wrapper .subtitle-wrapper a {
+            right: 10%; }
   .product-list-wrapper .card-list-wrapper {
     margin: 80px auto;
     width: 1080px;

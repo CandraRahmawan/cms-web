@@ -50,16 +50,18 @@ class PageController extends PagesController {
       $category_id = $category_url[0];
     }
     
-    $product = $this->Paginator->paginate($this->Products->find('all')->join([
-      'category' => [
+    $featured = $this->plugin('featured_product_list');
+    
+    $product = $this->Paginator->paginate($this->Products->find('all')->contain(['Category'])->join([
+      'Category' => [
         'table' => 'category',
         'type' => 'INNER',
-        'conditions' => 'Products.category_id = category.category_id',
+        'conditions' => 'Products.category_id = Category.category_id',
       ]
     ])
-      ->where(['category.status' => 'Y', 'Products.status' => 'Y', 'Products.category_id' => $category_id])
+      ->where(['Category.status' => 'Y', 'Products.status' => 'Y', 'Products.category_id' => $category_id])
       ->order(['Products.product_id' => 'DESC']), ['limit' => 6]);
-    $this->set(compact('product'));
+    $this->set(compact('product', 'featured'));
   }
   
   public function productDetail() {

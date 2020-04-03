@@ -1910,6 +1910,29 @@ header {
         }
       }
     }
+
+    &.no-featured {
+      background-color: $blueGreyColor;
+      min-height: 450px;
+
+      .content-info-wrapper {
+        padding: 120px 0;
+
+        .title-wrapper {
+          margin: 0 auto;
+          position: unset;
+          top: 0;
+          transform: unset;
+          left: 0;
+
+          .subtitle-wrapper {
+            a {
+              right: 10%;
+            }
+          }
+        }
+      }
+    }
   }
 
   .card-list-wrapper {
