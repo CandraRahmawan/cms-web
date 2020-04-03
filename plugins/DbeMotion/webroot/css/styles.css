@@ -1240,7 +1240,7 @@ header {
         line-height: 56px;
         font-size: 48px;
         font-weight: 500;
-        width: 390px;
+        width: 500px;
         margin-top: 0; }
     .product-list-wrapper .top-content .content-info-wrapper .content-color {
       position: absolute;
@@ -1283,8 +1283,6 @@ header {
           left: 0; }
           .product-list-wrapper .top-content.no-featured .content-info-wrapper .title-wrapper .subtitle-wrapper a {
             right: 10%; }
-          .product-list-wrapper .top-content.no-featured .content-info-wrapper .title-wrapper .subtitle-wrapper h3 {
-            width: auto; }
   .product-list-wrapper .card-list-wrapper {
     margin: 80px auto;
     width: 1080px;
@@ -1357,6 +1355,13 @@ header {
       background-color: transparent !important; }
       .product-list-wrapper .top-content .content-info-wrapper .content-color .content-wrapper {
         display: none; }
+    .product-list-wrapper .top-content.no-featured {
+      min-height: 370px; }
+      .product-list-wrapper .top-content.no-featured .content-info-wrapper {
+        padding: 120px 0; }
+        .product-list-wrapper .top-content.no-featured .content-info-wrapper .title-wrapper .subtitle-wrapper a {
+          right: 10%;
+          top: 45%; }
     .product-list-wrapper .card-list-wrapper {
       width: auto;
       padding: 0 30px; }

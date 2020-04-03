@@ -1868,7 +1868,7 @@ header {
           line-height: 56px;
           font-size: 48px;
           font-weight: 500;
-          width: 390px;
+          width: 500px;
           margin-top: 0;
         }
       }
@@ -1933,10 +1933,6 @@ header {
           .subtitle-wrapper {
             a {
               right: 10%;
-            }
-
-            h3 {
-              width: auto;
             }
           }
         }
@@ -2073,6 +2069,23 @@ header {
 
           .content-wrapper {
             display: none;
+          }
+        }
+      }
+
+      &.no-featured {
+        min-height: 370px;
+
+        .content-info-wrapper {
+          padding: 120px 0;
+
+          .title-wrapper {
+            .subtitle-wrapper {
+              a {
+                right: 10%;
+                top: 45%;
+              }
+            }
           }
         }
       }
