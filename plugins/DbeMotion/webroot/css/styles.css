@@ -1271,6 +1271,8 @@ header {
     .product-list-wrapper .top-content.no-featured {
       background-color: #EEEFF4;
       min-height: 450px; }
+      .product-list-wrapper .top-content.no-featured img {
+        min-height: auto; }
       .product-list-wrapper .top-content.no-featured .content-info-wrapper {
         padding: 120px 0; }
         .product-list-wrapper .top-content.no-featured .content-info-wrapper .title-wrapper {
