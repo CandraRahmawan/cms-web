@@ -3,6 +3,7 @@ $title = '';
 $subtitle = '';
 $description = '';
 $img_url = '';
+$bg_color = '#fff';
 $featuredSize = 0;
 $explode_category_url = explode('-', $this->request->category);
 foreach ($featured as $item) {
@@ -13,6 +14,7 @@ foreach ($featured as $item) {
       $title = $value_2->title;
       $subtitle = $value_2->subtitle;
       $description = $value_2->description;
+      $bg_color = $value_2->bg_color;
       $img_url = $item['detail']['value_3'];
       $featuredSize++;
     }
@@ -43,7 +45,7 @@ foreach ($featured as $item) {
           <?php
           if ($featuredSize > 0):
             ?>
-              <div class="content-color" style="background-color: #AED8D5">
+              <div class="content-color" style="background-color: <?= $bg_color; ?>">
                   <div class="content-wrapper">
                       <div class="left-content">
                         <?= $description; ?>
