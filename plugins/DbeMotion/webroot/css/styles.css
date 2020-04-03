@@ -1280,6 +1280,8 @@ header {
           left: 0; }
           .product-list-wrapper .top-content.no-featured .content-info-wrapper .title-wrapper .subtitle-wrapper a {
             right: 10%; }
+          .product-list-wrapper .top-content.no-featured .content-info-wrapper .title-wrapper .subtitle-wrapper h3 {
+            width: auto; }
   .product-list-wrapper .card-list-wrapper {
     margin: 80px auto;
     width: 1080px;

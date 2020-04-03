@@ -1,22 +1,22 @@
 <?php
-$product_name = '';
-foreach ($product as $item) {
-  $product_name = $item['category']['name'];
-  break;
-}
-
 $title = '';
 $subtitle = '';
 $description = '';
 $img_url = '';
 $featuredSize = 0;
+$explode_category_url = explode('-', $this->request->category);
 foreach ($featured as $item) {
+  $value_1 = json_decode($item['detail']['value_1']);
   $value_2 = json_decode($item['detail']['value_2']);
-  $title = $value_2->title;
-  $subtitle = $value_2->subtitle;
-  $description = $value_2->description;
-  $img_url = $item['detail']['value_3'];
-  $featuredSize++;
+  if (sizeof($explode_category_url) > 0) {
+    if ($explode_category_url[0] == $value_1->id) {
+      $title = $value_2->title;
+      $subtitle = $value_2->subtitle;
+      $description = $value_2->description;
+      $img_url = $item['detail']['value_3'];
+      $featuredSize++;
+    }
+  }
 }
 ?>
 
@@ -29,7 +29,7 @@ foreach ($featured as $item) {
                 <h1>Product</h1>
                 <div class="subtitle-wrapper">
                     <div>
-                      <?= $this->Html->tag('h3', $product_name); ?>
+                      <?= $this->Html->tag('h3', $category['name']); ?>
                     </div>
                     <div>
                       <?= $this->Html->link(

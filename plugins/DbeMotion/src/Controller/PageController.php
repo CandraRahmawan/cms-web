@@ -44,6 +44,7 @@ class PageController extends PagesController {
   }
   
   public function productLists() {
+    $this->loadModel('Category');
     $category_id = 0;
     $category_url = explode('-', $this->request->category);
     if (sizeof($category_url) > 0) {
@@ -51,6 +52,7 @@ class PageController extends PagesController {
     }
     
     $featured = $this->plugin('featured_category_product');
+    $category = $this->Category->find()->select(['name'])->where(['status' => 'Y', 'category_id' => $category_id])->first();
     
     $product = $this->Paginator->paginate($this->Products->find('all')->contain(['Category'])->join([
       'Category' => [
@@ -61,7 +63,7 @@ class PageController extends PagesController {
     ])
       ->where(['Category.status' => 'Y', 'Products.status' => 'Y', 'Products.category_id' => $category_id])
       ->order(['Products.product_id' => 'DESC']), ['limit' => 6]);
-    $this->set(compact('product', 'featured'));
+    $this->set(compact('product', 'featured', 'category'));
   }
   
   public function productDetail() {
