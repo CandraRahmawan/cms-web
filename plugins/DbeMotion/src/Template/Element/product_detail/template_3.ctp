@@ -44,66 +44,7 @@ $section_1_image = isset($img_url[2]) ? $img_url[2] : '';
           <?= $product['description_2']; ?>
         </div>
         <div class="specification-wrapper template-3">
-            <div class="specification-list">
-                <h2>dbE Earphone Hardcase S (small)</h2>
-                <p>
-                    dbE Earphone Hardcase is a hard case made by EVA plastic to protect your earphone / in ear monitor
-                    from damage.
-                </p>
-                <div class="specification">
-                    <h4>Specification</h4>
-                    <table border="0">
-                        <tbody>
-                        <tr>
-                            <td><span>High Quality EVA Plastics & Zipper</span></td>
-                        </tr>
-                        <tr>
-                            <td><span>Size 10 cm (width) x 8 cm (length) x 4 cm (height)</span></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="specification-list">
-                <h2>dbE Earphone Hardcase L (large)</h2>
-                <p>
-                    dbE Headphone Hardcase Large is hard case made by EVA Plastic to protect your headphones from
-                    damage. This case is suitable for large sized headphone and planar headphones
-                </p>
-                <div class="specification">
-                    <h4>Specification</h4>
-                    <table border="0">
-                        <tbody>
-                        <tr>
-                            <td><span>High Quality EVA Plastics & Zipper</span></td>
-                        </tr>
-                        <tr>
-                            <td><span>Size 27 cm (width) x 22 cm (length) x 10 cm (height)</span></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="specification-list">
-                <h2>dbE Earphone Hardcase M (medium)</h2>
-                <p>
-                    Is a hard case made by EVA Plastic to protect your headphones from damage. This case is suitable for
-                    medium sized headphone and foldable headphone.
-                </p>
-                <div class="specification">
-                    <h4>Specification</h4>
-                    <table border="0">
-                        <tbody>
-                        <tr>
-                            <td><span>High Quality EVA Plastics & Zipper</span></td>
-                        </tr>
-                        <tr>
-                            <td><span>Size 25 cm (width) x 22 cm (length) x 6 cm (height)</span></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+          <?= $product['specification']; ?>
         </div>
     </div>
   <?php
