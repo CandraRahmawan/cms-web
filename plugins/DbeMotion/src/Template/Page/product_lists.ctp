@@ -67,9 +67,15 @@ foreach ($featured as $item) {
       <?php
       if (sizeof($product) > 0) {
         foreach ($product as $item) {
+          $extract_img = !empty($item['img_path']) ? json_decode($item['img_path']) : [];
+          $img_url = '';
+          foreach ($extract_img as $subItem) {
+            $img_url = $subItem;
+            break;
+          }
           echo '<div class="card-list">';
           echo '<a href="' . $this->Utility->buildUrl('/products/' . $this->request->params['category'] . DS . $this->Utility->slugText($item['unique_id'] . ' ' . $item['name'])) . '">';
-          echo $this->Html->image('/images/card/card_1.jpg');
+          echo '<img data-src="' . $full_base_admin_url . $img_url . '" uk-img/>';
           echo $this->Html->image('/images/arrow-srp.png', ['class' => 'arrow']);
           echo '</a>';
           echo '<div class="detail-info">';
