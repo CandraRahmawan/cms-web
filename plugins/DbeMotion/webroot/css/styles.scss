@@ -2453,7 +2453,7 @@ header {
           margin-top: 60px;
 
           table {
-            width: 100%;
+            width: 100% !important;
             margin-top: 30px;
             border-collapse: collapse;
 
@@ -2499,7 +2499,7 @@ header {
     }
 
     table {
-      width: 450px;
+      width: 450px !important;
       border-collapse: collapse;
       color: $blackColor;
 
@@ -2735,7 +2735,7 @@ header {
 
       &.template-3 {
         table {
-          width: 100%;
+          width: 100% !important;
         }
       }
 
@@ -2743,7 +2743,7 @@ header {
         width: 100%;
 
         table {
-          width: 100%;
+          width: 100% !important;
         }
       }
 

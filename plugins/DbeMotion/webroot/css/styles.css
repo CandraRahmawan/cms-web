@@ -1612,7 +1612,7 @@ header {
       width: 45%;
       margin-top: 60px; }
       .product-detail-wrapper .section-2 .specification-wrapper.template-3 .specification-list table {
-        width: 100%;
+        width: 100% !important;
         margin-top: 30px;
         border-collapse: collapse; }
         .product-detail-wrapper .section-2 .specification-wrapper.template-3 .specification-list table tr:first-child {
@@ -1639,7 +1639,7 @@ header {
       font-weight: bold;
       margin-bottom: 32px; }
     .product-detail-wrapper .section-3 table {
-      width: 450px;
+      width: 450px !important;
       border-collapse: collapse;
       color: #191818; }
       .product-detail-wrapper .section-3 table tr:first-child {
@@ -1770,11 +1770,11 @@ header {
       width: auto;
       padding: 0 30px; }
       .product-detail-wrapper .section-3.template-3 table {
-        width: 100%; }
+        width: 100% !important; }
       .product-detail-wrapper .section-3 .left-content {
         width: 100%; }
         .product-detail-wrapper .section-3 .left-content table {
-          width: 100%; }
+          width: 100% !important; }
       .product-detail-wrapper .section-3 .right-content {
         width: 100%;
         margin-top: 50px; }
