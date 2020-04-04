@@ -80,7 +80,7 @@ body {
         margin: 0 12px;
 
         img {
-          height: 18px;
+          height: 22px;
         }
 
         a {
@@ -327,6 +327,9 @@ header {
         left: 0;
         animation-name: animation-img-carousel-phone;
         animation-duration: 2s;
+      }
+      .uk-cover {
+        left: 0;
       }
     }
   }
@@ -1949,6 +1952,9 @@ header {
         background-color: $blueGreyColor;
 
         img {
+          height: 364px;
+          object-fit: contain;
+
           &.arrow {
             display: none;
             position: absolute;
@@ -2047,6 +2053,10 @@ header {
           .subtitle-wrapper {
             display: flex;
 
+            h3 {
+              width: 400px;
+            }
+
             a {
               top: 30px;
               right: 10px;
@@ -2088,6 +2098,10 @@ header {
         a {
           width: 100%;
           height: auto;
+
+          img {
+            height: 240px;
+          }
 
           img:not(.arrow) {
             transition: none;
@@ -2147,7 +2161,6 @@ header {
           height: 180px;
 
           img {
-            object-fit: cover;
             height: 180px;
           }
         }
@@ -2653,10 +2666,6 @@ header {
           }
         }
       }
-
-      .right-bg-color-skew {
-        right: -54px;
-      }
     }
     .section-2 {
       &.template-2 {
@@ -2820,6 +2829,7 @@ header {
           color: $blackColor;
           margin: 18px;
           line-height: 26px;
+          text-align: center;
         }
 
         &.template-3 {
@@ -3018,6 +3028,9 @@ header {
 
   @include tablet-view() {
     margin-top: 100px;
+    .middle {
+      margin: 0 16px;
+    }
   }
 }
 
@@ -3192,7 +3205,7 @@ footer {
       padding: 0 18px;
 
       img {
-        height: 18px;
+        height: 22px;
         margin-bottom: 20px;
       }
     }

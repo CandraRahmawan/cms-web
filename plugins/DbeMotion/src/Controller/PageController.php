@@ -54,16 +54,21 @@ class PageController extends PagesController {
     $featured = $this->plugin('featured_category_product');
     $category = $this->Category->find()->select(['name'])->where(['status' => 'Y', 'category_id' => $category_id])->first();
     
-    $product = $this->Paginator->paginate($this->Products->find('all')->contain(['Category'])->join([
-      'Category' => [
-        'table' => 'category',
-        'type' => 'INNER',
-        'conditions' => 'Products.category_id = Category.category_id',
-      ]
-    ])
-      ->where(['Category.status' => 'Y', 'Products.status' => 'Y', 'Products.category_id' => $category_id])
-      ->order(['Products.product_id' => 'DESC']), ['limit' => 6]);
-    $this->set(compact('product', 'featured', 'category'));
+    if (empty($category)) {
+      $this->is_404_page = true;
+      $this->render('/Page/404_page');
+    } else {
+      $product = $this->Paginator->paginate($this->Products->find('all')->contain(['Category'])->join([
+        'Category' => [
+          'table' => 'category',
+          'type' => 'INNER',
+          'conditions' => 'Products.category_id = Category.category_id',
+        ]
+      ])
+        ->where(['Category.status' => 'Y', 'Products.status' => 'Y', 'Products.category_id' => $category_id])
+        ->order(['Products.product_id' => 'DESC']), ['limit' => 6]);
+      $this->set(compact('product', 'featured', 'category'));
+    }
   }
   
   public function productDetail() {

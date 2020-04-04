@@ -174,7 +174,7 @@ body .not-found-content {
       .uk-offcanvas-bar .list-menu .social-link-list .social-link {
         margin: 0 12px; }
         .uk-offcanvas-bar .list-menu .social-link-list .social-link img {
-          height: 18px; }
+          height: 22px; }
         .uk-offcanvas-bar .list-menu .social-link-list .social-link a {
           padding: 0; }
     .uk-offcanvas-bar .list-menu a {
@@ -325,7 +325,9 @@ header {
       text-align: center;
       left: 0;
       animation-name: animation-img-carousel-phone;
-      animation-duration: 2s; } }
+      animation-duration: 2s; }
+    .top-image .uk-slideshow-items .uk-cover {
+      left: 0; } }
 
 .home-section-1 {
   max-width: 1210px;
@@ -1315,13 +1317,16 @@ header {
         height: 364px;
         display: block;
         background-color: #EEEFF4; }
-        .product-list-wrapper .card-list-wrapper .card-list a img.arrow {
-          display: none;
-          position: absolute;
-          right: 5%;
-          top: 50%;
-          transform: translate(0, -50%);
-          width: 70px; }
+        .product-list-wrapper .card-list-wrapper .card-list a img {
+          height: 364px;
+          object-fit: contain; }
+          .product-list-wrapper .card-list-wrapper .card-list a img.arrow {
+            display: none;
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 70px; }
         .product-list-wrapper .card-list-wrapper .card-list a img:not(.arrow) {
           transition: transform .5s ease; }
         .product-list-wrapper .card-list-wrapper .card-list a:hover img:not(.arrow) {
@@ -1365,6 +1370,8 @@ header {
         line-height: normal; }
       .product-list-wrapper .top-content .content-info-wrapper .title-wrapper .subtitle-wrapper {
         display: flex; }
+        .product-list-wrapper .top-content .content-info-wrapper .title-wrapper .subtitle-wrapper h3 {
+          width: 400px; }
         .product-list-wrapper .top-content .content-info-wrapper .title-wrapper .subtitle-wrapper a {
           top: 30px;
           right: 10px; }
@@ -1385,6 +1392,8 @@ header {
       .product-list-wrapper .card-list-wrapper .card-list a {
         width: 100%;
         height: auto; }
+        .product-list-wrapper .card-list-wrapper .card-list a img {
+          height: 240px; }
         .product-list-wrapper .card-list-wrapper .card-list a img:not(.arrow) {
           transition: none; }
         .product-list-wrapper .card-list-wrapper .card-list a:hover img:not(.arrow) {
@@ -1414,7 +1423,6 @@ header {
           width: 100%;
           height: 180px; }
           .product-list-wrapper .card-list-wrapper .card-list a img {
-            object-fit: cover;
             height: 180px; }
         .product-list-wrapper .card-list-wrapper .card-list .detail-info h2 {
           font-size: 22px; }
@@ -1723,8 +1731,6 @@ header {
         line-height: 34px; }
       .product-detail-wrapper .section-1 .right-content.template-3 p {
         font-size: 22px; }
-    .product-detail-wrapper .section-1 .right-bg-color-skew {
-      right: -54px; }
     .product-detail-wrapper .section-2.template-2 {
       padding: 0; }
     .product-detail-wrapper .section-2 .content-wrapper {
@@ -1815,7 +1821,8 @@ header {
           width: auto;
           color: #191818;
           margin: 18px;
-          line-height: 26px; }
+          line-height: 26px;
+          text-align: center; }
         .product-detail-wrapper .section-1 .right-content.template-3 {
           display: none; }
     .product-detail-wrapper .section-2.template-3 {
@@ -1923,7 +1930,9 @@ header {
     align-self: center; }
   @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
     .not-found-page-image-wrapper {
-      margin-top: 100px; } }
+      margin-top: 100px; }
+      .not-found-page-image-wrapper .middle {
+        margin: 0 16px; } }
 
 .not-found-btn-home {
   margin-top: 30px;
@@ -2044,7 +2053,7 @@ footer {
         letter-spacing: 1px;
         padding: 0 18px; }
         footer .left-footer img {
-          height: 18px;
+          height: 22px;
           margin-bottom: 20px; }
       footer .right-footer {
         padding: 0 18px; }
