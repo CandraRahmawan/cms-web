@@ -1518,12 +1518,14 @@ header {
         color: #4F7673;
         transform: translate(-54%, -50%);
         font-size: 28px;
-        font-weight: bold; }
+        font-weight: bold;
+        text-align: right; }
         .product-detail-wrapper .section-1 .right-content.template-2 p {
           width: 514px;
           letter-spacing: 4px; }
       .product-detail-wrapper .section-1 .right-content.template-3 {
-        color: #4F7673; }
+        color: #4F7673;
+        text-align: right; }
         .product-detail-wrapper .section-1 .right-content.template-3 p {
           width: 610px;
           letter-spacing: 3px;
@@ -1719,6 +1721,8 @@ header {
       .product-detail-wrapper .top-content .content-info-wrapper .title-wrapper h3 {
         font-size: 28px;
         line-height: normal; }
+    .product-detail-wrapper .section-1.template-2 img, .product-detail-wrapper .section-1.template-3 img {
+      object-position: left; }
     .product-detail-wrapper .section-1 .right-content {
       width: calc(100% - 60px);
       margin-right: 30px; }
@@ -1806,8 +1810,6 @@ header {
       overflow: unset; }
       .product-detail-wrapper .section-1 img {
         height: 350px; }
-      .product-detail-wrapper .section-1.template-2 img, .product-detail-wrapper .section-1.template-3 img {
-        object-position: left; }
       .product-detail-wrapper .section-1 .right-content {
         width: 100%;
         margin-right: 0;

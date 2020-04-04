@@ -328,6 +328,7 @@ header {
         animation-name: animation-img-carousel-phone;
         animation-duration: 2s;
       }
+
       .uk-cover {
         left: 0;
       }
@@ -2306,6 +2307,7 @@ header {
         transform: translate(-54%, -50%);
         font-size: 28px;
         font-weight: bold;
+        text-align: right;
 
         p {
           width: 514px;
@@ -2315,6 +2317,7 @@ header {
 
       &.template-3 {
         color: #4F7673;
+        text-align: right;
 
         p {
           width: 610px;
@@ -2643,6 +2646,12 @@ header {
       }
     }
     .section-1 {
+      &.template-2, &.template-3 {
+        img {
+          object-position: left;
+        }
+      }
+
       .right-content {
         width: calc(100% - 60px);
         margin-right: 30px;
@@ -2806,12 +2815,6 @@ header {
 
       img {
         height: 350px;
-      }
-
-      &.template-2, &.template-3 {
-        img {
-          object-position: left;
-        }
       }
 
       .right-content {
