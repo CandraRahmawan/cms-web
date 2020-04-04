@@ -2986,6 +2986,28 @@ header {
     font-size: 28px;
     margin-bottom: 0;
   }
+
+  @include tablet-view() {
+    width: 100%;
+    padding-top: 180px;
+    h1 {
+      font-size: 98px;
+    }
+    p {
+      font-size: 22px;
+    }
+  }
+
+  @include phone-view() {
+    width: 100%;
+    padding-top: 180px;
+    h1 {
+      font-size: 32px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
 }
 
 .not-found-page-image-wrapper {
@@ -3002,6 +3024,10 @@ header {
 
   .right {
     align-self: center;
+  }
+
+  @include tablet-view() {
+    margin-top: 100px;
   }
 }
 
