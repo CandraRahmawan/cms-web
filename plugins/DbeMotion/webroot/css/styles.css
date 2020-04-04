@@ -1628,7 +1628,7 @@ header {
             margin-left: -6px; }
   .product-detail-wrapper .section-3 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 1080px;
     margin: 80px auto 0 auto; }
     .product-detail-wrapper .section-3 h4 {
