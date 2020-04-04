@@ -1,7 +1,18 @@
+<?php
+$extract_img = !empty($product['img_path']) ? json_decode($product['img_path']) : [];
+$img_url = [];
+foreach ($extract_img as $subItem) {
+  $img_url[] = $subItem;
+}
+$top_image = isset($img_url[1]) ? $img_url[1] : '';
+$section_1_image = isset($img_url[2]) ? $img_url[2] : '';
+$section_2_image = isset($img_url[3]) ? $img_url[3] : '';
+?>
+
 <div class="product-detail-wrapper">
-    <div class="top-content">
+    <div class="top-content <?= !empty($top_image) ? '' : 'no-image' ?>">
       <?= $this->Element('scroll_text_absolute'); ?>
-        <img data-src="<?= $this->Url->assetUrl('/images/template_1/top_image.jpg') ?>" uk-img/>
+        <img data-src="<?= $full_base_admin_url . $top_image; ?>" uk-img/>
         <div class="content-info-wrapper">
           <?= $this->Html->link(
             '<span uk-icon="icon: chevron-left; ratio:1.8" />',
@@ -21,23 +32,35 @@
         ['escape' => false, 'class' => 'show-mobile']
       ); ?>
     </div>
-    <div class="section-1">
-      <?= $this->Html->image('/images/template_1/section_1_img.jpg'); ?>
-        <div class="right-bg-color-skew hide-mobile"></div>
-        <div class="right-content">
-          <?= $product['description_1']; ?>
-        </div>
-    </div>
-    <div class="section-2 blue-grey">
-        <div class="content-wrapper">
-            <div class="left-content">
-              <?= $product['description_2']; ?>
-            </div>
-            <div class="right-content">
-              <?= $this->Html->image('/images/template_1/section_2_img.png'); ?>
-            </div>
-        </div>
-    </div>
+  <?php
+  if (!empty($section_1_image)):
+    ?>
+      <div class="section-1">
+          <img data-src="<?= $full_base_admin_url . $section_1_image; ?>" uk-img/>
+          <div class="right-bg-color-skew hide-mobile"></div>
+          <div class="right-content">
+            <?= $product['description_1']; ?>
+          </div>
+      </div>
+  <?php
+  endif;
+  ?>
+  <?php
+  if (!empty($product['description_2']) || !empty($section_2_image)):
+    ?>
+      <div class="section-2 blue-grey">
+          <div class="content-wrapper">
+              <div class="left-content">
+                <?= $product['description_2']; ?>
+              </div>
+              <div class="right-content">
+                  <img data-src="<?= $full_base_admin_url . $section_2_image; ?>" uk-img/>
+              </div>
+          </div>
+      </div>
+  <?php
+  endif;
+  ?>
     <div class="section-3">
       <?php
       if (!empty($product['specification'])) {

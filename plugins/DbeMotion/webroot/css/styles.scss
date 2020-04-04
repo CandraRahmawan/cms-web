@@ -2188,8 +2188,26 @@ header {
   .top-content {
     position: relative;
 
+    &.no-image {
+      min-height: 450px;
+
+      .content-info-wrapper {
+        padding: 120px 0;
+        margin: 0 auto;
+        position: unset;
+        transform: unset;
+
+        a {
+          right: 10%;
+          top: 45%;
+        }
+      }
+    }
+
     img {
       width: 100%;
+      min-height: 650px;
+      max-height: 750px;
       object-fit: cover;
     }
 
@@ -2242,7 +2260,7 @@ header {
     overflow: hidden;
 
     img {
-      height: auto;
+      height: 500px;
       width: 100%;
       object-fit: cover;
     }
@@ -2572,6 +2590,24 @@ header {
 
   @include tablet-view() {
     .top-content {
+
+      &.no-image {
+        min-height: 370px;
+
+        .content-info-wrapper {
+          padding: 120px 0;
+
+          a {
+            right: 10%;
+            top: 45%;
+          }
+        }
+
+        img {
+          height: auto;
+        }
+      }
+
       .content-info-wrapper {
         width: calc(100% - 60px);
         top: 60%;
@@ -2721,12 +2757,8 @@ header {
 
   @include phone-view() {
     .top-content {
-      img {
-        height: 100vh;
-      }
-
       a {
-        top: 55%;
+        top: 45%;
         right: 18px;
       }
 
