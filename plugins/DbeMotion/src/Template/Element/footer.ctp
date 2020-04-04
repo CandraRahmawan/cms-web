@@ -2,7 +2,7 @@
     <div class="wrapper-section">
         <div class="left-footer">
           <?= $this->Html->link(
-            $this->Html->image('/images/logo.png'),
+            $this->Html->image($settings['image_logo']),
             '/',
             ['escape' => false]
           ); ?>
@@ -69,7 +69,7 @@
     </div>
     <div class="bottom-footer">
         <div>
-            dBE acoustics 2020
+            dbE acoustics <?= date('Y'); ?>
         </div>
     </div>
 </footer>

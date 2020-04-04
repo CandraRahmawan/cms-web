@@ -1,7 +1,7 @@
 <header>
     <div class="logo">
         <a href="<?= $this->Utility->buildUrl('/'); ?>">
-          <?= $this->Html->image('/images/logo.png'); ?>
+          <?= $this->Html->image($settings['image_logo']); ?>
         </a>
     </div>
     <div class="burger-menu">

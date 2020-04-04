@@ -2,7 +2,7 @@
     <div class="uk-offcanvas-bar">
         <div class="menu-fullbar-header">
           <?= $this->Html->link(
-            $this->Html->image('/images/logo.png'),
+            $this->Html->image($settings['image_logo']),
             '/',
             ['escape' => false]
           ); ?>
