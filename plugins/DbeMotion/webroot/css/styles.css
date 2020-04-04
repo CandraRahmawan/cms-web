@@ -101,6 +101,24 @@ label.error {
   font-style: italic;
   font-size: 11px; }
 
+@keyframes animation-img-carousel {
+  from {
+    left: -500px; }
+  to {
+    left: 30px; } }
+
+@keyframes animation-img-carousel-phone {
+  from {
+    left: -500px; }
+  to {
+    left: 0; } }
+
+@keyframes animation-img-carousel-featured {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 .blue-grey {
   background-color: #EEEFF4; }
 
@@ -244,8 +262,6 @@ header {
 
 .top-image {
   position: relative; }
-  .top-image.show-mobile {
-    display: none; }
   .top-image .text-image-centre {
     color: #fff;
     position: absolute;
@@ -254,7 +270,9 @@ header {
     transform: translate(-50%, -50%);
     letter-spacing: 4px;
     font-weight: 300;
-    text-align: center; }
+    text-align: center;
+    animation-name: animation-img-carousel-featured;
+    animation-duration: 4s; }
     .top-image .text-image-centre span {
       font-size: 20px; }
     .top-image .text-image-centre .box-text {
@@ -268,7 +286,9 @@ header {
     position: absolute;
     top: 50%;
     left: 30px;
-    z-index: 1; }
+    z-index: 1;
+    animation-name: animation-img-carousel;
+    animation-duration: 2s; }
     .top-image .uk-slideshow-items .text-title h1 {
       font-size: 140px;
       margin-top: 0; }
@@ -303,7 +323,9 @@ header {
       top: 120px;
       width: 100%;
       text-align: center;
-      left: 0; } }
+      left: 0;
+      animation-name: animation-img-carousel-phone;
+      animation-duration: 2s; } }
 
 .home-section-1 {
   max-width: 1210px;
@@ -575,8 +597,6 @@ header {
 .where-to-buy-wrapper {
   width: 1080px;
   margin: 180px auto 0 auto; }
-  .where-to-buy-wrapper .show-mobile {
-    display: none; }
   .where-to-buy-wrapper h1 {
     font-weight: bold;
     margin-bottom: 92px;
@@ -969,8 +989,6 @@ header {
     width: 1080px; }
     .contact-page-wrapper .contact-page-bottom .content-top .left-content, .contact-page-wrapper .contact-page-bottom .content-top .right-content {
       width: 45%; }
-      .contact-page-wrapper .contact-page-bottom .content-top .left-content .show-mobile, .contact-page-wrapper .contact-page-bottom .content-top .right-content .show-mobile {
-        display: none; }
   .contact-page-wrapper .contact-page-bottom .content-bottom {
     display: flex;
     justify-content: space-between;
@@ -1108,8 +1126,6 @@ header {
       display: flex;
       justify-content: center;
       align-items: center; }
-      .review-wrapper .youtube-section-wrapper .logo-youtube.show-mobile {
-        display: none; }
       .review-wrapper .youtube-section-wrapper .logo-youtube div {
         margin-left: 40px;
         margin-bottom: -24px;

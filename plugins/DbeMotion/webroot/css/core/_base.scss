@@ -16,3 +16,30 @@ $blueGreyColor: #EEEFF4;
     @content;
   }
 }
+
+@keyframes animation-img-carousel {
+  from {
+    left: -500px;
+  }
+  to {
+    left: 30px;
+  }
+}
+
+@keyframes animation-img-carousel-phone {
+  from {
+    left: -500px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes animation-img-carousel-featured {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
