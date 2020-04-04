@@ -294,16 +294,16 @@ header {
     .top-image .uk-slideshow-items .text-title span {
       font-size: 18px; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
-    .top-image.show-mobile {
-      display: block; }
-      .top-image.show-mobile img {
-        height: 100vh;
-        object-fit: cover; }
-      .top-image.show-mobile .text-image-centre .box-text {
-        width: 220px;
-        font-size: 12px;
-        padding: 12px;
-        font-weight: 500; } }
+    .top-image .text-image-centre .box-text {
+      width: 220px;
+      font-size: 12px;
+      padding: 12px;
+      font-weight: 500; }
+    .top-image .uk-slideshow-items .text-title {
+      top: 120px;
+      width: 100%;
+      text-align: center;
+      left: 0; } }
 
 .home-section-1 {
   max-width: 1210px;
@@ -1216,7 +1216,8 @@ header {
     .product-list-wrapper .top-content img {
       width: 100%;
       object-fit: cover;
-      min-height: 670px; }
+      min-height: 650px;
+      max-height: 750px; }
     .product-list-wrapper .top-content a {
       position: absolute;
       top: 50%;
