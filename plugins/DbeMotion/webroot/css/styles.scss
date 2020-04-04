@@ -2188,6 +2188,13 @@ header {
   .top-content {
     position: relative;
 
+    img {
+      width: 100%;
+      min-height: 650px;
+      max-height: 750px;
+      object-fit: cover;
+    }
+
     &.no-image {
       min-height: 450px;
 
@@ -2202,13 +2209,11 @@ header {
           top: 45%;
         }
       }
-    }
 
-    img {
-      width: 100%;
-      min-height: 650px;
-      max-height: 750px;
-      object-fit: cover;
+      img {
+        min-height: auto;
+        max-height: unset;
+      }
     }
 
     a {
@@ -2585,7 +2590,6 @@ header {
 
   .scroll-text-absolute {
     bottom: 100px !important;
-    z-index: -1;
   }
 
   @include tablet-view() {

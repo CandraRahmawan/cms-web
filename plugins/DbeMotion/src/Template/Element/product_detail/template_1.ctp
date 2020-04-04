@@ -44,8 +44,6 @@ $section_2_image = isset($img_url[3]) ? $img_url[3] : '';
       </div>
   <?php
   endif;
-  ?>
-  <?php
   if (!empty($product['description_2']) || !empty($section_2_image)):
     ?>
       <div class="section-2 blue-grey">
