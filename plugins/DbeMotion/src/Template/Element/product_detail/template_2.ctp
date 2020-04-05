@@ -18,6 +18,9 @@ $section_1_image = isset($img_url[2]) ? $img_url[2] : '';
             ['escape' => false, 'class' => 'hide-mobile']
           ); ?>
             <div class="title-wrapper template-2">
+              <div>
+                <?= $this->Html->tag('h3', $product['subtitle']) ?>
+              </div>
               <?= $this->Html->tag('h1', $product['name']) ?>
             </div>
         </div>

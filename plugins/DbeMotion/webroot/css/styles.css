@@ -1484,6 +1484,8 @@ header {
           width: 150px;
           font-weight: bold;
           letter-spacing: 2px; }
+      .product-detail-wrapper .top-content .content-info-wrapper .title-wrapper.template-2 h3 {
+        font-size: 32px; }
   .product-detail-wrapper .section-1 {
     position: relative;
     overflow: hidden; }
@@ -1817,6 +1819,8 @@ header {
       .product-detail-wrapper .top-content .content-info-wrapper .title-wrapper.template-2 h1 {
         font-size: 38px;
         width: 100%; }
+      .product-detail-wrapper .top-content .content-info-wrapper .title-wrapper.template-2 h3 {
+        font-size: 22px; }
       .product-detail-wrapper .top-content .content-info-wrapper .title-wrapper.template-3 h1 {
         width: auto; }
     .product-detail-wrapper .section-1 {
