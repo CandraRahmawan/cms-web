@@ -98,7 +98,7 @@ class PageController extends PagesController {
   }
   
   private function __parseDomSpecificationForTemplate3($html) {
-    $dom = HtmlDomParser::str_get_html($html);
+    $dom = HtmlDomParser::str_get_html(!empty($html) ? $html : '<div></div>');
     $specification = [];
     foreach ($dom->find('h2') as $index => $element) {
       $specification[$index]['title'] = $element->plaintext;
