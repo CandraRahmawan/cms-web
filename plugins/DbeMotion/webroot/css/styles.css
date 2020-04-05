@@ -1601,6 +1601,8 @@ header {
         padding: 12px 0; }
         .product-detail-wrapper .section-2 .specification-wrapper.template-2 table td:last-child {
           text-align: right; }
+        .product-detail-wrapper .section-2 .specification-wrapper.template-2 table td:first-child {
+          text-align: left; }
   .product-detail-wrapper .section-2 .specification-wrapper.template-3 {
     width: 1080px;
     margin: 50px auto 0 auto;
@@ -1838,7 +1840,7 @@ header {
           font-size: 16px;
           width: auto;
           color: #191818;
-          margin: 18px;
+          margin: 18px 18px 52px 18px;
           line-height: 26px;
           text-align: center; }
         .product-detail-wrapper .section-1 .right-content.template-3 {
