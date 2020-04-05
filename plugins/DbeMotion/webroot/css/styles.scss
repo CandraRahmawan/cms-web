@@ -2421,6 +2421,27 @@ header {
         p {
           width: 430px;
         }
+
+        table {
+          width: 50% !important;
+          margin-top: 30px;
+          border-collapse: collapse;
+
+          tr {
+            &:first-child {
+              border-top: 1px solid $semiBlackColor;
+            }
+          }
+
+          td {
+            border-bottom: 1px solid $semiBlackColor;
+            padding: 12px 0;
+
+            &:last-child {
+              text-align: right;
+            }
+          }
+        }
       }
 
       &.template-3 {
@@ -2722,6 +2743,10 @@ header {
 
           p {
             width: 100%;
+          }
+
+          table {
+            width: 100% !important;
           }
         }
 
