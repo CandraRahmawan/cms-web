@@ -46,16 +46,18 @@ $section_1_image = isset($img_url[2]) ? $img_url[2] : '';
         <div class="specification-wrapper template-3">
           <?php
           foreach ($product['specification'] as $spec) {
-            echo '<div class="specification-list">';
-            echo $this->Html->tag('h2', $spec['title']);
-            echo $this->Html->tag('p', $spec['description']);
-            echo '<div class="specification">';
-            echo $this->Html->tag('h4', 'Specification');
-            echo '<table border="0">';
-            echo $spec['specification'];
-            echo '</table>';
-            echo '</div>';
-            echo '</div>';
+            if (!empty($spec['title']) && !empty($spec['description'] && !empty($spec['specification']))) {
+              echo '<div class="specification-list">';
+              echo $this->Html->tag('h2', $spec['title']);
+              echo $this->Html->tag('p', $spec['description']);
+              echo '<div class="specification">';
+              echo $this->Html->tag('h4', 'Specification');
+              echo '<table border="0">';
+              echo $spec['specification'];
+              echo '</table>';
+              echo '</div>';
+              echo '</div>';
+            }
           }
           ?>
         </div>
