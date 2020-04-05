@@ -44,15 +44,28 @@ $section_1_image = isset($img_url[2]) ? $img_url[2] : '';
           <?= $product['description_2']; ?>
         </div>
         <div class="specification-wrapper template-3">
-          <?= $product['specification']; ?>
+          <?php
+          foreach ($product['specification'] as $spec) {
+            echo '<div class="specification-list">';
+            echo $this->Html->tag('h2', $spec['title']);
+            echo $this->Html->tag('p', $spec['description']);
+            echo '<div class="specification">';
+            echo $this->Html->tag('h4', 'Specification');
+            echo '<table border="0">';
+            echo $spec['specification'];
+            echo '</table>';
+            echo '</div>';
+            echo '</div>';
+          }
+          ?>
         </div>
+      <?php
+      if (!empty($product['additional_info'])) {
+        echo '<div class="section-3 template-3">';
+        echo $this->Html->tag('h4', 'Available Size and Type');
+        echo $product['additional_info'];
+        echo '</div>';
+      }
+      ?>
     </div>
-  <?php
-  if (!empty($product['additional_info'])) {
-    echo '<div class="section-3 template-3">';
-    echo $this->Html->tag('h4', 'Available Size and Type');
-    echo $product['additional_info'];
-    echo '</div>';
-  }
-  ?>
 </div>

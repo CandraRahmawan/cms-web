@@ -3,6 +3,8 @@
 namespace DbeMotion\Controller;
 
 use App\Controller\PagesController;
+use KubAT\PhpSimple\HtmlDomParser;
+use Cake\Utility\Hash;
 
 class PageController extends PagesController {
   
@@ -82,6 +84,10 @@ class PageController extends PagesController {
         ]
       ])->where(['Products.unique_id' => $id[0], 'category.status' => 'Y', 'Products.status' => 'Y'])
         ->first();
+      
+      if ($product['render_template_filename'] == 'template_3') {
+        $product['specification'] = $this->__parseDomSpecificationForTemplate3($product['specification']);
+      }
       $this->set(compact('product'));
       
       if (empty($product)) {
@@ -89,5 +95,21 @@ class PageController extends PagesController {
         $this->render('/Page/404_page');
       }
     }
+  }
+  
+  private function __parseDomSpecificationForTemplate3($html) {
+    $dom = HtmlDomParser::str_get_html($html);
+    $specification = [];
+    foreach ($dom->find('h2') as $index => $element) {
+      $specification[$index]['title'] = $element->plaintext;
+    }
+    foreach ($dom->find('p') as $index => $element) {
+      $specification[$index]['description'] = $element->plaintext;
+    }
+    foreach ($dom->find('table') as $index => $element) {
+      $specification[$index]['specification'] = trim($element->innertext);
+    }
+    
+    return $specification;
   }
 }
