@@ -1646,7 +1646,7 @@ header {
             margin-left: -6px; }
   .product-detail-wrapper .section-3 {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 1080px;
     margin: 80px auto 0 auto; }
     .product-detail-wrapper .section-3 h4 {
@@ -1680,7 +1680,7 @@ header {
     .product-detail-wrapper .section-3 .right-content {
       width: 45%;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       flex-direction: column; }
       .product-detail-wrapper .section-3 .right-content .top {
         border: 1px solid grey;

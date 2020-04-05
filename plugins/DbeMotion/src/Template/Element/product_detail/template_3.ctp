@@ -61,13 +61,13 @@ $section_1_image = isset($img_url[2]) ? $img_url[2] : '';
           }
           ?>
         </div>
-      <?php
-      if (!empty($product['additional_info'])) {
-        echo '<div class="section-3 template-3">';
-        echo $this->Html->tag('h4', 'Available Size and Type');
-        echo $product['additional_info'];
-        echo '</div>';
-      }
-      ?>
     </div>
+  <?php
+  if (!empty($product['additional_info'])) {
+    echo '<div class="section-3 template-3">';
+    echo $this->Html->tag('h4', 'Available Size and Type');
+    echo $product['additional_info'];
+    echo '</div>';
+  }
+  ?>
 </div>

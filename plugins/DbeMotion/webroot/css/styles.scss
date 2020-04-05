@@ -2524,7 +2524,7 @@ header {
 
   .section-3 {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: $middleWidth;
     margin: 80px auto 0 auto;
 
@@ -2575,7 +2575,7 @@ header {
     .right-content {
       width: 45%;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       flex-direction: column;
 
       .top {

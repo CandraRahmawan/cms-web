@@ -60,14 +60,14 @@ $section_2_image = isset($img_url[3]) ? $img_url[3] : '';
   endif;
   ?>
     <div class="section-3">
-      <?php
-      if (!empty($product['specification'])) {
-        echo '<div class="left-content">';
-        echo '<h3>Specification</h3>';
-        echo $product['specification'];
-        echo '</div>';
-      }
-      ?>
+        <div class="left-content">
+          <?php
+          if (!empty($product['specification'])) {
+            echo '<h3>Specification</h3>';
+            echo $product['specification'];
+          }
+          ?>
+        </div>
         <div class="right-content">
           <?php
           if (!empty($product['feature_note'])) {

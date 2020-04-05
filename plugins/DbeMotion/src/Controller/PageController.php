@@ -68,7 +68,7 @@ class PageController extends PagesController {
         ]
       ])
         ->where(['Category.status' => 'Y', 'Products.status' => 'Y', 'Products.category_id' => $category_id])
-        ->order(['Products.product_id' => 'DESC']), ['limit' => 6]);
+        ->order(['Products.updated_date' => 'DESC']), ['limit' => 6]);
       $this->set(compact('product', 'featured', 'category'));
     }
   }
