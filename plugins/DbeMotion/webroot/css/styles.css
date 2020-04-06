@@ -1417,6 +1417,8 @@ header {
           font-size: 24px; }
         .product-list-wrapper .top-content .content-info-wrapper .title-wrapper svg {
           width: 24px; }
+        .product-list-wrapper .top-content .content-info-wrapper .title-wrapper .subtitle-wrapper h3 {
+          width: 90%; }
     .product-list-wrapper .card-list-wrapper {
       padding: 0 18px; }
       .product-list-wrapper .card-list-wrapper ul {
