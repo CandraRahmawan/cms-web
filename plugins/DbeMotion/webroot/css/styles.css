@@ -1128,6 +1128,8 @@ header {
       display: flex;
       justify-content: center;
       align-items: center; }
+      .review-wrapper .youtube-section-wrapper .logo-youtube.show-mobile {
+        display: none; }
       .review-wrapper .youtube-section-wrapper .logo-youtube div {
         margin-left: 40px;
         margin-bottom: -24px;
