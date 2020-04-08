@@ -3,7 +3,7 @@ echo $this->Html->docType();
 if (!empty($content[0]['picture'])) {
   $og_image = $this->Utility->basePathImgArticle($path_url_admin, $content[0]['cat']['category_id']) . $content[0]['picture'];
 } else {
-  $og_image = isset($settings['image_logo']) ? $settings['image_logo'] : '';
+  $og_image = !empty($og_image) ? $og_image : $settings['image_logo'];
 }
 $title = !empty($seo['meta_title']) ? $seo['meta_title'] : '';
 $description = !empty($seo['meta_description']) ? $seo['meta_description'] : '';
@@ -21,7 +21,7 @@ $description = !empty($seo['meta_description']) ? $seo['meta_description'] : '';
   echo $this->Html->meta(['property' => 'og:description', 'content' => $description]);
   echo $this->Html->meta(['property' => 'og:url', 'content' => $this->Utility->buildFullUrl($this->request->here)]);
   echo $this->Html->meta(['property' => 'og:site_name', 'content' => isset($settings['company_title']) ? $settings['company_title'] : '']);
-  echo $this->Html->meta(['name' => 'google-site-verification', 'content' => 'Kc4ZjRsxpVhsEscBm1x8RoCwM50FuG9c68hb6okuAQc']);
+  echo $this->Html->meta(['name' => 'google-site-verification', 'content' => '']);
   echo $this->Html->meta(['property' => 'og:image', 'content' => $og_image]);
   echo $this->Element('favicon');
   echo $this->fetch('css');

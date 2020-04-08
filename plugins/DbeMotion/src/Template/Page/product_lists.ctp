@@ -1,31 +1,7 @@
-<?php
-$title = '';
-$subtitle = '';
-$description = '';
-$img_url = '';
-$bg_color = '#fff';
-$featuredSize = 0;
-$explode_category_url = explode('-', $this->request->category);
-foreach ($featured as $item) {
-  $value_1 = json_decode($item['detail']['value_1']);
-  $value_2 = json_decode($item['detail']['value_2']);
-  if (sizeof($explode_category_url) > 0) {
-    if ($explode_category_url[0] == $value_1->id) {
-      $title = $value_2->title;
-      $subtitle = $value_2->subtitle;
-      $description = $value_2->description;
-      $bg_color = $value_2->bg_color;
-      $img_url = $item['detail']['value_3'];
-      $featuredSize++;
-    }
-  }
-}
-?>
-
 <div class="product-list-wrapper">
     <div class="top-content <?= $featuredSize > 0 ? '' : 'no-featured'; ?>">
       <?= $this->Element('scroll_text_absolute'); ?>
-        <img data-src="<?= $img_url; ?>" uk-img/>
+        <img data-src="<?= $featured['img_url']; ?>" uk-img/>
         <div class="content-info-wrapper">
             <div class="title-wrapper">
                 <h1>Product</h1>
@@ -45,15 +21,15 @@ foreach ($featured as $item) {
           <?php
           if ($featuredSize > 0):
             ?>
-              <div class="content-color" style="background-color: <?= $bg_color; ?>">
+              <div class="content-color" style="background-color: <?= $featured['bg_color']; ?>">
                   <div class="content-wrapper">
                       <div class="left-content">
-                        <?= $description; ?>
+                        <?= $featured['description']; ?>
                       </div>
                       <div class="right-content">
                         <?php
-                        echo $this->Html->tag('h2', $title);
-                        echo $this->Html->tag('span', $subtitle);
+                        echo $this->Html->tag('h2', $featured['title']);
+                        echo $this->Html->tag('span', $featured['subtitle']);
                         ?>
                       </div>
                   </div>

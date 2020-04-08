@@ -15,6 +15,7 @@ class AppController extends Controller {
   public $pass;
   public $baseUrl;
   public $is_404_page = false;
+  public $setSeo;
   
   public function initialize() {
     parent::initialize();
@@ -203,6 +204,10 @@ class AppController extends Controller {
       
       if (sizeof($seo) > 0) {
         $seo = $this->Seo->get($seo[0]['seo_id']);
+      }
+      
+      if (!empty($this->setSeo)) {
+        $seo = $this->setSeo;
       }
     }
     

@@ -5,6 +5,7 @@ namespace DbeMotion\Controller;
 use App\Controller\PagesController;
 use KubAT\PhpSimple\HtmlDomParser;
 use Cake\Utility\Hash;
+use Cake\Core\Configure;
 
 class PageController extends PagesController {
   
@@ -53,8 +54,34 @@ class PageController extends PagesController {
       $category_id = $category_url[0];
     }
     
-    $featured = $this->plugin('featured_category_product');
+    $featured_plugin = $this->plugin('featured_category_product');
     $category = $this->Category->find()->select(['name'])->where(['status' => 'Y', 'category_id' => $category_id])->first();
+    
+    $featured = [
+      'title' => '',
+      'subtitle' => '',
+      'description' => '',
+      'img_url' => '',
+      'bg_color' => ''
+    ];
+    $featuredSize = 0;
+    $explode_category_url = explode('-', $this->request->category);
+    foreach ($featured_plugin as $item) {
+      $value_1 = json_decode($item['detail']['value_1']);
+      $value_2 = json_decode($item['detail']['value_2']);
+      if (sizeof($explode_category_url) > 0) {
+        if ($explode_category_url[0] == $value_1->id) {
+          $featured = [
+            'title' => $value_2->title,
+            'subtitle' => $value_2->subtitle,
+            'description' => $value_2->description,
+            'img_url' => $item['detail']['value_3'],
+            'bg_color' => $value_2->bg_color
+          ];
+          $featuredSize++;
+        }
+      }
+    }
     
     if (empty($category)) {
       $this->is_404_page = true;
@@ -69,7 +96,12 @@ class PageController extends PagesController {
       ])
         ->where(['Category.status' => 'Y', 'Products.status' => 'Y', 'Products.category_id' => $category_id])
         ->order(['Products.updated_date' => 'DESC']), ['limit' => 6]);
-      $this->set(compact('product', 'featured', 'category'));
+      
+      $this->setSeo['meta_title'] = !empty($featured['title']) ? $featured['title'] : $category['name'];
+      $this->setSeo['meta_description'] = !empty($featured['description']) ? $featured['description'] : 'Product List of DBE Acoustics';
+      $og_image = $featured['img_url'];
+      
+      $this->set(compact('product', 'featuredSize', 'featured', 'category', 'og_image'));
     }
   }
   
@@ -88,7 +120,23 @@ class PageController extends PagesController {
       if ($product['render_template_filename'] == 'template_3') {
         $product['specification'] = $this->__parseDomSpecificationForTemplate3($product['specification']);
       }
-      $this->set(compact('product'));
+      
+      $full_base_admin_url = Configure::read('App.fullBaseAdminUrl');
+      $extract_img = !empty($product['img_path']) ? json_decode($product['img_path']) : [];
+      $img_url = [];
+      foreach ($extract_img as $subItem) {
+        $img_url[] = $subItem;
+      }
+      $srp_img = isset($img_url[0]) ? $full_base_admin_url . $img_url[0] : '';
+      $detail_image['top_image'] = isset($img_url[1]) ? $full_base_admin_url . $img_url[1] : '';
+      $detail_image['section_1_image'] = isset($img_url[2]) ? $full_base_admin_url . $img_url[2] : '';
+      $detail_image['section_2_image'] = isset($img_url[3]) ? $full_base_admin_url . $img_url[3] : '';
+      
+      $this->setSeo['meta_title'] = $product['name'];
+      $this->setSeo['meta_description'] = $product['subtitle'];
+      $og_image = !empty($detail_image['top_image']) ? $detail_image['top_image'] : $srp_img;
+      
+      $this->set(compact('product', 'og_image', 'detail_image'));
       
       if (empty($product)) {
         $this->is_404_page = true;
