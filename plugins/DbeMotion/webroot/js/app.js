@@ -67,7 +67,7 @@ $(document).ready(function () {
                 }
             }).done(function (data) {
                 alert(data);
-                location.reload();
+                location.reload(true);
             }).fail(function (jqXHR) {
                 $(':button').html('Submit');
                 alert('Error Internal Client');
@@ -138,7 +138,7 @@ $(document).ready(function () {
                 }
             }).done(function (data) {
                 alert(data);
-                location.reload();
+                location.reload(true);
             }).fail(function (jqXHR) {
                 $(':button').html('Book Consultation');
                 alert('Error Internal Client');
