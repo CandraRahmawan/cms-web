@@ -4,8 +4,9 @@ if (!empty($top_slider)) {
   echo '<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">';
   echo '<ul class="uk-slideshow-items">';
   foreach ($top_slider as $slider) {
+    $cursor_link_style = !empty($slider['g']['link']) ? 'cursor:pointer' : '';
     if ($slider['t']['key'] == 'featured_top_image_carousel') {
-      echo '<li>';
+      echo '<li onclick="createLinkOpenNewTab(\'' . $slider['g']['link'] . '\')" style="' . $cursor_link_style . '">';
       echo '<img data-src="' . $full_base_admin_url . $slider['g']['path'] . '" uk-img uk-cover/>';
       echo '<div class="text-image-centre">';
       echo '<span>' . $slider['g']['description'] . '</span>';
@@ -13,7 +14,7 @@ if (!empty($top_slider)) {
       echo '</div>';
       echo '</li>';
     } else {
-      echo '<li>';
+      echo '<li onclick="createLinkOpenNewTab(\'' . $slider['g']['link'] . '\');" style="' . $cursor_link_style . '">';
       echo '<div class="text-title">';
       echo '<span>' . $slider['g']['description'] . '</span>';
       echo '<h1>' . $slider['g']['title'] . '</h1>';

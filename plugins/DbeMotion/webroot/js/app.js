@@ -157,3 +157,10 @@ function callbackValid(id_form) {
         });
     }
 }
+
+function createLinkOpenNewTab(linkUrl) {
+    if (linkUrl) {
+        window.open(linkUrl)
+    }
+    return false;
+}
