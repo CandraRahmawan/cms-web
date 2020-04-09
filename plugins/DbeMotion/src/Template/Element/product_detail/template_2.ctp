@@ -3,11 +3,10 @@
       <?= $this->Element('scroll_text_absolute'); ?>
         <img data-src="<?= $detail_image['top_image']; ?>" uk-img/>
         <div class="content-info-wrapper template-2">
-          <?= $this->Html->link(
-            '<span uk-icon="icon: chevron-left; ratio:1.8" />',
-            '/products/' . $this->request->params['category'] . '',
-            ['escape' => false, 'class' => 'hide-mobile']
-          ); ?>
+            <a href="#" class="hide-mobile"
+               onclick="backButtonDetailPage('<?= $this->Utility->buildFullUrl('/products/' . $this->request->params['category']); ?>')">
+                <span uk-icon="icon: chevron-left; ratio:1.8"/>
+            </a>
             <div class="title-wrapper template-2">
                 <div>
                   <?= $this->Html->tag('h3', $product['subtitle']) ?>
@@ -15,11 +14,10 @@
               <?= $this->Html->tag('h1', $product['name']) ?>
             </div>
         </div>
-      <?= $this->Html->link(
-        '<span uk-icon="icon: chevron-left; ratio:1" />',
-        '/products/' . $this->request->params['category'] . '',
-        ['escape' => false, 'class' => 'show-mobile']
-      ); ?>
+        <a href="#" class="show-mobile"
+           onclick="backButtonDetailPage('<?= $this->Utility->buildFullUrl('/products/' . $this->request->params['category']); ?>')">
+            <span uk-icon="icon: chevron-left; ratio:1"/>
+        </a>
     </div>
   <?php
   if (!empty($detail_image['section_1_image'])):

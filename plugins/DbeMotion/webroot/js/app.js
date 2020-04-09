@@ -164,3 +164,12 @@ function createLinkOpenNewTab(linkUrl) {
     }
     return false;
 }
+
+function backButtonDetailPage(url) {
+    const referrerUrl = window.document.referrer;
+    if (referrerUrl == "") {
+        window.location.href = url;
+    } else {
+        history.go(-1);
+    }
+}
