@@ -170,6 +170,6 @@ function backButtonDetailPage(url) {
     if (referrerUrl == "") {
         window.location.href = url;
     } else {
-        history.go(-1);
+        window.location.href = referrerUrl;
     }
 }
