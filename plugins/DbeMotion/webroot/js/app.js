@@ -167,7 +167,7 @@ function createLinkOpenNewTab(linkUrl) {
 
 function backButtonDetailPage(url) {
     const referrerUrl = window.document.referrer;
-    if (referrerUrl == "") {
+    if (referrerUrl == "" || referrerUrl == window.location.origin + '/') {
         window.location.href = url;
     } else {
         window.location.href = referrerUrl;
