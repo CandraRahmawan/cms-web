@@ -1112,7 +1112,6 @@ header {
 
 .warranty-information-wrapper {
   margin: 180px auto 0 auto;
-  height: calc(100vh - 180px);
   width: $middleWidth;
   color: $blackColor;
 
@@ -1348,7 +1347,7 @@ header {
 
   .contact-page-bottom {
     color: $blackColor;
-    height: 100vh;
+    padding: 120px 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
