@@ -12,7 +12,7 @@
                     <div>
                       <?= $this->Html->link(
                         '<span uk-icon="icon: chevron-left; ratio:1.8" />',
-                        '/products',
+                        '/products/',
                         ['escape' => false]
                       ); ?>
                     </div>
