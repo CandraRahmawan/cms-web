@@ -97,7 +97,7 @@ class PageController extends PagesController {
         ->where(['Category.status' => 'Y', 'Products.status' => 'Y', 'Products.category_id' => $category_id])
         ->order(['Products.updated_date' => 'DESC']), ['limit' => 6]);
       
-      $this->setSeo['meta_title'] = !empty($featured['title']) ? $featured['title'] : $category['name'];
+      $this->setSeo['meta_title'] = $category['name'];
       $this->setSeo['meta_description'] = !empty($featured['description']) ? $featured['description'] : 'Product List of DBE Acoustics';
       $og_image = $featured['img_url'];
       
