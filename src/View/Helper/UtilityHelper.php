@@ -21,7 +21,7 @@ class UtilityHelper extends Helper {
   
   public function buildFullUrl($url) {
     $queryBuilder = sizeof($this->request->query) > 0 ? '?' . http_build_query($this->request->query) : '';
-    $http = $this->request->env('HTTPS') ? 'https://' : '//';
+    $http = $this->request->env('IS_HTTPS') ? 'https://' : '//';
     if (!$this->isDevelopment()) {
       $url = str_replace($this->request->base, "", $url);
     }
