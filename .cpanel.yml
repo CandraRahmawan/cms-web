@@ -9,3 +9,4 @@ deployment:
     - /bin/cp -R webroot $DEPLOYPATH
     - /bin/cp -R plugins $DEPLOYPATH
     - /bin/cp -R config $DEPLOYPATH
+    - /bin/mkdir -p $DEPLOYPATH/logs
