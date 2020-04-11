@@ -105,6 +105,7 @@ echo $this->Html->script([
             }
             $('#page').val(page++);
         }).fail(function (jqXHR) {
+            $('.load-more-wrapper > .right-content').hide();
             $('.review-list').html('<div class="not-found-content">Error Load Reviews :(</h4>');
             console.log('error : ', jqXHR);
         });
