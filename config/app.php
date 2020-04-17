@@ -12,6 +12,11 @@ if (env('IS_HTTPS')) {
   $protocol = 'https://';
 }
 
+$withWWW = '';
+if (env('WITH_WWW')) {
+  $withWWW = 'www.';
+}
+
 return [
   /**
    * Debug Level:
@@ -63,6 +68,7 @@ return [
     'wwwRoot' => WWW_ROOT,
     //'baseUrl' => env('SCRIPT_NAME'),
     'fullBaseAdminUrl' => $protocol . $_SERVER["SERVER_NAME"] . env('ADMIN_PATH_URL'),
+    'baseWebUrl' => $protocol . $withWWW . $_SERVER["SERVER_NAME"],
     'fullBaseUrl' => false,
     'imageBaseUrl' => 'img/',
     'cssBaseUrl' => 'css/',

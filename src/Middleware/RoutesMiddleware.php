@@ -2,6 +2,8 @@
 
 namespace App\Middleware;
 
+use Cake\Core\Configure;
+
 class RoutesMiddleware {
   
   public function __construct() {
@@ -17,7 +19,8 @@ class RoutesMiddleware {
       }
     }
     if (substr($requestUri, -1) != '/' && $except == false) {
-      return $response->withHeader('Location', $requestUri . "/");
+      return $response->withStatus(301)
+        ->withHeader('Location', Configure::read('App.baseWebUrl') . $requestUri . "/");
     }
     return $next($request, $response);
   }
