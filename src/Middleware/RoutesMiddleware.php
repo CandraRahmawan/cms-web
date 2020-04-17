@@ -11,7 +11,7 @@ class RoutesMiddleware {
   
   public function __invoke($request, $response, $next) {
     $requestUri = $_SERVER['REQUEST_URI'];
-    $exceptCharacter = ['.css', '.js', '.png', '.jpg', '.jpeg', '.json', '.svg', '.txt'];
+    $exceptCharacter = ['.css', '.js', '.png', '.jpg', '.jpeg', '.json', '.svg', '.txt', '.xml'];
     $except = false;
     foreach ($exceptCharacter as $item) {
       if (strpos($requestUri, $item) !== false) {
