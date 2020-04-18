@@ -19,7 +19,7 @@ class RoutesMiddleware {
         $except = true;
       }
     }
-    if ((substr($requestUri, -1) != '/' && $except == false) || ($except == false && strstr($serverName, 'www'))) {
+    if ((substr($requestUri, -1) != '/' && $except == false) || ($except == false && !strstr($serverName, 'www'))) {
       return $response->withStatus(301)
         ->withHeader('Location', Configure::read('App.baseWebUrl') . $requestUri . "/");
     }
