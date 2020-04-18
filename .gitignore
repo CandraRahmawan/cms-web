@@ -1,7 +1,7 @@
 /logs/
 /tmp/
-/nbproject/
 /.idea
 /config/.env
 /node_modules
 .htaccess
+/plugins/**/webroot/favicon/*
