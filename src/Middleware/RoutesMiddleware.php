@@ -19,9 +19,16 @@ class RoutesMiddleware {
         $except = true;
       }
     }
-    if ((substr($requestUri, -1) != '/' && $except == false) || ($except == false && !strstr($serverName, 'www'))) {
-      return $response->withStatus(301)
-        ->withHeader('Location', Configure::read('App.baseWebUrl') . $requestUri . "/");
+    if ($except == false) {
+      if (Configure::read('App.withWWW') && !strstr($serverName, 'www')) {
+        return $response->withStatus(301)
+          ->withHeader('Location', Configure::read('App.baseWebUrl') . $requestUri);
+      }
+      
+      if (substr($requestUri, -1) != '/') {
+        return $response->withStatus(301)
+          ->withHeader('Location', Configure::read('App.baseWebUrl') . $requestUri . "/");
+      }
     }
     
     return $next($request, $response);

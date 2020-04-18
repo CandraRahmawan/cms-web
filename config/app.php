@@ -67,6 +67,7 @@ return [
     'webroot' => 'webroot',
     'wwwRoot' => WWW_ROOT,
     //'baseUrl' => env('SCRIPT_NAME'),
+    'withWWW' => env('WITH_WWW'),
     'fullBaseAdminUrl' => $protocol . $_SERVER["SERVER_NAME"] . env('ADMIN_PATH_URL'),
     'baseWebUrl' => $protocol . $withWWW . $_SERVER["SERVER_NAME"],
     'fullBaseUrl' => false,
