@@ -13,7 +13,7 @@ if (env('IS_HTTPS')) {
 }
 
 $withWWW = '';
-if (env('WITH_WWW')) {
+if (env('WITH_WWW') && !strstr($_SERVER["SERVER_NAME"], 'www')) {
   $withWWW = 'www.';
 }
 
