@@ -16,7 +16,7 @@
 - Bundle css minify compressed run `npx node-sass plugins/{PluginName}/webroot/css/styles.scss plugins/{PluginName}/webroot/css/styles.min.css --output-style compressed`.
 
 #### Depedencies :
-- [admin-cms](https://bitbucket.org/candra_rahmawan/cms-admin/src/master/)
+- [admin-cms](https://github.com/CandraRahmawan/cms-admin)
 
 #### Configuration :
 - Copy files .htaccess.default into .htaccess
