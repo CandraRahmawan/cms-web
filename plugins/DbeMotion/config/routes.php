@@ -16,4 +16,5 @@ Router::scope('/', ['plugin' => 'DbeMotion'], function (RouteBuilder $routes) {
   $routes->connect('/review', ['controller' => 'Page', 'action' => 'review']);
   $routes->connect('/warranty', ['controller' => 'Page', 'action' => 'warrantyInformation']);
   $routes->connect('/contact', ['controller' => 'Page', 'action' => 'contact']);
+  $routes->connect('/download-driver', ['controller' => 'Page', 'action' => 'downloadDriver']);
 });

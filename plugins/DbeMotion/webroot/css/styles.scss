@@ -3020,6 +3020,42 @@ header {
   }
 }
 
+.driver-manual-wrapper {
+  margin: 180px auto 0 auto;
+
+  .back-navigation {
+    margin-left: 30px;
+
+    a {
+      color: #191818;
+      font-size: 24px;
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      span {
+        margin-left: 24px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .content-wrapper {
+    width: 1080px;
+    margin: 80px auto 0 auto;
+
+    h2 {
+      font-size: 35px;
+    }
+
+    .manual-wrapper {
+      margin-top: 80px;
+    }
+  }
+}
+
 .not-found-wrapper {
   padding-top: 100px;
   margin: 0 auto;

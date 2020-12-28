@@ -1909,6 +1909,27 @@ header {
       .product-detail-wrapper .section-3 .right-content .bottom .text-features span {
         width: auto; } }
 
+.driver-manual-wrapper {
+  margin: 180px auto 0 auto; }
+  .driver-manual-wrapper .back-navigation {
+    margin-left: 30px; }
+    .driver-manual-wrapper .back-navigation a {
+      color: #191818;
+      font-size: 24px;
+      font-weight: 600; }
+      .driver-manual-wrapper .back-navigation a:hover {
+        text-decoration: none; }
+      .driver-manual-wrapper .back-navigation a span {
+        margin-left: 24px;
+        vertical-align: middle; }
+  .driver-manual-wrapper .content-wrapper {
+    width: 1080px;
+    margin: 80px auto 0 auto; }
+    .driver-manual-wrapper .content-wrapper h2 {
+      font-size: 35px; }
+    .driver-manual-wrapper .content-wrapper .manual-wrapper {
+      margin-top: 80px; }
+
 .not-found-wrapper {
   padding-top: 100px;
   margin: 0 auto;

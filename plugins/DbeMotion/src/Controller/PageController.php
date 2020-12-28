@@ -46,6 +46,11 @@ class PageController extends PagesController {
     $this->set(compact('service_centre', 'contact'));
   }
   
+  public function downloadDriver() {
+    $content = $this->plugin('download_driver');
+    $this->set(compact('content'));
+  }
+  
   public function productLists() {
     $this->loadModel('Category');
     $category_id = 0;

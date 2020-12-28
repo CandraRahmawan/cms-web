@@ -1,3 +1,5 @@
+$('.product_select').select2();
+
 grecaptcha.ready(function () {
     grecaptcha.execute(captchaSiteKey, {action: 'form_submit'}).then(function (token) {
         $('#g-recaptcha-response').val(token);
