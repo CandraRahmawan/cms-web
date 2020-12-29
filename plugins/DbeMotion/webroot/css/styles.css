@@ -2015,6 +2015,9 @@ header {
         .driver-manual-wrapper .content-wrapper .download-description button:hover {
           color: #000;
           background-color: #f5f6fa; }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+          .driver-manual-wrapper .content-wrapper .download-description button {
+            width: 100%; } }
       .driver-manual-wrapper .content-wrapper .download-description .info {
         margin-top: 40px;
         font-size: 20px;

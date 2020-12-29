@@ -3127,6 +3127,10 @@ header {
           color: #000;
           background-color: #f5f6fa;
         }
+
+        @include phone-view() {
+          width: 100%;
+        }
       }
 
       .info {
