@@ -54,3 +54,27 @@ label {
     font-size: 11px;
   }
 }
+
+.select2-results__option {
+  font-size: 18px;
+}
+
+.select2-search--dropdown {
+ display: none;
+}
+
+.select2-results {
+  border-radius: unset;
+  border: 1px solid #000;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: #000 transparent transparent transparent;
+  margin-left: -15px;
+  border-width: 8px 6px 0 6px;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-width: 0 6px 8px 6px;
+  border-color: transparent transparent #000 transparent;
+}

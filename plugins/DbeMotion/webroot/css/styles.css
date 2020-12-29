@@ -101,6 +101,25 @@ label.error {
   font-style: italic;
   font-size: 11px; }
 
+.select2-results__option {
+  font-size: 18px; }
+
+.select2-search--dropdown {
+  display: none; }
+
+.select2-results {
+  border-radius: unset;
+  border: 1px solid #000; }
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: #000 transparent transparent transparent;
+  margin-left: -15px;
+  border-width: 8px 6px 0 6px; }
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-width: 0 6px 8px 6px;
+  border-color: transparent transparent #000 transparent; }
+
 @keyframes animation-img-carousel {
   from {
     left: -500px; }
@@ -1927,8 +1946,59 @@ header {
     margin: 80px auto 0 auto; }
     .driver-manual-wrapper .content-wrapper h2 {
       font-size: 35px; }
+    .driver-manual-wrapper .content-wrapper .filter-wrapper {
+      display: flex;
+      justify-content: space-between; }
+      .driver-manual-wrapper .content-wrapper .filter-wrapper input {
+        width: 100%;
+        margin: 0;
+        border: 1px solid #000;
+        padding-left: 12px; }
+      .driver-manual-wrapper .content-wrapper .filter-wrapper button {
+        background-color: #1471B5;
+        border-radius: unset; }
+        .driver-manual-wrapper .content-wrapper .filter-wrapper button:hover {
+          color: #fff;
+          background-color: #2980b9; }
+      .driver-manual-wrapper .content-wrapper .filter-wrapper .select2-container {
+        width: 280px !important;
+        font-size: 18px; }
+        .driver-manual-wrapper .content-wrapper .filter-wrapper .select2-container .select2-selection--single {
+          height: 50px;
+          border-radius: unset;
+          border: 1px solid #000; }
+      .driver-manual-wrapper .content-wrapper .filter-wrapper .select2-container--default .select2-selection--single .select2-selection__rendered {
+        line-height: 52px; }
+      .driver-manual-wrapper .content-wrapper .filter-wrapper .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 46px; }
+    .driver-manual-wrapper .content-wrapper .download-description {
+      margin-top: 100px; }
+      .driver-manual-wrapper .content-wrapper .download-description button {
+        background-color: transparent;
+        color: #191818;
+        border: 1px solid #000; }
+        .driver-manual-wrapper .content-wrapper .download-description button:hover {
+          color: #000;
+          background-color: #f5f6fa; }
+      .driver-manual-wrapper .content-wrapper .download-description .info {
+        margin-top: 40px;
+        font-size: 20px;
+        font-weight: 700;
+        color: #191818; }
     .driver-manual-wrapper .content-wrapper .manual-wrapper {
       margin-top: 80px; }
+      .driver-manual-wrapper .content-wrapper .manual-wrapper .uk-accordion {
+        border: 1px solid #707070; }
+        .driver-manual-wrapper .content-wrapper .manual-wrapper .uk-accordion .uk-accordion-title {
+          padding: 20px;
+          background-color: #EEEFF4; }
+        .driver-manual-wrapper .content-wrapper .manual-wrapper .uk-accordion .uk-open .uk-accordion-title {
+          border-bottom: 1px solid #707070; }
+        .driver-manual-wrapper .content-wrapper .manual-wrapper .uk-accordion .uk-accordion-content {
+          margin-top: 0;
+          margin-bottom: 14px; }
+          .driver-manual-wrapper .content-wrapper .manual-wrapper .uk-accordion .uk-accordion-content dt {
+            padding: 8px 20px; }
 
 .not-found-wrapper {
   padding-top: 100px;

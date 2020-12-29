@@ -3050,8 +3050,91 @@ header {
       font-size: 35px;
     }
 
+    .filter-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      input {
+        width: 100%;
+        margin: 0;
+        border: 1px solid #000;
+        padding-left: 12px;
+      }
+
+      button {
+        background-color: #1471B5;
+        border-radius: unset;
+        &:hover {
+          color: #fff;
+          background-color: #2980b9;
+        }
+      }
+
+      .select2-container {
+        width: 280px !important;
+        font-size: 18px;
+
+        .select2-selection--single {
+          height: 50px;
+          border-radius: unset;
+          border: 1px solid #000;
+        }
+      }
+
+      .select2-container--default .select2-selection--single .select2-selection__rendered {
+        line-height: 52px;
+      }
+
+      .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 46px;
+      }
+    }
+
+    .download-description {
+      margin-top: 100px;
+
+      button {
+        background-color: transparent;
+        color: #191818;
+        border: 1px solid #000;
+        &:hover {
+          color: #000;
+          background-color: #f5f6fa;
+        }
+      }
+
+      .info {
+        margin-top: 40px;
+        font-size: 20px;
+        font-weight: 700;
+        color: #191818;
+      }
+    }
+
     .manual-wrapper {
       margin-top: 80px;
+
+      .uk-accordion {
+        border: 1px solid #707070;
+        .uk-accordion-title {
+          padding: 20px;
+          background-color: #EEEFF4;
+        }
+
+        .uk-open {
+          .uk-accordion-title {
+            border-bottom: 1px solid #707070;
+          }
+        }
+
+        .uk-accordion-content {
+          margin-top: 0;
+          margin-bottom: 14px;
+          dt {
+            padding: 8px 20px;
+          }
+        }
+      }
     }
   }
 }
