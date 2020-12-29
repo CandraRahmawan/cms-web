@@ -1,4 +1,10 @@
+var downloadDriverId;
+
 $('.product_select').select2();
+$('.product_select').on('select2:select', function (e) {
+    const data = e.params.data;
+    downloadDriverId = data.id;
+});
 
 grecaptcha.ready(function () {
     grecaptcha.execute(captchaSiteKey, {action: 'form_submit'}).then(function (token) {
@@ -173,5 +179,11 @@ function backButtonDetailPage(url) {
         window.location.href = url;
     } else {
         window.location.href = referrerUrl;
+    }
+}
+
+function downloadDriverSearch() {
+    if (downloadDriverId) {
+        window.location.replace(window.location.pathname + '?id=' + downloadDriverId);
     }
 }

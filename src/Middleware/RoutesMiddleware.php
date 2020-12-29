@@ -11,6 +11,7 @@ class RoutesMiddleware {
   
   public function __invoke($request, $response, $next) {
     $requestUri = $_SERVER['REQUEST_URI'];
+    $queryString = $_SERVER['QUERY_STRING'];
     $serverName = $_SERVER['SERVER_NAME'];
     $exceptCharacter = ['.css', '.js', '.png', '.jpg', '.jpeg', '.json', '.svg', '.txt', '.xml'];
     $except = false;
@@ -25,9 +26,9 @@ class RoutesMiddleware {
           ->withHeader('Location', Configure::read('App.baseWebUrl') . $requestUri);
       }
       
-      if (substr($requestUri, -1) != '/') {
+      if (substr($request->here, -1) != '/') {
         return $response->withStatus(301)
-          ->withHeader('Location', Configure::read('App.baseWebUrl') . $requestUri . "/");
+          ->withHeader('Location', Configure::read('App.baseWebUrl') . $request->here . "/" . ($queryString ? '?' . $queryString : ''));
       }
     }
     

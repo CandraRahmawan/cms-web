@@ -48,7 +48,9 @@ class PageController extends PagesController {
   
   public function downloadDriver() {
     $content = $this->plugin('download_driver');
-    $this->set(compact('content'));
+    $id = empty($this->query['id']) ? json_decode($content[0]['detail']['value_3'])[0]->id : $this->query['id'];
+    $products = $this->Products->find()->select(['unique_id', 'name', 'link_download', 'download_info'])->where(['unique_id' => $id, 'link_download is not' => null])->first();
+    $this->set(compact('content', 'products'));
   }
   
   public function productLists() {

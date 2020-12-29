@@ -12,6 +12,7 @@ class AppController extends Controller {
   
   public $id_themes;
   public $params;
+  public $query;
   public $pass;
   public $baseUrl;
   public $is_404_page = false;
@@ -29,6 +30,7 @@ class AppController extends Controller {
     $this->loadModel('Seo');
     $this->loadComponent('Utility');
     $this->params = $this->request->params;
+    $this->query = $this->request->query;
     $this->pass = $this->request->pass;
     $this->baseUrl = $this->buildBaseUrl();
     $this->loadComponent('Paginator');

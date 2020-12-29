@@ -3059,6 +3059,9 @@ header {
         margin: 0;
         border: 1px solid #000;
         padding-left: 12px;
+        &:focus {
+          outline: none;
+        }
       }
 
       button {
@@ -3068,21 +3071,30 @@ header {
           color: #fff;
           background-color: #2980b9;
         }
+        &:focus {
+          outline: none;
+        }
       }
 
       .select2-container {
-        width: 280px !important;
+        width: 260px !important;
         font-size: 18px;
 
         .select2-selection--single {
           height: 50px;
           border-radius: unset;
           border: 1px solid #000;
+          &:focus {
+            outline: none;
+          }
         }
       }
 
       .select2-container--default .select2-selection--single .select2-selection__rendered {
         line-height: 52px;
+        &:focus {
+          outline: none;
+        }
       }
 
       .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -3134,6 +3146,11 @@ header {
             padding: 8px 20px;
           }
         }
+      }
+
+      a {
+        color: #666;
+        text-decoration: none;
       }
     }
   }
