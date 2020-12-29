@@ -2041,8 +2041,8 @@ header {
           .driver-manual-wrapper .content-wrapper .manual-wrapper .uk-accordion .uk-accordion-content dt {
             padding: 8px 20px; }
       .driver-manual-wrapper .content-wrapper .manual-wrapper a {
-        color: #666;
-        text-decoration: none; }
+        text-decoration: none;
+        color: #191818; }
   @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
     .driver-manual-wrapper {
       margin-top: 130px;
