@@ -1977,7 +1977,7 @@ header {
         @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
           .driver-manual-wrapper .content-wrapper .filter-wrapper input {
             height: 48px;
-            width: 97.7%;
+            width: calc(100% - 14px);
             margin-bottom: 8px; } }
       .driver-manual-wrapper .content-wrapper .filter-wrapper button {
         background-color: #1471B5;
