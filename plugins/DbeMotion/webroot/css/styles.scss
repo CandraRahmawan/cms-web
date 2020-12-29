@@ -3062,15 +3062,23 @@ header {
         &:focus {
           outline: none;
         }
+
+        @include tablet-view() {
+          height: 48px;
+          width: 97.7%;
+          margin-bottom: 8px;
+        }
       }
 
       button {
         background-color: #1471B5;
         border-radius: unset;
+
         &:hover {
           color: #fff;
           background-color: #2980b9;
         }
+
         &:focus {
           outline: none;
         }
@@ -3079,6 +3087,11 @@ header {
       .select2-container {
         width: 260px !important;
         font-size: 18px;
+
+        @include tablet-view() {
+          margin-bottom: 8px;
+          width: 100% !important;
+        }
 
         .select2-selection--single {
           height: 50px;
@@ -3109,6 +3122,7 @@ header {
         background-color: transparent;
         color: #191818;
         border: 1px solid #000;
+
         &:hover {
           color: #000;
           background-color: #f5f6fa;
@@ -3121,6 +3135,10 @@ header {
         font-weight: 700;
         color: #191818;
       }
+
+      @include tablet-view() {
+        margin-top: 40px;
+      }
     }
 
     .manual-wrapper {
@@ -3128,6 +3146,7 @@ header {
 
       .uk-accordion {
         border: 1px solid #707070;
+
         .uk-accordion-title {
           padding: 20px;
           background-color: #EEEFF4;
@@ -3142,6 +3161,7 @@ header {
         .uk-accordion-content {
           margin-top: 0;
           margin-bottom: 14px;
+
           dt {
             padding: 8px 20px;
           }
@@ -3152,6 +3172,40 @@ header {
         color: #666;
         text-decoration: none;
       }
+    }
+  }
+
+  @include tablet-view() {
+    margin-top: 130px;
+    padding: 0 30px;
+
+    .content-wrapper {
+      h2 {
+        font-size: 24px;
+      }
+
+      width: 100%;
+      margin-top: 0;
+    }
+
+    .back-navigation {
+      margin-left: 0;
+      margin-bottom: 40px;
+
+      a > span {
+        margin-left: 0;
+      }
+    }
+
+    .filter-wrapper {
+      flex-direction: column;
+    }
+  }
+
+  @include phone-view() {
+    margin-top: 80px;
+    .back-navigation {
+      display: none;
     }
   }
 }

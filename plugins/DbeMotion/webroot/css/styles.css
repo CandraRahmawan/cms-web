@@ -58,6 +58,24 @@ body, html {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased; }
 
+@keyframes animation-img-carousel {
+  from {
+    left: -500px; }
+  to {
+    left: 30px; } }
+
+@keyframes animation-img-carousel-phone {
+  from {
+    left: -500px; }
+  to {
+    left: 0; } }
+
+@keyframes animation-img-carousel-featured {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 input[type="text"] {
   background-color: transparent;
   border: none;
@@ -1956,6 +1974,11 @@ header {
         padding-left: 12px; }
         .driver-manual-wrapper .content-wrapper .filter-wrapper input:focus {
           outline: none; }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+          .driver-manual-wrapper .content-wrapper .filter-wrapper input {
+            height: 48px;
+            width: 97.7%;
+            margin-bottom: 8px; } }
       .driver-manual-wrapper .content-wrapper .filter-wrapper button {
         background-color: #1471B5;
         border-radius: unset; }
@@ -1967,6 +1990,10 @@ header {
       .driver-manual-wrapper .content-wrapper .filter-wrapper .select2-container {
         width: 260px !important;
         font-size: 18px; }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+          .driver-manual-wrapper .content-wrapper .filter-wrapper .select2-container {
+            margin-bottom: 8px;
+            width: 100% !important; } }
         .driver-manual-wrapper .content-wrapper .filter-wrapper .select2-container .select2-selection--single {
           height: 50px;
           border-radius: unset;
@@ -1993,6 +2020,9 @@ header {
         font-size: 20px;
         font-weight: 700;
         color: #191818; }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+        .driver-manual-wrapper .content-wrapper .download-description {
+          margin-top: 40px; } }
     .driver-manual-wrapper .content-wrapper .manual-wrapper {
       margin-top: 80px; }
       .driver-manual-wrapper .content-wrapper .manual-wrapper .uk-accordion {
@@ -2010,6 +2040,27 @@ header {
       .driver-manual-wrapper .content-wrapper .manual-wrapper a {
         color: #666;
         text-decoration: none; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+    .driver-manual-wrapper {
+      margin-top: 130px;
+      padding: 0 30px; }
+      .driver-manual-wrapper .content-wrapper {
+        width: 100%;
+        margin-top: 0; }
+        .driver-manual-wrapper .content-wrapper h2 {
+          font-size: 24px; }
+      .driver-manual-wrapper .back-navigation {
+        margin-left: 0;
+        margin-bottom: 40px; }
+        .driver-manual-wrapper .back-navigation a > span {
+          margin-left: 0; }
+      .driver-manual-wrapper .filter-wrapper {
+        flex-direction: column; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    .driver-manual-wrapper {
+      margin-top: 80px; }
+      .driver-manual-wrapper .back-navigation {
+        display: none; } }
 
 .not-found-wrapper {
   padding-top: 100px;
