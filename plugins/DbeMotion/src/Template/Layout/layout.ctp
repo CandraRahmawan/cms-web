@@ -32,6 +32,7 @@ $description = !empty($seo['meta_description']) ? $seo['meta_description'] : '';
     echo $this->Html->css('styles.min');
   }
   echo $this->Html->script('/plugins/jQuery/jquery-2.2.3.min');
+  echo $this->fetch('scriptTop');
   ?>
     <script>
         const fullBaseAdminUrl = "<?= $full_base_admin_url; ?>";

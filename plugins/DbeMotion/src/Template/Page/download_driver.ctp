@@ -1,5 +1,5 @@
 <?php
-echo $this->Html->script('/components/select2/js/select2', ['block' => 'scriptBottom']);
+echo $this->Html->script('/components/select2/js/select2', ['block' => 'scriptTop']);
 echo $this->Html->css('/components/select2/css/select2.min', ['block' => 'css']);
 $link_download = json_decode($products['link_download']);
 ?>
