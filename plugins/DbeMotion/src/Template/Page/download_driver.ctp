@@ -68,3 +68,19 @@ $link_download = json_decode($products['link_download']);
       <?php endif; ?>
     </div>
 </div>
+
+<script>
+    var downloadDriverId;
+
+    $('.product_select').select2();
+    $('.product_select').on('select2:select', function (e) {
+        const data = e.params.data;
+        downloadDriverId = data.id;
+    });
+
+    function downloadDriverSearch() {
+        if (downloadDriverId) {
+            window.location.replace(window.location.pathname + '?id=' + downloadDriverId);
+        }
+    }
+</script>
