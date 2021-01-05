@@ -1,4 +1,4 @@
-## Front End CMS Website Version 1.2.0
+## Front End CMS Website Version 1.2.1
 > contains a web theme plugin, build use CakePHP Version 3.8.9
 
 #### Core Requirement :
