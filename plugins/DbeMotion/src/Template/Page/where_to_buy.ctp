@@ -50,7 +50,7 @@
                 <div class="store-list">
                     <h5>Good Gaming Shop</h5>
                     <span>Mangga Dua Mall Lt 2 No 2A, Jl Alteri, Mangga Dua Raya,RT.11/RW.5, Ancol, Pademangan, North Jakarta City, Jakarta 14430</span>
-                    <span>(021) 62302218 / 0817 805 665</span>
+                    <span>(021) 62302218 / 081 293 665 665</span>
                 </div>
                 <div class="store-list">
                     <h5>Quantech</h5>
